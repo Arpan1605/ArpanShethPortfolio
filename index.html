@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arpan Sheth | UX/UI Designer</title>
+    <meta
+      name="description"
+      content="Arpan Sheth is a self-taught UX/UI designer from Gandhinagar building thoughtful product experiences with sharp UX instincts, structured case studies, and interface clarity."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="brand" type="button" data-panel-target="home">
+        <span class="brand__mark">AS</span>
+        <span class="brand__text">ARPAN SHETH</span>
+      </button>
+
+      <nav class="topbar__nav" aria-label="Top navigation">
+        <button type="button" data-panel-target="home">Home</button>
+        <button type="button" data-panel-target="work">Portfolio</button>
+        <button type="button" data-panel-target="about">About</button>
+        <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="submit-button" type="button" data-panel-target="contact">Contact Me</button>
+        <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle theme">
+          Theme
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="profile-rail">
+        <div class="profile-rail__inner">
+          <div class="profile-photo">
+            <div class="profile-photo__placeholder">AS</div>
+          </div>
+
+          <div class="profile-block">
+            <h1>Arpan Sheth</h1>
+            <p class="profile-handle">@arpansheth · Gandhinagar, India</p>
+            <p class="profile-role">UX/UI Designer</p>
+          </div>
+
+          <div class="profile-block profile-block--muted">
+            <p>Self-taught and design-obsessed.</p>
+            <p>Interested in product thinking, visual structure, SAP complexity, and case-study storytelling.</p>
+          </div>
+
+          <div class="profile-block profile-block--muted">
+            <p>Experience Includes:</p>
+            <div class="company-row">
+              <span class="company-pill">GE Healthcare</span>
+              <span class="company-pill">TasteX</span>
+              <span class="company-pill">Pareexa</span>
+              <span class="company-pill">Golfpac</span>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <button class="message-button" type="button" data-panel-target="contact">Message</button>
+            <a class="bookmark-button" href="resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume PDF">
+              PDF
+            </a>
+          </div>
+
+          <div class="profile-tabs">
+            <button class="profile-tab" type="button" id="openProfileModal">
+              <span>Profile</span>
+            </button>
+            <button class="profile-tab profile-tab--active" type="button" data-panel-target="home">
+              <span>Home</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="stage" id="home">
+        <div class="stage__grid" aria-hidden="true"></div>
+
+        <nav class="section-menu" aria-label="Section navigation">
+          <button class="section-link is-active" type="button" data-panel-target="work">WORK</button>
+          <button class="section-link" type="button" data-panel-target="about">ABOUT</button>
+          <a class="section-link" href="resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+          <button class="section-link" type="button" data-panel-target="contact">CONTACT</button>
+        </nav>
+
+        <section class="panel panel--active" id="panel-home" data-panel="home">
+          <div class="statement-wrap reveal">
+            <div class="statement-line"></div>
+            <div class="statement-pin statement-pin--left"></div>
+            <div class="statement-pin statement-pin--right"></div>
+            <div class="statement-box">
+              <p class="statement-letter" id="activeLetter">A</p>
+              <h2 class="statement-text" id="activeMessage">Auto critiques every app I see</h2>
+            </div>
+          </div>
+
+          <div class="alphabet-board reveal" id="alphabetBoard" aria-label="Alphabet traits"></div>
+        </section>
+
+        <section class="panel" id="panel-work" data-panel="work">
+          <div class="work-layout reveal">
+            <div class="work-intro">
+              <p class="eyebrow">Work</p>
+              <h2>Projects and case studies.</h2>
+              <p>
+                This section is for your actual portfolio pieces, so `WORK` now opens a dedicated
+                view instead of the alphabet landing page.
+              </p>
+            </div>
+
+            <div class="work-list">
+              <a class="work-card work-card--link" href="ge-healthcare.html">
+                <p class="work-card__type">Enterprise Healthcare Platform</p>
+                <h3>GE Healthcare Asset Lifecycle Management</h3>
+                <p>
+                  Evolved a Germany-focused enterprise platform from roughly 100 users to 2000+ users,
+                  spanning lease, loan, end-of-term, remarketing, and financial workflows.
+                </p>
+                <span class="work-card__cta">Open case study</span>
+              </a>
+
+              <article class="work-card">
+                <p class="work-card__type">Travel Platform</p>
+                <h3>Golfpac Travel</h3>
+                <p>29 screens, 3 booking flows, and a clearer journey for trip planning decisions.</p>
+              </article>
+
+              <article class="work-card">
+                <p class="work-card__type">Cloud Kitchen</p>
+                <h3>TasteX</h3>
+                <p>Customer, operator, and admin experiences designed across multiple product surfaces.</p>
+              </article>
+
+              <a class="work-card work-card--link" href="pareexa-ai.html">
+                <p class="work-card__type">EdTech</p>
+                <h3>Pareexa.ai</h3>
+                <p>AI-powered learning ecosystem for competitive exam aspirants across planning, study, tests, analytics, and retention.</p>
+                <span class="work-card__cta">Open case study</span>
+              </a>
+
+              <article class="work-card">
+                <p class="work-card__type">Enterprise Learning</p>
+                <h3>SAP Journey</h3>
+                <p>Role-based workflow thinking for dense product experiences that need more clarity.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel--about" id="panel-about" data-panel="about">
+          <div class="about-layout reveal">
+            <div class="about-image">
+              <div class="about-image__placeholder">AS</div>
+            </div>
+            <div class="about-copy">
+              <h2>Hi! I am Arpan Sheth</h2>
+              <p>
+                I’m a self-taught UX/UI designer from Gandhinagar who got into design by noticing
+                how every product decision changes the way people feel while using an app.
+              </p>
+              <p>
+                As I explored different design disciplines, I kept coming back to user experience:
+                structure, hierarchy, flow, friction, and the tiny moments that make an interface
+                feel obvious instead of confusing.
+              </p>
+              <p>
+                I now enjoy work that sits between practical usability and visual sharpness,
+                especially when I can simplify complexity, shape a stronger narrative, and make
+                digital products feel more trustworthy.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel--contact" id="panel-contact" data-panel="contact">
+          <div class="contact-layout reveal">
+            <div>
+              <p class="eyebrow">Let’s Connect</p>
+              <h2>Open to internships, junior roles, freelance work, and thoughtful collaborations.</h2>
+            </div>
+            <div class="contact-stack">
+              <a href="mailto:hello@arpansheth.design">hello@arpansheth.design</a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.behance.net" target="_blank" rel="noreferrer">Behance</a>
+              <a href="resume.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="profile-modal" id="profileModal" aria-hidden="true">
+      <div class="profile-modal__card">
+        <button class="profile-modal__close" id="closeProfileModal" type="button">Close</button>
+        <div class="profile-modal__avatar">AS</div>
+        <h2>Arpan Sheth</h2>
+        <p class="profile-modal__meta">@arpansheth · Gandhinagar, India</p>
+
+        <div class="profile-modal__section">
+          <h3>About</h3>
+          <p>
+            Arpan Sheth is a self-taught UX/UI designer building strong foundations through
+            interface exploration, structured thinking, and an obsession with how products feel
+            in use. His work reflects clarity in hierarchy, flow simplification, and visual precision.
+          </p>
+        </div>
+
+        <div class="profile-modal__section">
+          <h3>Experience Includes:</h3>
+          <div class="company-row company-row--left">
+            <span class="company-pill">GE Healthcare</span>
+            <span class="company-pill">TasteX</span>
+            <span class="company-pill">Pareexa</span>
+            <span class="company-pill">Golfpac</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
