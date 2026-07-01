@@ -14,9 +14,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="favicon-as.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="ge-case-page">
+    <div class="ge-case-lock" id="geCaseLock" aria-hidden="true">
+      <div class="ge-case-lock__card">
+        <p class="ge-access-modal__eyebrow">Protected case study</p>
+        <h1>GE Healthcare Asset Lifecycle Management</h1>
+        <p class="ge-access-modal__copy">
+          This project contains protected enterprise work. Enter the password to continue to the case study.
+        </p>
+        <form class="ge-access-modal__form" id="geCaseLockForm">
+          <label class="ge-access-modal__label" for="geCasePassword">Password</label>
+          <input
+            class="ge-access-modal__input"
+            id="geCasePassword"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Enter password"
+            required
+          />
+          <p class="ge-access-modal__error" id="geCaseLockError" hidden>Incorrect password. Please try again.</p>
+          <button class="submit-button ge-access-modal__submit" type="submit">Unlock case study</button>
+        </form>
+      </div>
+    </div>
     <header class="topbar ge-case-topbar">
       <a class="brand" href="index.html">
         <span class="brand__mark">AS</span>
@@ -271,5 +295,43 @@
         </section>
       </main>
     </div>
+    <script>
+      (function () {
+        const gePassword = "Itsab@1605";
+        const geAccessKey = "arpan-ge-case-access";
+        const geCaseLock = document.getElementById("geCaseLock");
+        const geCaseLockForm = document.getElementById("geCaseLockForm");
+        const geCasePassword = document.getElementById("geCasePassword");
+        const geCaseLockError = document.getElementById("geCaseLockError");
+
+        if (sessionStorage.getItem(geAccessKey) === "granted") {
+          geCaseLock?.classList.add("is-hidden");
+          document.body.classList.remove("ge-case-page--locked");
+          return;
+        }
+
+        geCaseLock?.classList.add("is-open");
+        geCaseLock?.setAttribute("aria-hidden", "false");
+        document.body.classList.add("ge-case-page--locked");
+        geCasePassword?.focus();
+
+        geCaseLockForm?.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          if (geCasePassword?.value === gePassword) {
+            sessionStorage.setItem(geAccessKey, "granted");
+            geCaseLockError.hidden = true;
+            geCaseLock?.classList.remove("is-open");
+            geCaseLock?.classList.add("is-hidden");
+            geCaseLock?.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("ge-case-page--locked");
+            return;
+          }
+
+          geCaseLockError.hidden = false;
+          geCasePassword?.select();
+        });
+      })();
+    </script>
   </body>
 </html>

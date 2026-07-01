@@ -9,6 +9,15 @@ const revealItems = document.querySelectorAll(".reveal");
 const profileModal = document.getElementById("profileModal");
 const openProfileModal = document.getElementById("openProfileModal");
 const closeProfileModal = document.getElementById("closeProfileModal");
+const geAccessModal = document.getElementById("geAccessModal");
+const closeGeAccessModal = document.getElementById("closeGeAccessModal");
+const geAccessForm = document.getElementById("geAccessForm");
+const geAccessPassword = document.getElementById("geAccessPassword");
+const geAccessError = document.getElementById("geAccessError");
+const geProtectedLinks = document.querySelectorAll("[data-ge-protected]");
+const gePassword = "Itsab@1605";
+const geAccessKey = "arpan-ge-case-access";
+let geAccessDestination = "ge-healthcare.html";
 
 const alphabetMessages = {
   A: "Auto critiques every app I see",
@@ -105,6 +114,25 @@ function hideProfileModal() {
   profileModal?.setAttribute("aria-hidden", "true");
 }
 
+function showGeAccessModal(destination) {
+  geAccessDestination = destination || "ge-healthcare.html";
+  geAccessModal?.classList.add("is-open");
+  geAccessModal?.setAttribute("aria-hidden", "false");
+  if (geAccessError) {
+    geAccessError.hidden = true;
+  }
+  geAccessPassword?.focus();
+}
+
+function hideGeAccessModal() {
+  geAccessModal?.classList.remove("is-open");
+  geAccessModal?.setAttribute("aria-hidden", "true");
+  geAccessForm?.reset();
+  if (geAccessError) {
+    geAccessError.hidden = true;
+  }
+}
+
 sectionLinks.forEach((link) => {
   if (!link.matches("button")) {
     return;
@@ -125,6 +153,39 @@ profileModal?.addEventListener("click", (event) => {
   if (event.target === profileModal) {
     hideProfileModal();
   }
+});
+
+geProtectedLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (sessionStorage.getItem(geAccessKey) === "granted") {
+      return;
+    }
+
+    event.preventDefault();
+    showGeAccessModal(link.getAttribute("href"));
+  });
+});
+
+closeGeAccessModal?.addEventListener("click", hideGeAccessModal);
+geAccessModal?.addEventListener("click", (event) => {
+  if (event.target === geAccessModal) {
+    hideGeAccessModal();
+  }
+});
+
+geAccessForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (geAccessPassword?.value === gePassword) {
+    sessionStorage.setItem(geAccessKey, "granted");
+    window.location.href = geAccessDestination;
+    return;
+  }
+
+  if (geAccessError) {
+    geAccessError.hidden = false;
+  }
+  geAccessPassword?.select();
 });
 
 const revealObserver = new IntersectionObserver(

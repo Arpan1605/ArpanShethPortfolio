@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="favicon-as.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -120,7 +121,7 @@
             </div>
 
             <div class="work-list">
-              <a class="work-card work-card--link" href="ge-healthcare.html">
+              <a class="work-card work-card--link" href="ge-healthcare.html" data-ge-protected="true">
                 <p class="work-card__type">Enterprise Healthcare Platform</p>
                 <h3>GE Healthcare Asset Lifecycle Management</h3>
                 <p>
@@ -225,6 +226,31 @@
             <span class="company-pill">Golfpac</span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="ge-access-modal" id="geAccessModal" aria-hidden="true">
+      <div class="ge-access-modal__card">
+        <button class="ge-access-modal__close" id="closeGeAccessModal" type="button">Close</button>
+        <p class="ge-access-modal__eyebrow">Protected case study</p>
+        <h2>GE Healthcare Asset Lifecycle Management</h2>
+        <p class="ge-access-modal__copy">
+          This enterprise case study is password protected. Enter the password to open the full project details.
+        </p>
+        <form class="ge-access-modal__form" id="geAccessForm">
+          <label class="ge-access-modal__label" for="geAccessPassword">Password</label>
+          <input
+            class="ge-access-modal__input"
+            id="geAccessPassword"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Enter password"
+            required
+          />
+          <p class="ge-access-modal__error" id="geAccessError" hidden>Incorrect password. Please try again.</p>
+          <button class="submit-button ge-access-modal__submit" type="submit">Open case study</button>
+        </form>
       </div>
     </div>
 

@@ -604,6 +604,145 @@ body[data-theme="dark"] .work-card {
   display: flex;
 }
 
+.ge-access-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(18, 18, 22, 0.72);
+  z-index: 50;
+}
+
+.ge-access-modal.is-open {
+  display: flex;
+}
+
+.ge-access-modal__card,
+.ge-case-lock__card {
+  width: min(560px, 100%);
+  padding: 34px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,0.03) 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 48%, rgba(0,0,0,0.03) 49%, transparent 50%);
+  background-size: auto, 84px 84px, 84px 84px;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+body[data-theme="dark"] .ge-access-modal__card,
+body[data-theme="dark"] .ge-case-lock__card {
+  background:
+    linear-gradient(rgba(21,24,31,0.96), rgba(21,24,31,0.96)),
+    linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.04) 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.04) 49%, transparent 50%);
+  background-size: auto, 84px 84px, 84px 84px;
+}
+
+.ge-access-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+}
+
+.ge-access-modal__eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.ge-access-modal__card h2,
+.ge-case-lock__card h1 {
+  margin: 0 0 16px;
+  font-family: "Special Elite", monospace;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.12;
+}
+
+.ge-access-modal__copy {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.ge-access-modal__form {
+  display: grid;
+  gap: 14px;
+}
+
+.ge-access-modal__label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ge-access-modal__input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font: inherit;
+}
+
+body[data-theme="dark"] .ge-access-modal__input {
+  background: rgba(24, 26, 32, 0.96);
+}
+
+.ge-access-modal__input:focus {
+  outline: 2px solid rgba(23, 22, 37, 0.18);
+  outline-offset: 2px;
+}
+
+.ge-access-modal__error {
+  margin: 0;
+  color: #c0395d;
+  font-size: 0.95rem;
+}
+
+.ge-access-modal__submit {
+  justify-self: start;
+}
+
+.ge-case-page--locked {
+  overflow: hidden;
+}
+
+.ge-case-lock {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(245, 245, 241, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 80;
+}
+
+.ge-case-lock.is-open {
+  display: flex;
+}
+
+.ge-case-lock.is-hidden {
+  display: none;
+}
+
+body[data-theme="dark"] .ge-case-lock {
+  background: rgba(14, 16, 21, 0.88);
+}
+
 .profile-modal__card {
   width: min(960px, 100%);
   min-height: 620px;
@@ -1112,6 +1251,45 @@ body[data-theme="dark"] .impact-strip article {
   color: #9c9ca1;
   font-size: 1rem;
   line-height: 1.55;
+}
+
+.pareexa-hero-stats {
+  max-width: 1120px;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pareexa-hero-stats article {
+  padding: 22px 20px;
+  border: 1px solid #ecece8;
+  background: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+
+.pareexa-hero-stats span {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8f9097;
+  font-weight: 700;
+}
+
+.pareexa-hero-stats strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.38rem;
+  line-height: 1.22;
+}
+
+.pareexa-hero-stats p {
+  margin: 0;
+  color: #565760;
+  line-height: 1.62;
+  font-size: 0.96rem;
 }
 
 .ge-hero-spacer {
@@ -1933,6 +2111,7 @@ body[data-theme="dark"] .impact-strip article {
   }
 
   .ge-meta-grid,
+  .pareexa-hero-stats,
   .ge-problem-layout,
   .pareexa-value-strip,
   .pareexa-persona-grid,
@@ -2000,5 +2179,10 @@ body[data-theme="dark"] .impact-strip article {
 
   .pareexa-phone-mockup__preview {
     height: 440px;
+  }
+
+  .ge-access-modal__card,
+  .ge-case-lock__card {
+    padding: 26px;
   }
 }
