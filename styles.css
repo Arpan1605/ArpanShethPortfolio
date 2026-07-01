@@ -415,23 +415,32 @@ body[data-theme="dark"] .statement-box {
 
 .identity-type {
   width: min(780px, calc(100% - 280px));
-  margin: 18px auto 40px;
+  margin: 8px auto 56px;
+  padding: 32px 36px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
+body[data-theme="dark"] .identity-type {
+  background: rgba(24, 26, 32, 0.92);
+}
+
 .identity-type__name {
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   font-size: 0.85rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .identity-type__role {
   margin: 0;
-  min-height: 1.6em;
+  min-height: 1.8em;
   font-family: "Special Elite", monospace;
-  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-size: clamp(1.25rem, 2.6vw, 1.85rem);
   color: var(--text);
 }
 
@@ -1170,6 +1179,13 @@ body[data-theme="dark"] .impact-strip article {
   .statement-box {
     margin: 0 18px;
     padding-left: 30px;
+  }
+
+  .identity-type {
+    margin-left: 18px;
+    margin-right: 18px;
+    width: auto;
+    padding: 24px 20px;
   }
 
   .statement-letter {
