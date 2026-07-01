@@ -589,6 +589,18 @@ body[data-theme="dark"] .work-card {
   color: var(--text);
 }
 
+.work-card__status {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px dashed var(--line);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .profile-modal {
   position: fixed;
   inset: 0;
@@ -676,9 +688,29 @@ body[data-theme="dark"] .ge-case-lock__card {
   line-height: 1.68;
 }
 
+.ge-access-modal__request {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 14px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.ge-access-modal__request:hover,
+.ge-access-modal__request:focus-visible {
+  border-color: rgba(0, 0, 0, 0.28);
+  transform: translateY(-1px);
+}
+
 .ge-access-modal__form {
   display: grid;
   gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
 .ge-access-modal__label {
@@ -1952,7 +1984,7 @@ body[data-theme="dark"] .impact-strip article {
 }
 
 .pareexa-board-card__image--pyq {
-  object-position: 88% center;
+  object-position: center 12%;
 }
 
 .pareexa-board-card__image--support {
@@ -2031,7 +2063,7 @@ body[data-theme="dark"] .impact-strip article {
   width: 100%;
   height: 520px;
   object-fit: cover;
-  object-position: 85% center;
+  object-position: center 8%;
   background: #fff;
 }
 
