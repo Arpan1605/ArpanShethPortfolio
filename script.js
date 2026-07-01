@@ -89,6 +89,52 @@ Object.keys(alphabetMessages).forEach((letter) => {
 
 setActiveLetter("A");
 
+const identityTypeText = document.getElementById("identityTypeText");
+const identityPhrases = [
+  "UX Designer — Enterprise Product Design",
+  "5+ Years Across Healthcare, Travel & EdTech",
+  "Currently Designing for GE Healthcare via TCS",
+  "Open to Relocating to Germany"
+];
+
+if (identityTypeText) {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion) {
+    identityTypeText.textContent = identityPhrases[0];
+  } else {
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const tick = () => {
+      const currentPhrase = identityPhrases[phraseIndex];
+      let delay = isDeleting ? 45 : 85;
+
+      if (!isDeleting) {
+        charIndex++;
+        identityTypeText.textContent = currentPhrase.slice(0, charIndex);
+        if (charIndex === currentPhrase.length) {
+          isDeleting = true;
+          delay = 1400;
+        }
+      } else {
+        charIndex--;
+        identityTypeText.textContent = currentPhrase.slice(0, charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % identityPhrases.length;
+          delay = 300;
+        }
+      }
+
+      setTimeout(tick, delay);
+    };
+
+    tick();
+  }
+}
+
 function setActivePanel(target) {
   panels.forEach((panel) => {
     panel.classList.toggle("panel--active", panel.dataset.panel === target);
