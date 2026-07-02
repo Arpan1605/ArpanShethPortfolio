@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GolfPac Travel | Arpan Sheth</title>
+    <meta
+      name="description"
+      content="Case study: GolfPac Travel booking flow redesign. Modernizing a dated golf-travel booking experience to recover falling conversions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon-as.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="ge-case-page">
+    <header class="topbar ge-case-topbar">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">AS</span>
+        <span class="brand__text">ARPAN SHETH</span>
+      </a>
+
+      <nav class="topbar__nav" aria-label="Case study navigation">
+        <a href="index.html">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="submit-button" href="index.html">Back Home</a>
+      </div>
+    </header>
+
+    <div class="ge-case-shell">
+      <aside class="ge-case-leftnav" aria-label="Case study phases">
+        <div class="ge-case-leftnav__inner">
+          <a href="#overview" class="ge-case-leftnav__item">Overview</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#problem" class="ge-case-leftnav__item">Problem</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#approach" class="ge-case-leftnav__item">Approach</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#outcome" class="ge-case-leftnav__item">Outcome</a>
+        </div>
+      </aside>
+
+      <main class="ge-case-main">
+        <nav class="ge-case-rightnav" aria-label="Quick navigation">
+          <a href="index.html">WORK</a>
+          <a href="#overview">ABOUT</a>
+          <a href="resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+          <a href="index.html#contact">CONTACT</a>
+        </nav>
+
+        <section class="ge-slide ge-slide--hero" id="overview">
+          <div class="ge-hero-copy">
+            <h1>Modernizing a dated booking experience to recover falling conversions</h1>
+            <p>
+              GolfPac Travel offers custom golf vacation packages across the US. The existing
+              site had an early-2000s look and feel, and the client's core concern was that this
+              outdated presentation was actively costing them conversions — users landing on the
+              site weren't trusting or engaging with it the way a modern travel platform would expect.
+            </p>
+          </div>
+
+          <div class="ge-meta-grid">
+            <article>
+              <h2>Role</h2>
+              <p>Freelance Product Designer &amp; Frontend Developer, working directly in the AngularJS front-end alongside the design work.</p>
+            </article>
+            <article>
+              <h2>Duration</h2>
+              <p>August 2024 to September 2025.</p>
+            </article>
+            <article>
+              <h2>Client</h2>
+              <p>GolfPac Travel, a US golf vacation package provider spanning quote requests, self-serve trip building, and instant packages.</p>
+            </article>
+          </div>
+
+          <figure class="browser-mockup">
+            <figcaption class="browser-mockup__bar">
+              <span class="browser-mockup__dots" aria-hidden="true">
+                <span class="browser-mockup__dot"></span>
+                <span class="browser-mockup__dot"></span>
+                <span class="browser-mockup__dot"></span>
+              </span>
+              <span class="browser-mockup__url">golfpactravel.com/start-planning</span>
+            </figcaption>
+            <img src="golfpac-hero.png" alt="GolfPac Travel redesigned start-planning page with hero banner, tab navigation, and the Design Your Own Golf Package form" />
+          </figure>
+        </section>
+
+        <section class="ge-slide" id="problem">
+          <div class="ge-statement">
+            <h2>
+              The site's visual design and interaction patterns hadn't kept pace with
+              <span>modern booking experiences</span>, and it wasn't obvious how to move from
+              browsing to requesting a quote.
+            </h2>
+          </div>
+
+          <div class="ge-problem-layout">
+            <div class="ge-document-stack" aria-hidden="true">
+              <div class="ge-document ge-document--back"></div>
+              <div class="ge-document ge-document--mid"></div>
+              <div class="ge-document ge-document--front">
+                <div class="ge-document__lines"></div>
+              </div>
+            </div>
+
+            <div class="ge-problem-copy">
+              <p class="ge-problem-copy__lead">What the client was seeing</p>
+              <ul>
+                <li>An early-2000s look and feel that read as untrustworthy to modern travel shoppers</li>
+                <li>Falling conversion rates the client attributed directly to the outdated presentation</li>
+                <li>No clear first action — three planning paths competed for attention with no obvious entry point</li>
+                <li>A booking flow that didn't guide users from "interested" to "requesting a quote"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              The brief was direct: modernize the visual design, and make sure every change served
+              a real usability purpose rather than just a cosmetic refresh — improve how users
+              could explore options and move through the site with confidence.
+            </p>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Before and after the redesign</h2>
+          </div>
+
+          <div class="golfpac-compare">
+            <div class="golfpac-compare__panel golfpac-compare__panel--text">
+              <span class="golfpac-compare__tag">Before</span>
+              <p>
+                An early-2000s layout with three competing entry points and no clear first action,
+                on the previous booking site the client asked GolfPac to move away from.
+              </p>
+              <p class="golfpac-compare__note">
+                No screenshot of the legacy site is shown here to keep this case study focused on
+                GolfPac's own product rather than a third-party site.
+              </p>
+            </div>
+            <figure class="golfpac-compare__panel golfpac-compare__panel--image">
+              <span class="golfpac-compare__tag">After</span>
+              <img src="golfpac-hero.png" alt="GolfPac Travel's redesigned start-planning hero with a single tabbed entry point" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="approach">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Three decisions carried most of the work.</h2>
+          </div>
+
+          <div class="golfpac-approach-row">
+            <figure class="golfpac-approach-row__media">
+              <img src="golfpac-tabs.png" alt="Segmented tab control offering Request a Quote, Design Your Own, and Instant Packages" />
+            </figure>
+            <div class="golfpac-approach-row__text">
+              <h3>One clear entry point</h3>
+              <p>
+                Three competing calls to action became a single tabbed choice — Request a Quote,
+                Design Your Own, or Instant Packages — so the first decision a visitor has to make
+                is obvious instead of a guess.
+              </p>
+            </div>
+          </div>
+
+          <div class="golfpac-approach-row">
+            <div class="golfpac-approach-row__text">
+              <h3>Progressive, sectioned flow</h3>
+              <p>
+                The planning process breaks into clear steps — trip details, group details,
+                preferences and add-ons, then contact info — each in its own section, so users
+                always know where they are and what comes next.
+              </p>
+            </div>
+            <figure class="golfpac-approach-row__media">
+              <img src="golfpac-flow.png" alt="Design Your Own flow showing Trip Details, Group Details, and Add Rounds as distinct sectioned steps" />
+            </figure>
+          </div>
+
+          <div class="golfpac-approach-row">
+            <figure class="golfpac-approach-row__media">
+              <img src="golfpac-confirmation.png" alt="Quote Request Submitted confirmation screen with a numbered list of what happens next" />
+            </figure>
+            <div class="golfpac-approach-row__text">
+              <h3>Closing the loop</h3>
+              <p>
+                The confirmation step restates the request, sets a 24 to 48 hour response-time
+                expectation, and lists exactly what happens next — so users leave the flow knowing
+                what to expect instead of wondering if it worked.
+              </p>
+            </div>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              Alongside the flow changes, the visual language was rebuilt from the ground up:
+              modern layout, imagery treatment, and typography replaced the dated early-2000s
+              presentation, and small icons were added next to key labels throughout — trip
+              details, lodging, golf preferences — to improve scannability without adding to the
+              reading load.
+            </p>
+            <p>
+              I worked directly in the AngularJS front-end alongside the design work, implementing
+              the new flow structure rather than handing off static screens.
+            </p>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="outcome">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Clearer at every step, from stakeholders' own read of it.</h2>
+          </div>
+
+          <div class="ge-impact-grid">
+            <article>
+              <strong>1 entry point</strong>
+              <span>Down from three competing CTAs to one tabbed choice</span>
+            </article>
+            <article>
+              <strong>4 sectioned steps</strong>
+              <span>Trip details, group details, preferences, contact — each its own step</span>
+            </article>
+            <article>
+              <strong>24–48 hr</strong>
+              <span>Response-time expectation set clearly at confirmation</span>
+            </article>
+          </div>
+
+          <div class="ge-reflection">
+            <p>
+              Stakeholders reported that the redesigned flow was noticeably clearer than the
+              previous version — users could navigate the site and understand their options
+              without confusion, and the more prominent CTAs made the intended next step obvious
+              at every stage. I don't have analytics access as a freelancer, so I'm reporting that
+              as stakeholder feedback rather than a conversion number I can't verify.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function () {
+        const leftNavLinks = Array.from(document.querySelectorAll(".ge-case-leftnav__item"));
+        const observedSections = leftNavLinks
+          .map((link) => {
+            const targetId = link.getAttribute("href");
+            if (!targetId || !targetId.startsWith("#")) {
+              return null;
+            }
+            const section = document.querySelector(targetId);
+            return section ? { link, section } : null;
+          })
+          .filter(Boolean);
+
+        if (!observedSections.length) {
+          return;
+        }
+
+        function setActiveSection(id) {
+          leftNavLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visibleEntries = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (!visibleEntries.length) {
+              return;
+            }
+
+            setActiveSection(visibleEntries[0].target.id);
+          },
+          {
+            rootMargin: "-30% 0px -45% 0px",
+            threshold: [0.2, 0.35, 0.55]
+          }
+        );
+
+        observedSections.forEach(({ section }) => observer.observe(section));
+
+        function syncActiveSectionFromScroll() {
+          let currentSection = observedSections[0].section.id;
+
+          observedSections.forEach(({ section }) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.32) {
+              currentSection = section.id;
+            }
+          });
+
+          setActiveSection(currentSection);
+        }
+
+        syncActiveSectionFromScroll();
+        window.addEventListener("scroll", syncActiveSectionFromScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
