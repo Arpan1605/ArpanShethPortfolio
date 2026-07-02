@@ -24,18 +24,33 @@
         <span class="brand__text">ARPAN SHETH</span>
       </button>
 
-      <nav class="topbar__nav" aria-label="Top navigation">
-        <button type="button" data-panel-target="home">Home</button>
-        <button type="button" data-panel-target="work">Portfolio</button>
-        <button type="button" data-panel-target="about">About</button>
-        <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-      </nav>
+      <button
+        class="hamburger"
+        id="hamburgerToggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="topbarMenu"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
 
-      <div class="topbar__actions">
-        <button class="submit-button" type="button" data-panel-target="contact">Contact Me</button>
-        <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle theme">
-          Theme
-        </button>
+      <div class="topbar__menu" id="topbarMenu">
+        <nav class="topbar__nav" aria-label="Top navigation">
+          <button type="button" data-panel-target="home">Home</button>
+          <button type="button" data-panel-target="work">Portfolio</button>
+          <button type="button" data-panel-target="about">About</button>
+          <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="submit-button" type="button" data-panel-target="contact">Contact Me</button>
+          <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle theme">
+            Theme
+          </button>
+        </div>
       </div>
     </header>
 
@@ -52,40 +67,55 @@
             <p class="profile-role">UX Designer — Enterprise Product Design</p>
           </div>
 
-          <div class="profile-block profile-block--muted">
-            <p>UX Designer with 5+ years of experience across enterprise and consumer products.</p>
-            <p>Interested in product thinking, visual structure, SAP complexity, and case-study storytelling.</p>
-          </div>
+          <button
+            class="profile-rail__toggle"
+            id="profileRailToggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="profileRailDetails"
+          >
+            <span class="profile-rail__toggle-text">Hide details</span>
+            <svg class="profile-rail__chevron" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
 
-          <div class="profile-block profile-block--muted">
-            <p>Experience Includes:</p>
-            <div class="company-row">
-              <span class="company-pill">GE Healthcare</span>
-              <span class="company-pill">TasteX</span>
-              <span class="company-pill">Pareexa</span>
-              <span class="company-pill">Golfpac</span>
+          <div class="profile-rail__details" id="profileRailDetails">
+            <div class="profile-block profile-block--muted">
+              <p>UX Designer with 5+ years of experience across enterprise and consumer products.</p>
+              <p>Interested in product thinking, visual structure, SAP complexity, and case-study storytelling.</p>
             </div>
-          </div>
 
-          <div class="profile-block profile-block--muted">
-            <p>Based in India, open to relocating anywhere in Germany — will require visa sponsorship. 90-day notice period.</p>
-            <p>Currently learning German (A1, working toward B1 by August 2026).</p>
-          </div>
+            <div class="profile-block profile-block--muted">
+              <p>Experience Includes:</p>
+              <div class="company-row">
+                <span class="company-pill">GE Healthcare</span>
+                <span class="company-pill">TasteX</span>
+                <span class="company-pill">Pareexa</span>
+                <span class="company-pill">Golfpac</span>
+              </div>
+            </div>
 
-          <div class="profile-actions">
-            <button class="message-button" type="button" data-panel-target="contact">Message</button>
-            <a class="bookmark-button" href="resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume PDF">
-              PDF
-            </a>
-          </div>
+            <div class="profile-block profile-block--muted">
+              <p>Based in India, open to relocating anywhere in Germany — will require visa sponsorship. 90-day notice period.</p>
+              <p>Currently learning German (A1, working toward B1 by August 2026).</p>
+            </div>
 
-          <div class="profile-tabs">
-            <button class="profile-tab" type="button" id="openProfileModal">
-              <span>Profile</span>
-            </button>
-            <button class="profile-tab profile-tab--active" type="button" data-panel-target="home">
-              <span>Home</span>
-            </button>
+            <div class="profile-actions">
+              <button class="message-button" type="button" data-panel-target="contact">Message</button>
+              <a class="bookmark-button" href="resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume PDF">
+                PDF
+              </a>
+            </div>
+
+            <div class="profile-tabs">
+              <button class="profile-tab" type="button" id="openProfileModal">
+                <span>Profile</span>
+              </button>
+              <button class="profile-tab profile-tab--active" type="button" data-panel-target="home">
+                <span>Home</span>
+              </button>
+            </div>
           </div>
         </div>
       </aside>
