@@ -260,16 +260,22 @@ body[data-theme="dark"] .topbar {
   padding-top: 6px;
 }
 
-.profile-photo__placeholder,
-.about-image__placeholder {
+.profile-photo__placeholder {
   display: block;
   object-fit: cover;
-}
-
-.profile-photo__placeholder {
   width: 152px;
   height: 152px;
   border-radius: 50%;
+}
+
+.about-image__placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.8), transparent 30%),
+    linear-gradient(145deg, #b7b7c0, #6f7480);
+  color: #fff;
+  letter-spacing: -0.06em;
 }
 
 .profile-block {
@@ -650,8 +656,8 @@ body[data-theme="dark"] .alpha-key {
 .about-image__placeholder {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  font-size: 7.2rem;
+  font-weight: 800;
 }
 
 .about-copy,
