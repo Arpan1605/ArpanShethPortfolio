@@ -98,6 +98,7 @@ body[data-theme="dark"] .topbar {
 .brand__mark {
   width: 42px;
   height: 42px;
+  flex-shrink: 0;
   border-radius: 12px;
   display: grid;
   place-items: center;
@@ -105,11 +106,26 @@ body[data-theme="dark"] .topbar {
   color: #fff;
   font-size: 0.95rem;
   letter-spacing: 0.08em;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.brand__mark:hover,
+.brand__mark:focus-visible {
+  opacity: 0.85;
+}
+
+.brand__mark:active {
+  transform: scale(0.94);
 }
 
 .brand__text {
   font-size: 1.1rem;
   letter-spacing: 0.08em;
+}
+
+.brand__text:hover,
+.brand__text:focus-visible {
+  opacity: 0.75;
 }
 
 .topbar__menu {
@@ -201,6 +217,31 @@ body[data-theme="dark"] .topbar {
 .profile-rail {
   border-right: 1px solid var(--line);
   background: var(--surface);
+  overflow: hidden;
+}
+
+@media (min-width: 1101px) {
+  .layout {
+    transition: grid-template-columns 320ms ease;
+  }
+
+  .layout.sidebar-collapsed {
+    grid-template-columns: 0px minmax(0, 1fr);
+  }
+
+  .layout.sidebar-collapsed .profile-rail {
+    border-right: 0;
+  }
+
+  .profile-rail__inner {
+    transition: opacity 200ms ease, transform 260ms ease;
+  }
+
+  .layout.sidebar-collapsed .profile-rail__inner {
+    opacity: 0;
+    transform: translateX(-24px);
+    pointer-events: none;
+  }
 }
 
 .profile-rail__inner {
@@ -216,18 +257,7 @@ body[data-theme="dark"] .topbar {
 .profile-photo {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 6px 0 0;
-}
-
-.profile-photo__placeholder {
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.profile-photo:hover .profile-photo__placeholder,
-.profile-photo:focus-visible .profile-photo__placeholder {
-  transform: scale(1.03);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+  padding-top: 6px;
 }
 
 .profile-photo__placeholder,
@@ -434,6 +464,16 @@ body[data-theme="dark"] .topbar {
 
 .panel--active {
   display: block;
+}
+
+.alphabet-eyebrow {
+  width: min(1040px, calc(100% - 180px));
+  margin: 0 auto 14px;
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.76rem;
 }
 
 .statement-wrap {
@@ -1213,6 +1253,7 @@ body[data-theme="dark"] .impact-strip article {
   .about-layout,
   .contact-layout,
   .statement-wrap,
+  .alphabet-eyebrow,
   .identity-type,
   .case-study {
     width: calc(100% - 140px);
@@ -1297,6 +1338,7 @@ body[data-theme="dark"] .impact-strip article {
 
   .statement-wrap,
   .alphabet-board,
+  .alphabet-eyebrow,
   .identity-type,
   .about-layout,
   .contact-layout {

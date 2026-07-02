@@ -20,21 +20,21 @@ const geAccessKey = "arpan-ge-case-access";
 let geAccessDestination = "ge-healthcare.html";
 
 const alphabetMessages = {
-  A: "Auto critiques every app I see",
+  A: "Analyzes every app I use, out of habit",
   B: "Builds better flows before better visuals",
   C: "Collects screenshots like design evidence",
   D: "Details matter more than decoration",
   E: "Empathy is my strongest design tool",
   F: "Finds friction before users complain",
-  G: "Grid lover with a soft spot for clarity",
-  H: "Hates hidden actions and messy hierarchy",
+  G: "Grounds every layout in a clear grid",
+  H: "Flags hidden actions and messy hierarchy",
   I: "Interfaces should feel obvious, not impressive only",
   J: "Jumps between research notes and pixel polish",
   K: "Keeps asking why this screen exists",
   L: "Loves making long journeys feel lighter",
   M: "Maps messy requirements into meaningful flows",
   N: "Notices small usability breaks instantly",
-  O: "Obsesses over onboarding and first impressions",
+  O: "Prioritizes onboarding and first impressions",
   P: "Pushes every product toward practical elegance",
   Q: "Questions defaults until the UX earns them",
   R: "Reworks rough edges until the path feels right",
@@ -44,8 +44,8 @@ const alphabetMessages = {
   V: "Visual hierarchy is never accidental",
   W: "Wants every workflow to feel worth it",
   X: "X-rays interfaces for hidden confusion",
-  Y: "Yes, I will redesign that button spacing too",
-  Z: "Zero patience for avoidable friction"
+  Y: "Yields cleaner spacing, one fix at a time",
+  Z: "Zeroes in on avoidable friction fast"
 };
 
 const storedTheme = localStorage.getItem("arpan-wall-theme");
@@ -270,14 +270,12 @@ topbarMenu?.querySelectorAll("a, button").forEach((el) => {
 });
 
 const profileRailToggle = document.getElementById("profileRailToggle");
-const profileAvatarToggle = document.getElementById("profileAvatarToggle");
 const profileRailDetails = document.getElementById("profileRailDetails");
 const profileRailToggleText = profileRailToggle?.querySelector(".profile-rail__toggle-text");
 
 function setProfileDetailsExpanded(isExpanded) {
   profileRailDetails?.classList.toggle("is-collapsed", !isExpanded);
   profileRailToggle?.setAttribute("aria-expanded", String(isExpanded));
-  profileAvatarToggle?.setAttribute("aria-expanded", String(isExpanded));
   if (profileRailToggleText) {
     profileRailToggleText.textContent = isExpanded ? "Hide details" : "Show details";
   }
@@ -289,4 +287,12 @@ function toggleProfileDetails() {
 }
 
 profileRailToggle?.addEventListener("click", toggleProfileDetails);
-profileAvatarToggle?.addEventListener("click", toggleProfileDetails);
+
+const sidebarToggle = document.getElementById("sidebarToggle");
+const layoutEl = document.querySelector(".layout");
+
+sidebarToggle?.addEventListener("click", () => {
+  const isCollapsed = layoutEl?.classList.toggle("sidebar-collapsed");
+  sidebarToggle.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+  sidebarToggle.setAttribute("aria-label", isCollapsed ? "Expand sidebar" : "Collapse sidebar");
+});

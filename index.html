@@ -19,10 +19,19 @@
   </head>
   <body>
     <header class="topbar">
-      <button class="brand" type="button" data-panel-target="home">
-        <span class="brand__mark">AS</span>
-        <span class="brand__text">ARPAN SHETH</span>
-      </button>
+      <div class="brand">
+        <button
+          class="brand__mark"
+          id="sidebarToggle"
+          type="button"
+          aria-label="Collapse sidebar"
+          aria-expanded="true"
+          aria-controls="profileRail"
+        >
+          AS
+        </button>
+        <button class="brand__text" type="button" data-panel-target="home">ARPAN SHETH</button>
+      </div>
 
       <button
         class="hamburger"
@@ -55,18 +64,11 @@
     </header>
 
     <div class="layout">
-      <aside class="profile-rail">
+      <aside class="profile-rail" id="profileRail">
         <div class="profile-rail__inner">
-          <button
-            class="profile-photo"
-            id="profileAvatarToggle"
-            type="button"
-            aria-expanded="true"
-            aria-controls="profileRailDetails"
-            aria-label="Toggle profile details"
-          >
-            <span class="profile-photo__placeholder">AS</span>
-          </button>
+          <div class="profile-photo">
+            <div class="profile-photo__placeholder">AS</div>
+          </div>
 
           <div class="profile-block">
             <h1>Arpan Sheth</h1>
@@ -145,13 +147,15 @@
             </p>
           </div>
 
+          <p class="alphabet-eyebrow reveal">A personal aside — how I think, A to Z</p>
+
           <div class="statement-wrap reveal">
             <div class="statement-line"></div>
             <div class="statement-pin statement-pin--left"></div>
             <div class="statement-pin statement-pin--right"></div>
             <div class="statement-box">
               <p class="statement-letter" id="activeLetter">A</p>
-              <h2 class="statement-text" id="activeMessage">Auto critiques every app I see</h2>
+              <h2 class="statement-text" id="activeMessage">Analyzes every app I use, out of habit</h2>
             </div>
           </div>
 
