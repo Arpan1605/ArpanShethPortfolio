@@ -270,14 +270,23 @@ topbarMenu?.querySelectorAll("a, button").forEach((el) => {
 });
 
 const profileRailToggle = document.getElementById("profileRailToggle");
+const profileAvatarToggle = document.getElementById("profileAvatarToggle");
 const profileRailDetails = document.getElementById("profileRailDetails");
 const profileRailToggleText = profileRailToggle?.querySelector(".profile-rail__toggle-text");
 
-profileRailToggle?.addEventListener("click", () => {
-  const isExpanded = profileRailToggle.getAttribute("aria-expanded") === "true";
-  profileRailToggle.setAttribute("aria-expanded", String(!isExpanded));
-  profileRailDetails?.classList.toggle("is-collapsed", isExpanded);
+function setProfileDetailsExpanded(isExpanded) {
+  profileRailDetails?.classList.toggle("is-collapsed", !isExpanded);
+  profileRailToggle?.setAttribute("aria-expanded", String(isExpanded));
+  profileAvatarToggle?.setAttribute("aria-expanded", String(isExpanded));
   if (profileRailToggleText) {
-    profileRailToggleText.textContent = isExpanded ? "Show details" : "Hide details";
+    profileRailToggleText.textContent = isExpanded ? "Hide details" : "Show details";
   }
-});
+}
+
+function toggleProfileDetails() {
+  const isExpanded = profileRailToggle?.getAttribute("aria-expanded") === "true";
+  setProfileDetailsExpanded(!isExpanded);
+}
+
+profileRailToggle?.addEventListener("click", toggleProfileDetails);
+profileAvatarToggle?.addEventListener("click", toggleProfileDetails);

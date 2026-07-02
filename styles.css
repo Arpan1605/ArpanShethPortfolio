@@ -216,7 +216,18 @@ body[data-theme="dark"] .topbar {
 .profile-photo {
   display: flex;
   justify-content: center;
-  padding-top: 6px;
+  width: 100%;
+  padding: 6px 0 0;
+}
+
+.profile-photo__placeholder {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.profile-photo:hover .profile-photo__placeholder,
+.profile-photo:focus-visible .profile-photo__placeholder {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
 }
 
 .profile-photo__placeholder,
@@ -294,6 +305,16 @@ body[data-theme="dark"] .topbar {
 .profile-rail__details {
   display: grid;
   gap: 18px;
+  overflow: hidden;
+  max-height: 900px;
+  opacity: 1;
+  transition: max-height 280ms ease, opacity 220ms ease;
+}
+
+.profile-rail__details.is-collapsed {
+  max-height: 0;
+  opacity: 0;
+  gap: 0;
 }
 
 .profile-block--muted {
@@ -1215,19 +1236,6 @@ body[data-theme="dark"] .impact-strip article {
 
   .profile-rail__toggle {
     display: flex;
-  }
-
-  .profile-rail__details {
-    overflow: hidden;
-    max-height: 900px;
-    opacity: 1;
-    transition: max-height 280ms ease, opacity 220ms ease, margin-top 220ms ease;
-  }
-
-  .profile-rail__details.is-collapsed {
-    max-height: 0;
-    opacity: 0;
-    gap: 0;
   }
 
   .section-menu {
