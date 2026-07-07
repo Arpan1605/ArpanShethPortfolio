@@ -2430,42 +2430,18 @@ body[data-theme="dark"] .impact-strip article {
   border: 0;
 }
 
-.pareexa-phone-mockup__preview {
+.pareexa-phone-mockup__preview,
+.pareexa-phone-mockup__embed {
   display: block;
   width: 100%;
   height: 520px;
-  object-fit: cover;
-  object-position: center 8%;
+  border: 0;
   background: #fff;
 }
 
-.pareexa-phone-mockup__badge {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(23, 22, 37, 0.82);
-  color: #fff;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.pareexa-phone-mockup__cta {
-  position: absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  text-decoration: none;
-  padding: 9px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+.pareexa-phone-mockup__preview {
+  object-fit: cover;
+  object-position: center 8%;
 }
 
 .pareexa-prompt-strip {
@@ -2587,7 +2563,8 @@ body[data-theme="dark"] .impact-strip article {
     height: 440px;
   }
 
-  .pareexa-phone-mockup__preview {
+  .pareexa-phone-mockup__preview,
+  .pareexa-phone-mockup__embed {
     height: 440px;
   }
 
