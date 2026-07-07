@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tasteX | Arpan Sheth</title>
+    <meta
+      name="description"
+      content="Case study: tasteX — designing a multi-hotel cloud kitchen ordering system across guest, kitchen, and admin portals."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon-as.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="ge-case-page">
+    <header class="topbar ge-case-topbar">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">AS</span>
+        <span class="brand__text">ARPAN SHETH</span>
+      </a>
+
+      <nav class="topbar__nav" aria-label="Case study navigation">
+        <a href="index.html">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="submit-button" href="index.html">Back Home</a>
+      </div>
+    </header>
+
+    <div class="ge-case-shell">
+      <aside class="ge-case-leftnav" aria-label="Case study phases">
+        <div class="ge-case-leftnav__inner">
+          <a href="#overview" class="ge-case-leftnav__item">Overview</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#problem" class="ge-case-leftnav__item">Problem</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#scope" class="ge-case-leftnav__item">Portals</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#design" class="ge-case-leftnav__item">Design System</a>
+          <span class="ge-case-leftnav__rule"></span>
+          <a href="#outcome" class="ge-case-leftnav__item">Outcome</a>
+        </div>
+      </aside>
+
+      <main class="ge-case-main">
+        <nav class="ge-case-rightnav" aria-label="Quick navigation">
+          <a href="index.html">WORK</a>
+          <a href="#overview">ABOUT</a>
+          <a href="resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
+          <a href="index.html#contact">CONTACT</a>
+        </nav>
+
+        <section class="ge-slide ge-slide--hero" id="overview">
+          <div class="ge-hero-copy">
+            <h1>Designing a multi-hotel cloud kitchen ordering system</h1>
+            <p>
+              tasteX is a QR-based room-service ordering system built for a cloud kitchen
+              operation serving multiple hotels within a city. Rather than each hotel running its
+              own in-house kitchen, a single central kitchen fulfills room-service orders across
+              several partner hotels — guests order by scanning a QR code in their room, and the
+              order is routed to whichever kitchen is mapped to that property.
+            </p>
+            <p class="ge-hero-copy__summary">
+              I designed the full system end-to-end: the guest ordering experience, the kitchen
+              staff's order-management dashboard, and the super-admin panel that runs the whole
+              operation across cities, kitchens, hotels, and menus — along with the brand and
+              design system tying all three together.
+            </p>
+          </div>
+
+          <div class="ge-meta-grid">
+            <article>
+              <h2>Role</h2>
+              <p>Freelance Product &amp; UX Designer, covering the guest, kitchen, and admin experiences plus the shared design system.</p>
+            </article>
+            <article>
+              <h2>Duration</h2>
+              <p>January 2026 to May 2026.</p>
+            </article>
+            <article>
+              <h2>Client</h2>
+              <p>A cloud-kitchen operator running centralized room-service kitchens across multiple partner hotels in a city.</p>
+            </article>
+          </div>
+
+          <figure class="browser-mockup">
+            <figcaption class="browser-mockup__bar">
+              <span class="browser-mockup__dots" aria-hidden="true">
+                <span class="browser-mockup__dot"></span>
+                <span class="browser-mockup__dot"></span>
+                <span class="browser-mockup__dot"></span>
+              </span>
+              <span class="browser-mockup__url">admin.tastex.app/dashboard</span>
+            </figcaption>
+            <img src="tastex-admin-overview.png" alt="tasteX admin dashboard overview with revenue, orders, and recent-orders table" />
+          </figure>
+        </section>
+
+        <section class="ge-slide" id="problem">
+          <div class="ge-statement">
+            <h2>
+              Boutique and mid-size hotels couldn't justify a full in-house kitchen —
+              <span>but guests still expected room service.</span>
+            </h2>
+          </div>
+
+          <div class="ge-problem-layout">
+            <div class="ge-document-stack" aria-hidden="true">
+              <div class="ge-document ge-document--back"></div>
+              <div class="ge-document ge-document--mid"></div>
+              <div class="ge-document ge-document--front">
+                <div class="ge-document__lines"></div>
+              </div>
+            </div>
+
+            <div class="ge-problem-copy">
+              <p class="ge-problem-copy__lead">What the system had to reconcile</p>
+              <ul>
+                <li>No affordable way for boutique and mid-size hotels to run their own in-house room-service kitchen</li>
+                <li>One central kitchen needed to reliably serve multiple hotels in the same city</li>
+                <li>Guests should never need to know or care which kitchen was actually cooking their food</li>
+                <li>Kitchen staff needed a simple way to manage incoming orders without training overhead</li>
+                <li>The business needed one central point of control over pricing, menus, and reporting across every city it operated in</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              The product needed to work for three completely different users, each with
+              different devices and different concerns — a hotel guest ordering from their room,
+              kitchen staff managing a live queue, and a super admin running the operation across
+              cities. That split is what shaped the rest of the system.
+            </p>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="scope">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Three portals, one system.</h2>
+          </div>
+
+          <div class="tastex-table-wrap">
+            <table class="tastex-portal-table">
+              <thead>
+                <tr>
+                  <th scope="col">Portal</th>
+                  <th scope="col">Device</th>
+                  <th scope="col">User</th>
+                  <th scope="col">Core job</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Guest</td>
+                  <td>Mobile-first (375px+)</td>
+                  <td>Hotel guests</td>
+                  <td>Order food from their room</td>
+                </tr>
+                <tr>
+                  <td>Kitchen</td>
+                  <td>Desktop (1024px+)</td>
+                  <td>Kitchen staff</td>
+                  <td>Accept, prepare, and fulfill orders</td>
+                </tr>
+                <tr>
+                  <td>Admin</td>
+                  <td>Desktop (1280px+)</td>
+                  <td>Super admin</td>
+                  <td>Manage cities, kitchens, hotels, menus, pricing, and reporting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Guest flow: QR &rarr; OTP &rarr; Menu &rarr; Cart &rarr; Pay &rarr; Confirm</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              The guest experience is deliberately linear, with no back-tracking once
+              verification starts: a QR scan (with a manual hotel-and-room-number fallback for
+              when scanning fails), OTP verification re-checked every session since no login
+              persists between visits, a menu filtered by veg/non-veg and organized into
+              categories, a prepaid-only cart with a full GST breakdown, and a confirmation screen
+              where the order ID, estimated time, and kitchen routing are handled invisibly in the
+              background.
+            </p>
+            <p>
+              I carried this through two fidelity stages — structural wireframes to lock the flow
+              logic first, then this fully-branded high-fidelity build in orange, with realistic
+              menu content, live-feeling payment states ("Processing Payment," "Verifying
+              Payment"), and a working demo mode that simulates the QR scan for testing without
+              needing a real hotel room.
+            </p>
+          </div>
+
+          <div class="tastex-flow-board">
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-landing.png" alt="Guest landing screen with QR demo mode and a list of hotels to scan" /></div>
+              <figcaption><strong>1. QR scan</strong><span>Demo mode simulates scanning a room's QR code</span></figcaption>
+            </figure>
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-otp.png" alt="OTP verification screen with a 6-digit code entry" /></div>
+              <figcaption><strong>2. OTP verify</strong><span>Re-verified every session, no persistent login</span></figcaption>
+            </figure>
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-menu.png" alt="Guest menu screen filtered by veg and non-veg, organized by category" /></div>
+              <figcaption><strong>3. Browse menu</strong><span>Filtered by veg/non-veg, grouped by category</span></figcaption>
+            </figure>
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-cart.png" alt="Cart screen with a bill summary including GST and total payable" /></div>
+              <figcaption><strong>4. Cart</strong><span>Full price breakdown with GST, prepaid only</span></figcaption>
+            </figure>
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-checkout.png" alt="Checkout screen with UPI, card, and net banking payment method options" /></div>
+              <figcaption><strong>5. Pay</strong><span>UPI, card, or net banking — no cash on delivery</span></figcaption>
+            </figure>
+            <figure class="tastex-flow-card">
+              <div class="tastex-flow-screen"><img src="tastex-guest-tracking.png" alt="Order tracking screen with a progress timeline from order placed to delivered" /></div>
+              <figcaption><strong>6. Confirm &amp; track</strong><span>Order ID, ETA, and a live status timeline</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Kitchen flow: a status-driven queue kitchen staff can glance at between orders.</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              Kitchen staff needed something they could check between orders, not a dashboard
+              requiring training. The screen leads with at-a-glance counts — New, Active, Done,
+              and average service time — then a filterable order list: all hotels or one, and
+              every stage from New through Delivered. Each order expands to show its items and a
+              single action button that advances it to the next stage — Accept, Start Preparing,
+              Mark Ready, Mark Delivered — so staff never have to guess what to do next. A live
+              "new orders" badge in the header calls out anything unaccepted. Deliberately absent:
+              pricing or revenue figures. Kitchen staff see what they need to cook and route,
+              nothing else.
+            </p>
+          </div>
+
+          <div class="tastex-desktop-board">
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-kitchen-dashboard.png" alt="Kitchen dashboard with New, Active, Done, and Avg Time counts above a filtered list of active orders" /></div>
+              <figcaption>Active-orders view, filtered by hotel and status</figcaption>
+            </figure>
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-kitchen-expanded.png" alt="An expanded order card showing itemized order details, a timeline, and a status-advance button" /></div>
+              <figcaption>Expanded order: items, timeline, and the next-stage action</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Admin: central control, without local overrides.</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              The admin panel is the operational backbone: a six-tab structure — Cities, Kitchens,
+              Hotels, Menu, QR Codes, Reports — sitting under one hard rule: pricing is centrally
+              controlled and propagates to every city, so no single hotel or kitchen can quietly
+              override a price. Hotels map to exactly one kitchen each, which prevents the
+              ambiguity of an order being split across two kitchens. QR codes are generated and
+              managed per hotel, with PNG and PDF export for printing.
+            </p>
+          </div>
+
+          <div class="tastex-desktop-board">
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-admin-hotels.png" alt="Admin Hotels tab listing every partner hotel with its mapped kitchen, order count, and revenue" /></div>
+              <figcaption>Hotels — each mapped to exactly one kitchen</figcaption>
+            </figure>
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-admin-menu.png" alt="Admin Menu tab with centrally-priced items grouped by category and an availability toggle per item" /></div>
+              <figcaption>Menu — centralized pricing, changes apply across every city</figcaption>
+            </figure>
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-admin-qr.png" alt="Admin QR Codes tab generating a unique QR code per hotel with PNG and PDF export" /></div>
+              <figcaption>QR Codes — one per hotel, exportable as PNG or PDF</figcaption>
+            </figure>
+            <figure class="tastex-desktop-card">
+              <div class="tastex-desktop-screen"><img src="tastex-admin-reports.png" alt="Admin Reports tab with revenue by hotel and a ranked list of top-ordered items" /></div>
+              <figcaption>Reports — revenue by hotel and top-ordered items</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="design">
+          <div class="ge-statement ge-statement--compact">
+            <h2>One design system underneath three portals.</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              Rather than design three portals as separate products, I built a shared design
+              system underneath all of them.
+            </p>
+          </div>
+
+          <div class="tastex-system-grid">
+            <article>
+              <h3>Brand</h3>
+              <p>Name treated strictly as "tasteX" (never TasteX or Tastex), tagline "Room to Order." — direct, warm, reliable, efficient by design intent.</p>
+            </article>
+            <article>
+              <h3>Color</h3>
+              <p>A deliberate accent color — orange — reserved for all primary actions and prices, plus semantic colors for status (green/yellow/red for order states) and a distinct accent reserved specifically for the admin portal, to visually separate "operator" surfaces from guest-facing ones.</p>
+            </article>
+            <article>
+              <h3>Typography</h3>
+              <p>Plus Jakarta Sans for display/headings, Inter for body and UI — a paired system rather than a single font doing every job.</p>
+            </article>
+            <article>
+              <h3>Spacing</h3>
+              <p>A 4px base-unit scale, applied consistently from icon gaps up to page-section margins.</p>
+            </article>
+            <article>
+              <h3>Components</h3>
+              <p>A documented library of buttons, form fields, badges, cards, and a dedicated OTP input component, so all three portals stayed visually and behaviorally consistent.</p>
+            </article>
+          </div>
+
+          <div class="tastex-swatch-row" aria-hidden="true">
+            <span class="tastex-swatch" style="background:#f97316;">Primary</span>
+            <span class="tastex-swatch" style="background:#22c55e;">Ready</span>
+            <span class="tastex-swatch" style="background:#eab308;">Preparing</span>
+            <span class="tastex-swatch" style="background:#ef4444;">Non-veg</span>
+            <span class="tastex-swatch" style="background:#7c3aed;">Admin</span>
+            <span class="tastex-swatch" style="background:#3b82f6;">Kitchen</span>
+          </div>
+
+          <div class="ge-statement ge-statement--compact tastex-rules-heading">
+            <h2>Encoding the rules into the design.</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              Because this system runs on a few non-negotiable business rules, I documented them
+              explicitly as design principles alongside a "don't" list. Treating these as
+              first-class design constraints — not just backend rules — meant the UI itself made
+              the wrong actions structurally unavailable, rather than relying on staff to remember
+              not to break them.
+            </p>
+          </div>
+
+          <div class="tastex-rules">
+            <div class="tastex-rules__col tastex-rules__col--do">
+              <h3>Design principles</h3>
+              <ul>
+                <li>Prepaid checkout only</li>
+                <li>Mandatory OTP re-verification every session</li>
+                <li>One kitchen per hotel, no exceptions</li>
+                <li>Pricing controlled centrally, propagated everywhere</li>
+              </ul>
+            </div>
+            <div class="tastex-rules__col tastex-rules__col--dont">
+              <h3>Structurally unavailable</h3>
+              <ul>
+                <li>No postpaid or cash-on-delivery</li>
+                <li>No OTP bypass</li>
+                <li>No local price overrides</li>
+                <li>No splitting a hotel across kitchens</li>
+                <li>No exposing kitchen identity or revenue data to the wrong role</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pareexa-prototype-section pareexa-prototype-section--single">
+            <div class="pareexa-prototype-copy">
+              <span>Live Prototype</span>
+              <h3>Explore the full guest ordering flow</h3>
+              <p>
+                The interactive prototype below is walkable end to end — QR scan through order
+                confirmation — in the same Figma file used to validate the flow.
+              </p>
+              <p class="pareexa-metrics-note pareexa-metrics-note--centered">
+                This file predates the tasteX rebrand, so its in-app header and admin sidebar
+                still read "RoomServe" — the flows and screens themselves are otherwise current.
+              </p>
+              <a
+                class="pareexa-prototype-link"
+                href="https://www.figma.com/proto/J5SAuw6E1Xv6LZEVKBqOML/TasteX?node-id=4002-3&viewport=860%2C501%2C0.14&t=fYQK2dnaaF3gDFbc-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4002%3A3&page-id=4002%3A2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open full-screen in Figma
+              </a>
+            </div>
+            <div class="pareexa-phone-mockup">
+              <span class="pareexa-phone-mockup__top"></span>
+              <div class="pareexa-phone-mockup__screen">
+                <iframe
+                  class="pareexa-phone-mockup__embed"
+                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJ5SAuw6E1Xv6LZEVKBqOML%2FTasteX%3Fnode-id%3D4002-3%26viewport%3D860%252C501%252C0.14%26t%3DfYQK2dnaaF3gDFbc-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D4002%253A3%26page-id%3D4002%253A2"
+                  title="tasteX interactive guest ordering prototype"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="outcome">
+          <div class="ge-statement ge-statement--compact">
+            <h2>In UAT, ahead of a production rollout.</h2>
+          </div>
+
+          <p class="pareexa-status-note">
+            tasteX has moved beyond design and prototyping into UAT (User Acceptance Testing),
+            with the system deployed in a test environment across the guest, kitchen, and admin
+            portals. Testing is currently in progress ahead of a production rollout, and a
+            rollout timeline has not yet been set.
+          </p>
+
+          <div class="ge-impact-grid">
+            <article>
+              <strong>Order visibility</strong>
+              <span>The status-driven queue gave kitchen staff clear, at-a-glance visibility into what's pending, being cooked, and ready</span>
+            </article>
+            <article>
+              <strong>Operational reporting</strong>
+              <span>Admin's reporting tools are used for monthly operational reporting, and stakeholders have started using them as a de facto inventory-tracking tool too</span>
+            </article>
+            <article>
+              <strong>Simplified ordering</strong>
+              <span>The QR code itself encodes the hotel and room, so guests never manually identify or select either one</span>
+            </article>
+          </div>
+
+          <div class="ge-reflection">
+            <p>
+              tasteX is currently in UAT, and stakeholder feedback so far has centered on these
+              three concrete improvements over the previous way of managing room-service. A
+              production rollout timeline has not yet been set, as UAT is ongoing — the figures
+              above reflect stakeholder-reported feedback during testing, not post-launch
+              analytics.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      (function () {
+        const leftNavLinks = Array.from(document.querySelectorAll(".ge-case-leftnav__item"));
+        const observedSections = leftNavLinks
+          .map((link) => {
+            const targetId = link.getAttribute("href");
+            if (!targetId || !targetId.startsWith("#")) {
+              return null;
+            }
+            const section = document.querySelector(targetId);
+            return section ? { link, section } : null;
+          })
+          .filter(Boolean);
+
+        if (!observedSections.length) {
+          return;
+        }
+
+        function setActiveSection(id) {
+          leftNavLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+          });
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visibleEntries = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (!visibleEntries.length) {
+              return;
+            }
+
+            setActiveSection(visibleEntries[0].target.id);
+          },
+          {
+            rootMargin: "-30% 0px -45% 0px",
+            threshold: [0.2, 0.35, 0.55]
+          }
+        );
+
+        observedSections.forEach(({ section }) => observer.observe(section));
+
+        function syncActiveSectionFromScroll() {
+          let currentSection = observedSections[0].section.id;
+
+          observedSections.forEach(({ section }) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.32) {
+              currentSection = section.id;
+            }
+          });
+
+          setActiveSection(currentSection);
+        }
+
+        syncActiveSectionFromScroll();
+        window.addEventListener("scroll", syncActiveSectionFromScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

@@ -2955,4 +2955,246 @@ body[data-theme="dark"] .impact-strip article {
   .ge-case-lock__card {
     padding: 26px;
   }
+
+  .tastex-flow-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tastex-desktop-board {
+    grid-template-columns: 1fr;
+  }
+
+  .tastex-system-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tastex-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .tastex-portal-table {
+    font-size: 0.82rem;
+  }
+
+  .tastex-portal-table th,
+  .tastex-portal-table td {
+    padding: 12px 14px;
+  }
+}
+
+/* tasteX case study */
+.tastex-table-wrap {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  overflow-x: auto;
+}
+
+.tastex-portal-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ecece8;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tastex-portal-table th,
+.tastex-portal-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ecece8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.tastex-portal-table th {
+  background: #fafaf8;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #74747a;
+  font-weight: 600;
+}
+
+.tastex-portal-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tastex-portal-table td:first-child {
+  font-weight: 600;
+  color: #1f1f23;
+}
+
+.tastex-flow-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tastex-flow-card {
+  margin: 0;
+  padding: 12px 12px 14px;
+  border: 1px solid #ecece8;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tastex-flow-screen {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #ecece8;
+  background: #fafafa;
+}
+
+.tastex-flow-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tastex-flow-card figcaption {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.tastex-flow-card figcaption strong {
+  display: block;
+  font-size: 0.86rem;
+  color: #1f1f23;
+}
+
+.tastex-flow-card figcaption span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #86868c;
+  line-height: 1.4;
+}
+
+.tastex-desktop-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tastex-desktop-card {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #ecece8;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tastex-desktop-screen {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ecece8;
+}
+
+.tastex-desktop-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tastex-desktop-card figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #74747a;
+}
+
+.tastex-system-grid {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tastex-system-grid article {
+  padding: 20px 22px;
+  border: 1px solid #ecece8;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.tastex-system-grid h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #1f1f23;
+}
+
+.tastex-system-grid p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #5a5a62;
+}
+
+.tastex-swatch-row {
+  max-width: 1120px;
+  margin: 22px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tastex-swatch {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.tastex-rules-heading {
+  margin-top: 56px;
+}
+
+.tastex-rules {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.tastex-rules__col {
+  padding: 24px 26px;
+  border-radius: 18px;
+  border: 1px solid #ecece8;
+}
+
+.tastex-rules__col--do {
+  background: #f4faf5;
+}
+
+.tastex-rules__col--dont {
+  background: #fdf5f5;
+}
+
+.tastex-rules__col h3 {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #4f5058;
+}
+
+.tastex-rules__col ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #303239;
 }
