@@ -2372,6 +2372,14 @@ body[data-theme="dark"] .impact-strip article {
   align-items: center;
 }
 
+.pareexa-prototype-section--single {
+  grid-template-columns: 1fr;
+}
+
+.pareexa-prototype-section--single .pareexa-prototype-copy p {
+  max-width: 640px;
+}
+
 .pareexa-prototype-copy p {
   margin: 0 0 18px;
   color: #565760;
