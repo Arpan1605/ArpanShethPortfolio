@@ -1508,6 +1508,17 @@ body[data-theme="dark"] .impact-strip article {
   line-height: 1.55;
 }
 
+.ge-hero-copy p.ge-hero-copy__summary {
+  max-width: 760px;
+  padding: 16px 22px;
+  border: 1px solid #ecece8;
+  border-radius: 14px;
+  background: #fff;
+  color: #3a3a40;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
 .pareexa-hero-stats {
   max-width: 1120px;
   margin: 32px auto 0;
@@ -1997,6 +2008,13 @@ body[data-theme="dark"] .impact-strip article {
   padding-left: 18px;
   color: #565760;
   line-height: 1.7;
+}
+
+.pareexa-metrics-note {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  color: #8f9097;
+  line-height: 1.55;
 }
 
 .pareexa-journey-block {
@@ -2681,6 +2699,40 @@ body[data-theme="dark"] .impact-strip article {
   background: #1f1f23;
 }
 
+.pareexa-wireframe-board--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wf-bubble {
+  align-self: flex-start;
+  max-width: 90%;
+  padding: 6px 8px;
+  border-radius: 9px;
+  background: #eeeeec;
+}
+
+.wf-bubble p {
+  margin: 0;
+  font-size: 0.46rem;
+  line-height: 1.35;
+  color: #3a3a40;
+}
+
+.wf-bubble--user {
+  align-self: flex-end;
+  background: #1f1f23;
+}
+
+.wf-bubble--user p {
+  color: #fff;
+}
+
+.wf-card strong {
+  display: block;
+  font-size: 0.5rem;
+  color: #26262b;
+}
+
 .pareexa-prototype-copy p {
   margin: 0 0 18px;
   color: #565760;
@@ -2745,9 +2797,16 @@ body[data-theme="dark"] .impact-strip article {
   object-position: center 8%;
 }
 
-.pareexa-prompt-strip {
+.pareexa-prompt-strip__label {
   max-width: 1120px;
   margin: 30px auto 0;
+  color: #6d6d75;
+  line-height: 1.65;
+}
+
+.pareexa-prompt-strip {
+  max-width: 1120px;
+  margin: 14px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
