@@ -39,15 +39,29 @@ export function lockedBody(errored) {
   return `
     <div class="ge-case-lock is-open" role="dialog" aria-modal="true">
       <div class="ge-case-lock__card">
-        <p class="ge-access-modal__eyebrow">Protected case study</p>
-        <h1>GE Healthcare Asset Lifecycle Management</h1>
+        <p class="ge-access-modal__eyebrow">Healthcare &amp; Enterprise Operations</p>
+        <h1>Scaling an Enterprise Healthcare Platform from 50 to 2,000+ Global Users</h1>
+        <div class="ge-access-modal__tags">
+          <span class="ge-access-modal__tag">Enterprise SaaS</span>
+          <span class="ge-access-modal__tag">Workflow Design</span>
+          <span class="ge-access-modal__tag">Design Systems</span>
+          <span class="ge-access-modal__tag">Stakeholder Research</span>
+        </div>
         <p class="ge-access-modal__copy">
-          This project includes enterprise work covered by an NDA, so it's gated rather than public.
-          If you're a recruiter or hiring manager, email me and I'll send access or walk you through it live.
+          Led UX design across lease, loan, end-of-term, remarketing, and financial workflows for a
+          global enterprise healthcare platform — consolidating fragmented processes into a
+          consistent, scalable design system as the user base grew more than 40x.
         </p>
-        <a class="ge-access-modal__request" href="mailto:mrarpansheth@gmail.com?subject=GE%20Healthcare%20case%20study%20access">
-          Request access by email
-        </a>
+        <p class="ge-access-modal__nda">
+          This case study covers proprietary enterprise workflows under NDA with GE Healthcare. The
+          scope, role, and design approach above are shareable — detailed screens, internal data, and
+          specific outcome metrics are available on request.
+        </p>
+        <div class="ge-access-modal__ctas">
+          <a class="ge-access-modal__request" href="mailto:mrarpansheth@gmail.com?subject=GE%20Healthcare%20case%20study%20access">
+            Request Full Case Study
+          </a>
+        </div>
         <form class="ge-access-modal__form" id="geCaseLockForm">
           <label class="ge-access-modal__label" for="geCasePassword">Already have the password?</label>
           <input
