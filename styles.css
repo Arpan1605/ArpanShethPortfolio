@@ -870,7 +870,6 @@ body[data-theme="dark"] .ge-case-lock__card {
 
 .ge-access-modal__request {
   display: inline-block;
-  margin-bottom: 24px;
   padding: 14px 20px;
   border-radius: 18px;
   border: 1px solid var(--line);
@@ -884,6 +883,57 @@ body[data-theme="dark"] .ge-case-lock__card {
 .ge-access-modal__request:focus-visible {
   border-color: rgba(0, 0, 0, 0.28);
   transform: translateY(-1px);
+}
+
+.ge-access-modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.ge-access-modal__tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.ge-access-modal__nda {
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+body[data-theme="dark"] .ge-access-modal__nda {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ge-access-modal__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.ge-access-modal__secondary {
+  color: var(--muted);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ge-access-modal__secondary:hover,
+.ge-access-modal__secondary:focus-visible {
+  color: var(--text);
 }
 
 .ge-access-modal__form {
