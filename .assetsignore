@@ -1,0 +1,6 @@
+# Cloudflare Pages: these are excluded from static-asset publishing by default already
+# (functions/ becomes the Pages Function bundle, not a servable directory), but this is
+# listed explicitly so the exclusion doesn't silently depend on default behavior.
+functions/
+.wrangler/
+node_modules/
