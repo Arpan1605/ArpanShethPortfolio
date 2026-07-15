@@ -214,7 +214,7 @@ export const protectedBody = `
             <h2>Enterprise UX that scaled with the business.</h2>
           </div>
 
-          <div class="ge-impact-grid">
+          <div class="ge-impact-grid ge-impact-grid--quad">
             <article>
               <strong>50 &rarr; 2,000+</strong>
               <span>Growth in supported users</span>
@@ -224,16 +224,22 @@ export const protectedBody = `
               <span>Expanded workflow ecosystem</span>
             </article>
             <article>
-              <strong>One source of truth</strong>
-              <span>Better visibility and reduced manual coordination</span>
+              <strong>40% faster</strong>
+              <span>Quote turnaround time</span>
+            </article>
+            <article>
+              <strong>30% higher</strong>
+              <span>Stakeholder satisfaction scores</span>
             </article>
           </div>
 
           <div class="ge-reflection">
             <p>
               The biggest learning from this project was designing for systems, not just screens.
-              It sharpened my ability to structure workflows, work across cross-functional teams,
-              and turn operational complexity into clearer digital experiences.
+              Consolidating queues, statuses, and approvals into one source of truth cut down on
+              manual coordination and gave teams visibility they didn't have before — it sharpened
+              my ability to structure workflows, work across cross-functional teams, and turn
+              operational complexity into clearer digital experiences.
             </p>
           </div>
         </section>
