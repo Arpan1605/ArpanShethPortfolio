@@ -1904,6 +1904,10 @@ body[data-theme="dark"] .impact-strip article {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ge-impact-grid--quad {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .ge-evolution-grid article,
 .ge-module-grid article,
 .ge-impact-grid article {
@@ -2947,6 +2951,7 @@ body[data-theme="dark"] .impact-strip article {
   .pareexa-analytics-story,
   .ge-module-grid,
   .ge-impact-grid,
+  .ge-impact-grid--quad,
   .pareexa-board-pair,
   .pareexa-focus-grid,
   .pareexa-prototype-section,
