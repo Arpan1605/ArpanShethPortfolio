@@ -936,6 +936,16 @@ body[data-theme="dark"] .ge-access-modal__nda {
   color: var(--text);
 }
 
+.ge-access-modal__ctas--centered {
+  max-width: 820px;
+  margin: 0 auto 44px;
+  justify-content: center;
+}
+
+.ge-access-modal__ctas--centered .ge-access-modal__request {
+  color: var(--text);
+}
+
 .ge-access-modal__form {
   display: grid;
   gap: 14px;
