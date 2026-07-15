@@ -9,9 +9,6 @@ const revealItems = document.querySelectorAll(".reveal");
 const profileModal = document.getElementById("profileModal");
 const openProfileModal = document.getElementById("openProfileModal");
 const closeProfileModal = document.getElementById("closeProfileModal");
-const geAccessModal = document.getElementById("geAccessModal");
-const closeGeAccessModal = document.getElementById("closeGeAccessModal");
-const geProtectedLinks = document.querySelectorAll("[data-ge-protected]");
 
 const alphabetMessages = {
   A: "Analyzes every app I use, out of habit",
@@ -154,16 +151,6 @@ function hideProfileModal() {
   profileModal?.setAttribute("aria-hidden", "true");
 }
 
-function showGeAccessModal() {
-  geAccessModal?.classList.add("is-open");
-  geAccessModal?.setAttribute("aria-hidden", "false");
-}
-
-function hideGeAccessModal() {
-  geAccessModal?.classList.remove("is-open");
-  geAccessModal?.setAttribute("aria-hidden", "true");
-}
-
 sectionLinks.forEach((link) => {
   if (!link.matches("button")) {
     return;
@@ -183,20 +170,6 @@ closeProfileModal?.addEventListener("click", hideProfileModal);
 profileModal?.addEventListener("click", (event) => {
   if (event.target === profileModal) {
     hideProfileModal();
-  }
-});
-
-geProtectedLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    showGeAccessModal();
-  });
-});
-
-closeGeAccessModal?.addEventListener("click", hideGeAccessModal);
-geAccessModal?.addEventListener("click", (event) => {
-  if (event.target === geAccessModal) {
-    hideGeAccessModal();
   }
 });
 
