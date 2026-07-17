@@ -3307,3 +3307,438 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.5;
   color: #303239;
 }
+
+/* GolfPac high-fidelity screen recreations. Real text/pricing/structure as shown to me;
+   photo areas are gradient placeholders since the source photography wasn't available as
+   files, not attempts to pass as real photos. */
+.golfpac-hifi-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.golfpac-hifi-board--single {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+}
+
+.golfpac-screen {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2e5ea;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  font-size: 6px;
+  line-height: 1.4;
+}
+
+.golfpac-screen__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6em 2.4em;
+  background: #0f1c33;
+  color: #cbd5e1;
+  font-size: 1em;
+}
+
+.golfpac-screen__topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.6em;
+}
+
+.golfpac-screen__book {
+  padding: 0.5em 1.1em;
+  border-radius: 5px;
+  background: #14b8d6;
+  color: #06232b;
+  font-weight: 700;
+}
+
+.golfpac-screen__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8em 2.4em;
+  border-bottom: 1px solid #eef0f3;
+  font-size: 1.1em;
+}
+
+.golfpac-screen__logo {
+  font-weight: 800;
+  font-size: 1.5em;
+  color: #14b8d6;
+  letter-spacing: 0.01em;
+}
+
+.golfpac-screen__logo span {
+  display: block;
+  font-size: 0.4em;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.15em;
+}
+
+.golfpac-screen__nav-links {
+  display: flex;
+  gap: 1.6em;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+.golfpac-screen__tabs {
+  display: flex;
+  border-bottom: 1px solid #eef0f3;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.golfpac-screen__tab {
+  flex: 1;
+  padding: 1em;
+  text-align: center;
+  color: #64748b;
+}
+
+.golfpac-screen__tab.is-active {
+  background: #14b8d6;
+  color: #fff;
+}
+
+.golfpac-screen__body {
+  padding: 2em;
+  background: #f6f8fa;
+}
+
+.golfpac-photo {
+  border-radius: 8px;
+  background: linear-gradient(135deg, #7fd6c2, #1c7a8c);
+}
+
+.golfpac-photo--sky {
+  background: linear-gradient(135deg, #a7d8f0, #2f6fa8);
+}
+
+.golfpac-photo--course {
+  background: linear-gradient(135deg, #9bd48a, #2f7a4f);
+}
+
+.golfpac-hero-photo {
+  height: 9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  gap: 0.4em;
+  background: linear-gradient(135deg, #386b4a, #1c3d2c);
+}
+
+.golfpac-hero-photo h3 {
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: 800;
+}
+
+.golfpac-hero-photo p {
+  margin: 0;
+  font-size: 1.05em;
+  opacity: 0.9;
+}
+
+.golfpac-trust-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.4em 0;
+  background: #fff;
+  text-align: center;
+}
+
+.golfpac-trust-bar strong {
+  display: block;
+  color: #14b8d6;
+  font-size: 1.3em;
+}
+
+.golfpac-trust-bar span {
+  color: #64748b;
+  font-size: 0.95em;
+}
+
+.golfpac-card {
+  border-radius: 8px;
+  border: 1px solid #e5e8ec;
+  background: #fff;
+  overflow: hidden;
+}
+
+.golfpac-card__photo {
+  height: 4.4em;
+  position: relative;
+}
+
+.golfpac-card__badge {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+  background: #14b8d6;
+  color: #fff;
+  font-size: 0.82em;
+  font-weight: 700;
+}
+
+.golfpac-card__badge--sale {
+  background: #dc2626;
+}
+
+.golfpac-card__body {
+  padding: 0.8em;
+}
+
+.golfpac-card__body h4 {
+  margin: 0 0 0.2em;
+  font-size: 1.08em;
+  color: #0f172a;
+}
+
+.golfpac-card__meta {
+  margin: 0 0 0.4em;
+  color: #64748b;
+  font-size: 0.92em;
+}
+
+.golfpac-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.golfpac-card__price strong {
+  font-size: 1.15em;
+  color: #0f172a;
+}
+
+.golfpac-card__price span {
+  color: #14b8d6;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.golfpac-row {
+  display: grid;
+  gap: 0.9em;
+}
+
+.golfpac-row--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.golfpac-row--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.golfpac-section-label {
+  margin: 0 0 0.8em;
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.15em;
+}
+
+.golfpac-form-block {
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #e5e8ec;
+  background: #fff;
+  margin-bottom: 0.8em;
+}
+
+.golfpac-form-block__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.6em;
+}
+
+.golfpac-form-block__label::before {
+  content: "";
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 3px;
+  background: #14b8d6;
+}
+
+.golfpac-input {
+  height: 1.9em;
+  border-radius: 5px;
+  border: 1px solid #dbe0e6;
+  background: #fff;
+}
+
+.golfpac-tabbed-card {
+  max-width: 22em;
+  margin: 1.6em auto 0;
+  border-radius: 10px;
+  border: 1px solid #e5e8ec;
+  background: #fff;
+  overflow: hidden;
+}
+
+.golfpac-tabbed-card__tabs {
+  display: flex;
+  font-weight: 700;
+  text-align: center;
+}
+
+.golfpac-tabbed-card__tabs span {
+  flex: 1;
+  padding: 0.9em;
+  color: #94a3b8;
+  border-bottom: 2px solid transparent;
+}
+
+.golfpac-tabbed-card__tabs span.is-active {
+  color: #14b8d6;
+  border-color: #14b8d6;
+}
+
+.golfpac-tabbed-card__body {
+  padding: 1.2em;
+}
+
+.golfpac-legal {
+  padding: 1.6em 2em;
+  background: #0f1c33;
+  color: #fff;
+}
+
+.golfpac-legal h3 {
+  margin: 0.3em 0;
+  font-size: 1.6em;
+}
+
+.golfpac-legal p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95em;
+}
+
+.golfpac-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #74747a;
+}
+
+/* GolfPac low-fidelity wireframe recreations, desktop aspect */
+.golfpac-wireframe-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.golfpac-wireframe-card {
+  padding: 0;
+  border: 1px solid #ecece8;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.golfpac-wireframe-screen {
+  aspect-ratio: 16 / 10;
+  padding: 14px 16px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 7px;
+}
+
+.golfpac-wireframe-card figcaption {
+  padding: 12px 16px 16px;
+  text-align: center;
+}
+
+.golfpac-wireframe-card figcaption strong {
+  display: block;
+  font-size: 0.86rem;
+  color: #1f1f23;
+}
+
+.golfpac-wireframe-card figcaption span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #86868c;
+  line-height: 1.4;
+}
+
+.golfpac-field {
+  margin-bottom: 0.8em;
+}
+
+.golfpac-field label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9em;
+  color: #334155;
+  margin-bottom: 0.35em;
+}
+
+.golfpac-cta {
+  margin-top: 1em;
+  padding: 0.8em;
+  border-radius: 6px;
+  background: #14b8d6;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+
+.golfpac-cta--dark {
+  background: #0f1c33;
+}
+
+.golfpac-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.92em;
+  color: #334155;
+  margin: 0.8em 0;
+}
+
+.golfpac-checkbox {
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.golfpac-muted {
+  color: #64748b;
+}
+
+.golfpac-center {
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .golfpac-hifi-board,
+  .golfpac-wireframe-board {
+    grid-template-columns: 1fr;
+  }
+}
