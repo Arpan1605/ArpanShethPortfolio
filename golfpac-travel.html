@@ -60,8 +60,8 @@
           <div class="ge-hero-copy">
             <h1>Modernizing a dated booking experience to recover falling conversions</h1>
             <p>
-              GolfPac Travel offers custom golf vacation packages across the US. The existing
-              site had an early-2000s look and feel, and the client's core concern was that this
+              GolfPac Travel offers custom golf vacation packages across the US. The existing site
+              had an early-2000s look and feel, and the client's core concern was that this
               outdated presentation was actively costing them conversions — users landing on the
               site weren't trusting or engaging with it the way a modern travel platform would expect.
             </p>
@@ -91,16 +91,17 @@
               </span>
               <span class="browser-mockup__url">golfpactravel.com/start-planning</span>
             </figcaption>
-            <img src="golfpac-hero.png" alt="GolfPac Travel redesigned start-planning page with hero banner, tab navigation, and the Design Your Own Golf Package form" />
+            <img src="golfpac-hero.png" alt="Early GolfPac Travel redesign exploration with a wooded hero banner and tabbed entry point" />
           </figure>
+          <p class="golfpac-caption">An earlier exploration pass — the visual language was refined further through the high-fidelity stage below.</p>
         </section>
 
         <section class="ge-slide" id="problem">
           <div class="ge-statement">
             <h2>
               The site's visual design and interaction patterns hadn't kept pace with
-              <span>modern booking experiences</span>, and it wasn't obvious how to move from
-              browsing to requesting a quote.
+              <span>modern booking experiences</span>, and the booking flow itself didn't clearly
+              guide users toward action.
             </h2>
           </div>
 
@@ -118,104 +119,532 @@
               <ul>
                 <li>An early-2000s look and feel that read as untrustworthy to modern travel shoppers</li>
                 <li>Falling conversion rates the client attributed directly to the outdated presentation</li>
-                <li>No clear first action — three planning paths competed for attention with no obvious entry point</li>
-                <li>A booking flow that didn't guide users from "interested" to "requesting a quote"</li>
+                <li>Three separate planning paths competing for attention on the homepage with no shared structure, making it unclear which one to use</li>
+                <li>A booking flow that didn't clearly guide users toward action beyond the aesthetics</li>
               </ul>
             </div>
           </div>
 
           <div class="ge-split-text">
             <p>
-              The brief was direct: modernize the visual design, and make sure every change served
-              a real usability purpose rather than just a cosmetic refresh — improve how users
-              could explore options and move through the site with confidence.
+              The client's brief was direct: modernize the visual design, and make sure every
+              change served a real usability purpose rather than just a cosmetic refresh — improve
+              how users could explore options and move through the site with confidence.
+            </p>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="approach">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Wireframes first, then a full visual rebuild.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              I worked through this in two stages: structural black-and-white wireframes first, to
+              lock down flow logic before any visual design began, followed by full high-fidelity
+              design once the structure was validated.
             </p>
           </div>
         </section>
 
         <section class="ge-slide">
           <div class="ge-statement ge-statement--compact">
-            <h2>Before and after the redesign</h2>
-          </div>
-
-          <div class="golfpac-compare">
-            <div class="golfpac-compare__panel golfpac-compare__panel--text">
-              <span class="golfpac-compare__tag">Before</span>
-              <p>
-                An early-2000s layout with three competing entry points and no clear first action,
-                on the previous booking site the client asked GolfPac to move away from.
-              </p>
-              <p class="golfpac-compare__note">
-                No screenshot of the legacy site is shown here to keep this case study focused on
-                GolfPac's own product rather than a third-party site.
-              </p>
-            </div>
-            <figure class="golfpac-compare__panel golfpac-compare__panel--image">
-              <span class="golfpac-compare__tag">After</span>
-              <img src="golfpac-hero.png" alt="GolfPac Travel's redesigned start-planning hero with a single tabbed entry point" />
-            </figure>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="approach">
-          <div class="ge-statement ge-statement--compact">
-            <h2>Three decisions carried most of the work.</h2>
-          </div>
-
-          <div class="golfpac-approach-row">
-            <figure class="golfpac-approach-row__media">
-              <img src="golfpac-tabs.png" alt="Segmented tab control offering Request a Quote, Design Your Own, and Instant Packages" />
-            </figure>
-            <div class="golfpac-approach-row__text">
-              <h3>One clear entry point</h3>
-              <p>
-                Three competing calls to action became a single tabbed choice — Request a Quote,
-                Design Your Own, or Instant Packages — so the first decision a visitor has to make
-                is obvious instead of a guess.
-              </p>
-            </div>
-          </div>
-
-          <div class="golfpac-approach-row">
-            <div class="golfpac-approach-row__text">
-              <h3>Progressive, sectioned flow</h3>
-              <p>
-                The planning process breaks into clear steps — trip details, group details,
-                preferences and add-ons, then contact info — each in its own section, so users
-                always know where they are and what comes next.
-              </p>
-            </div>
-            <figure class="golfpac-approach-row__media">
-              <img src="golfpac-flow.png" alt="Design Your Own flow showing Trip Details, Group Details, and Add Rounds as distinct sectioned steps" />
-            </figure>
-          </div>
-
-          <div class="golfpac-approach-row">
-            <figure class="golfpac-approach-row__media">
-              <img src="golfpac-confirmation.png" alt="Quote Request Submitted confirmation screen with a numbered list of what happens next" />
-            </figure>
-            <div class="golfpac-approach-row__text">
-              <h3>Closing the loop</h3>
-              <p>
-                The confirmation step restates the request, sets a 24 to 48 hour response-time
-                expectation, and lists exactly what happens next — so users leave the flow knowing
-                what to expect instead of wondering if it worked.
-              </p>
-            </div>
+            <h2>Wireframes: locking the flow logic first.</h2>
           </div>
 
           <div class="ge-split-text ge-split-text--large">
             <p>
-              Alongside the flow changes, the visual language was rebuilt from the ground up:
-              modern layout, imagery treatment, and typography replaced the dated early-2000s
-              presentation, and small icons were added next to key labels throughout — trip
-              details, lodging, golf preferences — to improve scannability without adding to the
-              reading load.
+              Before moving to visual design, I mapped the full GolfPac experience in low-fidelity
+              wireframes — entry and account flows, the three planning paths, supporting content
+              pages, and the full checkout sequence.
             </p>
+          </div>
+
+          <div class="golfpac-wireframe-board">
+            <figure class="golfpac-wireframe-card">
+              <div class="golfpac-wireframe-screen">
+                <div class="wf-row" style="justify-content:space-between;">
+                  <div class="wf-line" style="width:20%;"></div>
+                  <div class="wf-row" style="gap:6px;"><div class="wf-line" style="width:16px;"></div><div class="wf-line" style="width:16px;"></div><div class="wf-line" style="width:16px;"></div></div>
+                </div>
+                <div class="wf-box" style="flex:0 0 42%; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:10px; gap:6px;">
+                  <div class="wf-line" style="width:60%; background:#c7c8ce;"></div>
+                  <div class="wf-btn" style="width:35%;">Start Planning</div>
+                </div>
+                <div class="wf-row" style="flex:1;">
+                  <div class="wf-box"></div>
+                  <div class="wf-box"></div>
+                  <div class="wf-box"></div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Entry &amp; Account</strong>
+                <span>Home establishes a single primary action; Sign In stays minimal and out of the way.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="golfpac-wireframe-card">
+              <div class="golfpac-wireframe-screen">
+                <div class="wf-row">
+                  <div class="wf-chip wf-chip--active">Request a Quote</div>
+                  <div class="wf-chip">Design Your Own</div>
+                  <div class="wf-chip">Instant Packages</div>
+                </div>
+                <div class="wf-card">
+                  <div class="wf-h">Destination &amp; Dates</div>
+                  <div class="wf-row" style="margin-top:6px;"><div class="wf-input"></div><div class="wf-input"></div></div>
+                </div>
+                <div class="wf-card"><div class="wf-h">Group Details</div></div>
+                <div class="wf-card" style="flex:1;"><div class="wf-h">Golf Preferences</div></div>
+              </div>
+              <figcaption>
+                <strong>The Three Planning Paths</strong>
+                <span>One tabbed choice instead of three competing entries — guided, self-serve, and instant.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="golfpac-wireframe-card">
+              <div class="golfpac-wireframe-screen">
+                <div class="wf-line" style="width:30%; height:8px;"></div>
+                <div class="wf-row"><div class="wf-input" style="flex:1;"></div><div class="wf-chip" style="flex:0 0 20%;">Filter</div></div>
+                <div class="wf-row" style="flex:1;">
+                  <div class="wf-col"><div class="wf-box" style="min-height:24px;"></div><div class="wf-line"></div><div class="wf-line wf-line--60"></div></div>
+                  <div class="wf-col"><div class="wf-box" style="min-height:24px;"></div><div class="wf-line"></div><div class="wf-line wf-line--60"></div></div>
+                  <div class="wf-col"><div class="wf-box" style="min-height:24px;"></div><div class="wf-line"></div><div class="wf-line wf-line--60"></div></div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Supporting Content</strong>
+                <span>Destinations, Specials, Why Golf Travel, and Saved Trips — scannable cards over dense text.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="golfpac-wireframe-card">
+              <div class="golfpac-wireframe-screen">
+                <div class="wf-row" style="justify-content:center; gap:10px;">
+                  <div class="wf-dot wf-dot--filled"></div><div class="wf-line" style="width:40px;"></div>
+                  <div class="wf-dot"></div><div class="wf-line" style="width:40px;"></div>
+                  <div class="wf-dot"></div><div class="wf-line" style="width:40px;"></div>
+                  <div class="wf-dot"></div>
+                </div>
+                <div class="wf-card"><div class="wf-line wf-line--80"></div><div class="wf-line" style="margin-top:4px;"></div></div>
+                <div class="wf-card" style="flex:1;"><div class="wf-line wf-line--80"></div><div class="wf-line" style="margin-top:4px;"></div></div>
+                <div class="wf-nav"><span></span><span class="wf-btn" style="width:30%;">Continue</span></div>
+              </div>
+              <figcaption>
+                <strong>Checkout Flow</strong>
+                <span>Cart consolidates selections; a four-step tracker (Traveler → Review → Payment → Confirm) breaks the form into clear stages.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>High-fidelity design: GolfPac's brand, in full.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
             <p>
-              I worked directly in the AngularJS front-end alongside the design work, implementing
-              the new flow structure rather than handing off static screens.
+              With structure validated, I moved to full visual design — establishing GolfPac's
+              brand identity (cyan accent, clean white surfaces, real photography) across the
+              complete experience. The photo areas below are shown as color placeholders rather
+              than the real course and destination photography, since the original image files
+              weren't available to me directly — everything else (copy, structure, pricing,
+              badges) reflects the real design.
             </p>
+          </div>
+
+          <div class="golfpac-hifi-board">
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course">
+                  <h3>Your Perfect Golf Vacation Awaits</h3>
+                  <p>Expertly crafted packages to 200+ destinations worldwide</p>
+                </div>
+                <div class="golfpac-trust-bar">
+                  <div><strong>35+</strong><span>Years</span></div>
+                  <div><strong>500K+</strong><span>Golfers</span></div>
+                  <div><strong>200+</strong><span>Destinations</span></div>
+                  <div><strong>4.9&#9733;</strong><span>Rating</span></div>
+                </div>
+                <div class="golfpac-screen__body">
+                  <p class="golfpac-section-label">Top Golf Destinations</p>
+                  <div class="golfpac-row golfpac-row--3">
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo"><span class="golfpac-card__badge">Most Popular</span></div>
+                      <div class="golfpac-card__body"><h4>Scottsdale, AZ</h4></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--sky"><span class="golfpac-card__badge">Best Value</span></div>
+                      <div class="golfpac-card__body"><h4>Myrtle Beach, SC</h4></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--course"><span class="golfpac-card__badge">Bucket List</span></div>
+                      <div class="golfpac-card__body"><h4>Pebble Beach, CA</h4></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Home</strong>
+                <span>Single clear CTA against real course photography, a trust bar (35+ years, 500K+ golfers, 200+ destinations, 4.9★), and a three-step "How It Works" explainer.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__body" style="display:flex; justify-content:center; padding:2.4em;">
+                  <div class="golfpac-tabbed-card">
+                    <div style="text-align:center; padding:1.4em 1.4em 0;">
+                      <div class="golfpac-screen__logo" style="font-size:1.8em;">GOLFPAC<span>TRAVEL</span></div>
+                      <p class="golfpac-muted" style="margin:0.6em 0 0;">Create your free account to start planning</p>
+                    </div>
+                    <div class="golfpac-tabbed-card__tabs">
+                      <span>Sign In</span><span class="is-active">Create Account</span>
+                    </div>
+                    <div class="golfpac-tabbed-card__body">
+                      <div class="golfpac-row golfpac-row--2">
+                        <div class="golfpac-field"><label>First Name</label><div class="golfpac-input"></div></div>
+                        <div class="golfpac-field"><label>Last Name</label><div class="golfpac-input"></div></div>
+                      </div>
+                      <div class="golfpac-field"><label>Email Address</label><div class="golfpac-input"></div></div>
+                      <div class="golfpac-field"><label>Password</label><div class="golfpac-input"></div><span class="golfpac-muted" style="font-size:0.85em;">Minimum 8 characters</span></div>
+                      <div class="golfpac-checkbox-row"><span class="golfpac-checkbox"></span> I agree to the Terms of Use and Privacy Policy</div>
+                      <div class="golfpac-cta">Create Account &rarr;</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Sign In / Create Account</strong>
+                <span>A single tabbed component rather than separate pages, so switching doesn't cost a page load. Password requirements stated upfront; consent is a simple inline checkbox.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span style="color:#14b8d6;">DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course" style="height:6em;">
+                  <h3 style="font-size:1.5em;">Golf Destinations</h3>
+                  <p>Discover America's premier golf destinations</p>
+                </div>
+                <div class="golfpac-screen__body">
+                  <div class="golfpac-row golfpac-row--3">
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo"><span class="golfpac-card__badge">Most Popular</span></div>
+                      <div class="golfpac-card__body"><h4>Myrtle Beach, SC</h4><p class="golfpac-card__meta">&#9733; 4.9 (2841) &middot; 100+ Courses</p><div class="golfpac-card__price"><span>From $699/pp</span></div></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--sky"><span class="golfpac-card__badge">Top Rated</span></div>
+                      <div class="golfpac-card__body"><h4>Scottsdale, AZ</h4><p class="golfpac-card__meta">&#9733; 4.8 (1927) &middot; 200+ Courses</p><div class="golfpac-card__price"><span>From $899/pp</span></div></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--course"><span class="golfpac-card__badge">Bucket List</span></div>
+                      <div class="golfpac-card__body"><h4>Pebble Beach, CA</h4><p class="golfpac-card__meta">&#9733; 5.0 (892) &middot; 12+ Courses</p><div class="golfpac-card__price"><span>From $2,499/pp</span></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Destinations</strong>
+                <span>Each card shows a status badge, rating, review count, and starting price. A fallback CTA ("Don't See Your Dream Destination?") routes unlisted requests to a custom quote instead of a dead end.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span style="color:#14b8d6;">SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course" style="height:6em;">
+                  <h3 style="font-size:1.5em;">Golf Travel Specials &amp; Deals</h3>
+                  <p>Exclusive discounts on top golf destinations</p>
+                </div>
+                <div class="golfpac-screen__body">
+                  <div class="golfpac-row golfpac-row--3">
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--sky"><span class="golfpac-card__badge golfpac-card__badge--sale">30% OFF</span></div>
+                      <div class="golfpac-card__body"><h4>Myrtle Beach Summer Saver</h4><div class="golfpac-card__price"><strong>$699</strong><span>was $999</span></div></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo"><span class="golfpac-card__badge" style="background:#f59e0b;">25% OFF</span></div>
+                      <div class="golfpac-card__body"><h4>Scottsdale Fall Golf Value</h4><div class="golfpac-card__price"><strong>$1,199</strong><span>was $1,599</span></div></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--course"><span class="golfpac-card__badge" style="background:#7c3aed;">Group Deal</span></div>
+                      <div class="golfpac-card__body"><h4>Group of 8+ Save Big</h4><div class="golfpac-card__price"><span>Up to $200/pp off</span></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Specials</strong>
+                <span>Expiring-deal dates and percentage-off badges, without countdown-timer pressure tactics. Category filters narrow by deal type; a newsletter capture converts "not ready to book" visitors into future leads.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__tabs">
+                  <div class="golfpac-screen__tab">Request a Quote</div>
+                  <div class="golfpac-screen__tab is-active">Design Your Own</div>
+                  <div class="golfpac-screen__tab">Instant Packages</div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course" style="height:6em;">
+                  <h3 style="font-size:1.5em;">Design Your Own Golf Package</h3>
+                  <p>Customize every detail of your perfect golf vacation</p>
+                </div>
+                <div class="golfpac-screen__body">
+                  <div class="golfpac-form-block">
+                    <div class="golfpac-form-block__label">Choose Your Destination</div>
+                    <div class="golfpac-row golfpac-row--3">
+                      <div class="golfpac-photo" style="height:3em;"></div>
+                      <div class="golfpac-photo--sky" style="height:3em;border-radius:6px;"></div>
+                      <div class="golfpac-photo--course" style="height:3em;border-radius:6px;"></div>
+                    </div>
+                  </div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Select Your Travel Dates</div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Group Details <span class="golfpac-muted" style="font-weight:400;">(2 total travelers)</span></div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Add Rounds</div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Add Lodging</div></div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Design Your Own</strong>
+                <span>Real destination photography replaces plain dropdowns; the builder is broken into collapsible sections (Group Details, Add Rounds, Add Lodging, Car Rental, Additional Services) so users focus on one decision at a time.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__tabs">
+                  <div class="golfpac-screen__tab">Request a Quote</div>
+                  <div class="golfpac-screen__tab">Design Your Own</div>
+                  <div class="golfpac-screen__tab is-active">Instant Packages</div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course" style="height:6em;">
+                  <h3 style="font-size:1.5em;">Instant Golf Packages</h3>
+                  <p>Pre-built packages — book online in minutes</p>
+                </div>
+                <div class="golfpac-screen__body">
+                  <div class="golfpac-row" style="grid-template-columns: 5em 1fr 1fr; margin-bottom:0.8em;">
+                    <div class="golfpac-checkbox-row" style="margin:0;">Value</div>
+                    <div class="golfpac-checkbox-row" style="margin:0;">Premium</div>
+                    <div class="golfpac-checkbox-row" style="margin:0;">Luxury</div>
+                  </div>
+                  <div class="golfpac-row golfpac-row--2">
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--sky"><span class="golfpac-card__badge">Best Seller</span></div>
+                      <div class="golfpac-card__body"><h4>Myrtle Beach Golf Getaway</h4><p class="golfpac-card__meta">3 Nights &middot; 3 Rounds &middot; &#9733; 4.8 (487)</p><div class="golfpac-card__price"><strong>$699</strong><span style="text-decoration:line-through;color:#94a3b8;">$899</span></div></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo"><span class="golfpac-card__badge" style="background:#7c3aed;">Limited Spots</span></div>
+                      <div class="golfpac-card__body"><h4>Bandon Dunes Ultimate</h4><p class="golfpac-card__meta">4 Nights &middot; 4 Rounds &middot; &#9733; 5.0 (203)</p><div class="golfpac-card__price"><strong>$2,299</strong></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Instant Packages</strong>
+                <span>Value/Premium/Luxury filter chips help users self-segment; strikethrough pricing makes savings explicit; status badges add urgency without separate marketing banners. The same "Build Your Own" fallback appears here too.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span style="color:#14b8d6;">START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__tabs">
+                  <div class="golfpac-screen__tab is-active">Request a Quote</div>
+                  <div class="golfpac-screen__tab">Design Your Own</div>
+                  <div class="golfpac-screen__tab">Instant Packages</div>
+                </div>
+                <div class="golfpac-hero-photo golfpac-photo--course" style="height:5em;">
+                  <h3 style="font-size:1.4em;">Request Your Golf Travel Quote</h3>
+                </div>
+                <div class="golfpac-screen__body">
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Destination &amp; Travel Dates</div><div class="golfpac-row golfpac-row--2"><div class="golfpac-input"></div><div class="golfpac-input"></div></div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Accommodation Preferences</div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Group Details</div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Golf Preferences</div></div>
+                  <div class="golfpac-form-block"><div class="golfpac-form-block__label">Additional Services &amp; Budget</div></div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Request a Quote</strong>
+                <span>The most form-heavy path, and the clearest example of progressive disclosure: Destination &amp; Dates, Accommodation, Group Details, Golf Preferences, and Additional Services each get their own visually distinct card.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span style="color:#14b8d6;">Saved Trips</span><span>Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__body">
+                  <p class="golfpac-section-label">Saved Trips <span class="golfpac-muted" style="font-weight:400;">&middot; 3 trips saved to your wishlist</span></p>
+                  <div class="golfpac-row golfpac-row--3">
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--course"><span class="golfpac-card__badge" style="background:#7c3aed;">Bucket List</span></div>
+                      <div class="golfpac-card__body"><h4>Pebble Beach Golf Links</h4><p class="golfpac-card__meta">Saved Jun 12 &middot; from $2,499</p></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo--sky"><span class="golfpac-card__badge" style="background:#16a34a;">Best Value</span></div>
+                      <div class="golfpac-card__body"><h4>Myrtle Beach Golf Getaway</h4><p class="golfpac-card__meta">Saved Jun 28 &middot; from $699</p></div>
+                    </div>
+                    <div class="golfpac-card">
+                      <div class="golfpac-card__photo golfpac-photo"><span class="golfpac-card__badge" style="background:#f59e0b;">Hot Deal</span></div>
+                      <div class="golfpac-card__body"><h4>Scottsdale Desert Golf</h4><p class="golfpac-card__meta">Saved Jul 2 &middot; from $1,199</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Saved Trips</strong>
+                <span>A lightweight wishlist showing when each trip was saved, with a direct "Book Now" path and phone fallback for returning users.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <div class="golfpac-screen">
+                <div class="golfpac-screen__topbar">
+                  <span>1-800-418-4617 &nbsp;Mon–Fri 8am–8pm EST</span>
+                  <div class="golfpac-screen__topbar-right">
+                    <span>Sign In</span><span>Saved Trips</span><span style="color:#14b8d6;">Cart</span>
+                    <span class="golfpac-screen__book">BOOK NOW</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__nav">
+                  <div class="golfpac-screen__logo">GOLFPAC<span>TRAVEL</span></div>
+                  <div class="golfpac-screen__nav-links">
+                    <span>START PLANNING</span><span>DESTINATIONS</span><span>WHY GOLF TRAVEL?</span><span>SPECIALS</span>
+                  </div>
+                </div>
+                <div class="golfpac-screen__body">
+                  <p class="golfpac-section-label">Your Cart <span class="golfpac-muted" style="font-weight:400;">&middot; 2 items</span></p>
+                  <div class="golfpac-row" style="grid-template-columns: 2fr 1fr; align-items:start;">
+                    <div>
+                      <div class="golfpac-card" style="display:flex; margin-bottom:0.8em;">
+                        <div class="golfpac-photo--sky" style="width:5em; flex-shrink:0;"></div>
+                        <div class="golfpac-card__body" style="flex:1;"><h4>Myrtle Beach Summer Saver</h4><p class="golfpac-card__meta">Aug 14&ndash;18, 2024 &middot; 2 golfers</p><div class="golfpac-card__price"><strong>$1,398</strong></div></div>
+                      </div>
+                      <div class="golfpac-card" style="display:flex;">
+                        <div class="golfpac-photo" style="width:5em; flex-shrink:0;"></div>
+                        <div class="golfpac-card__body" style="flex:1;"><h4>Scottsdale Fall Golf Value</h4><p class="golfpac-card__meta">Oct 5&ndash;10, 2024 &middot; 2 golfers</p><div class="golfpac-card__price"><strong>$2,398</strong></div></div>
+                      </div>
+                    </div>
+                    <div class="golfpac-form-block">
+                      <p style="display:flex; justify-content:space-between; margin:0 0 0.4em;"><span class="golfpac-muted">Subtotal</span><span>$3,796</span></p>
+                      <p style="display:flex; justify-content:space-between; margin:0 0 0.8em;"><span class="golfpac-muted">Taxes &amp; Fees</span><span>$304</span></p>
+                      <p style="display:flex; justify-content:space-between; font-weight:800; border-top:1px solid #e5e8ec; padding-top:0.6em;"><span>Total</span><span>$4,100</span></p>
+                      <div class="golfpac-cta">Proceed to Checkout &rarr;</div>
+                      <p class="golfpac-muted golfpac-center" style="font-size:0.82em; margin-top:0.8em;">Secure checkout &middot; No booking fees &middot; Free cancellation within 24h</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Your Cart</strong>
+                <span>Cart items and order summary side by side, with adjustable golfer counts and transparent price recalculation. Reassurance microcopy sits directly above the CTA, addressing checkout hesitation at the exact moment it would cause drop-off.</span>
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -230,12 +659,12 @@
               <span>Down from three competing CTAs to one tabbed choice</span>
             </article>
             <article>
-              <strong>4 sectioned steps</strong>
-              <span>Trip details, group details, preferences, contact — each its own step</span>
+              <strong>2-stage process</strong>
+              <span>Wireframes locked the flow before any visual design began</span>
             </article>
             <article>
-              <strong>24–48 hr</strong>
-              <span>Response-time expectation set clearly at confirmation</span>
+              <strong>4-step checkout</strong>
+              <span>Traveler → Review → Payment → Confirm, tracked at every step</span>
             </article>
           </div>
 
