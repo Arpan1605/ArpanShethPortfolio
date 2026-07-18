@@ -40,11 +40,11 @@
         <div class="ge-case-leftnav__inner">
           <a href="#overview" class="ge-case-leftnav__item">Overview</a>
           <span class="ge-case-leftnav__rule"></span>
-          <a href="#problem" class="ge-case-leftnav__item">Problem</a>
+          <a href="#research" class="ge-case-leftnav__item">Research</a>
           <span class="ge-case-leftnav__rule"></span>
           <a href="#approach" class="ge-case-leftnav__item">Approach</a>
           <span class="ge-case-leftnav__rule"></span>
-          <a href="#outcome" class="ge-case-leftnav__item">Outcome</a>
+          <a href="#impact" class="ge-case-leftnav__item">Impact</a>
         </div>
       </aside>
 
@@ -58,20 +58,29 @@
 
         <section class="ge-slide ge-slide--hero" id="overview">
           <div class="ge-hero-copy">
-            <h1>Scaling an Enterprise Healthcare Platform from 50 to 2,000+ Global Users</h1>
+            <h1>Transforming Efficiency and User Autonomy in Financial Services Through Centralized, User-Centric Design</h1>
             <p>
-              A global enterprise healthcare platform needed to scale its core operational
-              workflows — lease, loan, end-of-term, remarketing, and financial processes — as its
-              user base grew more than 40x, from roughly 50 to over 2,000 users worldwide. I led
-              UX design across this growth, working to keep increasingly complex, high-volume
-              workflows usable rather than letting complexity compound as the platform scaled.
+              GE Healthcare's financial services workflows required a centralized platform to
+              address the inefficiencies and fragmentation of running quote generation, asset
+              requests, renewals, and upgrades across disconnected tools. Users had voiced
+              frustration with time-consuming, manual work and a lack of integration — the
+              solution needed to improve efficiency, reduce manual process, and elevate customer
+              satisfaction.
             </p>
+          </div>
+
+          <div class="ge-persona-tags" style="justify-content:center; max-width:1120px; margin:24px auto 0;">
+            <span>User Experience (UX) Design</span>
+            <span>Usability Testing</span>
+            <span>Wireframing</span>
+            <span>User Interface (UI)</span>
+            <span>UX Research</span>
           </div>
 
           <p class="pareexa-metrics-note pareexa-metrics-note--centered">
             This case study covers proprietary enterprise workflows under NDA. Screens shown are
-            sanitized/abstracted; figures below are approximate and directional. Exact metrics
-            available under NDA on request.
+            sanitized/abstracted, dashboard data is illustrative placeholder content, and figures
+            below are approximate and directional. Exact metrics available under NDA on request.
           </p>
 
           <div class="ge-meta-grid">
@@ -89,23 +98,24 @@
             </article>
           </div>
 
-          <div class="ge-shot-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-              <circle cx="8.5" cy="9.5" r="1.5"></circle>
-              <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L4 19"></path>
-            </svg>
-            <span class="ge-shot-placeholder__label">Hero image</span>
-            <span class="ge-shot-placeholder__note">High-fidelity abstracted dashboard screen — logos and branding scrubbed. Coming soon.</span>
+          <div class="ge-team-grid">
+            <div class="ge-team-card"><strong>2</strong><span>Technical Architects</span></div>
+            <div class="ge-team-card"><strong>4</strong><span>Full Stack Developers</span></div>
+            <div class="ge-team-card"><strong>4</strong><span>Angular UI Developers</span></div>
+            <div class="ge-team-card"><strong>2</strong><span>.NET Developers</span></div>
+            <div class="ge-team-card"><strong>5</strong><span>QA Engineers</span></div>
+            <div class="ge-team-card"><strong>1</strong><span>Cloud / DevOps Engineer</span></div>
+            <div class="ge-team-card"><strong>3</strong><span>UX/UI Designers</span></div>
+            <div class="ge-team-card"><strong>2</strong><span>Support Analysts</span></div>
           </div>
         </section>
 
-        <section class="ge-slide" id="problem">
+        <section class="ge-slide" id="research">
           <div class="ge-statement">
             <h2>
-              Workflows built for a small internal team started
-              <span>showing strain</span>
-              as adoption scaled more than 40x.
+              Financial services teams were managing
+              <span>fragmented, dispersed</span>
+              systems for quotes, renewals, and vouchers, with no unified source of truth.
             </h2>
           </div>
 
@@ -119,176 +129,326 @@
             </div>
 
             <div class="ge-problem-copy">
-              <p class="ge-problem-copy__lead">Where the platform was breaking down</p>
+              <p class="ge-problem-copy__lead">Problem statement</p>
               <ul>
-                <li>Invoice cancellation involved multi-step exception handling that had become difficult for operational users to track</li>
-                <li>Reporting was fragmented across disconnected views, making it harder for stakeholders to act quickly on operational data</li>
-                <li>The challenge wasn't building new features — it was redesigning core workflows to hold up at 40x the original scale</li>
+                <li>Financial services workflows required a centralized platform to address inefficiencies and fragmentation</li>
+                <li>Users relied on manual data entry and disconnected systems for quotes, renewals, and upgrades</li>
+                <li>Managers needed to independently raise and track requests without relying on other teams</li>
+                <li>Users voiced frustration with low productivity and the overall lack of integration</li>
               </ul>
             </div>
           </div>
-        </section>
 
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>Discovery: finding where workflows were actually breaking down.</h2>
+          <div class="ge-persona-card">
+            <div class="ge-persona-card__avatar" aria-hidden="true"></div>
+            <div>
+              <h3>Joseph K.</h3>
+              <p class="ge-persona-card__meta">45 years &middot; Senior Asset Manager</p>
+              <div class="ge-persona-tags">
+                <span>Collaborative</span>
+                <span>Detail-Oriented</span>
+                <span>Efficient</span>
+              </div>
+              <p class="ge-persona-quote">
+                "I need a system that works as fast as I do. Every second spent waiting on quotes
+                or retrieving duplicate data is a second I could be dedicating to my clients."
+              </p>
+              <div class="ge-persona-lists">
+                <div>
+                  <h4>Goals</h4>
+                  <ul>
+                    <li>Streamline asset renewals, disputes, and upgrades with reduced manual effort</li>
+                    <li>Access a centralized platform that consolidates data from multiple systems</li>
+                    <li>Increase efficiency to manage a larger portfolio of accounts with fewer delays</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Pain points &amp; ability to use tech</h4>
+                  <ul>
+                    <li>Frequent delays in quote generation caused by disconnected data and manual entry</li>
+                    <li>Switching between multiple systems increases errors and information loss</li>
+                    <li>Comfortable with standard financial and asset management software</li>
+                    <li>Prefers intuitive, streamlined tools over anything requiring formal training</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="ge-split-text ge-split-text--large">
-            <p>
-              I worked directly with Product Owners, Business Analysts, and engineering to
-              understand where workflows were breaking down at scale, running stakeholder
-              workshops and requirement-gathering sessions to surface the specific friction points
-              operational teams were hitting.
-            </p>
-            <p>
-              I also used AI-assisted synthesis to speed up analysis of stakeholder feedback and
-              usability testing sessions, allowing faster iteration between research rounds.
-            </p>
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>What the persona's goals implied</h2>
           </div>
 
-          <div class="ge-shot-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-              <circle cx="8.5" cy="9.5" r="1.5"></circle>
-              <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L4 19"></path>
-            </svg>
-            <span class="ge-shot-placeholder__label">Discovery artifact</span>
-            <span class="ge-shot-placeholder__note">Journey map or workshop output, abstracted. Coming soon.</span>
+          <div class="ge-insights-grid">
+            <div class="ge-insight-card">
+              <h4>Efficiency is key</h4>
+              <p>Joseph values streamlined processes that reduce redundant tasks, boosting his productivity and allowing more focus on client relationships.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Centralization is essential</h4>
+              <p>Workflow fragmentation disrupts Joseph's productivity; a unified platform consolidating data eliminates back-and-forth decision-making.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Reliability and simplicity</h4>
+              <p>Joseph prioritizes intuitive, reliable tools with minimal learning curve that enhance day-to-day workflow without a steep learning curve.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Time-sensitive information matters</h4>
+              <p>Fast, real-time data processing is crucial in quote preparation — expectations, filters, and interactions all need to reduce time and effort.</p>
+            </div>
+          </div>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Key findings from research</h2>
+          </div>
+
+          <div class="ge-insights-grid">
+            <div class="ge-insight-card">
+              <h4>High demand for efficiency</h4>
+              <p>Users like Joseph value processes that reduce manual tasks and streamline workflows, which directly impacts their productivity and satisfaction.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Need for data centralization</h4>
+              <p>Fragmentation across multiple systems leads to inefficiencies; users perform noticeably better with minimal, well-organized navigation.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Preference for intuitive tools</h4>
+              <p>Users seek easy, no-nonsense systems that require minimal training and support their existing mental model of the workflow.</p>
+            </div>
+            <div class="ge-insight-card">
+              <h4>Importance of speed in task completion</h4>
+              <p>Real-time data processing, especially in quote preparation, is essential — it lets users reduce dead time and errors caused by manual re-entry.</p>
+            </div>
           </div>
         </section>
 
         <section class="ge-slide" id="approach">
           <div class="ge-statement ge-statement--compact">
-            <h2>Two workflows carried most of the redesign.</h2>
-          </div>
-
-          <div class="golfpac-approach-row">
-            <div class="ge-shot-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                <circle cx="8.5" cy="9.5" r="1.5"></circle>
-                <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L4 19"></path>
-              </svg>
-              <span class="ge-shot-placeholder__label">Before/after wireframes</span>
-              <span class="ge-shot-placeholder__note">Abstracted invoice cancellation flow. Coming soon.</span>
-            </div>
-            <div class="golfpac-approach-row__text">
-              <h3>Invoice cancellation</h3>
-              <p>
-                Early exploration focused on the invoice cancellation workflow specifically, since
-                it had the most reported confusion. I explored ways to simplify the multi-step
-                exception-handling process and make processing status visible at a glance, rather
-                than requiring users to interpret disconnected system states.
-              </p>
-            </div>
-          </div>
-
-          <div class="golfpac-approach-row">
-            <div class="golfpac-approach-row__text">
-              <h3>Dashboard consolidation</h3>
-              <p>
-                In parallel, I explored consolidating fragmented reporting views into unified
-                operational dashboards, working through what information stakeholders actually
-                needed surfaced versus what had simply accumulated over time.
-              </p>
-            </div>
-            <div class="ge-shot-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                <circle cx="8.5" cy="9.5" r="1.5"></circle>
-                <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L4 19"></path>
-              </svg>
-              <span class="ge-shot-placeholder__label">Dashboard consolidation wireframes</span>
-              <span class="ge-shot-placeholder__note">Abstracted. Coming soon.</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>What I shipped</h2>
-          </div>
-
-          <div class="ge-module-grid">
-            <article>
-              <h3>Invoice cancellation workflow</h3>
-              <p>Simplified exception handling and improved visibility into processing status for operational users.</p>
-            </article>
-            <article>
-              <h3>Consolidated dashboards</h3>
-              <p>Brought key workflow and business metrics into a single view, reducing how long it took stakeholders to act on reporting data.</p>
-            </article>
-            <article>
-              <h3>Reusable design system</h3>
-              <p>Built shared components and patterns to keep the growing set of application modules consistent, rather than each new module reinventing its own UI conventions.</p>
-            </article>
-          </div>
-
-          <div class="ge-shot-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-              <circle cx="8.5" cy="9.5" r="1.5"></circle>
-              <path d="M21 16l-5.5-5.5a2 2 0 0 0-2.83 0L4 19"></path>
-            </svg>
-            <span class="ge-shot-placeholder__label">Design system / component library</span>
-            <span class="ge-shot-placeholder__note">Abstracted. Coming soon.</span>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>Technical &amp; engineering collaboration</h2>
+            <h2>A centralized, role-based platform for quote generation and asset management.</h2>
           </div>
 
           <div class="ge-split-text ge-split-text--large">
             <p>
-              Working at this scale meant designing within real technical constraints, not just
-              visual ones — coordinating closely with Angular-based engineering teams on what was
-              implementable within existing architecture, and using that technical fluency to make
-              handoff faster and reduce rework.
-            </p>
-            <p>
-              I contributed hands-on Angular development myself and used Git/GitHub for version
-              control, keeping design and implementation tightly coupled through handoff rather
-              than working from static screens alone.
+              To solve these issues, I designed a centralized, mission-ready platform by
+              automating repetitive tasks and consolidating data into a user-friendly interface.
+              With role-based access, I allowed users to independently manage requests for quote
+              generation without waiting on other teams, enhancing accessibility and autonomy
+              while improving overall efficiency and user satisfaction.
             </p>
           </div>
         </section>
 
-        <section class="ge-slide" id="outcome">
+        <section class="ge-slide">
           <div class="ge-statement ge-statement--compact">
-            <h2>Redesigned to hold up at 40x scale.</h2>
+            <h2>Rapid wireframes to lock the structure first.</h2>
+          </div>
+
+          <div class="ge-dashboard-mock ge-dashboard-mock--wireframe" aria-hidden="true">
+            <div class="ge-dashboard-mock__sidebar">
+              <div class="is-active"></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="ge-dashboard-mock__main">
+              <div class="ge-dashboard-mock__stats">
+                <div class="ge-dashboard-mock__stat"><strong>&nbsp;</strong><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>&nbsp;</strong><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>&nbsp;</strong><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>&nbsp;</strong><span>&nbsp;</span></div>
+              </div>
+              <div class="ge-dashboard-mock__table">
+                <div class="ge-dashboard-mock__row is-head"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__row"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__row"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+                <div class="ge-dashboard-mock__row"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+              </div>
+            </div>
+          </div>
+          <ol class="ge-callout-legend">
+            <li><strong>Menu options</strong> &mdash; quick navigation across action items</li>
+            <li><strong>Quote request</strong> &mdash; flow for quote generation requests</li>
+            <li><strong>Actionable alerts</strong> &mdash; surfaced directly on the dashboard</li>
+            <li><strong>Active / inactive quotes</strong> &mdash; view all quotes at a glance</li>
+          </ol>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Usability testing shaped the key changes.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              We ran usability sessions on the initial wireframes to gather insight into user
+              interactions, identify pain points, and collect feedback on usability. Based on that
+              feedback, we implemented key changes: streamlined navigation, color-coded status
+              indicators, enhanced search capabilities, and quick action buttons — updates designed
+              to improve accessibility, reduce task-completion time, and create a more intuitive,
+              efficient experience across the final dashboard.
+            </p>
+          </div>
+
+          <div class="ge-dashboard-mock">
+            <div class="ge-dashboard-mock__sidebar">
+              <div class="is-active">Quotes</div>
+              <div>Requests</div>
+              <div>Vouchers</div>
+              <div>Reports</div>
+              <div>Settings</div>
+            </div>
+            <div class="ge-dashboard-mock__main">
+              <div class="ge-dashboard-mock__stats">
+                <div class="ge-dashboard-mock__stat"><strong>128</strong><span>Open Quotes</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>42</strong><span>Pending Review</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>310</strong><span>Completed</span></div>
+                <div class="ge-dashboard-mock__stat"><strong>4</strong><span>Alerts</span></div>
+              </div>
+              <div class="ge-dashboard-mock__table">
+                <div class="ge-dashboard-mock__row is-head"><span>Quote ID</span><span>Status</span><span>Owner</span><span>Updated</span></div>
+                <div class="ge-dashboard-mock__row"><span>AMO-10234</span><span class="ge-status-pill ge-status-pill--green">Approved</span><span>J. Kessler</span><span>2h ago</span></div>
+                <div class="ge-dashboard-mock__row"><span>AMO-10235</span><span class="ge-status-pill ge-status-pill--yellow">Pending</span><span>R. Alvarez</span><span>4h ago</span></div>
+                <div class="ge-dashboard-mock__row"><span>AMO-10236</span><span class="ge-status-pill ge-status-pill--red">Escalated</span><span>T. Brooks</span><span>1d ago</span></div>
+              </div>
+            </div>
+          </div>
+          <ol class="ge-callout-legend">
+            <li><strong>Enhanced quick summary panel</strong> &mdash; key totals visible without drilling in</li>
+            <li><strong>Top navigation tabs</strong> &mdash; faster switching between core workflows</li>
+            <li><strong>Advanced &amp; enhanced search</strong> &mdash; instant lookup with saved filters</li>
+            <li><strong>Color-coded status indicators</strong> &mdash; status readable at a glance</li>
+            <li><strong>Notifications &amp; alerts</strong> &mdash; actionable items surfaced proactively</li>
+            <li><strong>Quick table view</strong> &mdash; dense data kept scannable</li>
+          </ol>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Finally, made responsive for tablets and mobile.</h2>
+          </div>
+
+          <div class="ge-mobile-row">
+            <div class="ge-mobile-frame">
+              <div class="ge-dashboard-mock__main">
+                <div class="ge-dashboard-mock__stats">
+                  <div class="ge-dashboard-mock__stat"><strong>128</strong><span>Open</span></div>
+                  <div class="ge-dashboard-mock__stat"><strong>42</strong><span>Pending</span></div>
+                </div>
+                <div class="ge-dashboard-mock__table">
+                  <div class="ge-dashboard-mock__row is-head"><span>Quote</span><span>Status</span></div>
+                  <div class="ge-dashboard-mock__row"><span>AMO-10234</span><span class="ge-status-pill ge-status-pill--green">OK</span></div>
+                  <div class="ge-dashboard-mock__row"><span>AMO-10235</span><span class="ge-status-pill ge-status-pill--yellow">Pend</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="ge-mobile-frame">
+              <div class="ge-dashboard-mock__main">
+                <div class="ge-dashboard-mock__stats">
+                  <div class="ge-dashboard-mock__stat"><strong>310</strong><span>Done</span></div>
+                  <div class="ge-dashboard-mock__stat"><strong>4</strong><span>Alerts</span></div>
+                </div>
+                <div class="ge-dashboard-mock__table">
+                  <div class="ge-dashboard-mock__row is-head"><span>Quote</span><span>Status</span></div>
+                  <div class="ge-dashboard-mock__row"><span>AMO-10236</span><span class="ge-status-pill ge-status-pill--red">Esc.</span></div>
+                  <div class="ge-dashboard-mock__row"><span>AMO-10237</span><span class="ge-status-pill ge-status-pill--green">OK</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="golfpac-caption">Dashboard data above is illustrative placeholder content, consistent with the NDA note at the top of this page.</p>
+        </section>
+
+        <section class="ge-slide" id="impact">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Notable gains in satisfaction, efficiency, and productivity.</h2>
+          </div>
+
+          <div class="ge-split-text">
+            <p>
+              The app enhancements drove notable gains in user satisfaction, efficiency, and
+              productivity. By simplifying financial processes and enabling faster data retrieval,
+              the platform saw adoption scale across several teams with improved collaboration.
+              Performance upgrades cut quote preparation time substantially and boosted stated
+              satisfaction. User-centered features increased processed quotes and reduced manual
+              work, giving users greater autonomy, accessibility, and a seamless experience across
+              devices.
+            </p>
           </div>
 
           <div class="ge-impact-grid">
             <article>
-              <strong>50 &rarr; 2,000+</strong>
-              <span>Growth in supported users</span>
+              <strong>~$23M</strong>
+              <span>Completed quotes processed through the platform</span>
             </article>
             <article>
-              <strong>Invoice cancellation</strong>
-              <span>Simplified exception handling and status visibility</span>
+              <strong>600+</strong>
+              <span>Asset management requests handled</span>
             </article>
             <article>
-              <strong>Unified dashboards</strong>
-              <span>Consolidated fragmented reporting into one view</span>
+              <strong>5,000+</strong>
+              <span>Quotes generated through the platform</span>
+            </article>
+            <article>
+              <strong>~$21M</strong>
+              <span>Value processed through the platform</span>
+            </article>
+            <article>
+              <strong>7,000+</strong>
+              <span>Vouchers processed</span>
+            </article>
+            <article>
+              <strong>2,000+</strong>
+              <span>Invoice cancellations handled</span>
             </article>
           </div>
 
+          <div class="ge-testimonial-grid">
+            <div class="ge-testimonial-card">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"This has completely streamlined my daily tasks. What used to take hours now only takes a few minutes, letting me focus more on client management."</p>
+              <strong>Senior Asset Manager</strong>
+              <span>Financial Services team</span>
+            </div>
+            <div class="ge-testimonial-card">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"I now have full autonomy to raise and track quote requests without relying on others. It's a real change for efficiency and team productivity."</p>
+              <strong>Asset Manager, Team Lead</strong>
+              <span>Financial Services team</span>
+            </div>
+            <div class="ge-testimonial-card">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"The platform's responsiveness on mobile means I can manage tasks anytime, anywhere. It's boosted my productivity and cut delays in our workflow."</p>
+              <strong>Field Operations Manager</strong>
+              <span>Financial Services team</span>
+            </div>
+          </div>
+
+          <p class="golfpac-caption">Quoted with role-based attribution rather than full names, since I don't have explicit confirmation these reviewers consented to being publicly named.</p>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Key learnings</h2>
+          </div>
+
+          <ul class="ge-learnings-list">
+            <li><strong>User-centered design boosts adoption.</strong> Prioritizing user needs enhances satisfaction and drives engagement.</li>
+            <li><strong>Responsive design increases flexibility.</strong> Mobile accessibility on the go significantly expands when and how the platform gets used.</li>
+            <li><strong>Iterative usability testing streamlines workflows.</strong> Early, lightweight testing found real problems before they became expensive to fix.</li>
+            <li><strong>Performance optimization enhances experience.</strong> Faster processing times directly improve efficiency and satisfaction.</li>
+            <li><strong>Role-based access empowers users.</strong> Independent request management boosts autonomy and efficiency.</li>
+          </ul>
+
           <div class="ge-reflection">
             <p>
-              The platform scaled from roughly 50 to 2,000+ global users during this period.
-              Stakeholders reported improved visibility into workflow status and faster ability to
-              act on operational data following the dashboard consolidation.
+              The biggest learning from this project was designing for systems, not just screens.
+              It sharpened my ability to structure workflows, work across cross-functional teams,
+              and turn operational complexity into clearer digital experiences.
             </p>
           </div>
 
           <p class="pareexa-status-note">
-            Exact performance metrics are confidential under NDA — the figures above are
-            directional. This case study covers proprietary enterprise workflows; screens shown
-            are sanitized and abstracted, and more detail is available on request for recruiters
-            and hiring managers.
+            This case study covers proprietary enterprise workflows under NDA with GE Healthcare.
+            The scope, role, and design approach above are shareable — detailed screens, internal
+            tooling, and exact outcome metrics are available on request for recruiters and hiring
+            managers.
           </p>
 
           <div class="ge-access-modal__ctas ge-access-modal__ctas--centered">
