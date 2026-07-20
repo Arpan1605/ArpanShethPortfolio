@@ -3773,6 +3773,18 @@ body[data-theme="dark"] .ge-shot-placeholder {
   margin-top: 4px;
 }
 
+.ge-persona-image {
+  max-width: 1007px;
+  margin: 34px auto 0;
+}
+
+.ge-persona-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
 .ge-persona-card {
   max-width: 900px;
   margin: 34px auto 0;
