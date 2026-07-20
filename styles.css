@@ -3005,7 +3005,8 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .pareexa-guideline-gallery,
   .pareexa-payment-showcase,
   .golfpac-compare,
-  .golfpac-approach-row {
+  .golfpac-approach-row,
+  .golfpac-shot-board {
     grid-template-columns: 1fr;
   }
 
@@ -3667,6 +3668,46 @@ body[data-theme="dark"] .ge-shot-placeholder {
   text-align: center;
   font-size: 0.82rem;
   color: #74747a;
+}
+
+.golfpac-shot-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.golfpac-shot-card {
+  border: 1px solid #ecece8;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.golfpac-shot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.golfpac-shot-card figcaption {
+  padding: 16px 18px 18px;
+  color: #5b5c64;
+  line-height: 1.62;
+  font-size: 0.92rem;
+}
+
+.golfpac-shot-card figcaption strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #1f1f23;
+  font-size: 0.98rem;
+}
+
+.golfpac-wireframe-shot img {
+  border-bottom: 1px solid #ecece8;
 }
 
 /* GolfPac low-fidelity wireframe recreations, desktop aspect */
