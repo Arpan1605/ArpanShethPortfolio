@@ -6,8 +6,24 @@
     <title>Arpan Sheth | UX Designer — Enterprise Product Design</title>
     <meta
       name="description"
-      content="Arpan Sheth is a UX Designer with 5+ years of enterprise product design experience across Healthcare, Travel, and EdTech, currently with GE Healthcare via Tata Consultancy Services. Based in Ahmedabad, India, open to relocating to Germany."
+      content="Enterprise UX Designer with 5+ years of experience designing B2B products across healthcare, travel, and EdTech. Currently designing enterprise healthcare workflows for GE Healthcare via Tata Consultancy Services, used by 2,000+ global users. Based in India, open to relocating to Germany."
     />
+    <meta name="keywords" content="UX Designer, Enterprise UX, Product Designer, B2B Design, Design Systems, Angular, Healthcare UX, Germany relocation" />
+    <link rel="canonical" href="https://arpan1605.github.io/ArpanShethPortfolio/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arpan Sheth | UX Designer — Enterprise Product Design" />
+    <meta
+      property="og:description"
+      content="Enterprise UX Designer with 5+ years of experience designing B2B products across healthcare, travel, and EdTech. Currently used by 2,000+ global users. Open to relocating to Germany."
+    />
+    <meta property="og:url" content="https://arpan1605.github.io/ArpanShethPortfolio/" />
+    <meta property="og:image" content="https://arpan1605.github.io/ArpanShethPortfolio/arpan-photo.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Arpan Sheth | UX Designer — Enterprise Product Design" />
+    <meta name="twitter:description" content="Enterprise UX Designer with 5+ years of experience across healthcare, travel, and EdTech. Open to relocating to Germany." />
+    <meta name="twitter:image" content="https://arpan1605.github.io/ArpanShethPortfolio/arpan-photo.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,19 +35,10 @@
   </head>
   <body>
     <header class="topbar">
-      <div class="brand">
-        <button
-          class="brand__mark"
-          id="sidebarToggle"
-          type="button"
-          aria-label="Collapse sidebar"
-          aria-expanded="true"
-          aria-controls="profileRail"
-        >
-          AS
-        </button>
-        <button class="brand__text" type="button" data-panel-target="home">ARPAN SHETH</button>
-      </div>
+      <a class="brand" href="#home">
+        <span class="brand__mark">AS</span>
+        <span class="brand__text">ARPAN SHETH</span>
+      </a>
 
       <button
         class="hamburger"
@@ -48,14 +55,15 @@
 
       <div class="topbar__menu" id="topbarMenu">
         <nav class="topbar__nav" aria-label="Top navigation">
-          <button type="button" data-panel-target="home">Home</button>
-          <button type="button" data-panel-target="work">Portfolio</button>
-          <button type="button" data-panel-target="about">About</button>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
           <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </nav>
 
         <div class="topbar__actions">
-          <button class="submit-button" type="button" data-panel-target="contact">Contact Me</button>
+          <a class="submit-button" href="#contact">Contact Me</a>
           <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle theme">
             Theme
           </button>
@@ -63,254 +71,321 @@
       </div>
     </header>
 
-    <div class="layout">
-      <aside class="profile-rail" id="profileRail">
-        <div class="profile-rail__inner">
-          <div class="profile-photo">
-            <img class="profile-photo__placeholder" src="arpan-photo.jpg" alt="Arpan Sheth" />
+    <main id="home">
+      <section class="home-hero" id="hero">
+        <div class="home-shell">
+          <p class="home-hero__eyebrow reveal">Enterprise UX Designer</p>
+          <h1 class="reveal">UX Designer creating enterprise software used by thousands of users.</h1>
+          <p class="home-hero__sub reveal">
+            I design complex B2B products that simplify financial workflows, healthcare
+            operations, and travel experiences through user-centered design and scalable design
+            systems.
+          </p>
+          <div class="home-hero__chips reveal">
+            <span class="home-chip">5+ Years Experience</span>
+            <span class="home-chip">Enterprise UX</span>
+            <span class="home-chip">Angular</span>
+            <span class="home-chip">Design Systems</span>
+            <span class="home-chip">Based in India</span>
+            <span class="home-chip">Open to Germany Relocation</span>
           </div>
-
-          <div class="profile-block">
-            <h1>Arpan Sheth</h1>
-            <p class="profile-handle">@arpansheth · Ahmedabad, India</p>
-            <p class="profile-role">UX Designer — Enterprise Product Design</p>
-          </div>
-
-          <button
-            class="profile-rail__toggle"
-            id="profileRailToggle"
-            type="button"
-            aria-expanded="true"
-            aria-controls="profileRailDetails"
-          >
-            <span class="profile-rail__toggle-text">Hide details</span>
-            <svg class="profile-rail__chevron" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-              <path d="M2 4.5L7 9.5L12 4.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-
-          <div class="profile-rail__details" id="profileRailDetails">
-            <div class="profile-block profile-block--muted">
-              <p>UX Designer with 5+ years of experience across enterprise and consumer products.</p>
-              <p>Interested in product thinking, visual structure, SAP complexity, and case-study storytelling.</p>
-            </div>
-
-            <div class="profile-block profile-block--muted">
-              <!-- <p>Based in India, open to relocating anywhere in Germany — will require visa sponsorship. 90-day notice period.</p> -->
-              <p>Currently learning German (A1, working toward B1 by August 2026).</p>
-            </div>
-
-            <div class="profile-block profile-block--muted">
-              <p>Experience Includes:</p>
-              <div class="company-row">
-                <span class="company-pill">GE Healthcare</span>
-                <span class="company-pill">tasteX</span>
-                <span class="company-pill">Pareexa</span>
-                <span class="company-pill">GolfPac</span>
-              </div>
-            </div>
-
-            <div class="profile-actions">
-              <button class="message-button" type="button" data-panel-target="contact">Message</button>
-              <a class="bookmark-button" href="resume.pdf" target="_blank" rel="noreferrer" aria-label="Open resume PDF">
-                PDF
-              </a>
-            </div>
-
-            <div class="profile-tabs">
-              <button class="profile-tab" type="button" id="openProfileModal">
-                <span>Profile</span>
-              </button>
-              <button class="profile-tab profile-tab--active" type="button" data-panel-target="home">
-                <span>Home</span>
-              </button>
-            </div>
+          <div class="home-hero__ctas reveal">
+            <a class="submit-button" href="#work">View Selected Work</a>
+            <a class="theme-button" href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
           </div>
         </div>
-      </aside>
+      </section>
 
-      <main class="stage" id="home">
-        <div class="stage__grid" aria-hidden="true"></div>
-
-        <nav class="section-menu" aria-label="Section navigation">
-          <button class="section-link is-active" type="button" data-panel-target="work">WORK</button>
-          <button class="section-link" type="button" data-panel-target="about">ABOUT</button>
-          <a class="section-link" href="resume.pdf" target="_blank" rel="noreferrer">RESUME</a>
-          <button class="section-link" type="button" data-panel-target="contact">CONTACT</button>
-        </nav>
-
-        <section class="panel panel--active" id="panel-home" data-panel="home">
-          <div class="identity-type reveal" aria-label="Arpan Sheth role highlights">
-            <p class="identity-type__name">Arpan Sheth</p>
-            <p class="identity-type__role">
-              <span id="identityTypeText"></span><span class="identity-type__cursor" aria-hidden="true"></span>
+      <section class="home-section" id="work">
+        <div class="home-shell">
+          <div class="home-section__head reveal">
+            <p class="eyebrow">Selected Work</p>
+            <h2>Enterprise products, real business outcomes.</h2>
+            <p>
+              Four case studies spanning healthcare operations, travel booking, EdTech, and cloud
+              kitchens — each one solving a specific business problem, not just a visual refresh.
             </p>
           </div>
 
-          <p class="alphabet-eyebrow reveal">A personal aside — how I think, A to Z</p>
-
-          <div class="statement-wrap reveal">
-            <div class="statement-line"></div>
-            <div class="statement-pin statement-pin--left"></div>
-            <div class="statement-pin statement-pin--right"></div>
-            <div class="statement-box">
-              <p class="statement-letter" id="activeLetter">A</p>
-              <h2 class="statement-text" id="activeMessage">Analyzes every app I use, out of habit</h2>
-            </div>
-          </div>
-
-          <div class="alphabet-board reveal" id="alphabetBoard" aria-label="Alphabet traits"></div>
-        </section>
-
-        <section class="panel" id="panel-work" data-panel="work">
-          <div class="work-layout reveal">
-            <div class="work-intro">
-              <p class="eyebrow">Work</p>
-              <h2>Projects and case studies.</h2>
+          <a class="home-featured reveal" href="ge-healthcare.html">
+            <img
+              class="home-featured__media"
+              src="thumb-ge-healthcare.jpg"
+              alt="GE Healthcare Asset Lifecycle Management dashboard, annotated with design decisions"
+            />
+            <div class="home-featured__body">
+              <p class="home-featured__eyebrow">Featured Case Study — Enterprise Healthcare</p>
+              <h3>GE Healthcare Asset Lifecycle Management</h3>
               <p>
-                Enterprise and consumer product work spanning healthcare operations, EdTech,
-                travel, and cloud kitchens.
+                Redesigned lease, loan, end-of-term, and remarketing workflows for a platform that
+                grew from roughly 50 to 2,000+ global users — consolidating fragmented data and
+                cutting redundant manual work out of daily quote generation.
               </p>
+              <span class="home-featured__cta">View Case Study →</span>
             </div>
+          </a>
 
-            <div class="work-list">
-              <a class="work-card work-card--link" href="ge-healthcare.html">
-                <p class="work-card__type">Enterprise Healthcare Platform</p>
-                <h3>GE Healthcare Asset Lifecycle Management</h3>
-                <p>
-                  Evolved an enterprise healthcare SaaS platform from roughly 50 to 2,000+ global
-                  users, spanning lease, loan, end-of-term, remarketing, and financial workflows.
-                </p>
-                <span class="work-card__cta">Open case study (sanitized for NDA)</span>
-              </a>
-
-              <a class="work-card work-card--link" href="golfpac-travel.html">
-                <p class="work-card__type">Travel Platform</p>
+          <div class="home-work-grid">
+            <a class="home-work-card reveal" href="golfpac-travel.html">
+              <img class="home-work-card__media" src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
+              <div class="home-work-card__body">
+                <p class="home-work-card__type">Travel Platform</p>
                 <h3>GolfPac Travel</h3>
-                <p>Modernized a dated booking flow — three competing CTAs became one clear path — to help recover falling conversions.</p>
-                <span class="work-card__cta">Open case study</span>
-              </a>
+                <p>Modernized a dated booking flow — three competing entry points became one guided path.</p>
+              </div>
+            </a>
 
-              <a class="work-card work-card--link" href="tastex.html">
-                <p class="work-card__type">Cloud Kitchen</p>
+            <a class="home-work-card reveal" href="tastex.html">
+              <img class="home-work-card__media" src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
+              <div class="home-work-card__body">
+                <p class="home-work-card__type">Cloud Kitchen</p>
                 <h3>tasteX</h3>
-                <p>A QR-based room-service system routing orders from multiple hotels to shared central kitchens — guest, kitchen, and admin portals designed as one system.</p>
-                <span class="work-card__cta">Open case study</span>
-              </a>
+                <p>QR-based room-service ordering routed from multiple hotels into shared central kitchens.</p>
+              </div>
+            </a>
 
-              <a class="work-card work-card--link" href="pareexa-ai.html">
-                <p class="work-card__type">EdTech</p>
+            <a class="home-work-card reveal" href="pareexa-ai.html">
+              <img class="home-work-card__media" src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
+              <div class="home-work-card__body">
+                <p class="home-work-card__type">EdTech / AI</p>
                 <h3>Pareexa.ai</h3>
-                <p>AI-powered learning ecosystem for competitive exam aspirants across planning, study, tests, analytics, and retention.</p>
-                <span class="work-card__cta">Open case study</span>
-              </a>
-
-              <article class="work-card">
-                <p class="work-card__type">Enterprise Learning</p>
-                <h3>SAP Journey</h3>
-                <p>Role-based workflow thinking for dense product experiences that need more clarity.</p>
-                <span class="work-card__status">Case study in progress</span>
-              </article>
-            </div>
+                <p>AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.</p>
+              </div>
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="panel panel--about" id="panel-about" data-panel="about">
+      <section class="home-section" id="about">
+        <div class="home-shell">
           <div class="about-layout reveal">
             <div class="about-image">
-              <div class="about-image__placeholder">AS</div>
+              <img src="arpan-photo.jpg" alt="Arpan Sheth" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:20px; display:block;" />
             </div>
             <div class="about-copy">
-              <h2>Hi! I am Arpan Sheth</h2>
+              <p class="eyebrow">About</p>
+              <h2>Hi, I'm Arpan.</h2>
               <p>
-                I’m a UX Designer with 5+ years of experience designing enterprise-scale digital
-                products across Healthcare, Travel, and EdTech, currently with GE Healthcare via
-                Tata Consultancy Services in Ahmedabad, India.
+                I'm a UX Designer with 5+ years of experience designing enterprise-scale digital
+                products across healthcare, travel, and EdTech — currently with GE Healthcare via
+                Tata Consultancy Services.
               </p>
               <p>
-                What keeps me in this work is the same thing that got me into it: user experience —
-                structure, hierarchy, flow, friction, and the tiny moments that make an interface
-                feel obvious instead of confusing.
+                I enjoy simplifying dense, workflow-heavy products — multi-team approval chains,
+                fragmented data sources, dashboards trying to do too much — into interfaces that
+                feel obvious instead of intimidating.
               </p>
               <p>
-                I now enjoy work that sits between practical usability and visual clarity —
-                simplifying complex workflows, like the multi-team approval chains I mapped at
-                GE Healthcare, into interfaces that feel obvious instead of intimidating.
+                I'm currently learning German (A1, working toward B1 by August 2026) and open to
+                relocating anywhere in Germany for enterprise UX roles.
               </p>
             </div>
           </div>
-        </section>
-
-        <section class="panel panel--contact" id="panel-contact" data-panel="contact">
-          <div class="contact-layout reveal">
-            <div>
-              <p class="eyebrow">Let’s Connect</p>
-              <h2>Open to full-time UX Designer roles in Germany, enterprise consulting engagements, and freelance collaborations — currently serving a 90-day notice period.</h2>
-            </div>
-            <div class="contact-stack">
-              <a href="mailto:mrarpansheth@gmail.com">mrarpansheth@gmail.com</a>
-              <a href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="resume.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <div class="profile-modal" id="profileModal" aria-hidden="true">
-      <div class="profile-modal__card">
-        <button class="profile-modal__close" id="closeProfileModal" type="button">Close</button>
-        <img class="profile-modal__avatar" src="arpan-photo.jpg" alt="Arpan Sheth" />
-        <h2>Arpan Sheth</h2>
-        <p class="profile-modal__meta">@arpansheth · Ahmedabad, India</p>
-
-        <div class="profile-modal__section">
-          <h3>About</h3>
-          <p>
-            Arpan Sheth is a UX Designer with 5+ years of experience across Healthcare, Travel,
-            and EdTech, currently designing enterprise workflows for GE Healthcare via Tata
-            Consultancy Services. His work spans a healthcare platform scaled to 2,000+ users and
-            a 40+ screen EdTech app, with a focus on clarity in hierarchy, flow simplification,
-            and visual precision.
-          </p>
         </div>
+      </section>
 
-        <div class="profile-modal__section">
-          <h3>Domains:</h3>
-          <div class="company-row company-row--left">
-            <span class="company-pill">Healthcare</span>
-            <span class="company-pill">EdTech</span>
-            <span class="company-pill">Travel</span>
+      <section class="home-section" id="process">
+        <div class="home-shell">
+          <div class="home-section__head reveal">
+            <p class="eyebrow">How I Work</p>
+            <h2>A consistent process, not just pretty screens.</h2>
+            <p>Every project — enterprise or freelance — follows the same core process, adapted to the team and timeline.</p>
+          </div>
+
+          <div class="home-process reveal">
+            <div class="home-process__step"><div class="home-process__num">1</div><span>Empathize</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">2</div><span>Research</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">3</div><span>Personas</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">4</div><span>Flows</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">5</div><span>Wireframes</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">6</div><span>Prototype</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">7</div><span>Testing</span></div>
+            <div class="home-process__arrow">→</div>
+            <div class="home-process__step"><div class="home-process__num">8</div><span>Final UI</span></div>
           </div>
         </div>
+      </section>
 
-        <div class="profile-modal__section">
-          <h3>Location & Relocation</h3>
-          <!-- <p>Based in India, open to relocating anywhere in Germany — will require visa sponsorship. 90-day notice period.</p> -->
-          <p>Currently learning German (A1, working toward B1 by August 2026).</p>
+      <section class="home-section" id="experience">
+        <div class="home-shell">
+          <div class="home-section__head reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Where I've applied this.</h2>
+          </div>
+
+          <div class="home-experience reveal">
+            <article class="home-exp-card">
+              <div class="home-exp-card__head">
+                <h3>UX Designer — Tata Consultancy Services (TCS)</h3>
+                <span class="home-exp-card__dates">Mar 2021 – Present</span>
+              </div>
+              <p class="home-exp-card__meta">Full-time · Client: GE Healthcare · Enterprise Healthcare Applications</p>
+              <ul>
+                <li>Design enterprise healthcare workflows, operational dashboards, and reporting experiences used by global business and operations teams.</li>
+                <li>Supported platform growth from roughly 50 to 2,000+ global users by improving workflow visibility and reducing friction in core operational tasks.</li>
+                <li>Redesigned the invoice cancellation workflow, simplifying a multi-step exception-handling process and improving visibility into processing status.</li>
+                <li>Led stakeholder workshops and requirement-gathering sessions, translating business requirements into user-centered workflows with Product Owners, BAs, and engineering.</li>
+                <li>Built reusable UX patterns and components, improving design consistency and delivery speed across multiple application modules.</li>
+                <li>Recognized with a Best Team Award and an On-the-Spot Award for delivery contributions in Agile environments.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="home-experience--freelance reveal">
+            <article class="home-exp-card">
+              <div class="home-exp-card__head">
+                <h3>Pareexa.ai</h3>
+                <span class="home-exp-card__dates">Sep 2025 – Mar 2026</span>
+              </div>
+              <p class="home-exp-card__meta">Product Design Advisor · Freelance</p>
+              <ul>
+                <li>Advised founders on product strategy and UX direction for a new AI-driven learning platform.</li>
+                <li>Designed end-to-end student learning journeys — assessment flows, performance tracking, personalized study paths.</li>
+                <li>Established a scalable design system and component library for the platform's growing set of modules.</li>
+              </ul>
+            </article>
+
+            <article class="home-exp-card">
+              <div class="home-exp-card__head">
+                <h3>GolfPac Travel</h3>
+                <span class="home-exp-card__dates">Aug 2024 – Sep 2025</span>
+              </div>
+              <p class="home-exp-card__meta">Product Designer &amp; Frontend Developer · Freelance</p>
+              <ul>
+                <li>Redesigned core booking and trip-planning flows, improving destination discovery and quote request journeys.</li>
+                <li>Restructured AngularJS controllers as part of a frontend modernization effort.</li>
+                <li>Worked directly with client stakeholders to prioritize and deliver UX improvements.</li>
+              </ul>
+            </article>
+
+            <article class="home-exp-card">
+              <div class="home-exp-card__head">
+                <h3>tasteX</h3>
+                <span class="home-exp-card__dates">Jan 2024 – Apr 2024</span>
+              </div>
+              <p class="home-exp-card__meta">Product &amp; UX Design · Freelance</p>
+              <ul>
+                <li>Designed a customer-facing ordering flow and a kitchen-side order-tracking experience for an independent cloud kitchen business.</li>
+                <li>Delivered a lightweight, functional UX applying the same end-to-end approach used on larger enterprise projects.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-        
-            <div class="profile-block profile-block--muted">
-              <p>Domains:</p>
-              <div class="company-row">
-                <span class="company-pill">Healthcare</span>
-                <span class="company-pill">EdTech</span>
-                <span class="company-pill">Travel</span>
+      </section>
+
+      <section class="home-section" id="skills">
+        <div class="home-shell">
+          <div class="home-section__head reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>What I bring to a product team.</h2>
+          </div>
+
+          <div class="home-skills reveal">
+            <div class="home-skill-group">
+              <h3>UX &amp; Product</h3>
+              <div class="home-skill-tags">
+                <span>User Research</span>
+                <span>Information Architecture</span>
+                <span>Journey Mapping</span>
+                <span>Interaction Design</span>
+                <span>Wireframing &amp; Prototyping</span>
+                <span>Design Systems</span>
+                <span>Usability Testing</span>
+                <span>Accessibility</span>
               </div>
             </div>
 
-        <!-- <div class="profile-modal__section">
-          <h3>Experience Includes:</h3>
-          <div class="company-row company-row--left">
-            <span class="company-pill">GE Healthcare</span>
-            <span class="company-pill">TasteX</span>
-            <span class="company-pill">Pareexa</span>
-            <span class="company-pill">GolfPac</span>
-          </div>
-        </div> -->
-      </div>
-    </div>
+            <div class="home-skill-group">
+              <h3>Technical</h3>
+              <div class="home-skill-tags">
+                <span>Angular</span>
+                <span>AngularJS</span>
+                <span>JavaScript</span>
+                <span>HTML5 / CSS3</span>
+                <span>REST APIs</span>
+                <span>Power BI</span>
+              </div>
+            </div>
 
+            <div class="home-skill-group">
+              <h3>Tools</h3>
+              <div class="home-skill-tags">
+                <span>Figma</span>
+                <span>Adobe XD</span>
+                <span>Photoshop</span>
+                <span>Confluence</span>
+                <span>Rally</span>
+              </div>
+            </div>
+
+            <div class="home-skill-group">
+              <h3>Ways of Working</h3>
+              <div class="home-skill-tags">
+                <span>Agile / Scrum</span>
+                <span>Stakeholder Management</span>
+                <span>Cross-functional Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-resume" id="resume">
+        <div class="home-shell">
+          <div class="home-section__head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+            <p class="eyebrow">Resume</p>
+            <h2>One-page summary of the above.</h2>
+          </div>
+          <div class="home-resume__ctas reveal">
+            <a class="submit-button" href="resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+            <a class="theme-button" href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section" id="contact">
+        <div class="home-shell">
+          <div class="home-section__head reveal">
+            <p class="eyebrow">Let's Connect</p>
+            <h2>
+              Open to full-time UX Designer roles in Germany, enterprise consulting engagements,
+              and freelance collaborations — currently serving a 90-day notice period.
+            </h2>
+          </div>
+
+          <div class="home-contact-grid reveal">
+            <a href="mailto:mrarpansheth@gmail.com">
+              <span class="home-contact-label">Email</span>
+              <span class="home-contact-value">mrarpansheth@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer">
+              <span class="home-contact-label">LinkedIn</span>
+              <span class="home-contact-value">arpan-sheth</span>
+            </a>
+            <a href="https://github.com/Arpan1605" target="_blank" rel="noreferrer">
+              <span class="home-contact-label">GitHub</span>
+              <span class="home-contact-value">Arpan1605</span>
+            </a>
+            <div class="home-contact-static">
+              <span class="home-contact-label">Location</span>
+              <span class="home-contact-value">Ahmedabad, India</span>
+            </div>
+            <div class="home-contact-static">
+              <span class="home-contact-label">Relocation</span>
+              <span class="home-contact-value">Open to anywhere in Germany</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="topbar-nav.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
