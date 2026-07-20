@@ -122,6 +122,44 @@ body[data-theme="dark"] .topbar {
   transform: scale(0.94);
 }
 
+.brand__mark--photo {
+  position: relative;
+  border-radius: 50%;
+  overflow: visible;
+  background: transparent;
+}
+
+.brand__mark--photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand__status-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #3ecf6a;
+  border: 2px solid var(--bg);
+}
+
+.home-closing__avatar-wrap {
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.home-closing__avatar-wrap .brand__status-dot {
+  width: 13px;
+  height: 13px;
+}
+
 .brand__text {
   font-size: 1.1rem;
   letter-spacing: 0.08em;
@@ -4366,9 +4404,15 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.14;
 }
 
+.home-hero__note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .home-hero__sub {
   max-width: 720px;
-  margin: 26px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
   font-size: 1.12rem;
   line-height: 1.68;
@@ -4750,12 +4794,11 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-closing__avatar {
+  display: block;
   width: 48px;
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  margin-top: 6px;
 }
 
 .home-closing h2 {
