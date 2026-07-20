@@ -89,9 +89,43 @@
             <span class="home-chip">Based in India</span>
             <span class="home-chip">Open to Germany Relocation</span>
           </div>
-          <div class="home-hero__ctas reveal">
-            <a class="submit-button" href="#work">View Selected Work</a>
-            <a class="theme-button" href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
+
+          <div class="home-hero__row reveal">
+            <div class="home-social-row">
+              <a class="home-social-icon" href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a class="home-social-icon" href="mailto:mrarpansheth@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a class="home-social-icon" href="https://github.com/Arpan1605" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+            </div>
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <a class="btn-ghost" href="#work">View Selected Work</a>
+              <a class="btn-accent" href="#contact">Let's Talk ↗</a>
+            </div>
+          </div>
+
+          <div class="home-showcase reveal">
+            <div class="home-phone home-phone--tilt-left">
+              <img src="tastex-guest-landing.png" alt="tasteX guest hotel-selection screen" />
+            </div>
+            <div class="home-phone">
+              <img src="phone-pareexa.jpg" alt="Pareexa.ai sign-in screen" />
+            </div>
+            <div class="home-phone home-phone--tilt-right">
+              <img src="tastex-guest-cart.png" alt="tasteX cart and checkout screen" />
+            </div>
+          </div>
+
+          <div class="home-client-strip reveal">
+            <span>GE Healthcare</span>
+            <span>Tata Consultancy Services</span>
+            <span>GolfPac Travel</span>
+            <span>Pareexa.ai</span>
+            <span>tasteX</span>
           </div>
         </div>
       </section>
@@ -99,8 +133,10 @@
       <section class="home-section" id="work">
         <div class="home-shell">
           <div class="home-section__head reveal">
-            <p class="eyebrow">Selected Work</p>
-            <h2>Enterprise products, real business outcomes.</h2>
+            <div class="home-section__title-row">
+              <span class="home-num">01</span>
+              <h2>Selected Work</h2>
+            </div>
             <p>
               Four case studies spanning healthcare operations, travel booking, EdTech, and cloud
               kitchens — each one solving a specific business problem, not just a visual refresh.
@@ -108,49 +144,54 @@
           </div>
 
           <a class="home-featured reveal" href="ge-healthcare.html">
-            <img
-              class="home-featured__media"
-              src="thumb-ge-healthcare.jpg"
-              alt="GE Healthcare Asset Lifecycle Management dashboard, annotated with design decisions"
-            />
-            <div class="home-featured__body">
-              <p class="home-featured__eyebrow">Featured Case Study — Enterprise Healthcare</p>
-              <h3>GE Healthcare Asset Lifecycle Management</h3>
-              <p>
-                Redesigned lease, loan, end-of-term, and remarketing workflows for a platform that
-                grew from roughly 50 to 2,000+ global users — consolidating fragmented data and
-                cutting redundant manual work out of daily quote generation.
-              </p>
-              <span class="home-featured__cta">View Case Study →</span>
+            <div class="home-project-media">
+              <span class="home-project-tag" style="background:#5b8def;">GE Healthcare</span>
+              <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare Asset Lifecycle Management dashboard, annotated with design decisions" />
             </div>
+            <p class="home-project-eyebrow">Featured Case Study &middot; Enterprise Healthcare</p>
+            <p class="home-project-title">
+              Redesigned lease, loan, end-of-term, and remarketing workflows for a platform that
+              grew from roughly 50 to 2,000+ global users, cutting redundant manual work out of
+              daily quote generation.
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </p>
           </a>
 
           <div class="home-work-grid">
             <a class="home-work-card reveal" href="golfpac-travel.html">
-              <img class="home-work-card__media" src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
-              <div class="home-work-card__body">
-                <p class="home-work-card__type">Travel Platform</p>
-                <h3>GolfPac Travel</h3>
-                <p>Modernized a dated booking flow — three competing entry points became one guided path.</p>
+              <div class="home-project-media">
+                <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
+                <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
               </div>
+              <p class="home-project-eyebrow">Travel Platform</p>
+              <p class="home-project-title">
+                Modernized a dated booking flow — three competing entry points became one guided path.
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </p>
             </a>
 
             <a class="home-work-card reveal" href="tastex.html">
-              <img class="home-work-card__media" src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
-              <div class="home-work-card__body">
-                <p class="home-work-card__type">Cloud Kitchen</p>
-                <h3>tasteX</h3>
-                <p>QR-based room-service ordering routed from multiple hotels into shared central kitchens.</p>
+              <div class="home-project-media">
+                <span class="home-project-tag" style="background:#f2994a;">tasteX</span>
+                <img src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
               </div>
+              <p class="home-project-eyebrow">Cloud Kitchen</p>
+              <p class="home-project-title">
+                QR-based room-service ordering routed from multiple hotels into shared central kitchens.
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </p>
             </a>
 
             <a class="home-work-card reveal" href="pareexa-ai.html">
-              <img class="home-work-card__media" src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
-              <div class="home-work-card__body">
-                <p class="home-work-card__type">EdTech / AI</p>
-                <h3>Pareexa.ai</h3>
-                <p>AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.</p>
+              <div class="home-project-media">
+                <span class="home-project-tag" style="background:#a78bfa;">Pareexa.ai</span>
+                <img src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
               </div>
+              <p class="home-project-eyebrow">EdTech / AI</p>
+              <p class="home-project-title">
+                AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </p>
             </a>
           </div>
         </div>
@@ -158,27 +199,40 @@
 
       <section class="home-section" id="about">
         <div class="home-shell">
+          <div class="home-section__head reveal" style="margin-bottom:32px;">
+            <div class="home-section__title-row">
+              <span class="home-num">02</span>
+              <h2>About Me</h2>
+            </div>
+          </div>
+
+          <p class="home-about-lead reveal" style="margin-bottom:56px;">
+            I'm a UX Designer with 5+ years of experience designing enterprise-scale digital
+            products across healthcare, travel, and EdTech.
+            <span class="is-dim">
+              Currently with GE Healthcare via Tata Consultancy Services, I enjoy simplifying
+              dense, workflow-heavy products — multi-team approval chains, fragmented data
+              sources, dashboards trying to do too much — into interfaces that feel obvious
+              instead of intimidating.
+            </span>
+          </p>
+
           <div class="about-layout reveal">
             <div class="about-image">
               <img src="arpan-photo.jpg" alt="Arpan Sheth" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:20px; display:block;" />
             </div>
             <div class="about-copy">
-              <p class="eyebrow">About</p>
-              <h2>Hi, I'm Arpan.</h2>
+              <h3 style="font-family:'Inter',sans-serif; font-weight:700; font-size:1.4rem; margin:0 0 18px;">My design approach</h3>
               <p>
-                I'm a UX Designer with 5+ years of experience designing enterprise-scale digital
-                products across healthcare, travel, and EdTech — currently with GE Healthcare via
-                Tata Consultancy Services.
-              </p>
-              <p>
-                I enjoy simplifying dense, workflow-heavy products — multi-team approval chains,
-                fragmented data sources, dashboards trying to do too much — into interfaces that
-                feel obvious instead of intimidating.
+                I believe in simplifying complexity, not decorating it. A deep focus on
+                usability and stakeholder workflows — not just visual polish — is what makes an
+                enterprise product actually get adopted.
               </p>
               <p>
                 I'm currently learning German (A1, working toward B1 by August 2026) and open to
                 relocating anywhere in Germany for enterprise UX roles.
               </p>
+              <a class="btn-accent" href="#contact">Let's Talk ↗</a>
             </div>
           </div>
         </div>
@@ -187,8 +241,10 @@
       <section class="home-section" id="process">
         <div class="home-shell">
           <div class="home-section__head reveal">
-            <p class="eyebrow">How I Work</p>
-            <h2>A consistent process, not just pretty screens.</h2>
+            <div class="home-section__title-row">
+              <span class="home-num">03</span>
+              <h2>My Process</h2>
+            </div>
             <p>Every project — enterprise or freelance — follows the same core process, adapted to the team and timeline.</p>
           </div>
 
@@ -215,8 +271,10 @@
       <section class="home-section" id="experience">
         <div class="home-shell">
           <div class="home-section__head reveal">
-            <p class="eyebrow">Experience</p>
-            <h2>Where I've applied this.</h2>
+            <div class="home-section__title-row">
+              <span class="home-num">04</span>
+              <h2>My Experience</h2>
+            </div>
           </div>
 
           <div class="home-experience reveal">
@@ -234,6 +292,12 @@
                 <li>Built reusable UX patterns and components, improving design consistency and delivery speed across multiple application modules.</li>
                 <li>Recognized with a Best Team Award and an On-the-Spot Award for delivery contributions in Agile environments.</li>
               </ul>
+              <div class="home-exp-card__tags">
+                <span>Healthcare UX</span>
+                <span>Dashboards</span>
+                <span>Stakeholder Workshops</span>
+                <span>Design Systems</span>
+              </div>
             </article>
           </div>
 
@@ -246,9 +310,12 @@
               <p class="home-exp-card__meta">Product Design Advisor · Freelance</p>
               <ul>
                 <li>Advised founders on product strategy and UX direction for a new AI-driven learning platform.</li>
-                <li>Designed end-to-end student learning journeys — assessment flows, performance tracking, personalized study paths.</li>
                 <li>Established a scalable design system and component library for the platform's growing set of modules.</li>
               </ul>
+              <div class="home-exp-card__tags">
+                <span>EdTech</span>
+                <span>Design Systems</span>
+              </div>
             </article>
 
             <article class="home-exp-card">
@@ -260,8 +327,11 @@
               <ul>
                 <li>Redesigned core booking and trip-planning flows, improving destination discovery and quote request journeys.</li>
                 <li>Restructured AngularJS controllers as part of a frontend modernization effort.</li>
-                <li>Worked directly with client stakeholders to prioritize and deliver UX improvements.</li>
               </ul>
+              <div class="home-exp-card__tags">
+                <span>Travel UX</span>
+                <span>AngularJS</span>
+              </div>
             </article>
 
             <article class="home-exp-card">
@@ -272,8 +342,11 @@
               <p class="home-exp-card__meta">Product &amp; UX Design · Freelance</p>
               <ul>
                 <li>Designed a customer-facing ordering flow and a kitchen-side order-tracking experience for an independent cloud kitchen business.</li>
-                <li>Delivered a lightweight, functional UX applying the same end-to-end approach used on larger enterprise projects.</li>
               </ul>
+              <div class="home-exp-card__tags">
+                <span>Ordering UX</span>
+                <span>Kitchen Ops</span>
+              </div>
             </article>
           </div>
         </div>
@@ -282,12 +355,15 @@
       <section class="home-section" id="skills">
         <div class="home-shell">
           <div class="home-section__head reveal">
-            <p class="eyebrow">Skills</p>
-            <h2>What I bring to a product team.</h2>
+            <div class="home-section__title-row">
+              <span class="home-num">05</span>
+              <h2>Skills</h2>
+            </div>
           </div>
 
           <div class="home-skills reveal">
             <div class="home-skill-group">
+              <div class="home-skill-group__num">01</div>
               <h3>UX &amp; Product</h3>
               <div class="home-skill-tags">
                 <span>User Research</span>
@@ -302,6 +378,7 @@
             </div>
 
             <div class="home-skill-group">
+              <div class="home-skill-group__num">02</div>
               <h3>Technical</h3>
               <div class="home-skill-tags">
                 <span>Angular</span>
@@ -314,6 +391,7 @@
             </div>
 
             <div class="home-skill-group">
+              <div class="home-skill-group__num">03</div>
               <h3>Tools</h3>
               <div class="home-skill-tags">
                 <span>Figma</span>
@@ -325,6 +403,7 @@
             </div>
 
             <div class="home-skill-group">
+              <div class="home-skill-group__num">04</div>
               <h3>Ways of Working</h3>
               <div class="home-skill-tags">
                 <span>Agile / Scrum</span>
@@ -336,30 +415,34 @@
         </div>
       </section>
 
-      <section class="home-section home-resume" id="resume">
+      <section class="home-closing" id="contact">
         <div class="home-shell">
-          <div class="home-section__head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
-            <p class="eyebrow">Resume</p>
-            <h2>One-page summary of the above.</h2>
-          </div>
-          <div class="home-resume__ctas reveal">
-            <a class="submit-button" href="resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
-            <a class="theme-button" href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="contact">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <p class="eyebrow">Let's Connect</p>
-            <h2>
-              Open to full-time UX Designer roles in Germany, enterprise consulting engagements,
-              and freelance collaborations — currently serving a 90-day notice period.
-            </h2>
+          <div class="home-closing__row reveal">
+            <img class="home-closing__avatar" src="arpan-photo.jpg" alt="Arpan Sheth" />
+            <h2>Let's build something great together — I'm open to enterprise UX roles in Germany, consulting engagements, and freelance collaborations.</h2>
           </div>
 
-          <div class="home-contact-grid reveal">
+          <div class="home-closing__ctas reveal">
+            <div class="home-social-row">
+              <a class="home-social-icon" href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a class="home-social-icon" href="mailto:mrarpansheth@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a class="home-social-icon" href="https://github.com/Arpan1605" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+            </div>
+            <a class="btn-accent" href="mailto:mrarpansheth@gmail.com">Let's Talk ↗</a>
+          </div>
+
+          <p class="home-closing__resume reveal">
+            <a href="resume.pdf" target="_blank" rel="noreferrer">View Resume</a> &middot;
+            <a href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
+          </p>
+
+          <div class="home-contact-details reveal">
             <a href="mailto:mrarpansheth@gmail.com">
               <span class="home-contact-label">Email</span>
               <span class="home-contact-value">mrarpansheth@gmail.com</span>
@@ -372,17 +455,25 @@
               <span class="home-contact-label">GitHub</span>
               <span class="home-contact-value">Arpan1605</span>
             </a>
-            <div class="home-contact-static">
+            <div>
               <span class="home-contact-label">Location</span>
               <span class="home-contact-value">Ahmedabad, India</span>
             </div>
-            <div class="home-contact-static">
+            <div>
               <span class="home-contact-label">Relocation</span>
               <span class="home-contact-value">Open to anywhere in Germany</span>
+            </div>
+            <div>
+              <span class="home-contact-label">Notice Period</span>
+              <span class="home-contact-value">90 days</span>
             </div>
           </div>
         </div>
       </section>
+
+      <footer class="home-footer">
+        <div class="home-shell">© 2026 Arpan Sheth. All rights reserved.</div>
+      </footer>
     </main>
 
     <script src="topbar-nav.js"></script>
