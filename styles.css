@@ -4602,7 +4602,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-hero__sub {
-  max-width: 720px;
+  max-width: 920px;
   margin: 20px 0 0;
   color: var(--muted);
   font-size: 1.12rem;
@@ -4614,7 +4614,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-hero__curiosity {
-  max-width: 720px;
+  max-width: 920px;
   margin: 18px 0 0;
   color: var(--text);
   font-weight: 600;
@@ -4623,7 +4623,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-hero__philosophy {
-  max-width: 680px;
+  max-width: 880px;
   margin: 12px 0 0;
   color: var(--muted);
   font-style: italic;
