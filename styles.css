@@ -5143,6 +5143,10 @@ body[data-theme="dark"] .ge-shot-placeholder {
   transition-delay: 240ms;
 }
 
+.home-skills .home-skill-group:nth-child(5) {
+  transition-delay: 320ms;
+}
+
 .home-experience--freelance .home-exp-card:nth-child(1) {
   transition-delay: 0ms;
 }
