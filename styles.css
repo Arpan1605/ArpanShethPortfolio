@@ -4577,18 +4577,48 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .home-client-strip {
   margin-top: 56px;
   padding-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 36px;
+  border-top: 1px solid var(--line);
 }
 
-.home-client-strip span {
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-  opacity: 0.7;
+.logo-carousel {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.logo-carousel__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 72px;
+  animation: logo-scroll 26s linear infinite;
+}
+
+.logo-carousel:hover .logo-carousel__track {
+  animation-play-state: paused;
+}
+
+.logo-carousel__track img {
+  height: 34px;
+  width: auto;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 200ms ease, filter 200ms ease;
+}
+
+.logo-carousel__track img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Project cards (featured + secondary share this language) */
