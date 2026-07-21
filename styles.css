@@ -5498,6 +5498,10 @@ body[data-theme="dark"] .ge-shot-placeholder {
     grid-template-columns: 1fr;
   }
 
+  .tastex-system-grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-process {
     flex-direction: column;
     align-items: stretch;
