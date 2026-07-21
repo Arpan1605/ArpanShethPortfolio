@@ -5009,13 +5009,30 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .home-experience--freelance {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
+  gap: 24px;
   margin-top: 8px;
 }
 
 .home-experience--freelance .home-exp-card {
-  padding: 0;
-  border-bottom: none;
+  padding: 28px 26px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--exp-accent, var(--accent));
+  background: var(--surface);
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms ease;
+}
+
+.home-experience--freelance .home-exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07);
+}
+
+.home-experience--freelance .home-exp-card__head h3 {
+  font-size: 1.15rem;
+}
+
+.home-experience--freelance .home-exp-card__tags span {
+  background: var(--bg);
 }
 
 /* Skills */
