@@ -233,6 +233,11 @@ body[data-theme="dark"] .topbar {
   gap: 14px;
 }
 
+.topbar--minimal {
+  padding-left: max(40px, calc((100vw - 1180px) / 2 + 40px));
+  padding-right: max(40px, calc((100vw - 1180px) / 2 + 40px));
+}
+
 .topbar--minimal .brand {
   gap: 14px;
   font-weight: 400;
@@ -5119,6 +5124,11 @@ body[data-theme="dark"] .ge-shot-placeholder {
 @media (max-width: 1100px) {
   .home-shell {
     padding: 0 28px;
+  }
+
+  .topbar--minimal {
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .home-work-grid,
