@@ -233,6 +233,72 @@ body[data-theme="dark"] .topbar {
   gap: 14px;
 }
 
+.topbar--minimal .brand {
+  gap: 14px;
+  font-weight: 400;
+}
+
+.topbar--minimal .brand__mark--photo {
+  width: 56px;
+  height: 56px;
+}
+
+.topbar--minimal .brand__status-dot {
+  width: 13px;
+  height: 13px;
+  top: -1px;
+  right: -1px;
+}
+
+.topbar--minimal .brand__text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.topbar--minimal .topbar__nav {
+  gap: 42px;
+}
+
+.topbar--minimal .topbar__nav a {
+  font-weight: 400;
+}
+
+.theme-toggle-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.theme-toggle-icon:hover,
+.theme-toggle-icon:focus-visible {
+  transform: translateY(-2px);
+  background: var(--bg);
+}
+
+.theme-toggle-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle-icon__sun {
+  display: none;
+}
+
+body[data-theme="dark"] .theme-toggle-icon__moon {
+  display: none;
+}
+
+body[data-theme="dark"] .theme-toggle-icon__sun {
+  display: block;
+}
+
 .submit-button,
 .theme-button {
   padding: 14px 24px;
