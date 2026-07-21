@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="ge-case-page">
-    <header class="topbar ge-case-topbar">
+    <header class="topbar topbar--minimal ge-case-topbar">
       <a class="brand" href="index.html">
-        <span class="brand__mark">AS</span>
-        <span class="brand__text">ARPAN SHETH</span>
+        <span class="brand__mark brand__mark--photo">
+          <img src="arpan-photo.jpg" alt="Arpan Sheth" />
+          <span class="brand__status-dot" aria-hidden="true"></span>
+        </span>
+        <span class="brand__text">Arpan Sheth</span>
       </a>
 
       <button
@@ -38,14 +41,16 @@
       </button>
 
       <div class="topbar__menu" id="topbarMenu">
-        <nav class="topbar__nav" aria-label="Case study navigation">
-          <a href="index.html">Portfolio</a>
+        <nav class="topbar__nav" aria-label="Top navigation">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
           <a href="index.html#contact">Contact</a>
-          <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </nav>
 
         <div class="topbar__actions">
-          <a class="submit-button" href="index.html">Back Home</a>
+          <a class="btn-ghost" href="index.html">Back Home</a>
         </div>
       </div>
     </header>
@@ -73,6 +78,7 @@
 
         <section class="ge-slide ge-slide--hero" id="overview">
           <div class="ge-hero-copy">
+            <p class="home-hero__eyebrow" style="text-align:center;"><span class="home-num">01</span> Enterprise Healthcare Case Study</p>
             <h1>Transforming Efficiency and User Autonomy in Financial Services Through Centralized, User-Centric Design</h1>
             <p>
               GE Healthcare's financial services workflows required a centralized platform to
@@ -98,19 +104,10 @@
             below are approximate and directional. Exact metrics available under NDA on request.
           </p>
 
-          <div class="ge-meta-grid">
-            <article>
-              <h2>Category</h2>
-              <p>Healthcare &amp; Enterprise Operations</p>
-            </article>
-            <article>
-              <h2>Role</h2>
-              <p>UX/UI Designer (via Tata Consultancy Services)</p>
-            </article>
-            <article>
-              <h2>Duration</h2>
-              <p>October 2022 &ndash; Present</p>
-            </article>
+          <div class="home-hero__chips" style="justify-content:center; max-width:1120px; margin:24px auto 0;">
+            <span class="home-chip"><strong>Category:</strong>&nbsp;Healthcare &amp; Enterprise Operations</span>
+            <span class="home-chip"><strong>Role:</strong>&nbsp;UX/UI Designer (via TCS)</span>
+            <span class="home-chip"><strong>Duration:</strong>&nbsp;October 2022 &ndash; Present</span>
           </div>
 
           <div class="ge-persona-image">
@@ -130,6 +127,7 @@
         </section>
 
         <section class="ge-slide" id="research">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">02</span> Research</p>
           <div class="ge-statement">
             <h2>
               Financial services teams were managing
@@ -210,6 +208,7 @@
         </section>
 
         <section class="ge-slide" id="approach">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">03</span> Approach</p>
           <div class="ge-statement ge-statement--compact">
             <h2>A centralized, role-based platform for quote generation and asset management.</h2>
           </div>
@@ -283,6 +282,7 @@
         </section>
 
         <section class="ge-slide" id="impact">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">04</span> Impact</p>
           <div class="ge-statement ge-statement--compact">
             <h2>Notable gains in satisfaction, efficiency, and productivity.</h2>
           </div>
@@ -382,6 +382,55 @@
             </a>
           </div>
         </section>
+
+        <section class="home-section" style="border-bottom:none;">
+          <div class="home-shell">
+            <div class="home-section__head reveal">
+              <div class="home-section__title-row">
+                <span class="home-num">05</span>
+                <h2>More Projects</h2>
+              </div>
+            </div>
+
+            <div class="home-work-grid">
+              <a class="home-work-card reveal" href="golfpac-travel.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
+                  <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
+                </div>
+                <p class="home-project-eyebrow">Travel Platform</p>
+                <p class="home-project-title">
+                  Modernized a dated booking flow — three competing entry points became one guided path.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a class="home-work-card reveal" href="tastex.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#f2994a;">tasteX</span>
+                  <img src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
+                </div>
+                <p class="home-project-eyebrow">Cloud Kitchen</p>
+                <p class="home-project-title">
+                  QR-based room-service ordering routed from multiple hotels into shared central kitchens.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a class="home-work-card reveal" href="pareexa-ai.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#a78bfa;">Pareexa.ai</span>
+                  <img src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
+                </div>
+                <p class="home-project-eyebrow">EdTech / AI</p>
+                <p class="home-project-title">
+                  AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <script>
@@ -446,5 +495,6 @@
       })();
     </script>
     <script src="topbar-nav.js"></script>
+    <script src="reveal.js"></script>
   </body>
 </html>

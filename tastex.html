@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="ge-case-page">
-    <header class="topbar ge-case-topbar">
+    <header class="topbar topbar--minimal ge-case-topbar">
       <a class="brand" href="index.html">
-        <span class="brand__mark">AS</span>
-        <span class="brand__text">ARPAN SHETH</span>
+        <span class="brand__mark brand__mark--photo">
+          <img src="arpan-photo.jpg" alt="Arpan Sheth" />
+          <span class="brand__status-dot" aria-hidden="true"></span>
+        </span>
+        <span class="brand__text">Arpan Sheth</span>
       </a>
 
       <button
@@ -38,14 +41,16 @@
       </button>
 
       <div class="topbar__menu" id="topbarMenu">
-        <nav class="topbar__nav" aria-label="Case study navigation">
-          <a href="index.html">Portfolio</a>
+        <nav class="topbar__nav" aria-label="Top navigation">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#skills">Skills</a>
           <a href="index.html#contact">Contact</a>
-          <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </nav>
 
         <div class="topbar__actions">
-          <a class="submit-button" href="index.html">Back Home</a>
+          <a class="btn-ghost" href="index.html">Back Home</a>
         </div>
       </div>
     </header>
@@ -75,6 +80,7 @@
 
         <section class="ge-slide ge-slide--hero" id="overview">
           <div class="ge-hero-copy">
+            <p class="home-hero__eyebrow" style="text-align:center;"><span class="home-num">01</span> Cloud Kitchen Case Study</p>
             <h1>Centralizing multi-hotel room service into one cloud-kitchen network with a single source of pricing control</h1>
             <p>
               tasteX is a QR-based room-service ordering system built for a cloud kitchen
@@ -91,19 +97,10 @@
             </p>
           </div>
 
-          <div class="ge-meta-grid">
-            <article>
-              <h2>Role</h2>
-              <p>Freelance Product &amp; UX Designer, covering the guest, kitchen, and admin experiences plus the shared design system.</p>
-            </article>
-            <article>
-              <h2>Duration</h2>
-              <p>January 2026 to May 2026.</p>
-            </article>
-            <article>
-              <h2>Client</h2>
-              <p>A cloud-kitchen operator running centralized room-service kitchens across multiple partner hotels in a city.</p>
-            </article>
+          <div class="home-hero__chips" style="justify-content:center; max-width:1120px; margin:24px auto 0;">
+            <span class="home-chip"><strong>Role:</strong>&nbsp;Freelance Product &amp; UX Designer</span>
+            <span class="home-chip"><strong>Duration:</strong>&nbsp;Jan 2026 &ndash; May 2026</span>
+            <span class="home-chip"><strong>Client:</strong>&nbsp;Cloud-kitchen operator (multi-hotel room service)</span>
           </div>
 
           <figure class="browser-mockup">
@@ -120,6 +117,7 @@
         </section>
 
         <section class="ge-slide" id="problem">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">02</span> Problem</p>
           <div class="ge-statement">
             <h2>
               Boutique and mid-size hotels couldn't justify a full in-house kitchen —
@@ -159,6 +157,7 @@
         </section>
 
         <section class="ge-slide" id="scope">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">03</span> Portals</p>
           <div class="ge-statement ge-statement--compact">
             <h2>Three portals, one system.</h2>
           </div>
@@ -317,6 +316,7 @@
         </section>
 
         <section class="ge-slide" id="design">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">04</span> Design System</p>
           <div class="ge-statement ge-statement--compact">
             <h2>One design system underneath three portals.</h2>
           </div>
@@ -433,6 +433,7 @@
         </section>
 
         <section class="ge-slide" id="outcome">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> Outcome</p>
           <div class="ge-statement ge-statement--compact">
             <h2>In UAT, ahead of a production rollout.</h2>
           </div>
@@ -467,6 +468,55 @@
               above reflect stakeholder-reported feedback during testing, not post-launch
               analytics.
             </p>
+          </div>
+        </section>
+
+        <section class="home-section" style="border-bottom:none;">
+          <div class="home-shell">
+            <div class="home-section__head reveal">
+              <div class="home-section__title-row">
+                <span class="home-num">06</span>
+                <h2>More Projects</h2>
+              </div>
+            </div>
+
+            <div class="home-work-grid">
+              <a class="home-work-card reveal" href="ge-healthcare.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#5b8def;">GE Healthcare</span>
+                  <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare Asset Lifecycle Management dashboard" />
+                </div>
+                <p class="home-project-eyebrow">Enterprise Healthcare</p>
+                <p class="home-project-title">
+                  Redesigned lease, loan, end-of-term, and remarketing workflows for a platform used by 2,000+ global users.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a class="home-work-card reveal" href="golfpac-travel.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
+                  <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
+                </div>
+                <p class="home-project-eyebrow">Travel Platform</p>
+                <p class="home-project-title">
+                  Modernized a dated booking flow — three competing entry points became one guided path.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a class="home-work-card reveal" href="pareexa-ai.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#a78bfa;">Pareexa.ai</span>
+                  <img src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
+                </div>
+                <p class="home-project-eyebrow">EdTech / AI</p>
+                <p class="home-project-title">
+                  AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -533,5 +583,6 @@
       })();
     </script>
     <script src="topbar-nav.js"></script>
+    <script src="reveal.js"></script>
   </body>
 </html>
