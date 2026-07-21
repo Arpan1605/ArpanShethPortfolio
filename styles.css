@@ -4982,8 +4982,15 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.6;
 }
 
-.home-timeline {
+.home-journey-row {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
   margin-top: 64px;
+}
+
+.home-timeline {
+  flex: 1 1 0;
   max-width: 640px;
 }
 
@@ -5037,12 +5044,13 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-why {
-  margin-top: 64px;
+  flex: 1 1 0;
   padding: 32px 36px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background: var(--surface);
-  max-width: 720px;
+  max-width: 460px;
+  align-self: stretch;
 }
 
 .home-why h3 {
@@ -5627,6 +5635,15 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .home-skills,
   .home-contact-details {
     grid-template-columns: 1fr;
+  }
+
+  .home-journey-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .home-why {
+    max-width: none;
   }
 
   .tastex-system-grid {
