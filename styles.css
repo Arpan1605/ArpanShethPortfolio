@@ -4609,6 +4609,10 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.68;
 }
 
+.home-hero__sub + .home-hero__sub {
+  margin-top: 14px;
+}
+
 .home-hero__curiosity {
   max-width: 720px;
   margin: 18px 0 0;
@@ -5240,16 +5244,20 @@ body[data-theme="dark"] .ge-shot-placeholder {
   transition-delay: 190ms;
 }
 
+.home-hero__sub.reveal + .home-hero__sub.reveal {
+  transition-delay: 215ms;
+}
+
 .home-hero__curiosity.reveal {
-  transition-delay: 220ms;
+  transition-delay: 240ms;
 }
 
 .home-hero__philosophy.reveal {
-  transition-delay: 250ms;
+  transition-delay: 265ms;
 }
 
 .home-hero__chips.reveal {
-  transition-delay: 280ms;
+  transition-delay: 290ms;
 }
 
 .home-hero__row.reveal {
