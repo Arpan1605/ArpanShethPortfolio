@@ -171,11 +171,13 @@ body[data-theme="dark"] .topbar {
 }
 
 .topbar__menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  gap: 24px;
+display: flex;
+    align-items: center;
+    justify-content: right;
+    flex: 1;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .hamburger {
