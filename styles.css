@@ -1322,13 +1322,14 @@ body[data-theme="dark"] .impact-strip article {
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 480ms ease, transform 480ms ease;
+  transform: translateY(26px) scale(0.98);
+  transition: opacity 640ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 @media (max-width: 1300px) {
@@ -4870,6 +4871,183 @@ body[data-theme="dark"] .ge-shot-placeholder {
   text-align: center;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+/* Entrance choreography: hero sequence + staggered grids */
+
+.home-hero__eyebrow.reveal {
+  transition-delay: 0ms;
+}
+
+.home-hero h1.reveal {
+  transition-delay: 70ms;
+}
+
+.home-hero__note.reveal {
+  transition-delay: 150ms;
+}
+
+.home-hero__sub.reveal {
+  transition-delay: 190ms;
+}
+
+.home-hero__chips.reveal {
+  transition-delay: 260ms;
+}
+
+.home-hero__row.reveal {
+  transition-delay: 330ms;
+}
+
+.home-showcase.reveal {
+  transition-delay: 400ms;
+}
+
+.home-client-strip.reveal {
+  transition-delay: 480ms;
+}
+
+.home-work-grid .reveal:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.home-work-grid .reveal:nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.home-work-grid .reveal:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.home-skills .home-skill-group:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.home-skills .home-skill-group:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.home-skills .home-skill-group:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.home-skills .home-skill-group:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+.home-experience--freelance .home-exp-card:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.home-experience--freelance .home-exp-card:nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.home-experience--freelance .home-exp-card:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.home-contact-details a:nth-child(1),
+.home-contact-details div:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.home-contact-details a:nth-child(2),
+.home-contact-details div:nth-child(2) {
+  transition-delay: 60ms;
+}
+
+.home-contact-details a:nth-child(3),
+.home-contact-details div:nth-child(3) {
+  transition-delay: 120ms;
+}
+
+/* Hover micro-interactions */
+
+.home-featured,
+.home-work-card {
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-featured:hover,
+.home-featured:focus-visible,
+.home-work-card:hover,
+.home-work-card:focus-visible {
+  transform: translateY(-6px);
+}
+
+.home-featured:hover .home-project-media img,
+.home-work-card:hover .home-project-media img {
+  transform: scale(1.035);
+}
+
+.home-project-media img {
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-featured .home-project-title svg,
+.home-work-card .home-project-title svg {
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-featured:hover .home-project-title svg,
+.home-work-card:hover .home-project-title svg {
+  transform: translate(3px, -3px);
+}
+
+.home-skill-group {
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms ease;
+}
+
+.home-skill-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+
+.home-phone {
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-phone:hover {
+  transform: translateY(36px);
+}
+
+.home-phone--tilt-left:hover {
+  transform: translateY(50px) rotate(-3deg);
+}
+
+.home-phone--tilt-right:hover {
+  transform: translateY(50px) rotate(3deg);
+}
+
+.home-chip,
+.home-skill-tags span,
+.home-exp-card__tags span {
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__chips.is-visible .home-chip {
+    animation: chip-pop 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .home-hero__chips.is-visible .home-chip:nth-child(1) { animation-delay: 320ms; }
+  .home-hero__chips.is-visible .home-chip:nth-child(2) { animation-delay: 370ms; }
+  .home-hero__chips.is-visible .home-chip:nth-child(3) { animation-delay: 420ms; }
+  .home-hero__chips.is-visible .home-chip:nth-child(4) { animation-delay: 470ms; }
+  .home-hero__chips.is-visible .home-chip:nth-child(5) { animation-delay: 520ms; }
+  .home-hero__chips.is-visible .home-chip:nth-child(6) { animation-delay: 570ms; }
+}
+
+@keyframes chip-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width: 1100px) {
