@@ -4985,7 +4985,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .home-journey-row {
   display: flex;
   gap: 56px;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 64px;
 }
 
@@ -5050,7 +5050,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
   border-radius: 20px;
   background: var(--surface);
   max-width: 460px;
-  align-self: stretch;
 }
 
 .home-why h3 {
