@@ -4602,7 +4602,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-hero__sub {
-  max-width: 920px;
+  max-width: 1080px;
   margin: 20px 0 0;
   color: var(--muted);
   font-size: 1.12rem;
