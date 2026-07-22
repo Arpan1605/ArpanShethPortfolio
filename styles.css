@@ -3957,6 +3957,10 @@ body[data-theme="dark"] .ge-shot-placeholder {
   margin-bottom: 0;
 }
 
+.golfpac-section-head + .golfpac-messy-item {
+  margin-top: 40px;
+}
+
 .golfpac-messy-item h4 {
   margin: 0 0 12px;
   font-size: 0.8rem;
@@ -3979,6 +3983,36 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .golfpac-messy-item__fix strong {
   color: #1f1f23;
+}
+
+.golfpac-section-head {
+  max-width: 1120px;
+  margin: 64px auto 0;
+  text-align: left;
+}
+
+.golfpac-section-head h2 {
+  margin: 0 0 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #1f1f23;
+}
+
+.golfpac-section-head p {
+  margin: 0;
+  max-width: 720px;
+  color: #5b5c64;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.golfpac-meta-chips .home-chip {
+  padding: 13px 22px;
+  font-size: 0.95rem;
+  border-color: #e2e2de;
 }
 
 .golfpac-shot-board {
