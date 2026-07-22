@@ -4009,6 +4009,89 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.5;
 }
 
+.golfpac-subhead {
+  max-width: 1120px;
+  margin: 40px auto 0;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1f1f23;
+}
+
+.golfpac-section-head + .golfpac-subhead {
+  margin-top: 40px;
+}
+
+.golfpac-hero-placeholder {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  aspect-ratio: 2265 / 792;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #d8d8d4;
+  border-radius: 16px;
+  background: #fafaf8;
+  color: #8f9097;
+  font-size: 0.92rem;
+  text-align: center;
+  padding: 24px;
+}
+
+.golfpac-overview-table {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.golfpac-overview-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 24px;
+}
+
+.golfpac-overview-label {
+  padding-top: 3px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8f9097;
+}
+
+.golfpac-overview-value p {
+  margin: 0 0 6px;
+  color: #3a3a40;
+  line-height: 1.65;
+}
+
+.golfpac-overview-value p:last-child {
+  margin-bottom: 0;
+}
+
+.golfpac-overview-value strong {
+  color: #1f1f23;
+}
+
+.golfpac-overview-sub {
+  color: #74747a;
+  font-size: 0.94rem;
+}
+
+.golfpac-disclaimer {
+  max-width: 900px;
+  margin: 32px auto 0;
+  padding: 18px 24px;
+  border-radius: 12px;
+  background: #fdf6e0;
+  color: #6b5a20;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .golfpac-meta-chips .home-chip {
   padding: 13px 22px;
   font-size: 0.95rem;
@@ -4558,8 +4641,13 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .ge-callout-legend,
   .ge-persona-card,
   .ge-persona-lists,
-  .golfpac-before-after {
+  .golfpac-before-after,
+  .golfpac-overview-row {
     grid-template-columns: 1fr;
+  }
+
+  .golfpac-overview-label {
+    padding-top: 0;
   }
 
   .ge-dashboard-mock {
