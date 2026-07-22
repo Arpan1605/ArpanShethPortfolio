@@ -3891,6 +3891,114 @@ body[data-theme="dark"] .ge-shot-placeholder {
   color: #74747a;
 }
 
+.golfpac-before-after {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.golfpac-before-after__panel {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ecece8;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.golfpac-before-after__label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(20, 20, 22, 0.78);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.golfpac-before-after__panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.golfpac-before-after__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  padding: 32px;
+  text-align: center;
+  color: #8f9097;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  border: 1px dashed #d8d8d4;
+  margin: 14px;
+  border-radius: 10px;
+}
+
+.golfpac-before-after__placeholder code {
+  font-family: "Special Elite", monospace;
+  font-size: 0.85rem;
+}
+
+.golfpac-persona-quote {
+  margin: 0 0 18px;
+  padding: 14px 18px;
+  border-left: 3px solid #5fd4e8;
+  background: #f7fdfe;
+  font-style: italic;
+  color: #3a3a40;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.golfpac-messy-item {
+  max-width: 1000px;
+  margin: 0 auto 28px;
+  padding: 28px 30px;
+  border: 1px solid #ecece8;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.golfpac-messy-item:last-child {
+  margin-bottom: 0;
+}
+
+.golfpac-messy-item h4 {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8f9097;
+}
+
+.golfpac-messy-item p {
+  margin: 0;
+  color: #3a3a40;
+  line-height: 1.7;
+}
+
+.golfpac-messy-item__fix {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ecece8;
+}
+
+.golfpac-messy-item__fix strong {
+  color: #1f1f23;
+}
+
 .golfpac-shot-board {
   max-width: 1120px;
   margin: 34px auto 0;
@@ -4433,7 +4541,8 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .ge-testimonial-grid,
   .ge-callout-legend,
   .ge-persona-card,
-  .ge-persona-lists {
+  .ge-persona-lists,
+  .golfpac-before-after {
     grid-template-columns: 1fr;
   }
 
