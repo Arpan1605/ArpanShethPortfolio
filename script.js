@@ -1,6 +1,6 @@
 const body = document.body;
 const themeToggle = document.getElementById("themeToggle");
-const revealItems = document.querySelectorAll(".reveal");
+const revealItems = document.querySelectorAll(".reveal, .color-reveal");
 
 const storedTheme = localStorage.getItem("arpan-wall-theme");
 if (storedTheme === "dark") {

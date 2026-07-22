@@ -5072,9 +5072,14 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-about-lead--support {
-  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
   color: var(--muted);
   font-weight: 400;
+  transition: color 700ms ease;
+}
+
+.home-about-lead--support.is-visible {
+  color: var(--text);
 }
 
 .home-about-current {
