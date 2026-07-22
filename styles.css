@@ -4609,28 +4609,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
   line-height: 1.68;
 }
 
-.home-hero__sub + .home-hero__sub {
-  margin-top: 14px;
-}
-
-.home-hero__curiosity {
-  max-width: 920px;
-  margin: 18px 0 0;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.home-hero__philosophy {
-  max-width: 880px;
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-style: italic;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 .home-hero__chips {
   display: flex;
   flex-wrap: wrap;
@@ -5348,20 +5326,8 @@ body[data-theme="dark"] .ge-shot-placeholder {
   transition-delay: 190ms;
 }
 
-.home-hero__sub.reveal + .home-hero__sub.reveal {
-  transition-delay: 215ms;
-}
-
-.home-hero__curiosity.reveal {
-  transition-delay: 240ms;
-}
-
-.home-hero__philosophy.reveal {
-  transition-delay: 265ms;
-}
-
 .home-hero__chips.reveal {
-  transition-delay: 290ms;
+  transition-delay: 220ms;
 }
 
 .home-hero__row.reveal {
