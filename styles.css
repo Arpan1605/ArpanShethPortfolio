@@ -3903,6 +3903,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
   position: relative;
   margin: 0;
   padding: 0;
+  height: 460px;
   border: 1px solid #ecece8;
   border-radius: 14px;
   overflow: hidden;
@@ -3929,26 +3930,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.golfpac-before-after__placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  padding: 32px;
-  text-align: center;
-  color: #8f9097;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  border: 1px dashed #d8d8d4;
-  margin: 14px;
-  border-radius: 10px;
-}
-
-.golfpac-before-after__placeholder code {
-  font-family: "Special Elite", monospace;
-  font-size: 0.85rem;
+  object-position: top;
 }
 
 .golfpac-persona-quote {
