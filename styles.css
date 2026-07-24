@@ -2550,7 +2550,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .browser-mockup__embed {
   display: block;
   width: 100%;
-  height: 640px;
+  height: 760px;
   border: 0;
   background: #fff;
 }
@@ -3293,7 +3293,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
   }
 
   .browser-mockup__embed {
-    height: 360px;
+    height: 480px;
   }
 
   .ge-access-modal__card,
