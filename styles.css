@@ -2547,6 +2547,14 @@ body[data-theme="dark"] .ge-shot-placeholder {
   height: auto;
 }
 
+.browser-mockup__embed {
+  display: block;
+  width: 100%;
+  height: 640px;
+  border: 0;
+  background: #fff;
+}
+
 .golfpac-compare {
   max-width: 1120px;
   margin: 34px auto 0;
@@ -3282,6 +3290,10 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .pareexa-phone-mockup__preview,
   .pareexa-phone-mockup__embed {
     height: 440px;
+  }
+
+  .browser-mockup__embed {
+    height: 360px;
   }
 
   .ge-access-modal__card,
