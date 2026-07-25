@@ -4078,20 +4078,15 @@ body[data-theme="dark"] .ge-shot-placeholder {
   margin-top: 40px;
 }
 
-.golfpac-hero-placeholder {
+.golfpac-hero-banner {
+  display: block;
+  width: 100%;
   max-width: 1120px;
+  height: auto;
   margin: 34px auto 0;
-  aspect-ratio: 2265 / 792;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed #d8d8d4;
   border-radius: 16px;
-  background: #fafaf8;
-  color: #8f9097;
-  font-size: 0.92rem;
-  text-align: center;
-  padding: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px -30px rgba(15, 15, 15, 0.35);
 }
 
 .golfpac-overview-table {
