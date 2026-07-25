@@ -4365,6 +4365,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
   height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, #c7d2fe, #818cf8);
+  object-fit: cover;
   flex-shrink: 0;
 }
 
