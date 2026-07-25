@@ -1993,6 +1993,14 @@ p.ge-hero-copy__summary {
   gap: 80px;
 }
 
+.ge-split-text > p:only-child,
+.ge-split-text > ul:only-child {
+  grid-column: 1 / -1;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ge-split-text p {
   margin: 0;
   color: #4f5058;
