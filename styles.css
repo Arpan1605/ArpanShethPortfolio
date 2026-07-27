@@ -4381,6 +4381,62 @@ body[data-theme="dark"] .ge-shot-placeholder {
   font-weight: 800;
 }
 
+.tastex-decision {
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.tastex-decision:first-of-type {
+  margin-top: 40px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.tastex-decision__eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8f9097;
+  font-weight: 700;
+}
+
+.tastex-decision__title {
+  margin: 0 0 24px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f1f23;
+}
+
+.tastex-decision__label {
+  margin: 24px 0 10px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8f9097;
+  font-weight: 700;
+}
+
+.tastex-decision__label:first-of-type {
+  margin-top: 0;
+}
+
+.tastex-decision p {
+  margin: 0 0 12px;
+  color: #3a3a40;
+  line-height: 1.7;
+}
+
+.tastex-decision p:last-child {
+  margin-bottom: 0;
+}
+
+.tastex-decision .golfpac-principles {
+  margin: 4px 0 0;
+}
+
 @media (max-width: 860px) {
   .golfpac-snapshot-grid,
   .golfpac-dual-list,

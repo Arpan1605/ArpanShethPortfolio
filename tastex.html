@@ -195,7 +195,19 @@
 
         <section class="ge-slide">
           <div class="ge-statement ge-statement--compact">
-            <h2>Guest flow: QR &rarr; OTP &rarr; Menu &rarr; Cart &rarr; Pay &rarr; Confirm</h2>
+            <h2>Guest flow, at a glance.</h2>
+          </div>
+
+          <div class="golfpac-flow">
+            <span class="golfpac-flow__step">📷 Scan</span>
+            <span class="golfpac-flow__arrow">→</span>
+            <span class="golfpac-flow__step">🔐 Verify</span>
+            <span class="golfpac-flow__arrow">→</span>
+            <span class="golfpac-flow__step">🍽️ Browse</span>
+            <span class="golfpac-flow__arrow">→</span>
+            <span class="golfpac-flow__step">💳 Pay</span>
+            <span class="golfpac-flow__arrow">→</span>
+            <span class="golfpac-flow__step">📦 Track</span>
           </div>
 
           <div class="ge-split-text">
@@ -433,8 +445,257 @@
           </div>
         </section>
 
+        <section class="ge-slide" id="decisions">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 🧩 Key Design Decisions</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>Simplicity for one user often meant complexity somewhere else.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              Building a shared platform meant making a series of product decisions where
+              simplicity for one user often increased complexity somewhere else. These decisions
+              shaped the final product more than the UI itself.
+            </p>
+          </div>
+
+          <h3 class="golfpac-subhead">Design Constraints</h3>
+          <div class="ge-split-text" style="margin-top:24px;">
+            <ul style="max-width:760px; margin:0 auto; text-align:left; color:#3a3a40; line-height:1.8;">
+              <li>Hotels cannot override pricing</li>
+              <li>One hotel maps to exactly one kitchen</li>
+              <li>No cash-on-delivery</li>
+              <li>QR codes must uniquely identify both hotel and room</li>
+              <li>Staff should be able to learn the interface with no formal training</li>
+              <li>Guest ordering should require no training</li>
+              <li>Admin changes must propagate across every city</li>
+            </ul>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Decision 1</p>
+            <h3 class="tastex-decision__title">Local pricing vs. centralized pricing</h3>
+
+            <p class="tastex-decision__label">Initial idea</p>
+            <p>
+              Allow every hotel to maintain its own menu and pricing. Sounds flexible — but once
+              multiple hotels shared the same kitchen, pricing quickly became inconsistent. Two
+              hotels could sell the same dish at different prices, creating operational confusion
+              and making centralized reporting unreliable.
+            </p>
+
+            <p class="tastex-decision__label">What changed</p>
+            <p>
+              Instead of local ownership, pricing became centrally managed. Hotels inherit menus
+              from the central system rather than editing them independently.
+            </p>
+
+            <p class="tastex-decision__label">Outcome</p>
+            <ul class="golfpac-principles">
+              <li>Consistent guest experience</li>
+              <li>Reliable reporting</li>
+              <li>Easier operations</li>
+            </ul>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Decision 2</p>
+            <h3 class="tastex-decision__title">Should guests know which kitchen prepares their food?</h3>
+
+            <p class="tastex-decision__label">Initial idea</p>
+            <p>
+              Initially, we considered exposing the assigned kitchen to improve transparency.
+              During workflow mapping, it became clear that guests weren't interested in the
+              operational structure — they simply wanted their food delivered to the correct room.
+              Showing kitchen information would only introduce unnecessary complexity.
+            </p>
+
+            <p class="tastex-decision__label">Final decision</p>
+            <p>
+              Guests interact only with the hotel. Kitchen routing happens entirely behind the
+              scenes.
+            </p>
+
+            <p class="tastex-decision__label">Outcome</p>
+            <ul class="golfpac-principles">
+              <li>Cleaner experience</li>
+              <li>Lower cognitive load</li>
+              <li>Hotels maintain ownership of the guest relationship</li>
+            </ul>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Decision 3</p>
+            <h3 class="tastex-decision__title">Persistent login vs. OTP every session</h3>
+
+            <p class="tastex-decision__label">Initial idea</p>
+            <p>
+              The first idea was a traditional guest login. However, hotel room occupancy changes
+              frequently — a persistent session could allow the next guest occupying the room to
+              accidentally access previous order history.
+            </p>
+
+            <p class="tastex-decision__label">Final decision</p>
+            <p>
+              Every ordering session begins with OTP verification. No persistent authentication.
+            </p>
+
+            <p class="tastex-decision__label">Outcome</p>
+            <ul class="golfpac-principles">
+              <li>Improved privacy</li>
+              <li>Reduced support issues</li>
+              <li>Safer guest experience</li>
+            </ul>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Decision 4</p>
+            <h3 class="tastex-decision__title">Kitchen dashboard vs. kitchen queue</h3>
+
+            <p class="tastex-decision__label">Initial idea</p>
+            <p>
+              The first dashboard concepts exposed too much information — pricing, reports,
+              analytics, and operational metrics. Kitchen staff didn't need business intelligence.
+              They needed to know: what should I cook next?
+            </p>
+
+            <p class="tastex-decision__label">Final decision</p>
+            <p>
+              A simplified queue focused on status, order details, and the next action. Everything
+              else was intentionally removed.
+            </p>
+
+            <p class="tastex-decision__label">Outcome</p>
+            <ul class="golfpac-principles">
+              <li>Faster onboarding</li>
+              <li>Reduced visual noise</li>
+              <li>Better operational focus</li>
+            </ul>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Decision 5</p>
+            <h3 class="tastex-decision__title">QR scanning only?</h3>
+
+            <p class="tastex-decision__label">Initial idea</p>
+            <p>
+              The original flow assumed every guest would successfully scan the QR code. But real
+              environments are unpredictable — damaged stickers, poor lighting, or camera issues
+              could block ordering entirely.
+            </p>
+
+            <p class="tastex-decision__label">Final decision</p>
+            <p>
+              Added a manual hotel-and-room-number verification flow as a fallback. The QR
+              experience remained the primary path while ensuring guests were never blocked from
+              ordering.
+            </p>
+
+            <p class="tastex-decision__label">Outcome</p>
+            <ul class="golfpac-principles">
+              <li>No guest ever blocked from ordering</li>
+              <li>QR remains the primary, fastest path</li>
+              <li>Manual fallback always available</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">06</span> 🔄 What We Changed During Design</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>The design evolved through testing and stakeholder feedback.</h2>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Iteration 1</p>
+            <h3 class="tastex-decision__title">Kitchen dashboard</h3>
+
+            <div class="golfpac-table-wrap">
+              <table class="golfpac-table">
+                <thead>
+                  <tr>
+                    <th>Version 1</th>
+                    <th>Version 2 (shipped)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Heavy dashboard: charts, graphs, analytics</td>
+                    <td>Status cards, order queue, one CTA</td>
+                  </tr>
+                  <tr>
+                    <td>Kitchen staff ignored most of it</td>
+                    <td>Faster onboarding, better operational focus</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Iteration 2</p>
+            <h3 class="tastex-decision__title">Guest checkout</h3>
+
+            <p class="tastex-decision__label">Initial flow</p>
+            <div class="golfpac-flow">
+              <span class="golfpac-flow__step">Cart</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Payment</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Success</span>
+            </div>
+            <p style="margin-top:20px;">
+              Testing showed guests still wondered: did my order actually reach the kitchen? So we
+              added live order tracking.
+            </p>
+
+            <p class="tastex-decision__label">Final flow</p>
+            <div class="golfpac-flow">
+              <span class="golfpac-flow__step">Cart</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Payment</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Live Tracking</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Delivered</span>
+            </div>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Iteration 3</p>
+            <h3 class="tastex-decision__title">Admin panel navigation</h3>
+
+            <p class="tastex-decision__label">Initial nav order</p>
+            <div class="golfpac-flow">
+              <span class="golfpac-flow__step">Hotels</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Cities</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Menus</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Kitchen</span>
+            </div>
+            <p style="margin-top:20px;">
+              Stakeholders found it confusing because their operational workflow began with
+              cities, not hotels. Navigation was reorganized around how administrators actually
+              manage the business.
+            </p>
+
+            <p class="tastex-decision__label">Final nav order</p>
+            <div class="golfpac-flow">
+              <span class="golfpac-flow__step">Cities</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Kitchens</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Hotels</span>
+              <span class="golfpac-flow__arrow">→</span>
+              <span class="golfpac-flow__step">Menu</span>
+            </div>
+          </div>
+        </section>
+
         <section class="ge-slide" id="outcome">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 📊 Outcome</p>
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">07</span> 📊 Outcome</p>
           <div class="ge-statement ge-statement--compact">
             <h2>In UAT, ahead of a production rollout.</h2>
           </div>
@@ -473,7 +734,7 @@
         </section>
 
         <section class="ge-slide" id="ai-pipeline">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">06</span> 🤖 Built With AI</p>
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">08</span> 🤖 AI-Augmented Product Development</p>
           <div class="ge-statement ge-statement--compact">
             <h2>Built with an AI-orchestrated pipeline, directed at every stage.</h2>
           </div>
@@ -520,11 +781,27 @@
           </div>
         </section>
 
+        <section class="ge-slide" id="reflections">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">09</span> 💭 Reflections</p>
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              Looking back, the biggest challenge wasn't designing three interfaces — it was
+              designing one product that behaved consistently across three completely different
+              users.
+            </p>
+            <p>
+              The project reinforced how product design extends beyond screens. Decisions around
+              permissions, business rules, ownership, and operational simplicity ultimately shaped
+              the experience far more than visual design alone.
+            </p>
+          </div>
+        </section>
+
         <section class="home-section" style="border-bottom:none;">
           <div class="home-shell">
             <div class="home-section__head reveal">
               <div class="home-section__title-row">
-                <span class="home-num">07</span>
+                <span class="home-num">10</span>
                 <h2>More Projects</h2>
               </div>
             </div>
