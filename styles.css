@@ -4318,10 +4318,74 @@ body[data-theme="dark"] .ge-shot-placeholder {
   font-weight: 800;
 }
 
+.golfpac-would-measure {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 28px 32px;
+  border-radius: 16px;
+  background: #f2f2f0;
+}
+
+.golfpac-would-measure p {
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: #1f1f23;
+}
+
+.golfpac-reflection-cards {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.golfpac-reflection-card {
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.golfpac-reflection-card h4 {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f1f23;
+}
+
+.golfpac-reflection-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.golfpac-reflection-card li {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: #3a3a40;
+}
+
+.golfpac-reflection-card--worked li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.golfpac-reflection-card--worked li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1f9d55;
+  font-weight: 800;
+}
+
 @media (max-width: 860px) {
   .golfpac-snapshot-grid,
   .golfpac-dual-list,
-  .golfpac-principles {
+  .golfpac-principles,
+  .golfpac-reflection-cards {
     grid-template-columns: 1fr;
   }
 
