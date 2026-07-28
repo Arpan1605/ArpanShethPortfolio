@@ -5391,11 +5391,78 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-featured {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #14141a;
+  border-radius: 24px;
+  padding: 28px;
 }
 
-.home-featured .home-project-title {
+.home-featured .home-project-media {
+  flex: 0 0 44%;
+  margin: 0;
+  background: transparent;
+}
+
+.home-featured__content {
+  position: relative;
+  flex: 1 1 0;
+  padding-right: 36px;
+}
+
+.home-featured__badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.home-featured__heading {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.home-featured__desc {
+  margin: 0 0 28px;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-featured__stats {
+  display: flex;
+  gap: 44px;
+}
+
+.home-featured__stat-number {
+  margin: 0;
+  color: #fff;
   font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.home-featured__stat-label {
+  margin: 4px 0 0;
+  max-width: 160px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.home-featured__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .home-work-grid {
@@ -6113,12 +6180,12 @@ body[data-theme="dark"] .ge-shot-placeholder {
   transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.home-featured .home-project-title svg,
+.home-featured__arrow,
 .home-work-card .home-project-title svg {
   transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.home-featured:hover .home-project-title svg,
+.home-featured:hover .home-featured__arrow,
 .home-work-card:hover .home-project-title svg {
   transform: translate(3px, -3px);
 }
@@ -6237,6 +6304,25 @@ body[data-theme="dark"] .ge-shot-placeholder {
   .home-skills,
   .home-contact-details {
     grid-template-columns: 1fr;
+  }
+
+  .home-featured {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .home-featured .home-project-media {
+    flex: none;
+  }
+
+  .home-featured__content {
+    padding-right: 0;
+    margin-top: 24px;
+  }
+
+  .home-featured__desc {
+    max-width: none;
   }
 
   .home-journey-row {
