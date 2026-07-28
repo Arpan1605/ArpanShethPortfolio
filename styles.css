@@ -5413,6 +5413,36 @@ body[data-theme="dark"] .ge-shot-placeholder {
   font-size: 1.1rem;
 }
 
+.home-project-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.home-project-stat__number {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.home-project-stat__label {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.home-featured .home-project-stats {
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+.home-featured .home-project-stat__number {
+  font-size: 1.5rem;
+}
+
 /* Design process */
 
 .home-process {
