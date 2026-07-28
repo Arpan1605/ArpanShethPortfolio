@@ -5061,7 +5061,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 }
 
 .home-section {
-  padding: 96px 0;
+  padding: 78px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -5071,7 +5071,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .home-section__head {
   max-width: 720px;
-  margin: 0 0 48px;
+  margin: 0 0 38px;
 }
 
 .home-section__title-row {
@@ -5440,7 +5440,9 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .home-featured__stats {
   display: flex;
-  gap: 44px;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 36px;
 }
 
 .home-featured__stat-number {
@@ -6307,7 +6309,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 @media (max-width: 860px) {
   .home-section {
-    padding: 64px 0;
+    padding: 52px 0;
   }
 
   .home-hero {
