@@ -5482,6 +5482,12 @@ body[data-theme="dark"] .ge-shot-placeholder {
   display: block;
 }
 
+.home-work-card .home-project-media img {
+  height: 260px;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .home-work-card .home-project-title {
   font-size: 1.1rem;
 }
