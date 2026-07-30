@@ -1,18 +1,15 @@
-const hamburgerToggle = document.getElementById("hamburgerToggle");
-const topbarMenu = document.getElementById("topbarMenu");
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-function closeTopbarMenu() {
-  topbarMenu?.classList.remove("is-open");
-  hamburgerToggle?.classList.remove("is-active");
-  hamburgerToggle?.setAttribute("aria-expanded", "false");
+if (scrollTopBtn) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      scrollTopBtn.classList.toggle("is-visible", window.scrollY > 480);
+    },
+    { passive: true }
+  );
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
-
-hamburgerToggle?.addEventListener("click", () => {
-  const isOpen = topbarMenu?.classList.toggle("is-open");
-  hamburgerToggle.classList.toggle("is-active", isOpen);
-  hamburgerToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-});
-
-topbarMenu?.querySelectorAll("a, button").forEach((el) => {
-  el.addEventListener("click", closeTopbarMenu);
-});

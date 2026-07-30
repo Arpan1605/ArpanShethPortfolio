@@ -18,42 +18,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="ge-case-page">
-    <header class="topbar topbar--minimal ge-case-topbar">
-      <a class="brand" href="index.html">
-        <span class="brand__mark brand__mark--photo">
-          <img src="arpan-photo.jpg" alt="Arpan Sheth" />
-          <span class="brand__status-dot" aria-hidden="true"></span>
-        </span>
-        <span class="brand__text">Arpan Sheth</span>
-      </a>
+    <div class="top-info-bar">
+      <a class="top-info-bar__name" href="index.html">Arpan Sheth</a>
+      <span class="top-info-bar__role">UX/UI Designer</span>
+      <span class="top-info-bar__location">Ahmedabad, India</span>
+    </div>
 
-      <button
-        class="hamburger"
-        id="hamburgerToggle"
-        type="button"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="topbarMenu"
-      >
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-        <span class="hamburger__bar"></span>
-      </button>
+    <nav class="floating-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="floating-nav__resume" href="resume.pdf" download="Arpan-Sheth-Resume.pdf"><span class="floating-nav__resume-full">Download </span>Resume</a>
+    </nav>
 
-      <div class="topbar__menu" id="topbarMenu">
-        <nav class="topbar__nav" aria-label="Top navigation">
-          <a href="index.html#work">Work</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#experience">Experience</a>
-          <a href="index.html#skills">Skills</a>
-          <a href="index.html#contact">Contact</a>
-        </nav>
-
-        <div class="topbar__actions">
-          <a class="btn-ghost" href="index.html">Back Home</a>
-        </div>
-      </div>
-    </header>
+    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
 
     <div class="ge-case-shell">
       <main class="ge-case-main">
