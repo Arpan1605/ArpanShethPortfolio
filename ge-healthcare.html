@@ -44,6 +44,7 @@
       <a href="#research">Research</a>
       <a href="#approach">Approach</a>
       <a href="#design-system">Design System</a>
+      <a href="#constraints-iteration">Constraints &amp; Iteration</a>
       <a href="#impact">Impact</a>
     </nav>
 
@@ -410,8 +411,63 @@
           </div>
         </section>
 
+        <section class="ge-slide" id="constraints-iteration">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 🔄 Constraints &amp; Iteration</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>Not every redesign is a single decision — some are a back-and-forth.</h2>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Constraint &amp; Iteration</p>
+            <h3 class="tastex-decision__title">Designing the Workflow Status View</h3>
+
+            <p class="tastex-decision__label">The challenge</p>
+            <p>
+              As the platform scaled and workflow volume grew, the original quote-status
+              visualization — a simple pie chart — stopped giving the PMO team enough detail to
+              act quickly. What followed wasn't a single redesign but a genuine iterative
+              back-and-forth: each stakeholder review surfaced a new requirement I hadn't
+              anticipated, and each one carried its own technical implications.
+            </p>
+            <ul class="pareexa-mini-list">
+              <li><strong>Pie chart → Bar graph:</strong> The PMO wanted to see the status of every workflow at a glance, not just a proportional breakdown — a bar view could show individual workflow items directly, which the pie chart structurally couldn't.</li>
+              <li><strong>Bar graph → Progress view:</strong> The bar view required scrolling once volume grew, which the PMO explicitly didn't want — pushing me toward a view that could show status without depending on scroll depth.</li>
+              <li><strong>Progress view → Card view:</strong> The next ask was to see status broken down by individual workflow step, not just overall progress — which meant restructuring the data model behind the view, not just the visual treatment.</li>
+              <li><strong>Card view → Live updates:</strong> The final requirement — real-time status updates — introduced a genuine technical constraint: a live-updating view has real implications for data refresh performance and backend load, not just a UI change.</li>
+            </ul>
+
+            <p class="tastex-decision__label">How I handled it</p>
+            <p>
+              Rather than treating each new requirement as a full restart, I kept the underlying
+              data structure (workflow status, by step) consistent across iterations, so each
+              visual pivot was a presentation change rather than a rebuild — which is what made it
+              possible to keep pace with requirements shifting meeting to meeting. For the
+              live-updates requirement specifically, I worked with engineering to understand what
+              refresh rate was actually sustainable at scale, rather than designing an ideal
+              real-time experience the backend couldn't support.
+            </p>
+
+            <p class="tastex-decision__label">The outcome</p>
+            <p>
+              The final card-based view with live status updates gave the PMO what they'd been
+              asking for across every iteration — at-a-glance visibility into individual workflow
+              steps, without scroll dependency, updated in real time.
+            </p>
+
+            <p class="tastex-decision__label">What I'd do differently</p>
+            <p>
+              Push for a more structured requirements-validation session upfront — even a single
+              round of "show me three rough directions before we build any of them" likely would
+              have surfaced the scroll and step-level requirements earlier, rather than discovering
+              them one meeting at a time. It's a good reminder that fast iteration is valuable, but
+              it's not a substitute for front-loading discovery when the stakeholder's mental model
+              is still evolving too.
+            </p>
+          </div>
+        </section>
+
         <section class="ge-slide" id="impact">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 📊 Impact</p>
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">06</span> 📊 Impact</p>
           <div class="ge-statement ge-statement--compact">
             <h2>Notable gains in satisfaction, efficiency, and productivity.</h2>
           </div>
@@ -521,7 +577,7 @@
           <div class="home-shell">
             <div class="home-section__head reveal">
               <div class="home-section__title-row">
-                <span class="home-num">06</span>
+                <span class="home-num">07</span>
                 <h2>More Projects</h2>
               </div>
             </div>
