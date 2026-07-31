@@ -2495,6 +2495,13 @@ body[data-theme="dark"] .ge-shot-placeholder {
   transform: rotate(-2deg);
 }
 
+.pareexa-challenge-collage__card--front-phone {
+  width: min(190px, 34%);
+  left: 60%;
+  top: 56px;
+  transform: rotate(-4deg);
+}
+
 .pareexa-value-strip,
 .pareexa-goals-grid,
 .pareexa-analytics-story {
@@ -3534,21 +3541,27 @@ body[data-theme="dark"] .ge-shot-placeholder {
   }
 
   .pareexa-challenge-collage__card--back {
-    width: 78%;
+    width: min(300px, 78%);
     left: 0;
     top: 60px;
   }
 
   .pareexa-challenge-collage__card--mid {
-    width: 82%;
+    width: min(320px, 82%);
     left: 10%;
     top: 24px;
   }
 
   .pareexa-challenge-collage__card--front {
-    width: 86%;
+    width: min(340px, 86%);
     left: 4%;
     top: 92px;
+  }
+
+  .pareexa-challenge-collage__card--front-phone {
+    width: min(130px, 28%);
+    left: 52%;
+    top: 20px;
   }
 
   .pareexa-board-card__image {
