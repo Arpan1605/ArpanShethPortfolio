@@ -2274,7 +2274,6 @@ p.ge-hero-copy__summary {
 
 .ge-lifecycle-band h3 {
   margin: 0 0 12px;
-  font-family: "Special Elite", monospace;
   font-size: 1.3rem;
 }
 
@@ -2435,7 +2434,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .ge-evolution-grid h3,
 .ge-module-grid h3 {
   margin: 0 0 14px;
-  font-family: "Special Elite", monospace;
   font-size: 1.48rem;
 }
 
@@ -2573,7 +2571,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
 .pareexa-prototype-copy h3,
 .pareexa-goals-grid h3 {
   margin: 0 0 10px;
-  font-family: "Special Elite", monospace;
   font-size: 1.45rem;
 }
 
@@ -2675,8 +2672,8 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .pareexa-ecosystem__center {
   grid-column: 2;
-  font-family: "Special Elite", monospace;
   font-size: 1.2rem;
+  font-weight: 700;
   background: #171625;
   color: #fff;
 }
@@ -2687,7 +2684,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .pareexa-ia-card h3 {
   margin: 0 0 16px;
-  font-family: "Special Elite", monospace;
   font-size: 1.38rem;
 }
 
@@ -3465,7 +3461,6 @@ body[data-theme="dark"] .ge-shot-placeholder {
   border: 1px solid #ecece8;
   background: #fff;
   padding: 22px 18px;
-  font-family: "Special Elite", monospace;
   font-size: 1.05rem;
 }
 
