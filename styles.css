@@ -2595,13 +2595,13 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .pareexa-metrics-note--centered {
   max-width: 720px;
-  margin: -12px auto 34px;
+  margin: 16px auto 34px;
   text-align: center;
 }
 
 .pareexa-status-note {
   max-width: 820px;
-  margin: -18px auto 44px;
+  margin: 20px auto 44px;
   padding: 16px 22px;
   border: 1px solid #ecece8;
   border-radius: 14px;
