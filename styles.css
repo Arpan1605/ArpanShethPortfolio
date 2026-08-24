@@ -6127,6 +6127,35 @@ body[data-theme="dark"] .ge-shot-placeholder {
   background: var(--bg);
 }
 
+.home-ai-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.home-ai-workflow-grid .home-exp-card {
+  padding: 28px 26px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.home-ai-workflow-grid .home-exp-card__head {
+  margin-bottom: 4px;
+}
+
+.home-ai-workflow-grid .home-exp-card__head h3 {
+  font-size: 1.15rem;
+}
+
+.home-ai-workflow-grid .home-exp-card p:not(.home-exp-card__meta) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* Awards */
 
 .award-carousel {
@@ -6652,6 +6681,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
   .home-work-grid,
   .home-experience--freelance,
+  .home-ai-workflow-grid,
   .home-skills,
   .home-contact-details {
     grid-template-columns: 1fr;
