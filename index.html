@@ -1,801 +1,380 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-loading">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arpan Sheth | UX/UI Designer — Web &amp; Digital Product Design</title>
     <meta
       name="description"
-      content="UX/UI Designer with 5+ years of experience designing web applications end-to-end across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Currently designing enterprise healthcare workflows for GE Healthcare via Tata Consultancy Services, used by 2,000+ global users. Hands-on frontend in Angular and Git/GitHub. Based in India, open to relocating across Europe."
+      content="UX/UI Designer with 5+ years of experience across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Open to relocating."
     />
-    <meta name="keywords" content="UX Designer, UI Designer, Web Design, Product Designer, Design Systems, Angular, Frontend Development, Healthcare UX, Europe relocation" />
+    <meta name="keywords" content="UX Designer, UI Designer, Web Design, Product Designer, Design Systems, Angular, Frontend Development, Healthcare UX, Open to relocate" />
     <link rel="canonical" href="https://arpansheth.digital/" />
-
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Arpan Sheth | UX/UI Designer — Web &amp; Digital Product Design" />
-    <meta
-      property="og:description"
-      content="UX/UI Designer with 5+ years of experience designing web applications end-to-end across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Hands-on frontend in Angular and Git/GitHub. Open to relocating across Europe."
-    />
+    <meta property="og:description" content="UX/UI Designer with 5+ years of experience across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Open to relocating." />
     <meta property="og:url" content="https://arpansheth.digital/" />
     <meta property="og:image" content="https://arpansheth.digital/arpan-photo.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Arpan Sheth | UX/UI Designer — Web &amp; Digital Product Design" />
-    <meta name="twitter:description" content="UX/UI Designer with 5+ years of experience across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Open to relocating across Europe." />
+    <meta name="twitter:description" content="UX/UI Designer with 5+ years of experience across enterprise, startup, and independent engagements in healthcare, travel, and EdTech. Open to relocating." />
     <meta name="twitter:image" content="https://arpansheth.digital/arpan-photo.jpg" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Special+Elite&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Geist+Mono:wght@400;500&family=Inter+Tight:wght@300..600&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="favicon-arpan.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="home.css" />
+    <script>
+      // Show the full preloader only on the first visit of the session.
+      try {
+        if (localStorage.getItem("arpan-wall-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");
+        if (sessionStorage.getItem("preloaderShown") === "true" || location.hash) document.documentElement.classList.add("skip-preloader");
+      } catch (e) {}
+      // Failsafe: never leave the page hidden if scripts fail to load.
+      setTimeout(function () { document.documentElement.classList.remove("is-loading"); }, 5000);
+    </script>
   </head>
-  <body>
-    <div class="top-info-bar">
-      <a class="top-info-bar__name" href="#home">
-        <img class="top-info-bar__avatar" src="arpan-photo.jpg" alt="" />
-        Arpan Sheth
-      </a>
-      <span class="top-info-bar__role">UX/UI Designer</span>
-      <div style="display:flex; align-items:center; gap:14px;">
-        <span class="top-info-bar__location">Ahmedabad, India</span>
-        <button class="theme-toggle-icon" id="themeToggle" type="button" aria-label="Toggle theme" style="width:28px; height:28px;">
-          <svg class="theme-toggle-icon__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line></svg>
-          <svg class="theme-toggle-icon__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-      </div>
+  <body data-page="home" data-theme-toggle>
+    <script src="chrome.js"></script>
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__bg"></div>
+      <span class="preloader__dot"></span>
     </div>
 
-    <nav class="floating-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="ai-workflow.html">AI Workflow</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a class="floating-nav__resume" href="resume.pdf" download="Arpan-Sheth-Resume.pdf"><span class="floating-nav__resume-full">Download </span>Resume</a>
-    </nav>
-
-    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Scroll to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
-    </button>
-
-    <main id="home">
-      <section class="home-hero" id="hero" data-cursor-hint="scroll">
-        <div class="home-shell">
-          <p class="home-hero__eyebrow reveal">UX/UI Designer — Web &amp; Digital Product Design</p>
-          <h1 class="reveal">Product-focused UX/UI Designer creating enterprise software used by thousands of users.</h1>
-          <p class="home-hero__note reveal">(Healthcare, finance &amp; travel&mdash;the products that keep businesses running.)</p>
-          <p class="home-hero__sub reveal">
-            Most recently: enterprise healthcare software used by 2,000+ users across 20+
-            countries, reducing manual operational effort across lease, loan, and end-of-term
-            workflows.
-          </p>
-          <div class="home-hero__chips reveal">
-            <span class="home-chip">5+ Years Experience</span>
-            <span class="home-chip">Enterprise SaaS</span>
-            <span class="home-chip">Healthcare &amp; Finance</span>
-            <span class="home-chip">Design Systems</span>
-            <span class="home-chip">2,000+ Users</span>
-            <span class="home-chip">20+ Countries</span>
-            <span class="home-chip">India &rarr; Open to Relocate (Europe)</span>
-          </div>
-
-          <div class="home-hero__row reveal">
-            <div class="home-social-row">
-              <a class="home-social-icon" href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-              <a class="home-social-icon" href="mailto:mrarpansheth@gmail.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </a>
-              <a class="home-social-icon" href="https://github.com/Arpan1605" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              </a>
-            </div>
-            <div style="display:flex; gap:14px; flex-wrap:wrap;">
-              <a class="btn-ghost" href="#work">View Selected Work</a>
-              <a class="btn-accent" href="#contact">Let's Talk ↗</a>
-            </div>
-          </div>
-
-          <div class="home-showcase reveal" data-nav-dark>
-            <div class="home-phone home-phone--tilt-left">
-              <img src="tastex-guest-landing.png" alt="tasteX guest hotel-selection screen" />
-            </div>
-            <div class="home-phone">
-              <img src="phone-pareexa.jpg" alt="Pareexa.ai sign-in screen" />
-            </div>
-            <div class="home-phone home-phone--tilt-right">
-              <img src="tastex-guest-cart.png" alt="tasteX cart and checkout screen" />
-            </div>
-          </div>
-
-          <div class="home-client-strip reveal">
-            <div class="logo-carousel">
-              <div class="logo-carousel__track">
-                <img src="logo-tcs.png" alt="Tata Consultancy Services" />
-                <img src="logo-gehealthcare.png" alt="GE HealthCare" />
-                <img src="logo-golfpac.png" alt="Golfpac Travel" />
-                <img src="logo-pareexa.png" alt="Pareexa.ai" />
-                <img src="logo-tcs.png" alt="Tata Consultancy Services" aria-hidden="true" />
-                <img src="logo-gehealthcare.png" alt="GE HealthCare" aria-hidden="true" />
-                <img src="logo-golfpac.png" alt="Golfpac Travel" aria-hidden="true" />
-                <img src="logo-pareexa.png" alt="Pareexa.ai" aria-hidden="true" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="work">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">01</span>
-              <h2>Selected Work</h2>
-            </div>
-            <p>
-              Four case studies spanning healthcare operations, travel booking, EdTech, and cloud
-              kitchens — each one solving a specific business problem, not just a visual refresh.
-            </p>
-          </div>
-
-          <a class="home-featured reveal" href="ge-healthcare.html">
-            <div class="home-project-media">
-              <span class="home-project-tag" style="background:#5b8def;">GE Healthcare</span>
-              <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare Asset Lifecycle Management dashboard, annotated with design decisions" />
-            </div>
-            <div class="home-featured__content">
-              <span class="home-featured__badge">Enterprise Healthcare</span>
-              <h3 class="home-featured__heading">Redesigning Enterprise Financial Workflows at Scale</h3>
-              <p class="home-featured__desc">
-                Redesigned lease, loan, end-of-term, and remarketing workflows for a platform that
-                grew from roughly 50 to 2,000+ global users across 20+ countries, cutting
-                redundant manual work out of daily quote generation.
-              </p>
-              <div class="home-featured__stats">
-                <div>
-                  <p class="home-featured__stat-number">2,000+</p>
-                  <p class="home-featured__stat-label">Users (scaled from ~50)</p>
-                </div>
-                <div>
-                  <p class="home-featured__stat-number">5,000+</p>
-                  <p class="home-featured__stat-label">Quotes generated</p>
-                </div>
-                <div>
-                  <p class="home-featured__stat-number">20+</p>
-                  <p class="home-featured__stat-label">Countries</p>
-                </div>
-              </div>
-              <svg class="home-featured__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </div>
-          </a>
-
-          <div class="home-work-grid">
-            <a class="home-work-card home-work-card--dark reveal" href="tastex.html">
-              <div class="home-project-media">
-                <span class="home-project-tag" style="background:#f2994a;">tasteX</span>
-                <img src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
-              </div>
-              <div class="home-work-card__content">
-                <span class="home-work-card__badge">Cloud Kitchen</span>
-                <p class="home-work-card__title">
-                  QR-based room-service ordering routed from multiple hotels into shared central
-                  kitchens — shipped in under 5 months and now in UAT ahead of a production
-                  rollout.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-                <div class="home-work-card__stats">
-                  <div>
-                    <p class="home-work-card__stat-number">&lt;5 Months</p>
-                    <p class="home-work-card__stat-label">To build, AI-augmented</p>
-                  </div>
-                  <div>
-                    <p class="home-work-card__stat-number">3</p>
-                    <p class="home-work-card__stat-label">Role-based portals</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a class="home-work-card home-work-card--dark reveal" href="pareexa-ai.html">
-              <div class="home-project-media">
-                <span class="home-project-tag" style="background:#a78bfa;">Pareexa.ai</span>
-                <img src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
-              </div>
-              <div class="home-work-card__content">
-                <span class="home-work-card__badge">EdTech / AI</span>
-                <p class="home-work-card__title">
-                  AI-powered learning ecosystem for exam aspirants — planning, study, testing, and
-                  analytics — designed as a scalable, pre-launch system across 40+ screens.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-                <div class="home-work-card__stats">
-                  <div>
-                    <p class="home-work-card__stat-number">40+</p>
-                    <p class="home-work-card__stat-label">Mobile screens designed</p>
-                  </div>
-                  <div>
-                    <p class="home-work-card__stat-number">6 Months</p>
-                    <p class="home-work-card__stat-label">Design &amp; systems work</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <a class="home-work-card home-work-card--dark reveal" href="golfpac-travel.html">
-              <div class="home-project-media">
-                <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
-                <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
-              </div>
-              <div class="home-work-card__content">
-                <span class="home-work-card__badge">Travel Platform</span>
-                <p class="home-work-card__title">
-                  Modernized a dated booking flow — three competing entry points became one guided
-                  path, and stakeholders confirmed a clearer, more trustworthy path to booking.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-                <div class="home-work-card__stats">
-                  <div>
-                    <p class="home-work-card__stat-number">500K+</p>
-                    <p class="home-work-card__stat-label">Golfers served</p>
-                  </div>
-                  <div>
-                    <p class="home-work-card__stat-number">35+</p>
-                    <p class="home-work-card__stat-label">Years in business</p>
-                  </div>
-                </div>
+    <div class="page" id="top">
+      <main id="main">
+        <!-- Hero -->
+        <section class="hero" aria-label="Introduction">
+          <div class="hero__media">
+            <a class="hero__media-inner" href="#work" aria-label="Jump to selected work" data-cursor="Explore work" data-cursor-theme="light">
+              <img class="hero__slide is-active" src="ge-healthcare-devices.jpg" alt="" data-label="GE Healthcare" />
+              <img class="hero__slide" src="thumb-tastex.jpg" alt="" data-label="tasteX" />
+              <img class="hero__slide" src="thumb-pareexa.jpg" alt="" data-label="Pareexa.ai" />
+              <img class="hero__slide" src="thumb-golfpac.jpg" alt="" data-label="GolfPac Travel" />
+              <div class="hero__media-ui">
+                <span class="mono">Selected work · 2020—2026</span>
+                <span class="mono hero__media-label">GE Healthcare</span>
               </div>
             </a>
           </div>
-        </div>
-      </section>
+          <div class="hero__content">
+            <h1 class="hero__title split" data-split-hero>Designing products people love to use.</h1>
+            <a class="hero__scroll mono" href="#intro">Scroll <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
 
-      <section class="home-section" id="about">
-        <div class="home-shell">
-          <div class="home-section__head reveal" style="margin-bottom:32px;">
-            <div class="home-section__title-row">
-              <span class="home-num">02</span>
-              <h2>About Me</h2>
-            </div>
+        <!-- Intro -->
+        <section class="intro container" id="intro">
+          <div class="row-head">
+            <h2 class="h2 split-lines">
+              I'm Arpan, a product-focused UX/UI designer creating enterprise software used by thousands of people.
+              Research, design and front-end, carried by one person from first workshop to shipped Angular — most recently
+              for healthcare platforms used by 2,000+ people across 20+ countries.
+            </h2>
+            <a class="btn btn--dark roll" href="#work" data-reveal="fade-in"><span data-text="Explore my work">Explore my work</span><i class="tri" aria-hidden="true"></i></a>
           </div>
 
-          <div class="home-about-intro" style="margin-bottom:56px;">
-            <p class="home-about-lead reveal">
-              I'm a Product Designer with 5+ years of experience designing enterprise software
-              across healthcare, travel, EdTech, and hospitality — helping organizations
-              transform complex workflows into intuitive digital products.
-            </p>
-            <p class="home-about-lead home-about-lead--support color-reveal">
-              My work focuses on simplifying complex workflows through research, systems
-              thinking, and close collaboration with engineering teams.
-            </p>
-            <p class="home-about-lead home-about-lead--support color-reveal">
-              With hands-on Angular experience, I help bridge the gap between design intent and
-              shipped products.
-            </p>
-            <p class="home-about-current reveal">
-              Currently designing enterprise healthcare platforms that support lease, loan,
-              end-of-term, and remarketing workflows for thousands of users.
-            </p>
-          </div>
-
-          <div class="about-layout reveal">
-            <div class="about-image">
-              <img src="arpan-photo.jpg" alt="Arpan Sheth" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:20px; display:block;" />
-            </div>
-            <div class="about-copy">
-              <h3 style="font-family:'Inter',sans-serif; font-weight:700; font-size:1.4rem; margin:0 0 18px;">My Design Philosophy</h3>
-              <p>
-                I believe in simplifying complexity, not decorating it. Whether redesigning
-                lease and loan workflows for GE Healthcare or streamlining booking flows for
-                GolfPac, my goal is always to reduce cognitive load while preserving business
-                capability.
-              </p>
-              <p>
-                Learning German (A1 &rarr; B1) and open to relocating across Europe.
-              </p>
-              <a class="btn-accent" href="#contact">Let's Talk ↗</a>
-            </div>
-          </div>
-
-          <div class="home-journey-row">
-            <div class="home-timeline reveal">
-              <h3 class="home-timeline__heading">My Journey</h3>
-              <div class="home-timeline-list">
-                <div class="home-timeline-row">
-                  <p class="home-timeline-row__date">2015&ndash;2019</p>
-                  <p class="home-timeline-row__desc">B.E. Information Technology, Gujarat Technological University</p>
+          <!-- Work grid -->
+          <div class="work" id="work">
+            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
+              <a href="ge-healthcare.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
+                <div class="card__media card__media--crop" style="--tile:#151515">
+                  <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare LEAP dashboard shown on laptop, tablet and phone" loading="lazy" />
                 </div>
-                <div class="home-timeline-row">
-                  <p class="home-timeline-row__date">Oct 2020</p>
-                  <p class="home-timeline-row__desc">Started my design career at Inospire Consultancy Services</p>
-                </div>
-                <div class="home-timeline-row">
-                  <p class="home-timeline-row__date">Mar 2021</p>
-                  <p class="home-timeline-row__desc">Joined Tata Consultancy Services</p>
-                </div>
-                <div class="home-timeline-row">
-                  <p class="home-timeline-row__date">Oct 2022&ndash;Present</p>
-                  <p class="home-timeline-row__desc">Moved onto the GE Healthcare account, scaling enterprise products to 2,000+ users</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="home-why reveal">
-              <h3>Why Hire Me</h3>
-              <p>
-                I thrive at the intersection of user needs, business goals, and engineering
-                constraints. My strength lies in simplifying complex enterprise systems into
-                experiences that teams can confidently build, scale, and adopt.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="process">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">03</span>
-              <h2>My Process</h2>
-            </div>
-            <p>Every project — enterprise or independent — follows the same core process, adapted to the team and timeline.</p>
-          </div>
-
-          <div class="home-process-list">
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">1</div>
-              <div class="home-process-item__body">
-                <h4>Empathize</h4>
-                <p>Understanding fragmented approval chains across PMO, FAS, and Ops teams — <a href="ge-healthcare.html">GE Healthcare</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">2</div>
-              <div class="home-process-item__body">
-                <h4>Research</h4>
-                <p>Stakeholder workshops mapping lease, loan, and remarketing workflows — <a href="ge-healthcare.html">GE Healthcare</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">3</div>
-              <div class="home-process-item__body">
-                <h4>Personas</h4>
-                <p>Three distinct aspirant profiles shaping personalized learning paths — <a href="pareexa-ai.html">Pareexa.ai</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">4</div>
-              <div class="home-process-item__body">
-                <h4>Flows</h4>
-                <p>Consolidating three competing booking paths into one guided journey — <a href="golfpac-travel.html">GolfPac</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">5</div>
-              <div class="home-process-item__body">
-                <h4>Wireframes</h4>
-                <p>Locking guest, kitchen, and admin structure before visual design — <a href="tastex.html">tasteX</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">6</div>
-              <div class="home-process-item__body">
-                <h4>Prototype</h4>
-                <p>Interactive Figma prototype for the guest ordering flow — <a href="tastex.html">tasteX</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">7</div>
-              <div class="home-process-item__body">
-                <h4>Testing</h4>
-                <p>Formal usability sessions validating the dashboard redesign — <a href="ge-healthcare.html">GE Healthcare</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">8</div>
-              <div class="home-process-item__body">
-                <h4>Final UI</h4>
-                <p>GolfPac's cyan-accented, trust-building visual system — <a href="golfpac-travel.html">GolfPac</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">9</div>
-              <div class="home-process-item__body">
-                <h4>Trade-offs</h4>
-                <p>Weighed per-hotel pricing flexibility against centralized reporting reliability — <a href="tastex.html">tasteX</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">10</div>
-              <div class="home-process-item__body">
-                <h4>Stakeholder Alignment</h4>
-                <p>Built concrete scenarios to resolve disagreement over multi-select vs. linear destination search — <a href="golfpac-travel.html">GolfPac</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">11</div>
-              <div class="home-process-item__body">
-                <h4>Prioritization</h4>
-                <p>Cut kitchen-dashboard analytics entirely so staff saw only what they needed to act on next — <a href="tastex.html">tasteX</a></p>
-              </div>
-            </div>
-            <div class="home-process-item reveal">
-              <div class="home-process-item__num">12</div>
-              <div class="home-process-item__body">
-                <h4>Business Decisions</h4>
-                <p>Balanced backend and stakeholder complexity against simplicity for enterprise users — <a href="ge-healthcare.html">GE Healthcare</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="experience">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">04</span>
-              <h2>My Experience</h2>
-            </div>
-          </div>
-
-          <div class="home-experience reveal">
-            <article class="home-exp-card">
-              <div class="home-exp-card__head">
-                <h3>UX/UI Designer — Tata Consultancy Services (TCS)</h3>
-                <span class="home-exp-card__dates">Oct 2022 – Present</span>
-              </div>
-              <p class="home-exp-card__meta">Full-time · Client: GE Healthcare · Enterprise Healthcare Applications</p>
-              <ul>
-                <li>Design enterprise healthcare workflows and dashboards, scaling the platform from roughly 50 to 2,000+ global users.</li>
-                <li>Redesigned the invoice cancellation workflow and built a reusable design system used across multiple application modules.</li>
-                <li>Contributed hands-on Angular development and used AI-assisted workflows to speed up design-to-delivery handoff.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>Healthcare UX</span>
-                <span>Dashboards</span>
-                <span>Design Systems</span>
-                <span>Angular &amp; Git</span>
-                <span>AI-Augmented Workflow</span>
-              </div>
-            </article>
-
-            <article class="home-exp-card">
-              <div class="home-exp-card__head">
-                <h3>Frontend &amp; UI Developer — Tata Consultancy Services (TCS)</h3>
-                <span class="home-exp-card__dates">Mar 2021 – Oct 2022</span>
-              </div>
-              <p class="home-exp-card__meta">Full-time · Client: GE Corporate · Web &amp; UI Development, Client-Facing Solution Architecture</p>
-              <ul>
-                <li>Improved front-end performance by approximately 20% through component-level optimization across devices and browsers.</li>
-                <li>Partnered directly with stakeholders to redesign web applications and developed solution architecture to support UI concepts.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>Frontend Development</span>
-                <span>Solution Architecture</span>
-                <span>Cross-Browser QA</span>
-              </div>
-            </article>
-
-            <article class="home-exp-card">
-              <div class="home-exp-card__head">
-                <h3>Graphic Designer — Inospire Consultancy Services</h3>
-                <span class="home-exp-card__dates">Oct 2020 – Mar 2021</span>
-              </div>
-              <p class="home-exp-card__meta">Full-time · Branding &amp; Visual Design</p>
-              <ul>
-                <li>Developed new style guides and brand directions, and contributed across UI design, illustration, and micro-animation for client projects.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>Branding</span>
-                <span>Visual Design</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="home-experience--freelance">
-            <article class="home-exp-card reveal" style="--exp-accent:#a78bfa;">
-              <div class="home-exp-card__head">
-                <h3>Pareexa.ai</h3>
-                <span class="home-exp-card__dates">Sep 2025 – Mar 2026</span>
-              </div>
-              <p class="home-exp-card__meta">Product Design Advisor</p>
-              <ul>
-                <li>Advised founders on product strategy and UX direction, designing mobile and web experiences for the student learning journey.</li>
-                <li>Established a scalable design system and component library for the platform's growing set of modules.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>EdTech</span>
-                <span>Design Systems</span>
-                <span>iOS &amp; Android</span>
-              </div>
-            </article>
-
-            <article class="home-exp-card reveal" style="--exp-accent:#5fd4e8;">
-              <div class="home-exp-card__head">
-                <h3>GolfPac Travel</h3>
-                <span class="home-exp-card__dates">Aug 2024 – Sep 2025</span>
-              </div>
-              <p class="home-exp-card__meta">Product Designer &amp; Frontend Developer</p>
-              <ul>
-                <li>Redesigned core booking and trip-planning flows, improving destination discovery and quote request journeys.</li>
-                <li>Restructured AngularJS controllers as part of a frontend modernization effort, managing code changes via Git/GitHub.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>Travel UX</span>
-                <span>AngularJS</span>
-                <span>Market Research</span>
-              </div>
-            </article>
-
-            <article class="home-exp-card reveal" style="--exp-accent:#f2994a;">
-              <div class="home-exp-card__head">
-                <h3>tasteX</h3>
-                <span class="home-exp-card__dates">Jan 2026 – May 2026</span>
-              </div>
-              <p class="home-exp-card__meta">Product &amp; UX Design</p>
-              <ul>
-                <li>Designed a QR-based guest ordering flow, a kitchen staff dashboard, and a super-admin panel across a multi-hotel cloud kitchen operation.</li>
-                <li>Built a shared design system across all three portals; currently in UAT ahead of production rollout.</li>
-              </ul>
-              <div class="home-exp-card__tags">
-                <span>Ordering UX</span>
-                <span>Kitchen Ops</span>
-                <span>Design Systems</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="awards">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">05</span>
-              <h2>Awards</h2>
-            </div>
-            <p>Recognized across TCS engagements for delivery, teamwork, and innovation.</p>
-          </div>
-
-          <div class="award-carousel reveal">
-            <div class="award-carousel__track">
-              <div class="award-carousel__item">
-                <img src="icon-best-team.png" alt="" aria-hidden="true" />
-                <span>Best Team Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="icon-on-the-spot.png" alt="" aria-hidden="true" />
-                <span>On the Spot Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="icon-xcelerate-warrior.png" alt="" aria-hidden="true" />
-                <span>Xcelerate Warrior Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="icon-xcelerate-conqueror.png" alt="" aria-hidden="true" />
-                <span>Xcelerate Conqueror Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="icon-xcelerate-victor.png" alt="" aria-hidden="true" />
-                <span>Xcelerate Victor Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="AI_Igniter.jpg" alt="" aria-hidden="true" />
-                <span>TCS AI Idea Igniter Award</span>
-              </div>
-              <div class="award-carousel__item">
-                <img src="icon-tcs-ai-spark.png" alt="" aria-hidden="true" />
-                <span>TCS AI Spark Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-best-team.png" alt="" />
-                <span>Best Team Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-on-the-spot.png" alt="" />
-                <span>On the Spot Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-xcelerate-warrior.png" alt="" />
-                <span>Xcelerate Warrior Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-xcelerate-conqueror.png" alt="" />
-                <span>Xcelerate Conqueror Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-xcelerate-victor.png" alt="" />
-                <span>Xcelerate Victor Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="AI_Igniter.jpg" alt="" />
-                <span>TCS AI Idea Igniter Award</span>
-              </div>
-              <div class="award-carousel__item" aria-hidden="true">
-                <img src="icon-tcs-ai-spark.png" alt="" />
-                <span>TCS AI Spark Award</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="skills">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">06</span>
-              <h2>Skills</h2>
-            </div>
-          </div>
-
-          <div class="home-skills">
-            <div class="home-skill-group reveal">
-              <div class="home-skill-group__num">01</div>
-              <h3>UX &amp; Product</h3>
-              <div class="home-skill-tags">
-                <span>User Research</span>
-                <span>Information Architecture</span>
-                <span>Journey Mapping</span>
-                <span>Interaction Design</span>
-                <span>Wireframing &amp; Prototyping</span>
-                <span>Design Systems</span>
-                <span>Usability Testing</span>
-                <span>Accessibility</span>
-                <span>Typography</span>
-                <span>Grid Systems</span>
-              </div>
-            </div>
-
-            <div class="home-skill-group reveal">
-              <div class="home-skill-group__num">02</div>
-              <h3>Technical</h3>
-              <div class="home-skill-tags">
-                <span>Angular</span>
-                <span>AngularJS</span>
-                <span>PrimeNG</span>
-                <span>JavaScript</span>
-                <span>HTML5 / CSS3</span>
-                <span>Git / GitHub</span>
-                <span>REST APIs</span>
-                <span>Power BI</span>
-              </div>
-            </div>
-
-            <div class="home-skill-group reveal">
-              <div class="home-skill-group__num">03</div>
-              <h3>Tools</h3>
-              <div class="home-skill-tags">
-                <span>Figma</span>
-                <span>Miro</span>
-                <span>Adobe XD</span>
-                <span>Photoshop</span>
-                <span>Confluence</span>
-                <span>Rally</span>
-              </div>
-            </div>
-
-            <div class="home-skill-group reveal">
-              <div class="home-skill-group__num">04</div>
-              <h3>Ways of Working</h3>
-              <div class="home-skill-tags">
-                <span>Agile / Scrum</span>
-                <span>Stakeholder Management</span>
-                <span>Cross-functional Collaboration</span>
-              </div>
-            </div>
-
-            <div class="home-skill-group reveal" style="grid-column: 1 / -1;">
-              <div class="home-skill-group__num">05</div>
-              <h3>AI-Augmented Workflow</h3>
-              <div class="home-skill-tags">
-                <span>Claude</span>
-                <span>Figma Make</span>
-                <span>Codex</span>
-                <span>Cursor</span>
-                <span>GitHub Copilot</span>
-                <span>Figma AI</span>
-                <span>AI-Assisted Research Synthesis</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-section" id="certifications">
-        <div class="home-shell">
-          <div class="home-section__head reveal">
-            <div class="home-section__title-row">
-              <span class="home-num">07</span>
-              <h2>Certifications</h2>
-            </div>
-          </div>
-
-          <div class="home-cert-card reveal">
-            <img class="home-cert-card__badge" src="claude-certified-badge.png" alt="Claude Certified Architect - Foundations badge" />
-            <div class="home-cert-card__content">
-              <h3>Claude Certified Architect &mdash; Foundations</h3>
-              <p class="home-cert-card__issuer">Issued by Anthropic</p>
-              <p class="home-cert-card__dates">Issued Sep 2026 &middot; Expires Sep 2027</p>
-              <a class="btn-ghost" href="https://www.credly.com/badges/2d6c74ce-0737-4afe-bb29-fb560450950a" target="_blank" rel="noreferrer">Verify on Credly ↗</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-closing" id="contact">
-        <div class="home-shell">
-          <div class="home-closing__row reveal">
-            <span class="home-closing__avatar-wrap">
-              <img class="home-closing__avatar" src="arpan-photo.jpg" alt="Arpan Sheth" />
-              <span class="brand__status-dot" aria-hidden="true"></span>
-            </span>
-            <h2>Let's design products people love to use&mdash;and teams love to build 🤝 — Open to Product Designer and Senior UX/UI Designer opportunities.</h2>
-          </div>
-
-          <div class="home-closing__ctas reveal">
-            <div class="home-social-row">
-              <a class="home-social-icon" href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <div class="card__meta mono"><span>01</span><span>Enterprise SaaS</span></div>
+                <h3 class="card__title">GE Healthcare</h3>
+                <p class="card__desc">Redesigning enterprise financial workflows at scale</p>
+                <span class="tag mono">Scaled ~50 → 2,000+ users, 20+ countries</span>
               </a>
-              <a class="home-social-icon" href="mailto:mrarpansheth@gmail.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </article>
+            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
+              <a href="tastex.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
+                <div class="card__media card__media--phones" style="--tile:#0b0b0b">
+                  <img src="thumb-tastex.jpg" alt="tasteX guest ordering screens on three phones" loading="lazy" />
+                </div>
+                <div class="card__meta mono"><span>02</span><span>Hospitality · Mobile</span></div>
+                <h3 class="card__title">tasteX</h3>
+                <p class="card__desc">QR room-service ordering for multi-hotel cloud kitchens</p>
+                <span class="tag mono">3 portals, shipped in &lt;5 months</span>
               </a>
-              <a class="home-social-icon" href="https://github.com/Arpan1605" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </article>
+            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
+              <a href="pareexa-ai.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
+                <div class="card__media card__media--phones" style="--tile:#0b0b0b">
+                  <img src="thumb-pareexa.jpg" alt="Pareexa.ai login, study plan and practice test screens" loading="lazy" />
+                </div>
+                <div class="card__meta mono"><span>03</span><span>EdTech · AI</span></div>
+                <h3 class="card__title">Pareexa.ai</h3>
+                <p class="card__desc">An AI-powered learning ecosystem for exam aspirants</p>
+                <span class="tag mono">40+ screens, one design system</span>
               </a>
-            </div>
-            <a class="btn-accent" href="mailto:mrarpansheth@gmail.com">Get in Touch ↗</a>
+            </article>
+            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
+              <a href="golfpac-travel.html" class="card__link" data-cursor="View case">
+                <div class="card__media" style="--tile:var(--grey-2)">
+                  <img src="thumb-golfpac.jpg" alt="Redesigned GolfPac Travel homepage" loading="lazy" />
+                </div>
+                <div class="card__meta mono"><span>04</span><span>Travel · Web</span></div>
+                <h3 class="card__title">GolfPac Travel</h3>
+                <p class="card__desc">Three competing booking paths, turned into one guided journey</p>
+                <span class="tag mono">500K+ golfers, 35+ years in business</span>
+              </a>
+            </article>
+            <article class="card card--work card--wide c-12" data-reveal="slide-up" data-reveal-batch>
+              <a href="ai-workflow.html" class="card__link" data-cursor="Read" data-cursor-theme="accent">
+                <div class="card__media card__media--ai" style="--tile:#1b1b1b">
+                  <div class="ai-tile" aria-hidden="true">
+                    <span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span>
+                    <span class="ai-tile__bar"></span><span class="ai-tile__bar"></span>
+                    <span class="ai-tile__word">AI × Design</span>
+                  </div>
+                </div>
+                <div class="card__meta mono"><span>05</span><span>Process</span></div>
+                <h3 class="card__title">AI Workflow</h3>
+                <p class="card__desc">How I design with Claude, Cursor, Figma Make and Codex</p>
+                <span class="tag mono">Claude Certified Architect</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="about container" id="about">
+          <div class="row-head row-head--label">
+            <p class="mono label">About</p>
+            <h2 class="h2 split-lines">
+              I simplify complexity rather than decorate it. My work turns tangled enterprise workflows into
+              intuitive products, through research, systems thinking and close collaboration with engineering.
+            </h2>
+            <a class="btn btn--dark roll" href="resume.pdf" download="Arpan-Sheth-Resume.pdf" data-reveal="fade-in"><span data-text="Download resume">Download resume</span><i class="tri" aria-hidden="true"></i></a>
           </div>
 
-          <p class="home-closing__resume reveal">
-            <a href="resume.pdf" target="_blank" rel="noreferrer">View Resume</a> &middot;
-            <a href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Download Resume</a>
-          </p>
+          <div class="about__body">
+            <aside class="about__sticky" aria-hidden="true">
+              <div class="mini-card is-active" data-for="0">
+                <span class="pill pill--light mono">Currently</span>
+                <img src="logo-gehealthcare.png" alt="" class="mini-card__logo" />
+                <span class="mini-card__name">GE Healthcare · TCS</span>
+              </div>
+              <div class="mini-card mini-card--green" data-for="1">
+                <span class="pill pill--light mono">Open to</span>
+                <span class="mini-card__big">Global</span>
+                <span class="mini-card__name">Connecting with teams worldwide</span>
+              </div>
+            </aside>
 
-          <div class="home-contact-details">
-            <a class="reveal" href="mailto:mrarpansheth@gmail.com">
-              <span class="home-contact-label">Email</span>
-              <span class="home-contact-value">mrarpansheth@gmail.com</span>
-            </a>
-            <a class="reveal" href="https://www.linkedin.com/in/arpan-sheth-939171171/" target="_blank" rel="noreferrer">
-              <span class="home-contact-label">LinkedIn</span>
-              <span class="home-contact-value">arpan-sheth</span>
-            </a>
-            <a class="reveal" href="https://github.com/Arpan1605" target="_blank" rel="noreferrer">
-              <span class="home-contact-label">GitHub</span>
-              <span class="home-contact-value">Arpan1605</span>
-            </a>
-            <div class="reveal">
-              <span class="home-contact-label">Location</span>
-              <span class="home-contact-value">Ahmedabad, India</span>
-            </div>
-            <div class="reveal">
-              <span class="home-contact-label">Relocation</span>
-              <span class="home-contact-value">Open to relocating across Europe</span>
-            </div>
-            <div class="reveal">
-              <span class="home-contact-label">Notice Period</span>
-              <span class="home-contact-value">90 days</span>
+            <div class="about__quotes">
+              <figure class="quote" data-reveal="slide-up" data-index="0">
+                <div class="quote__head">
+                  <img src="arpan-photo.jpg" alt="" class="quote__avatar" />
+                  <figcaption>
+                    <strong>Arpan Sheth,</strong>
+                    <span>UX/UI Designer, Tata Consultancy Services</span>
+                  </figcaption>
+                  <span class="quote__brand mono">My philosophy</span>
+                </div>
+                <blockquote>
+                  “Whether I'm building lease and loan workflows from scratch for GE Healthcare or streamlining booking flows for
+                  GolfPac, the goal is the same: reduce cognitive load while keeping every bit of business capability.
+                  With hands-on Angular experience, I close the gap between design intent and what actually ships.”
+                </blockquote>
+                <div class="quote__stats">
+                  <div><span class="stat">5<sup>+</sup> <small>years</small></span><span class="muted">Designing and building products</span></div>
+                  <div><span class="stat">2,000<sup>+</sup></span><span class="muted">Users on the platforms I design</span></div>
+                  <div><span class="stat">20<sup>+</sup></span><span class="muted">Countries using that work</span></div>
+                </div>
+              </figure>
+
+              <figure class="quote" data-reveal="slide-up" data-index="1">
+                <div class="quote__head">
+                  <img src="arpan-photo.jpg" alt="" class="quote__avatar" />
+                  <figcaption>
+                    <strong>Why hire me,</strong>
+                    <span>Open to Product Designer &amp; Senior UX/UI roles</span>
+                  </figcaption>
+                  <span class="quote__brand mono">Relocating</span>
+                </div>
+                <blockquote>
+                  “I thrive where user needs, business goals and engineering constraints meet. My strength is simplifying
+                  complex enterprise systems into experiences that teams can confidently build, scale and adopt. I'm
+                  open to relocating and to working with teams worldwide.”
+                </blockquote>
+                <div class="quote__stats">
+                  <div><span class="stat">5,000<sup>+</sup></span><span class="muted">Quotes generated through my GE flows</span></div>
+                  <div><span class="stat">7</span><span class="muted">TCS awards for delivery and innovation</span></div>
+                  <div><span class="stat">90 <small>days</small></span><span class="muted">Notice period</span></div>
+                </div>
+              </figure>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer class="home-footer">
-        <div class="home-shell">© 2026 Arpan Sheth. All rights reserved.</div>
-      </footer>
-    </main>
+        <!-- Logo marquee -->
+        <section class="marquee" aria-label="Companies and products I've worked with">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <span class="marquee__word">TCS</span>
+              <img src="logo-gehealthcare.png" alt="GE HealthCare" />
+              <img src="logo-golfpac.png" alt="GolfPac Travel" />
+              <span class="marquee__word">Pareexa.ai</span>
+              <img src="logo-teetimes.png" alt="TeeTimes" />
+              <span class="marquee__word marquee__word--brand">tasteX</span>
+              <span class="marquee__word">Inospire</span>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <span class="marquee__word">TCS</span>
+              <img src="logo-gehealthcare.png" alt="" />
+              <img src="logo-golfpac.png" alt="" />
+              <span class="marquee__word">Pareexa.ai</span>
+              <img src="logo-teetimes.png" alt="" />
+              <span class="marquee__word marquee__word--brand">tasteX</span>
+              <span class="marquee__word">Inospire</span>
+            </div>
+          </div>
+        </section>
 
-    <script src="topbar-nav.js"></script>
-    <script src="script.js"></script>
-    <!-- <script src="cursor-hint.js"></script> -->
+        <!-- Capabilities -->
+        <section class="services container" id="capabilities">
+          <div class="row-head">
+            <h2 class="h2 split-lines">I bring together research, design and engineering to build systems that flex as your product grows.</h2>
+            <a class="btn btn--dark roll" href="ai-workflow.html" data-reveal="fade-in"><span data-text="See my AI workflow">See my AI workflow</span><i class="tri" aria-hidden="true"></i></a>
+          </div>
+          <div class="services__grid">
+            <article class="service" data-reveal="slide-up" data-reveal-batch>
+              <h3>Research</h3>
+              <p>Stakeholder workshops, journey mapping and usability testing that ground decisions in evidence, not assumptions. It's where a project starts: finding where the work has moved on and the product hasn't yet.</p>
+            </article>
+            <article class="service" data-reveal="slide-up" data-reveal-batch>
+              <h3>UX &amp; Flows</h3>
+              <p>Information architecture, flows and wireframes that turn tangled processes — approval chains, quote generation, booking — into one guided path people can follow without a manual.</p>
+            </article>
+            <article class="service" data-reveal="slide-up" data-reveal-batch>
+              <h3>Design Systems</h3>
+              <p>Reusable component libraries and visual systems that keep multi-module products consistent. Built once, used across every portal, so new features ship faster and look like they belong.</p>
+            </article>
+            <article class="service" data-reveal="slide-up" data-reveal-batch>
+              <h3>Front-end</h3>
+              <p>Hands-on Angular, AngularJS and PrimeNG. I build what I design, partner closely with developers, and have cut front-end load by around 20% through component-level optimisation.</p>
+            </article>
+            <article class="service" data-reveal="slide-up" data-reveal-batch>
+              <h3>AI Workflow</h3>
+              <p>Claude, Cursor, Figma Make, Codex and Copilot woven into research synthesis, prototyping and delivery — moving faster from ambiguous brief to tested product without cutting corners.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="experience container" id="experience">
+          <div class="row-head row-head--rule">
+            <h2 class="h2 split-lines">Six years across enterprise, startups and independent work.</h2>
+            <a class="btn btn--dark roll" href="resume.pdf" download="Arpan-Sheth-Resume.pdf" data-reveal="fade-in"><span data-text="Full resume">Full resume</span><i class="tri" aria-hidden="true"></i></a>
+          </div>
+          <ol class="xp">
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Oct 2022 — Now</span>
+              <div class="xp__role"><h3>UX/UI Designer</h3><p class="muted">Tata Consultancy Services · Client: GE Healthcare</p></div>
+              <p class="xp__desc">Enterprise healthcare workflows and dashboards, scaling the platform from ~50 to 2,000+ global users. Built a reusable design system across modules and contribute hands-on Angular.</p>
+              <div class="xp__tags"><span class="tag mono">Healthcare UX</span><span class="tag mono">Design systems</span><span class="tag mono">Angular</span></div>
+            </li>
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Jan 2026 — May 2026</span>
+              <div class="xp__role"><h3>Product &amp; UX Design</h3><p class="muted">tasteX</p></div>
+              <p class="xp__desc">QR guest ordering, a kitchen staff dashboard and a super-admin panel across a multi-hotel cloud kitchen, on one shared design system. In UAT ahead of rollout.</p>
+              <div class="xp__tags"><span class="tag mono">Ordering UX</span><span class="tag mono">Kitchen ops</span></div>
+            </li>
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Sep 2025 — Mar 2026</span>
+              <div class="xp__role"><h3>Product Design Advisor</h3><p class="muted">Pareexa.ai</p></div>
+              <p class="xp__desc">Advised founders on product strategy and UX direction for the student learning journey, and established a scalable component library for iOS, Android and web.</p>
+              <div class="xp__tags"><span class="tag mono">EdTech</span><span class="tag mono">iOS &amp; Android</span></div>
+            </li>
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Aug 2024 — Sep 2025</span>
+              <div class="xp__role"><h3>Product Designer &amp; Front-end Developer</h3><p class="muted">GolfPac Travel</p></div>
+              <p class="xp__desc">Redesigned core booking and trip-planning flows, improving destination discovery and quote requests, and restructured AngularJS controllers in a front-end modernisation.</p>
+              <div class="xp__tags"><span class="tag mono">Travel UX</span><span class="tag mono">AngularJS</span></div>
+            </li>
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Mar 2021 — Oct 2022</span>
+              <div class="xp__role"><h3>Front-end &amp; UI Developer</h3><p class="muted">Tata Consultancy Services · Client: GE Corporate</p></div>
+              <p class="xp__desc">Improved front-end performance by ~20% through component-level optimisation, and partnered with stakeholders on redesigns and solution architecture.</p>
+              <div class="xp__tags"><span class="tag mono">Front-end</span><span class="tag mono">Architecture</span></div>
+            </li>
+            <li class="xp__row" data-reveal="slide-up" data-reveal-batch>
+              <span class="mono xp__date">Oct 2020 — Mar 2021</span>
+              <div class="xp__role"><h3>Graphic Designer</h3><p class="muted">Inospire Consultancy Services</p></div>
+              <p class="xp__desc">Style guides and brand directions, plus UI design, illustration and micro-animation for client projects.</p>
+              <div class="xp__tags"><span class="tag mono">Branding</span><span class="tag mono">Visual design</span></div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Recognition -->
+        <section class="recognition container" id="recognition">
+          <div class="row-head row-head--rule">
+            <h2 class="h2 split-lines">Certifications, awards and the things I'm proud of.</h2>
+            <a class="btn btn--dark roll" href="https://www.credly.com/badges/2d6c74ce-0737-4afe-bb29-fb560450950a" target="_blank" rel="noopener" data-reveal="fade-in"><span data-text="Verify on Credly">Verify on Credly</span><i class="tri" aria-hidden="true"></i></a>
+          </div>
+          <div class="journal">
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <a class="jcard__link" href="https://www.credly.com/badges/2d6c74ce-0737-4afe-bb29-fb560450950a" target="_blank" rel="noopener" data-cursor="Verify" data-cursor-icon="↗">
+                <div class="jcard__media" style="--tile:var(--accent)">
+                  <img src="claude-certified-badge.png" alt="" class="jcard__badge" />
+                  <span class="jcard__arrow" aria-hidden="true">↗</span>
+                </div>
+                <div class="jcard__tags"><span class="tag tag--pill mono">Certification</span><span class="tag mono">Anthropic</span></div>
+                <h3>Claude Certified Architect — Foundations</h3>
+              </a>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:#1f1f23"><span class="jcard__icon"><img src="icon-tcs-ai-spark.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>TCS AI Spark Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:var(--grey-2)"><span class="jcard__icon"><img src="AI_Igniter.jpg" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>TCS AI Idea Igniter Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:#2b2d33"><span class="jcard__icon"><img src="icon-best-team.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>Best Team Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:var(--accent-soft)"><span class="jcard__icon"><img src="icon-on-the-spot.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>On the Spot Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:#1f1f23"><span class="jcard__icon"><img src="icon-xcelerate-warrior.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>Xcelerate Warrior Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:var(--grey-2)"><span class="jcard__icon"><img src="icon-xcelerate-conqueror.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>Xcelerate Conqueror Award</h3>
+            </article>
+            <article class="jcard" data-reveal="slide-up" data-reveal-batch>
+              <div class="jcard__media" style="--tile:var(--accent)"><span class="jcard__icon"><img src="icon-xcelerate-victor.png" alt="" /></span></div>
+              <div class="jcard__tags"><span class="tag tag--pill mono">Award</span><span class="tag mono">TCS</span></div>
+              <h3>Xcelerate Victor Award</h3>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="site.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
