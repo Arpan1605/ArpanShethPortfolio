@@ -626,6 +626,60 @@
   }
 }
 
+/* Pause/Play for the slideshow and logo scroller (WCAG 2.2.2). */
+.motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.motion-toggle:hover { background: var(--accent); color: var(--accent-ink); }
+.motion-toggle svg { width: 12px; height: 12px; fill: currentColor; }
+.hero__content .motion-toggle { margin-left: auto; margin-right: 20px; margin-bottom: 4px; }
+.marquee { position: relative; }
+.marquee .motion-toggle { position: absolute; right: var(--gutter); bottom: 24px; }
+@media (max-width: 767px) {
+  .hero__content .motion-toggle { margin-right: 0; }
+  .marquee .motion-toggle { bottom: 8px; }
+}
+
+/* Reduced motion / no GSAP: no scroll scale-up, so the headline and the image
+   stack instead of overlapping. */
+.hero--static {
+  height: auto;
+  min-height: 0;
+  padding-top: calc(var(--header-h) + 24px);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  padding-bottom: 8px;
+}
+.hero--static .hero__media,
+.hero--static .hero__content {
+  position: relative;
+  inset: auto;
+  padding: 0 var(--gutter);
+}
+.hero--static .hero__media-inner {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  transform: none;
+}
+.hero--static .hero__scroll { display: none; }
+@media (max-width: 767px) {
+  .hero--static .hero__media-inner { aspect-ratio: 4 / 3; }
+}
+
 /* ---------- Section heads ---------- */
 
 .intro {
@@ -1497,24 +1551,16 @@ html[data-theme="dark"] .marquee__group img {
 
 
 /* ---------- Project details panel ---------- */
+/* Sits in the page flow right below the folder grid. */
 .pd {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  max-height: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: var(--bg);
+  overflow: hidden;
   color: var(--ink);
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  scroll-margin-top: calc(var(--header-h) + 24px);
 }
-.pd::backdrop { background: var(--bg); }
-.pd-open, .pd-open body { overflow: hidden; }
-.pd__inner { padding-top: clamp(24px, 5vh, 56px); padding-bottom: 64px; }
+.pd[hidden] { display: none; }
+.pd__inner { padding-top: clamp(48px, 7vh, 80px); padding-bottom: 16px; }
+/* The open project's folder stays slightly raised so it's clear which one is showing. */
+.folder-card.is-active .folder__front { box-shadow: 0 0 0 2px var(--ink); }
 .pd__bar {
   display: flex;
   align-items: center;

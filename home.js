@@ -9,14 +9,48 @@
   function $$(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
   var Site = window.Site || { motion: false };
 
+  // A small Pause/Play button for content that moves on its own.
+  // Starts paused when the visitor prefers reduced motion.
+  function motionToggle(what, onChange) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "motion-toggle mono";
+    var state = false;
+    function set(p) {
+      state = p;
+      b.setAttribute("aria-label", (p ? "Play " : "Pause ") + what);
+      b.innerHTML = (p
+        ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Play'
+        : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>Pause');
+      onChange(p);
+    }
+    b.addEventListener("click", function () { set(!state); });
+    set(!Site.motion);
+    return b;
+  }
+
   // Hero showreel: cross-fade through project images.
   (function heroSlides() {
     var slides = $$(".hero__slide");
     var label = $(".hero__media-label");
     if (slides.length < 2) return;
     var i = 0;
+    // WCAG 2.2.2: anything that moves on its own needs a way to pause it.
+    var paused = !Site.motion, hovered = false;
+    var content = $(".hero__content");
+    var link = $(".hero__media-inner");
+    var btn = motionToggle("slideshow", function (p) { paused = p; });
+    if (content && btn) content.insertBefore(btn, $(".hero__scroll", content));
+    if (link) {
+      link.addEventListener("pointerenter", function () { hovered = true; });
+      link.addEventListener("pointerleave", function () { hovered = false; });
+      link.addEventListener("focus", function () { hovered = true; });
+      link.addEventListener("blur", function () { hovered = false; });
+    }
     setInterval(function () {
-      if (document.hidden) return;
+      if (document.hidden || paused || hovered) return;
+      // Hold still once the headline (and the pause button with it) has faded out on scroll.
+      if (btn && getComputedStyle(btn).visibility === "hidden") return;
       slides[i].classList.remove("is-active");
       i = (i + 1) % slides.length;
       slides[i].classList.add("is-active");
@@ -26,10 +60,11 @@
 
   /* ---------- Project details panel ----------
      Clicking a folder opens a quick brief before the full case study.
-     Cmd/Ctrl/middle-click still go straight to the page. */
+     It opens inline, right below the folders. Cmd/Ctrl/middle-click still
+     go straight to the page. */
   (function projectDetails() {
     var grid = $(".featured__grid");
-    if (!grid || !window.HTMLDialogElement) return;
+    if (!grid) return;
 
     var PROJECTS = {
       "ge-healthcare.html": {
@@ -90,24 +125,25 @@
     };
 
     var ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
-    var dlg = document.createElement("dialog");
-    dlg.className = "pd";
-    dlg.setAttribute("aria-labelledby", "pd-title");
-    dlg.setAttribute("data-lenis-prevent", "");
-    document.body.appendChild(dlg);
+    var panel = document.createElement("section");
+    panel.className = "pd";
+    panel.id = "project-details";
+    panel.setAttribute("aria-labelledby", "pd-title");
+    panel.hidden = true;
+    grid.parentNode.insertBefore(panel, grid.nextSibling);
 
     function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
 
     function render(href, p) {
-      dlg.innerHTML =
-        '<div class="pd__inner container">' +
+      panel.innerHTML =
+        '<div class="pd__inner">' +
         '<div class="pd__bar"><p class="pd__label">Project details</p>' +
         '<button class="pd__close" type="button" aria-label="Close project details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>' +
         '<div class="pd__grid">' +
         '<a class="pd__media" href="' + href + '" data-cursor="View case" data-cursor-theme="light">' +
         '<img src="' + p.img + '" alt="' + esc(p.alt) + '" /><span class="pd__media-go" aria-hidden="true">' + ARROW + "</span></a>" +
         '<div class="pd__body">' +
-        '<h2 class="pd__title" id="pd-title">' + esc(p.title) + "</h2>" +
+        '<h3 class="pd__title" id="pd-title">' + esc(p.title) + "</h3>" +
         '<p class="pd__sub">' + esc(p.sub) + "</p>" +
         '<details class="pd__acc" open><summary>Project details <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></summary>' +
         '<p class="pd__desc">' + esc(p.desc) + "</p>" +
@@ -117,56 +153,97 @@
         '<p class="pd__highlight">' + esc(p.highlight) + "</p>" +
         '<a class="btn btn--dark pd__cta" href="' + href + '">' + esc(p.cta) + " " + ARROW + "</a>" +
         "</div></div></div>";
+      panel.querySelector(".pd__close").addEventListener("click", close);
     }
 
-    var lastFocus = null;
+    var current = null, lastFocus = null;
+    var links = $$(".folder-card__link", grid);
+    links.forEach(function (l) { l.setAttribute("aria-controls", "project-details"); l.setAttribute("aria-expanded", "false"); });
+
+    // The panel pushes everything below it down, so scroll-linked effects need fresh positions.
+    function relayout() {
+      if (Site.ScrollTrigger) Site.ScrollTrigger.refresh();
+      if (Site.lenis && Site.lenis.resize) Site.lenis.resize();
+    }
+    function mark(href) {
+      links.forEach(function (l) {
+        var on = l.getAttribute("href") === href;
+        l.setAttribute("aria-expanded", on ? "true" : "false");
+        l.closest(".folder-card").classList.toggle("is-active", on);
+      });
+    }
+    function scrollTo(el) {
+      if (Site.scrollTo) Site.scrollTo(el);
+      else el.scrollIntoView({ behavior: "smooth" });
+    }
+
     function open(href, trigger) {
       var p = PROJECTS[href];
-      if (!p) return false;
+      if (!p) return;
       lastFocus = trigger;
+      var wasOpen = !panel.hidden;
+      current = href;
+      mark(href);
       render(href, p);
-      dlg.querySelector(".pd__close").addEventListener("click", close);
-      dlg.showModal();
-      dlg.scrollTop = 0;
-      document.documentElement.classList.add("pd-open");
-      if (Site.lenis) Site.lenis.stop();
-      if (Site.motion) {
-        Site.gsap.fromTo(dlg, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" });
-        Site.gsap.fromTo(dlg.querySelector(".pd__media"), { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "expo.out", delay: 0.05 });
-        Site.gsap.fromTo(dlg.querySelectorAll(".pd__body > *"), { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "expo.out", stagger: 0.06, delay: 0.12 });
-      }
-      return true;
+      panel.hidden = false;
+      var g = Site.gsap;
+      if (Site.motion && g) {
+        g.killTweensOf(panel);
+        if (!wasOpen) {
+          g.fromTo(panel, { height: 0, opacity: 0 }, { height: "auto", opacity: 1, duration: 0.7, ease: "expo.out",
+            onComplete: function () { panel.style.height = ""; relayout(); } });
+        } else {
+          panel.style.height = ""; panel.style.opacity = "";
+          relayout();
+        }
+        g.fromTo(panel.querySelector(".pd__media"), { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "expo.out", delay: 0.05 });
+        g.fromTo(panel.querySelectorAll(".pd__body > *"), { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "expo.out", stagger: 0.06, delay: 0.12 });
+      } else relayout();
+      scrollTo(panel);
     }
 
-    var closing = false;
     function close() {
-      if (!dlg.open || closing) return;
-      closing = true;
+      if (panel.hidden) return;
+      current = null;
+      mark(null);
       function done() {
-        closing = false;
-        dlg.close();
-        document.documentElement.classList.remove("pd-open");
-        if (Site.lenis) Site.lenis.start();
-        if (lastFocus) lastFocus.focus({ preventScroll: true });
+        panel.hidden = true;
+        panel.textContent = "";
+        panel.style.height = "";
+        panel.style.opacity = "";
+        relayout();
       }
-      if (!Site.motion) done();
-      else Site.gsap.to(dlg, { opacity: 0, duration: 0.25, ease: "power2.in", onComplete: done });
+      if (lastFocus) {
+        scrollTo(lastFocus.closest(".folder-card"));
+        lastFocus.focus({ preventScroll: true });
+      }
+      if (Site.motion && Site.gsap) Site.gsap.to(panel, { height: 0, opacity: 0, duration: 0.5, ease: "power3.inOut", onComplete: done });
+      else done();
     }
 
-    dlg.addEventListener("cancel", function (e) { e.preventDefault(); close(); });
-    // Clicking the backdrop area outside the content closes too.
-    dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !panel.hidden) close();
+    });
 
     grid.addEventListener("click", function (e) {
       var link = e.target.closest(".folder-card__link");
       if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
-      if (open(link.getAttribute("href"), link)) e.preventDefault();
+      var href = link.getAttribute("href");
+      if (!PROJECTS[href]) return;
+      e.preventDefault();
+      // Clicking the open project's folder again closes it.
+      if (href === current) close();
+      else open(href, link);
     });
   })();
 
   if (!Site.motion) {
     var m = $(".hero__media-inner");
     if (m) m.style.transform = "none";
+    // Without the scroll scale-up, a full-size image would sit on top of the
+    // headline, so stack them instead.
+    var hero = $(".hero");
+    if (hero) hero.classList.add("hero--static");
     var p = $(".preloader");
     if (p) p.remove();
     var fg = $(".featured__grid");
@@ -728,7 +805,10 @@
       },
     });
     tl.fromTo(heroMedia, { scale: 0.35 }, { scale: 1, ease: "none", duration: 0.8 }, 0)
-      .to(".hero__content", { autoAlpha: 0, ease: "none", duration: 0.56 }, 0)
+      // The headline only fades (it stays the page's h1 for screen readers);
+      // the Scroll link and Pause button hide fully so they can't take focus unseen.
+      .to(".hero__title", { opacity: 0, ease: "none", duration: 0.56 }, 0)
+      .to(".hero__content > :not(.hero__title)", { autoAlpha: 0, ease: "none", duration: 0.56 }, 0)
       .to({}, { duration: 0.2 });
     ScrollTrigger.refresh();
     return function () { gsap.set(heroMedia, { clearProps: "scale,transform" }); };
@@ -780,11 +860,18 @@
     if (!track || !group) return;
     var loop = gsap.to(track, { x: function () { return -group.offsetWidth; }, duration: 38, ease: "none", repeat: -1 });
     var settle = null;
+    var paused = false, hovered = false;
+    function sync() { if (paused || hovered) loop.pause(); else loop.resume(); }
+    var section = $(".marquee");
+    section.appendChild(motionToggle("logo scroller", function (p) { paused = p; sync(); }));
+    track.addEventListener("pointerenter", function () { hovered = true; sync(); });
+    track.addEventListener("pointerleave", function () { hovered = false; sync(); });
     ScrollTrigger.create({
       trigger: ".marquee",
       start: "top bottom",
       end: "bottom top",
       onUpdate: function (self) {
+        if (paused || hovered) return;
         var speed = Math.min(1 + Math.abs(self.getVelocity()) / 300, 6);
         if (settle) settle.kill();
         loop.timeScale(speed);

@@ -173,3 +173,10 @@ body.subpage {
 .subpage .page .ai-dark {
   background: var(--footer-bg);
 }
+
+/* Promoted to h2 for a correct heading outline; keeps its original h3 look. */
+.subpage .page .pareexa-contrib-title {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: inherit;
+}
