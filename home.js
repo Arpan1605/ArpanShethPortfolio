@@ -24,6 +24,146 @@
     }, 3200);
   })();
 
+  /* ---------- Project details panel ----------
+     Clicking a folder opens a quick brief before the full case study.
+     Cmd/Ctrl/middle-click still go straight to the page. */
+  (function projectDetails() {
+    var grid = $(".featured__grid");
+    if (!grid || !window.HTMLDialogElement) return;
+
+    var PROJECTS = {
+      "ge-healthcare.html": {
+        title: "GE Healthcare",
+        sub: "Enterprise SaaS · Healthcare operations",
+        img: "ge-healthcare-devices.jpg",
+        alt: "GE Healthcare asset management platform shown on desktop, tablet and mobile",
+        desc: "GE Healthcare’s commercial teams managed quotes, renewals, upgrades and asset requests across fragmented internal systems. I designed a centralized, role-based platform that streamlined these workflows and let users act without waiting on other teams.",
+        tags: ["Research", "Information architecture", "Wireframes", "Prototyping", "Usability testing"],
+        rows: [["Role", "UX/UI Designer (via TCS)"], ["Duration", "Oct 2022 – Present"], ["Users", "2,000+ across 20+ countries"], ["Platform", "Web: desktop, tablet and mobile"]],
+        highlight: "Scaled from about 50 users to more than 2,000",
+        cta: "Read full case study",
+      },
+      "tastex.html": {
+        title: "tasteX",
+        sub: "Hospitality · QR ordering",
+        img: "thumb-tastex.jpg",
+        alt: "tasteX guest ordering screens on three phones",
+        desc: "A QR-based room-service system for a cloud kitchen serving several hotels in a city. Guests order by scanning a code in their room, and each order is routed to whichever kitchen is mapped to that property.",
+        tags: ["Guest ordering", "Kitchen dashboard", "Super-admin panel", "Design system", "Branding"],
+        rows: [["Role", "Product & UX Designer"], ["Duration", "Jan 2026 – May 2026"], ["Scope", "Three portals, end to end"], ["Status", "In UAT ahead of rollout"]],
+        highlight: "Three portals running on one shared design system",
+        cta: "Read full case study",
+      },
+      "pareexa-ai.html": {
+        title: "Pareexa.ai",
+        sub: "EdTech · AI",
+        img: "thumb-pareexa.jpg",
+        alt: "Pareexa.ai mobile app screens",
+        desc: "Aspirants preparing for UPSC, GPSC and other government exams were switching between apps for planning, study material, mock tests and progress tracking. Pareexa.ai brings the whole journey into one ecosystem, with AI giving personal guidance instead of being another standalone tool.",
+        tags: ["Onboarding", "Study planner", "Mock tests", "AI analytics", "Design system"],
+        rows: [["Role", "Product Designer & Design System Lead"], ["Duration", "6 months"], ["Platforms", "iOS + Android"], ["Status", "Pre-launch development"]],
+        highlight: "40+ screens across 15+ modules, under one design system",
+        cta: "Read full case study",
+      },
+      "golfpac-travel.html": {
+        title: "GolfPac Travel",
+        sub: "Travel · Responsive web",
+        img: "GolfPac-Case-Study-Banner.png",
+        alt: "The live GolfPac Travel homepage",
+        desc: "GolfPac Travel lets golfers book complete multi-day trips, with golf rounds, lodging and rental cars, across US destinations in one place. I redesigned its dated platform and built the front end myself.",
+        tags: ["Research", "UX", "UI", "AngularJS build"],
+        rows: [["Role", "Lead Product Designer & Frontend Developer"], ["Timeline", "Aug 2024 – Sep 2025"], ["Team", "Solo, with the GolfPac stakeholder team"], ["Status", "Shipped"]],
+        highlight: "Three competing booking paths, turned into one guided journey",
+        cta: "Read full case study",
+      },
+      "ai-workflow.html": {
+        title: "AI Workflow",
+        sub: "Process · AI × Design",
+        img: "AI.avif",
+        alt: "A robotic hand and a human hand shaking",
+        desc: "Most projects start with scattered ideas, incomplete requirements and conflicting opinions. This is the process I use to get from that uncertainty to a confident decision, with AI helping me think faster and explore more directions, not deciding for me.",
+        tags: ["Claude", "ChatGPT", "Cursor", "Figma Make", "Codex"],
+        rows: [["Type", "Process write-up"], ["Focus", "From ambiguity to design decisions"], ["Example", "tasteX: three portals in under five months"]],
+        highlight: "A product that traditionally takes a year, shipped in under five",
+        cta: "Read the write-up",
+      },
+    };
+
+    var ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+    var dlg = document.createElement("dialog");
+    dlg.className = "pd";
+    dlg.setAttribute("aria-labelledby", "pd-title");
+    dlg.setAttribute("data-lenis-prevent", "");
+    document.body.appendChild(dlg);
+
+    function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+    function render(href, p) {
+      dlg.innerHTML =
+        '<div class="pd__inner container">' +
+        '<div class="pd__bar"><p class="pd__label">Project details</p>' +
+        '<button class="pd__close" type="button" aria-label="Close project details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>' +
+        '<div class="pd__grid">' +
+        '<a class="pd__media" href="' + href + '" data-cursor="View case" data-cursor-theme="light">' +
+        '<img src="' + p.img + '" alt="' + esc(p.alt) + '" /><span class="pd__media-go" aria-hidden="true">' + ARROW + "</span></a>" +
+        '<div class="pd__body">' +
+        '<h2 class="pd__title" id="pd-title">' + esc(p.title) + "</h2>" +
+        '<p class="pd__sub">' + esc(p.sub) + "</p>" +
+        '<details class="pd__acc" open><summary>Project details <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></summary>' +
+        '<p class="pd__desc">' + esc(p.desc) + "</p>" +
+        '<ul class="pd__tags">' + p.tags.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
+        "</details>" +
+        '<dl class="pd__rows">' + p.rows.map(function (r) { return "<div><dt>" + esc(r[0]) + "</dt><dd>" + esc(r[1]) + "</dd></div>"; }).join("") + "</dl>" +
+        '<p class="pd__highlight">' + esc(p.highlight) + "</p>" +
+        '<a class="btn btn--dark pd__cta" href="' + href + '">' + esc(p.cta) + " " + ARROW + "</a>" +
+        "</div></div></div>";
+    }
+
+    var lastFocus = null;
+    function open(href, trigger) {
+      var p = PROJECTS[href];
+      if (!p) return false;
+      lastFocus = trigger;
+      render(href, p);
+      dlg.querySelector(".pd__close").addEventListener("click", close);
+      dlg.showModal();
+      dlg.scrollTop = 0;
+      document.documentElement.classList.add("pd-open");
+      if (Site.lenis) Site.lenis.stop();
+      if (Site.motion) {
+        Site.gsap.fromTo(dlg, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" });
+        Site.gsap.fromTo(dlg.querySelector(".pd__media"), { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "expo.out", delay: 0.05 });
+        Site.gsap.fromTo(dlg.querySelectorAll(".pd__body > *"), { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "expo.out", stagger: 0.06, delay: 0.12 });
+      }
+      return true;
+    }
+
+    var closing = false;
+    function close() {
+      if (!dlg.open || closing) return;
+      closing = true;
+      function done() {
+        closing = false;
+        dlg.close();
+        document.documentElement.classList.remove("pd-open");
+        if (Site.lenis) Site.lenis.start();
+        if (lastFocus) lastFocus.focus({ preventScroll: true });
+      }
+      if (!Site.motion) done();
+      else Site.gsap.to(dlg, { opacity: 0, duration: 0.25, ease: "power2.in", onComplete: done });
+    }
+
+    dlg.addEventListener("cancel", function (e) { e.preventDefault(); close(); });
+    // Clicking the backdrop area outside the content closes too.
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+
+    grid.addEventListener("click", function (e) {
+      var link = e.target.closest(".folder-card__link");
+      if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      if (open(link.getAttribute("href"), link)) e.preventDefault();
+    });
+  })();
+
   if (!Site.motion) {
     var m = $(".hero__media-inner");
     if (m) m.style.transform = "none";

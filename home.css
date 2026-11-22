@@ -1495,3 +1495,112 @@ html[data-theme="dark"] .marquee__group img {
   visibility: hidden;
 }
 
+
+/* ---------- Project details panel ---------- */
+.pd {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.pd::backdrop { background: var(--bg); }
+.pd-open, .pd-open body { overflow: hidden; }
+.pd__inner { padding-top: clamp(24px, 5vh, 56px); padding-bottom: 64px; }
+.pd__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: clamp(28px, 4vh, 48px);
+  border-top: 1px solid var(--line);
+}
+.pd__label { margin: 0; color: var(--muted); font-size: 15px; }
+.pd__close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.25s var(--ease), transform 0.4s var(--ease);
+}
+.pd__close:hover { background: var(--accent); color: var(--accent-ink); transform: rotate(90deg); }
+.pd__close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.pd__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+.pd__media {
+  position: relative;
+  display: block;
+  padding: clamp(16px, 2.6vw, 32px);
+  border-radius: var(--radius-lg);
+  background: var(--grey-2);
+}
+.pd__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11.5;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  transition: transform 0.6s var(--ease);
+}
+.pd__media:hover img { transform: scale(1.02); }
+.pd__media-go {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.pd__media:hover .pd__media-go { background: var(--accent); color: var(--accent-ink); }
+.pd__media-go svg, .pd__cta svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pd__title { margin: 0; font-size: clamp(36px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 600; }
+.pd__sub { margin: 10px 0 0; color: var(--muted); font-size: 17px; }
+.pd__acc { margin-top: 26px; padding: 22px 0 26px; border-block: 1px solid var(--line); }
+.pd__acc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+.pd__acc summary::-webkit-details-marker { display: none; }
+.pd__acc summary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s var(--ease); }
+.pd__acc:not([open]) summary svg { transform: rotate(180deg); }
+.pd__desc { margin: 22px 0 0; color: var(--ink-soft); font-size: 17px; line-height: 1.75; }
+.pd__tags { display: flex; flex-wrap: wrap; gap: 8px 0; margin: 22px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+.pd__tags li + li::before { content: "/"; margin: 0 12px; color: var(--line-strong); }
+.pd__rows { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.pd__rows div { display: grid; grid-template-columns: 126px 1fr; gap: 16px; padding: 7px 0; font-size: 15px; }
+.pd__rows dt { color: var(--muted); }
+.pd__rows dd { margin: 0; font-weight: 500; }
+.pd__highlight { margin: 30px 0 22px; font-size: clamp(19px, 1.6vw, 22px); font-weight: 500; letter-spacing: -0.01em; }
+.pd__cta { height: 50px; padding: 0 22px; border-radius: 6px; font-family: var(--sans); font-size: 16px; font-weight: 500; text-transform: none; letter-spacing: 0; }
+
+@media (max-width: 899px) {
+  .pd__grid { grid-template-columns: 1fr; }
+  .pd__rows div { grid-template-columns: 96px 1fr; }
+}
