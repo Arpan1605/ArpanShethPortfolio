@@ -26,8 +26,8 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="favicon-arpan.png" />
-    <link rel="stylesheet" href="site.css" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="site.css?v=20261122a" />
+    <link rel="stylesheet" href="home.css?v=20261122a" />
     <script>
       // Show the full preloader only on the first visit of the session.
       try {
@@ -39,7 +39,7 @@
     </script>
   </head>
   <body data-page="home" data-theme-toggle>
-    <script src="chrome.js"></script>
+    <script src="chrome.js?v=20261122a"></script>
     <!-- Preloader -->
     <div class="preloader" aria-hidden="true">
       <div class="preloader__bg"></div>
@@ -78,66 +78,99 @@
             </h2>
             <a class="btn btn--dark roll" href="#work" data-reveal="fade-in"><span data-text="Explore my work">Explore my work</span><i class="tri" aria-hidden="true"></i></a>
           </div>
+        </section>
 
-          <!-- Work grid -->
-          <div class="work" id="work">
-            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
-              <a href="ge-healthcare.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
-                <div class="card__media card__media--crop" style="--tile:#151515">
-                  <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare LEAP dashboard shown on laptop, tablet and phone" loading="lazy" />
+        <!-- Featured projects: each case study is a folder that opens on hover -->
+        <section class="featured container" id="work">
+          <div class="featured__head">
+            <h2 class="featured__title split-lines">Featured Projects</h2>
+            <a class="featured__link" href="resume.pdf" download="Arpan-Sheth-Resume.pdf">Resume <span class="featured__link-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          </div>
+          <p class="featured__lede" data-reveal="fade-in">Enterprise, startup and independent work. Open a folder to see how each project came together.</p>
+          <div class="featured__grid">
+            <article class="folder-card" data-reveal="slide-up" data-reveal-batch>
+              <a class="folder-card__link" href="ge-healthcare.html" data-cursor="Open folder" data-cursor-theme="light">
+                <div class="folder">
+                  <span class="folder__back" aria-hidden="true"></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--a" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Design system</b><i class="folder__lines"></i></span>
+                  <span class="folder__sheet folder__sheet--shot" style="--tile:#151515" aria-hidden="true"><img src="thumb-ge-healthcare.jpg" alt="" loading="lazy" style="object-position:0 0" /></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--b" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Case study</b><i class="folder__lines"></i></span>
+                  <span class="folder__front">
+                    <span class="folder__num mono" aria-hidden="true">01</span>
+                    <h3 class="folder__title">GE Healthcare</h3>
+                    <span class="folder__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  </span>
                 </div>
-                <div class="card__meta mono"><span>01</span><span>Enterprise SaaS</span></div>
-                <h3 class="card__title">GE Healthcare</h3>
-                <p class="card__desc">Redesigning enterprise financial workflows at scale</p>
-                <span class="tag mono">Scaled ~50 → 2,000+ users, 20+ countries</span>
+                <span class="folder-card__meta"><span class="mono">Enterprise SaaS</span><span class="folder-card__cta">View case <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                <span class="folder-card__desc">Redesigning enterprise financial workflows at scale</span>
               </a>
             </article>
-            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
-              <a href="tastex.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
-                <div class="card__media card__media--phones" style="--tile:#0b0b0b">
-                  <img src="thumb-tastex.jpg" alt="tasteX guest ordering screens on three phones" loading="lazy" />
+            <article class="folder-card" data-reveal="slide-up" data-reveal-batch>
+              <a class="folder-card__link" href="tastex.html" data-cursor="Open folder" data-cursor-theme="light">
+                <div class="folder">
+                  <span class="folder__back" aria-hidden="true"></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--a" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>3 portals</b><i class="folder__lines"></i></span>
+                  <span class="folder__sheet folder__sheet--shot" style="--tile:#0b0b0b" aria-hidden="true"><img src="thumb-tastex.jpg" alt="" loading="lazy" style="object-position:50% 100%" /></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--b" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Case study</b><i class="folder__lines"></i></span>
+                  <span class="folder__front">
+                    <span class="folder__num mono" aria-hidden="true">02</span>
+                    <h3 class="folder__title">tasteX</h3>
+                    <span class="folder__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  </span>
                 </div>
-                <div class="card__meta mono"><span>02</span><span>Hospitality · Mobile</span></div>
-                <h3 class="card__title">tasteX</h3>
-                <p class="card__desc">QR room-service ordering for multi-hotel cloud kitchens</p>
-                <span class="tag mono">3 portals, shipped in &lt;5 months</span>
+                <span class="folder-card__meta"><span class="mono">Hospitality · Mobile</span><span class="folder-card__cta">View case <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                <span class="folder-card__desc">QR room-service ordering for multi-hotel cloud kitchens</span>
               </a>
             </article>
-            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
-              <a href="pareexa-ai.html" class="card__link" data-cursor="View case" data-cursor-theme="light">
-                <div class="card__media card__media--phones" style="--tile:#0b0b0b">
-                  <img src="thumb-pareexa.jpg" alt="Pareexa.ai login, study plan and practice test screens" loading="lazy" />
+            <article class="folder-card" data-reveal="slide-up" data-reveal-batch>
+              <a class="folder-card__link" href="pareexa-ai.html" data-cursor="Open folder" data-cursor-theme="light">
+                <div class="folder">
+                  <span class="folder__back" aria-hidden="true"></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--a" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>40+ screens</b><i class="folder__lines"></i></span>
+                  <span class="folder__sheet folder__sheet--shot" style="--tile:#0b0b0b" aria-hidden="true"><img src="thumb-pareexa.jpg" alt="" loading="lazy" style="object-position:50% 100%" /></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--b" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Case study</b><i class="folder__lines"></i></span>
+                  <span class="folder__front">
+                    <span class="folder__num mono" aria-hidden="true">03</span>
+                    <h3 class="folder__title">Pareexa.ai</h3>
+                    <span class="folder__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  </span>
                 </div>
-                <div class="card__meta mono"><span>03</span><span>EdTech · AI</span></div>
-                <h3 class="card__title">Pareexa.ai</h3>
-                <p class="card__desc">An AI-powered learning ecosystem for exam aspirants</p>
-                <span class="tag mono">40+ screens, one design system</span>
+                <span class="folder-card__meta"><span class="mono">EdTech · AI</span><span class="folder-card__cta">View case <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                <span class="folder-card__desc">An AI-powered learning ecosystem for exam aspirants</span>
               </a>
             </article>
-            <article class="card card--work c-6" data-reveal="slide-up" data-reveal-batch>
-              <a href="golfpac-travel.html" class="card__link" data-cursor="View case">
-                <div class="card__media" style="--tile:var(--grey-2)">
-                  <img src="thumb-golfpac.jpg" alt="Redesigned GolfPac Travel homepage" loading="lazy" />
+            <article class="folder-card" data-reveal="slide-up" data-reveal-batch>
+              <a class="folder-card__link" href="golfpac-travel.html" data-cursor="Open folder" >
+                <div class="folder">
+                  <span class="folder__back" aria-hidden="true"></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--a" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Booking flow</b><i class="folder__lines"></i></span>
+                  <span class="folder__sheet folder__sheet--shot" style="--tile:var(--grey-2)" aria-hidden="true"><img src="thumb-golfpac.jpg" alt="" loading="lazy" style="object-position:50% 0" /></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--b" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Case study</b><i class="folder__lines"></i></span>
+                  <span class="folder__front">
+                    <span class="folder__num mono" aria-hidden="true">04</span>
+                    <h3 class="folder__title">GolfPac Travel</h3>
+                    <span class="folder__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  </span>
                 </div>
-                <div class="card__meta mono"><span>04</span><span>Travel · Web</span></div>
-                <h3 class="card__title">GolfPac Travel</h3>
-                <p class="card__desc">Three competing booking paths, turned into one guided journey</p>
-                <span class="tag mono">500K+ golfers, 35+ years in business</span>
+                <span class="folder-card__meta"><span class="mono">Travel · Web</span><span class="folder-card__cta">View case <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                <span class="folder-card__desc">Three competing booking paths, turned into one guided journey</span>
               </a>
             </article>
-            <article class="card card--work card--wide c-12" data-reveal="slide-up" data-reveal-batch>
-              <a href="ai-workflow.html" class="card__link" data-cursor="Read" data-cursor-theme="accent">
-                <div class="card__media card__media--ai" style="--tile:#1b1b1b">
-                  <div class="ai-tile" aria-hidden="true">
-                    <span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span>
-                    <span class="ai-tile__bar"></span><span class="ai-tile__bar"></span>
-                    <span class="ai-tile__word">AI × Design</span>
-                  </div>
+            <article class="folder-card" data-reveal="slide-up" data-reveal-batch>
+              <a class="folder-card__link" href="ai-workflow.html" data-cursor="Open folder" data-cursor-theme="accent">
+                <div class="folder">
+                  <span class="folder__back" aria-hidden="true"></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--a" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Toolkit</b><i class="folder__lines"></i></span>
+                  <span class="folder__sheet folder__sheet--shot" style="--tile:#1b1b1b" aria-hidden="true"><span class="ai-tile"><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__bar"></span><span class="ai-tile__word">AI × Design</span></span></span>
+                  <span class="folder__sheet folder__sheet--doc folder__sheet--b" aria-hidden="true"><svg class="folder__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><b>Process</b><i class="folder__lines"></i></span>
+                  <span class="folder__front">
+                    <span class="folder__num mono" aria-hidden="true">05</span>
+                    <h3 class="folder__title">AI Workflow</h3>
+                    <span class="folder__go" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+                  </span>
                 </div>
-                <div class="card__meta mono"><span>05</span><span>Process</span></div>
-                <h3 class="card__title">AI Workflow</h3>
-                <p class="card__desc">How I design with Claude, Cursor, Figma Make and Codex</p>
-                <span class="tag mono">Claude Certified Architect</span>
+                <span class="folder-card__meta"><span class="mono">Process</span><span class="folder-card__cta">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                <span class="folder-card__desc">How I design with Claude, Cursor, Figma Make and Codex</span>
               </a>
             </article>
           </div>
@@ -375,6 +408,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="site.js"></script>
-    <script src="home.js"></script>
+    <script src="home.js?v=20261122a"></script>
   </body>
 </html>
