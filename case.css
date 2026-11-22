@@ -180,3 +180,12 @@ body.subpage {
   letter-spacing: -0.02em;
   line-height: inherit;
 }
+
+/* Tighter "More Projects" block and page end, so there's no empty band
+   before the footer. */
+.ge-case-page .home-section {
+  padding: 32px 0 16px;
+}
+.ge-case-page .ge-case-main {
+  padding-bottom: 48px;
+}

@@ -1900,9 +1900,10 @@ body[data-theme="dark"] .impact-strip article {
   font-weight: 700;
 }
 
+/* Sections size to their content; a full-screen minimum left large empty
+   gaps under shorter sections. */
 .ge-slide {
-  min-height: 100vh;
-  padding: 28px 0 72px;
+  padding: 24px 0 48px;
 }
 
 .ge-slide--hero {
@@ -4318,7 +4319,7 @@ body[data-theme="dark"] .ge-shot-placeholder {
 
 .golfpac-section-head {
   max-width: 1120px;
-  margin: 64px auto 0;
+  margin: 40px auto 0;
   text-align: left;
 }
 
