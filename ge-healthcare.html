@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#fafafa" />
     <title>GE Healthcare Asset Lifecycle Management | Arpan Sheth</title>
     <meta
       name="description"
@@ -11,348 +10,610 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Geist+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,300..600;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="favicon-arpan.png" />
-    <script>
-      try {
-        var t = localStorage.getItem("arpan-wall-theme");
-        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.setAttribute("data-theme", "dark");
-      } catch (e) {}
-    </script>
-    <link rel="stylesheet" href="chrome.css?v=20261125c" />
-    <link rel="stylesheet" href="study.css?v=20261125d" />
+    <link rel="stylesheet" href="styles.css?v=20261123i" />
+    <link rel="stylesheet" href="site.css?v=20261123i" />
+    <link rel="stylesheet" href="case.css?v=20261123i" />
   </head>
-  <body class="study-page" data-page="ge-healthcare" data-theme-toggle>
-    <script src="chrome.js?v=20261125f"></script>
+  <body class="ge-case-page subpage" data-page="ge-healthcare">
+    <script src="chrome.js?v=20261123i"></script>
+    <div class="page" id="top">
 
-    <main id="main" class="page study">
-      <div class="study-reading">
-        <header class="study-intro" id="top">
-          <p class="study-kicker">Enterprise healthcare · via TCS</p>
-          <h1>GE HealthCare: one platform for quotes and assets</h1>
-          <p>
-            Redesigning fragmented lease, loan and end-of-term workflows into one role-based platform, scaled from
-            ~50 to 2,000+ users in 20+ countries.
+    <nav class="case-toc" aria-label="On this page">
+      <a href="#overview">Overview</a>
+      <a href="#research">Research</a>
+      <a href="#approach">Approach</a>
+      <a href="#design-system">Design System</a>
+      <a href="#constraints-iteration">Constraints &amp; Iteration</a>
+      <a href="#impact">Impact</a>
+    </nav>
+
+    <div class="ge-case-shell">
+      <main id="main" class="ge-case-main">
+        <section class="ge-slide ge-slide--hero" id="overview">
+          <div class="ge-hero-split">
+            <div class="ge-hero-split__text reveal">
+              <p class="home-hero__eyebrow"><span class="home-num">01</span> Enterprise Healthcare Case Study</p>
+              <h1>Redesigning Enterprise Financial Workflows at Scale</h1>
+              <p>
+                GE Healthcare's commercial teams managed quotes, renewals, upgrades, and asset
+                requests across fragmented internal systems. Manual work, duplicated data, and
+                disconnected workflows slowed decision-making and increased operational overhead.
+                My goal was to design a centralized platform that streamlined these processes
+                while giving users greater autonomy.
+              </p>
+              <div class="home-hero__chips">
+                <span class="home-chip"><strong>Category:</strong>&nbsp;Healthcare &amp; Enterprise Operations</span>
+                <span class="home-chip"><strong>Role:</strong>&nbsp;UX/UI Designer (via TCS)</span>
+                <span class="home-chip"><strong>Duration:</strong>&nbsp;October 2022 &ndash; Present</span>
+                <span class="home-chip"><strong>Users:</strong>&nbsp;2,000+ (scaled from ~50)</span>
+                <span class="home-chip"><strong>Reach:</strong>&nbsp;20+ countries</span>
+                <span class="home-chip"><strong>Platform:</strong>&nbsp;Web (Desktop, Tablet &amp; Mobile)</span>
+                <span class="home-chip"><strong>Team:</strong>&nbsp;3 UX/UI Designers</span>
+                <span class="home-chip"><strong>Responsibilities:</strong>&nbsp;Research, IA, Wireframes, Prototyping, Usability Testing</span>
+              </div>
+            </div>
+            <div class="ge-hero-split__media reveal">
+              <img src="ge-healthcare-devices.jpg" alt="GE Healthcare Asset Lifecycle Management EOT dashboard shown across laptop, tablet, and mobile" />
+            </div>
+          </div>
+
+          <div class="ge-persona-tags reveal" style="justify-content:center; max-width:1120px; margin:40px auto 0;">
+            <span>User Experience (UX) Design</span>
+            <span>Usability Testing</span>
+            <span>Wireframing</span>
+            <span>User Interface (UI)</span>
+            <span>UX Research</span>
+          </div>
+
+          <p class="pareexa-metrics-note pareexa-metrics-note--centered">
+            This reflects real work on GE Healthcare's live platform, shown here in full — screens,
+            workflows, and approach are the genuine story. Because it's an active enterprise client
+            engagement, customer names and figures shown are demo/anonymized data, and business
+            metrics below are kept approximate and directional per the NDA covering this engagement.
           </p>
-          <dl class="study-meta">
-            <div><dt>Role</dt><dd>UX/UI Designer (via TCS)</dd></div>
-            <div><dt>Timeline</dt><dd>Oct 2022 — Present</dd></div>
-            <div><dt>Team</dt><dd>3 UX/UI designers in a 23-person team</dd></div>
-            <div><dt>Platform</dt><dd>Web: desktop, tablet &amp; mobile</dd></div>
-            <div><dt>Users</dt><dd>2,000+ (scaled from ~50), 20+ countries</dd></div>
-            <div><dt>Focus</dt><dd>Research, IA, wireframes, prototyping, usability testing</dd></div>
-          </dl>
-          <figure>
-            <a class="study-zoom study-hero" href="ge-healthcare-devices.jpg">
-              <img src="ge-healthcare-devices.jpg" alt="GE Healthcare Asset Lifecycle Management end-of-term dashboard shown across laptop, tablet and mobile" width="1800" height="900" />
-            </a>
-          </figure>
-        </header>
 
-        <aside class="study-toc">
-          <details open>
-            <summary>On this page</summary>
-            <nav aria-label="Contents">
-              <ol>
-                <li><a href="#about">About the project</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#testing">Testing &amp; responsive</a></li>
-                <li><a href="#design-system">Design system</a></li>
-                <li><a href="#iteration">Constraints &amp; iteration</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#learnings">What I took away</a></li>
-              </ol>
-            </nav>
-          </details>
-        </aside>
+          <div class="golfpac-section-head" style="margin-top:56px; text-align:center;">
+            <h2 style="font-size:1.6rem;">Cross-functional Team</h2>
+          </div>
 
-        <article class="study-article">
-          <section id="about" aria-labelledby="about-title">
-            <h2 id="about-title">About the project</h2>
-            <p>
-              GE HealthCare’s commercial teams managed quotes, renewals, upgrades and asset requests across fragmented
-              internal systems. Manual work, duplicated data and disconnected workflows slowed decisions down and added
-              operational overhead. My goal was a centralized platform that streamlined these processes while giving
-              users more autonomy.
-            </p>
-            <ul>
-              <li><strong>Problem.</strong> Teams relied on manual data entry across disconnected systems for quote generation, asset requests, renewals and upgrades, with no unified source of truth. Users were frustrated by low productivity and a lack of integration.</li>
-              <li><strong>Solution.</strong> I led the redesign of quote generation and asset management: the information architecture, the dashboard and validation through usability testing. I also contributed hands-on Angular front-end work to close the gap between design and build.</li>
-              <li><strong>Impact.</strong> Faster quote preparation, fewer manual approvals, centralized data, role-based workflows and higher adoption.</li>
-            </ul>
-            <p>
-              I worked inside a cross-functional team of <strong>2 technical architects, 4 full-stack developers,
-              4 Angular UI developers, 2 .NET developers, 5 QA engineers, 1 cloud/DevOps engineer, 3 UX/UI designers
-              and 2 support analysts.</strong>
-            </p>
-            <p class="study-note">
-              This is real work on GE HealthCare’s live platform: the screens, workflows and approach are the genuine
-              story. Because it’s an active enterprise engagement, customer names and figures shown are demo or
-              anonymized data, and business metrics are kept approximate per the NDA.
-            </p>
-          </section>
+          <div class="ge-team-grid">
+            <div class="ge-team-card reveal"><strong>2</strong><span>Technical Architects</span></div>
+            <div class="ge-team-card reveal"><strong>4</strong><span>Full Stack Developers</span></div>
+            <div class="ge-team-card reveal"><strong>4</strong><span>Angular UI Developers</span></div>
+            <div class="ge-team-card reveal"><strong>2</strong><span>.NET Developers</span></div>
+            <div class="ge-team-card reveal"><strong>5</strong><span>QA Engineers</span></div>
+            <div class="ge-team-card reveal"><strong>1</strong><span>Cloud / DevOps Engineer</span></div>
+            <div class="ge-team-card reveal"><strong>3</strong><span>UX/UI Designers</span></div>
+            <div class="ge-team-card reveal"><strong>2</strong><span>Support Analysts</span></div>
+          </div>
 
-          <section id="research" aria-labelledby="research-title">
-            <h2 id="research-title">Research</h2>
-            <blockquote><p>Teams were managing fragmented, dispersed systems for quotes, renewals and vouchers, with no unified source of truth.</p></blockquote>
-            <p>
-              Research combined stakeholder workshops with financial services teams and usability sessions with end
-              users on wireframes and prototypes. The problem came into focus quickly:
-            </p>
-            <ul>
-              <li>Financial services workflows needed a centralized platform to address inefficiency and fragmentation.</li>
-              <li>Users relied on manual data entry and disconnected systems for quotes, renewals and upgrades.</li>
-              <li>Managers needed to raise and track requests independently, without relying on other teams.</li>
-              <li>Users voiced frustration with low productivity and the overall lack of integration.</li>
-            </ul>
+          <div class="case-psi">
+            <article class="reveal">
+              <span>🧭 Problem</span>
+              <p>Financial services teams were managing fragmented, disconnected systems for quote generation, asset requests, renewals, and upgrades — relying on manual data entry with no unified source of truth, and voicing frustration with low productivity and a lack of integration.</p>
+            </article>
+            <article class="reveal">
+              <span>💡 Solution</span>
+              <p>I led the redesign of quote generation and asset management workflows — creating the information architecture, designing the dashboard, and validating it through usability testing — while also contributing hands-on Angular frontend development to help close the gap between design and implementation.</p>
+            </article>
+            <article class="reveal">
+              <span>📊 Impact</span>
+              <p style="margin:0; text-align:left;">
+                Reduced quote preparation time<br />
+                ↓ Fewer manual approvals<br />
+                ↓ Centralized data<br />
+                ↓ Role-based workflows<br />
+                ↓ Higher adoption
+              </p>
+            </article>
+          </div>
+        </section>
 
-            <h3>Meet Joseph</h3>
-            <figure class="study-figure">
-              <a class="study-zoom" href="ge-healthcare-persona.svg">
-                <img src="ge-healthcare-persona.svg" alt="Persona: Joseph K, 45, Senior Asset Manager. Goals: streamline asset renewals and upgrades, access a centralized platform, increase efficiency to manage a larger portfolio. Pain points: delays in quote generation, fragmented systems, repeated data entry. Expectations: a seamless, intuitive interface, accurate real-time data and customized templates. Proficient with financial software, comfortable learning new tools, values simplicity." loading="lazy" />
-              </a>
-              <figcaption>Persona built from stakeholder workshops and usability sessions.</figcaption>
-            </figure>
-            <p>What Joseph’s goals implied for the design:</p>
-            <ul>
-              <li><strong>Efficiency is key.</strong> Streamlined processes that cut redundant tasks free him to focus on client relationships.</li>
-              <li><strong>Centralization is essential.</strong> Fragmented workflows disrupt his day; one platform removes the back-and-forth.</li>
-              <li><strong>Reliability and simplicity.</strong> Intuitive, dependable tools with a minimal learning curve.</li>
-              <li><strong>Time-sensitive information matters.</strong> Quote preparation depends on fast, real-time data, filters and interactions.</li>
-            </ul>
+        <section class="ge-slide" id="research">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">02</span> 🔍 Research</p>
+          <div class="ge-statement">
+            <h2>
+              Financial services teams were managing
+              <span>fragmented, dispersed</span>
+              systems for quotes, renewals, and vouchers, with no unified source of truth.
+            </h2>
+          </div>
 
-            <h3>Key findings</h3>
-            <ul>
-              <li><strong>High demand for efficiency.</strong> Reducing manual tasks directly lifts productivity and satisfaction.</li>
-              <li><strong>Data needs to live in one place.</strong> Fragmentation across systems causes inefficiency; users did noticeably better with minimal, well-organized navigation.</li>
-              <li><strong>Preference for intuitive tools.</strong> Users want no-nonsense systems that need little training and match their mental model of the workflow.</li>
-              <li><strong>Speed matters.</strong> Real-time processing in quote preparation cuts dead time and the errors caused by manual re-entry.</li>
-            </ul>
-          </section>
-
-          <section id="approach" aria-labelledby="approach-title">
-            <h2 id="approach-title">A centralized, role-based platform</h2>
-            <p>
-              I led the redesign end to end: the information architecture, the dashboard and quote workflows, and
-              validation through usability testing. The platform automates repetitive tasks and consolidates data
-              into one interface. <strong>Role-based access lets users manage their own quote requests without
-              waiting on other teams.</strong>
-            </p>
-            <p>
-              I also contributed hands-on Angular front-end development, working closely with engineering to keep
-              the build faithful to the design intent.
-            </p>
-            <div class="study-shift">
-              <div>
-                <h4>Before</h4>
-                <ul><li>Fragmented systems</li><li>Manual data entry</li><li>Duplicated records</li><li>No shared visibility</li></ul>
-              </div>
-              <div>
-                <h4>After</h4>
-                <ul><li>Centralized platform</li><li>Role-based access</li><li>Automated workflows</li><li>Single source of truth</li></ul>
-              </div>
+          <div class="ge-problem-layout">
+            <div class="pareexa-challenge-collage" role="group" aria-label="GE Healthcare platform previews">
+              <img
+                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--back"
+                src="Prototype-2.png"
+                alt="High-fidelity prototype of the GE Healthcare asset management dashboard"
+              />
+              <img
+                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--mid"
+                src="Wireframe.png"
+                alt="Low-fidelity wireframe of the GE Healthcare asset management dashboard"
+              />
+              <img
+                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--front"
+                src="ge-healthcare-devices.jpg"
+                alt="GE Healthcare Asset Lifecycle Management dashboard shown across laptop, tablet, and mobile"
+              />
             </div>
 
-            <h3>Rapid wireframes to lock the structure first</h3>
-            <figure class="study-figure">
-              <a class="study-zoom" href="Wireframe.png">
-                <img src="Wireframe.png" alt="Low-fidelity wireframes of the asset management dashboard showing sidebar navigation, quote request flow, alerts and the quote table" loading="lazy" />
-              </a>
-            </figure>
-            <ul>
-              <li><strong>Menu options</strong> for quick navigation across action items.</li>
-              <li><strong>Quote request</strong> flow for raising quote generation requests.</li>
-              <li><strong>Actionable alerts</strong> surfaced directly on the dashboard.</li>
-              <li><strong>Active and inactive quotes</strong>, all visible at a glance.</li>
-            </ul>
-          </section>
-
-          <section id="testing" aria-labelledby="testing-title">
-            <h2 id="testing-title">Usability testing shaped the key changes</h2>
-            <p>
-              I planned and ran usability sessions on the first wireframes, covering core tasks like raising a quote
-              request, searching and filtering active quotes, and reading status updates.
-            </p>
-            <p>
-              The feedback led to <strong>streamlined navigation, color-coded status indicators, better search and
-              quick action buttons</strong>: changes that improved accessibility and cut task-completion time across
-              the final dashboard.
-            </p>
-            <div class="study-gallery" style="--ratio: 1.6">
-              <a class="study-zoom" href="Prototype-1.png">
-                <img src="Prototype-1.png" alt="High-fidelity dashboard prototype with streamlined navigation, color-coded statuses, enhanced search and quick actions" loading="lazy" />
-              </a>
-              <a class="study-zoom" href="Prototype-2.png">
-                <img src="Prototype-2.png" alt="High-fidelity dashboard prototype showing detailed workflow states" loading="lazy" />
-              </a>
+            <div class="ge-problem-copy">
+              <p class="ge-problem-copy__lead">Problem statement</p>
+              <ul>
+                <li>Financial services workflows required a centralized platform to address inefficiencies and fragmentation</li>
+                <li>Users relied on manual data entry and disconnected systems for quotes, renewals, and upgrades</li>
+                <li>Managers needed to independently raise and track requests without relying on other teams</li>
+                <li>Users voiced frustration with low productivity and the overall lack of integration</li>
+              </ul>
             </div>
-            <ul>
-              <li><strong>Quick summary panel</strong>: key totals visible without drilling in.</li>
-              <li><strong>Top navigation tabs</strong>: faster switching between core workflows.</li>
-              <li><strong>Advanced search</strong>: instant lookup with saved filters.</li>
-              <li><strong>Color-coded status</strong>: readable at a glance.</li>
-              <li><strong>Notifications and alerts</strong>: actionable items surfaced proactively.</li>
-              <li><strong>Quick table view</strong>: dense data kept scannable.</li>
-            </ul>
+          </div>
 
-            <h3>Finally, responsive for tablets and mobile</h3>
+          <p class="golfpac-caption" style="margin-top:20px;">
+            Research included stakeholder workshops with financial services teams and usability
+            testing sessions with end users on wireframes and prototypes.
+          </p>
+
+          <div class="ge-persona-image">
+            <img src="ge-healthcare-persona.svg" alt="Persona: Joseph K, 45, Senior Asset Manager. Goals: streamline asset renewals and upgrades, access a centralized platform, increase efficiency to manage a larger portfolio. Pain points: delays in quote generation, fragmented systems, repeated data entry. Expectations: seamless intuitive interface, accurate real-time data, customized templates. Ability to use technology: proficient with financial software, comfortable learning new tools, values simplicity." />
+          </div>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>What the persona's goals implied</h2>
+          </div>
+
+          <div class="ge-insights-grid">
+            <div class="ge-insight-card reveal">
+              <h3>Efficiency is key</h3>
+              <p>Joseph values streamlined processes that reduce redundant tasks, boosting his productivity and allowing more focus on client relationships.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Centralization is essential</h3>
+              <p>Workflow fragmentation disrupts Joseph's productivity; a unified platform consolidating data eliminates back-and-forth decision-making.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Reliability and simplicity</h3>
+              <p>Joseph prioritizes intuitive, reliable tools with minimal learning curve that enhance day-to-day workflow without a steep learning curve.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Time-sensitive information matters</h3>
+              <p>Fast, real-time data processing is crucial in quote preparation — expectations, filters, and interactions all need to reduce time and effort.</p>
+            </div>
+          </div>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Key findings from research</h2>
+          </div>
+
+          <div class="ge-insights-grid">
+            <div class="ge-insight-card reveal">
+              <h3>High demand for efficiency</h3>
+              <p>Users like Joseph value processes that reduce manual tasks and streamline workflows, which directly impacts their productivity and satisfaction.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Need for data centralization</h3>
+              <p>Fragmentation across multiple systems leads to inefficiencies; users perform noticeably better with minimal, well-organized navigation.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Preference for intuitive tools</h3>
+              <p>Users seek easy, no-nonsense systems that require minimal training and support their existing mental model of the workflow.</p>
+            </div>
+            <div class="ge-insight-card reveal">
+              <h3>Importance of speed in task completion</h3>
+              <p>Real-time data processing, especially in quote preparation, is essential — it lets users reduce dead time and errors caused by manual re-entry.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="approach">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">03</span> 🛠️ Approach</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>A centralized, role-based platform for quote generation and asset management.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
             <p>
-              Asset managers needed to check quote status and act on alerts wherever they were, not only at a desk,
-              which matched Joseph’s goal of managing a larger portfolio without being tied to one device.
+              I led the redesign end to end: creating the information architecture, designing the
+              dashboard and quote workflows, and validating the design through usability testing.
+              To solve these issues, I designed a centralized, mission-ready platform by
+              automating repetitive tasks and consolidating data into a user-friendly interface.
+              With role-based access, I allowed users to independently manage requests for quote
+              generation without waiting on other teams, enhancing accessibility and autonomy
+              while improving overall efficiency and user satisfaction. I also contributed
+              hands-on Angular frontend development, working closely with the engineering team to
+              keep implementation faithful to the design intent.
             </p>
-            <figure class="study-figure">
-              <a class="study-zoom" href="ge-healthcare-responsive.png">
-                <img src="ge-healthcare-responsive.png" alt="End-of-term dashboard responsive design on tablet and mobile" loading="lazy" />
-              </a>
-              <figcaption>Customer names and figures are demo or anonymized data.</figcaption>
-            </figure>
-          </section>
+          </div>
 
-          <section id="design-system" aria-labelledby="ds-title">
-            <h2 id="ds-title">Aligning with the Ethos Design System</h2>
-            <blockquote><p>Modernizing the platform to match GE HealthCare’s new design language.</p></blockquote>
+          <div class="golfpac-before-after" style="margin-top:40px;">
+            <figure class="golfpac-before-after__panel" style="height:auto; aspect-ratio:auto; padding:24px;">
+              <span class="golfpac-before-after__label" style="position:static; display:inline-block; margin-bottom:14px;">Before</span>
+              <p style="margin:0; color:#3a3a40; line-height:2;">Fragmented systems<br />↓ Manual data entry<br />↓ Duplicated records<br />↓ No shared visibility</p>
+            </figure>
+            <figure class="golfpac-before-after__panel" style="height:auto; aspect-ratio:auto; padding:24px;">
+              <span class="golfpac-before-after__label" style="position:static; display:inline-block; margin-bottom:14px;">After</span>
+              <p style="margin:0; color:#3a3a40; line-height:2;">Centralized platform<br />↓ Role-based access<br />↓ Automated workflows<br />↓ Single source of truth</p>
+            </figure>
+          </div>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Rapid wireframes to lock the structure first.</h2>
+          </div>
+
+          <div class="ge-persona-image ge-persona-image--wide">
+            <img src="Wireframe.png" alt="Low-fidelity wireframes of the GE Healthcare asset management dashboard showing sidebar navigation, quote request flow, alerts, and quote table structure" />
+          </div>
+          <ol class="ge-callout-legend">
+            <li><strong>Menu options</strong> &mdash; quick navigation across action items</li>
+            <li><strong>Quote request</strong> &mdash; flow for quote generation requests</li>
+            <li><strong>Actionable alerts</strong> &mdash; surfaced directly on the dashboard</li>
+            <li><strong>Active / inactive quotes</strong> &mdash; view all quotes at a glance</li>
+          </ol>
+        </section>
+
+        <section class="ge-slide">
+          <div class="ge-statement ge-statement--compact">
+            <h2>Usability testing shaped the key changes.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
             <p>
-              When GE HealthCare introduced the <a href="https://www.ethosdesignsystem.com/" target="_blank" rel="noopener noreferrer">Ethos Design System</a>
-              after its brand evolution, one of my key responsibilities was bringing the financing platform in line
-              with it. Beyond migrating legacy workflows, I contributed reusable components that improved consistency
+              I planned and conducted usability testing sessions on the initial wireframes,
+              covering core tasks like raising a quote request, searching and filtering active
+              quotes, and reading status updates — to gather insight into user interactions,
+              identify pain points, and collect feedback on usability. Based on that feedback, I
+              made key changes: streamlined navigation, color-coded status indicators, enhanced
+              search capabilities, and quick action buttons — updates designed to improve
+              accessibility, reduce task-completion time, and create a more intuitive, efficient
+              experience across the final dashboard.
+            </p>
+          </div>
+
+          <div class="ge-persona-image ge-persona-image--wide">
+            <img src="Prototype-1.png" alt="High-fidelity prototype of the GE Healthcare asset management dashboard with streamlined navigation, color-coded status indicators, enhanced search, and quick action buttons" />
+          </div>
+          <div class="ge-persona-image ge-persona-image--wide" style="margin-top:24px;">
+            <img src="Prototype-2.png" alt="High-fidelity prototype of the GE Healthcare asset management dashboard, additional view showing detailed workflow states" />
+          </div>
+          <ol class="ge-callout-legend">
+            <li><strong>Enhanced quick summary panel</strong> &mdash; key totals visible without drilling in</li>
+            <li><strong>Top navigation tabs</strong> &mdash; faster switching between core workflows</li>
+            <li><strong>Advanced &amp; enhanced search</strong> &mdash; instant lookup with saved filters</li>
+            <li><strong>Color-coded status indicators</strong> &mdash; status readable at a glance</li>
+            <li><strong>Notifications &amp; alerts</strong> &mdash; actionable items surfaced proactively</li>
+            <li><strong>Quick table view</strong> &mdash; dense data kept scannable</li>
+          </ol>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Finally, made responsive for tablets and mobile.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              Asset managers needed to check quote status and act on alerts wherever they were
+              working, not only at a desktop — matching the persona's own goal of managing a
+              larger portfolio without being tied to one device. Responsive support meant the
+              platform stayed useful outside a fixed desk setup, not just technically accessible
+              on a smaller screen.
+            </p>
+          </div>
+
+          <div class="ge-persona-image">
+            <img src="ge-healthcare-responsive.png" alt="GE Healthcare EOT Dashboard responsive design shown on tablet and mobile" />
+          </div>
+          <p class="golfpac-caption">Customer names and figures shown above are demo/anonymized data, consistent with the note at the top of this page.</p>
+        </section>
+
+        <section class="ge-slide" id="design-system">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">04</span> 🎨 Designing with the GE HealthCare Ethos Design System</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>Modernizing the platform to align with GE HealthCare's new design language.</h2>
+          </div>
+
+          <div class="ge-split-text ge-split-text--large">
+            <p>
+              When GE HealthCare introduced the
+              <a href="https://www.ethosdesignsystem.com/" target="_blank" rel="noreferrer">Ethos Design System</a>
+              following its brand evolution, one of my key responsibilities was modernizing the
+              financing platform to align with the new design language. Beyond migrating legacy
+              workflows, I also contributed to reusable components that improved consistency
               across enterprise applications.
             </p>
-            <h3>My contribution</h3>
-            <ul>
-              <li>Migrated multiple enterprise workflows to the Ethos Design System.</li>
-              <li>Redesigned legacy screens with standardized layouts, typography, spacing and interaction patterns.</li>
-              <li>Designed reusable components: accordion, dropdown, filter, navigation and modal patterns.</li>
-              <li>Worked with product managers, business analysts and Angular developers on accurate implementation.</li>
-              <li>Ran design QA to keep the application consistent.</li>
-            </ul>
-            <ul class="study-tags" aria-label="Components designed">
-              <li>Accordion</li><li>Dropdown</li><li>Filter</li><li>Navigation</li><li>Modal / popup</li>
-            </ul>
-            <h3>Design decisions</h3>
+          </div>
+
+          <h3 class="golfpac-subhead" style="text-align:center; max-width:none;">My Contribution</h3>
+          <ul class="golfpac-principles" style="max-width:1000px;">
+            <li>Migrated multiple enterprise workflows to align with the Ethos Design System</li>
+            <li>Redesigned legacy screens using standardized layouts, typography, spacing, and interaction patterns</li>
+            <li>Designed reusable components including Accordion, Dropdown, Filter, Navigation, and Modal/Popup patterns</li>
+            <li>Collaborated with Product Managers, Business Analysts, and Angular developers to ensure accurate implementation</li>
+            <li>Conducted design QA to maintain consistency across the application</li>
+          </ul>
+
+          <h3 class="golfpac-subhead" style="text-align:center; max-width:none;">Design Decisions</h3>
+          <div class="ge-split-text ge-split-text--large">
             <p>
-              Instead of custom UI for every workflow, I prioritized reusable patterns that reduced cognitive load in
-              complex financial processes. Where requirements went beyond existing components, I designed scalable
-              patterns that stayed aligned with Ethos while meeting product-specific needs.
+              Instead of creating custom UI for every workflow, I prioritized reusable patterns
+              that reduced cognitive load and helped users navigate complex financial processes
+              more efficiently.
             </p>
             <p>
-              The callouts: <strong>standardized spacing, updated typography, a reusable filter pattern, a clearer
-              navigation hierarchy and accessible interaction states.</strong> Together they gave design and
-              engineering a shared language and made future changes simpler.
+              Where business requirements extended beyond existing components, I worked on
+              designing scalable patterns that aligned with the Ethos Design System while
+              addressing product-specific needs. This approach improved visual consistency,
+              simplified future enhancements, and created a shared language between design and
+              engineering teams.
             </p>
-            <h3>Outcome</h3>
-            <ul>
-              <li>The application now aligns with the Ethos Design System.</li>
-              <li>Reusable enterprise components were adopted across workflows.</li>
-              <li>Consistency improved across multiple business modules.</li>
-              <li>Design and engineering collaborate faster.</li>
+          </div>
+
+          <div class="ge-reflection">
+            <p>
+              Beyond applying the design system, I contributed to its evolution by designing
+              reusable enterprise components and leading the migration of legacy workflows to
+              create a more consistent and scalable user experience.
+            </p>
+          </div>
+
+          <h3 class="golfpac-subhead" style="text-align:center; max-width:none;">Key Outcome</h3>
+          <ul class="golfpac-principles">
+            <li>Modernized the application to align with the Ethos Design System</li>
+            <li>Contributed reusable enterprise components adopted across workflows</li>
+            <li>Improved consistency across multiple business modules</li>
+            <li>Enabled faster collaboration between design and engineering</li>
+          </ul>
+
+          <h3 class="golfpac-subhead" style="text-align:center; max-width:none; margin-top:56px;">Components Designed</h3>
+          <div class="home-hero__chips" style="justify-content:center; max-width:900px; margin:24px auto 0;">
+            <span class="home-chip">🧩 Accordion</span>
+            <span class="home-chip">🧩 Dropdown</span>
+            <span class="home-chip">🧩 Filter</span>
+            <span class="home-chip">🧩 Navigation</span>
+            <span class="home-chip">🧩 Modal / Popup</span>
+          </div>
+
+          <h3 class="golfpac-subhead" style="text-align:center; max-width:none;">Design Callouts</h3>
+          <div class="home-hero__chips" style="justify-content:center; max-width:900px; margin:24px auto 0;">
+            <span class="home-chip">📏 Standardized spacing</span>
+            <span class="home-chip">🔤 Updated typography</span>
+            <span class="home-chip">🔍 Reusable filter pattern</span>
+            <span class="home-chip">🧭 Improved navigation hierarchy</span>
+            <span class="home-chip">♿ Accessible interaction states</span>
+          </div>
+
+          <div style="text-align:center; margin-top:40px;">
+            <a class="btn-accent" href="https://www.ethosdesignsystem.com/" target="_blank" rel="noreferrer">
+              View Design System
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="constraints-iteration">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 🔄 Constraints &amp; Iteration</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>Not every redesign is a single decision — some are a back-and-forth.</h2>
+          </div>
+
+          <div class="tastex-decision">
+            <p class="tastex-decision__eyebrow">Constraint &amp; Iteration</p>
+            <h3 class="tastex-decision__title">Designing the Workflow Status View</h3>
+
+            <p class="tastex-decision__label">The challenge</p>
+            <p>
+              As the platform scaled and workflow volume grew, the original quote-status
+              visualization — a simple pie chart — stopped giving the PMO team enough detail to
+              act quickly. What followed wasn't a single redesign but a genuine iterative
+              back-and-forth: each stakeholder review surfaced a new requirement I hadn't
+              anticipated, and each one carried its own technical implications.
+            </p>
+            <ul class="pareexa-mini-list">
+              <li><strong>Pie chart → Bar graph:</strong> The PMO wanted to see the status of every workflow at a glance, not just a proportional breakdown — a bar view could show individual workflow items directly, which the pie chart structurally couldn't.</li>
+              <li><strong>Bar graph → Progress view:</strong> The bar view required scrolling once volume grew, which the PMO explicitly didn't want — pushing me toward a view that could show status without depending on scroll depth.</li>
+              <li><strong>Progress view → Card view:</strong> The next ask was to see status broken down by individual workflow step, not just overall progress — which meant restructuring the data model behind the view, not just the visual treatment.</li>
+              <li><strong>Card view → Live updates:</strong> The final requirement — real-time status updates — introduced a genuine technical constraint: a live-updating view has real implications for data refresh performance and backend load, not just a UI change.</li>
             </ul>
-            <div class="study-cta">
-              <a href="https://www.ethosdesignsystem.com/" target="_blank" rel="noopener noreferrer">View the Ethos Design System <span aria-hidden="true">↗</span></a>
+
+            <p class="tastex-decision__label">How I handled it</p>
+            <p>
+              Rather than treating each new requirement as a full restart, I kept the underlying
+              data structure (workflow status, by step) consistent across iterations, so each
+              visual pivot was a presentation change rather than a rebuild — which is what made it
+              possible to keep pace with requirements shifting meeting to meeting. For the
+              live-updates requirement specifically, I worked with engineering to understand what
+              refresh rate was actually sustainable at scale, rather than designing an ideal
+              real-time experience the backend couldn't support.
+            </p>
+
+            <p class="tastex-decision__label">The outcome</p>
+            <p>
+              The final card-based view with live status updates gave the PMO what they'd been
+              asking for across every iteration — at-a-glance visibility into individual workflow
+              steps, without scroll dependency, updated in real time.
+            </p>
+
+            <p class="tastex-decision__label">What I'd do differently</p>
+            <p>
+              Push for a more structured requirements-validation session upfront — even a single
+              round of "show me three rough directions before we build any of them" likely would
+              have surfaced the scroll and step-level requirements earlier, rather than discovering
+              them one meeting at a time. It's a good reminder that fast iteration is valuable, but
+              it's not a substitute for front-loading discovery when the stakeholder's mental model
+              is still evolving too.
+            </p>
+          </div>
+        </section>
+
+        <section class="ge-slide" id="impact">
+          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">06</span> 📊 Impact</p>
+          <div class="ge-statement ge-statement--compact">
+            <h2>Notable gains in satisfaction, efficiency, and productivity.</h2>
+          </div>
+
+          <div class="ge-insights-grid ge-insights-grid--triple">
+            <div class="ge-insight-card reveal">
+              <h3>Business Impact</h3>
+              <p>Adoption scaled across several teams as the platform consolidated work that used to run through disconnected tools, with improved cross-team collaboration.</p>
             </div>
-          </section>
-
-          <section id="iteration" aria-labelledby="iteration-title">
-            <h2 id="iteration-title">Constraints &amp; iteration: the workflow status view</h2>
-            <blockquote><p>Not every redesign is a single decision. Some are a back-and-forth.</p></blockquote>
-            <p>
-              As the platform scaled, the original quote-status view (a simple pie chart) stopped giving the PMO team
-              enough detail to act quickly. Each stakeholder review surfaced a new requirement, and each carried its
-              own technical implications.
-            </p>
-            <div class="study-table-wrap">
-              <table>
-                <thead><tr><th scope="col">Shift</th><th scope="col">Why</th></tr></thead>
-                <tbody>
-                  <tr><td>Pie chart → bar graph</td><td>The PMO wanted every workflow’s status at a glance, not a proportional breakdown.</td></tr>
-                  <tr><td>Bar graph → progress view</td><td>Bars needed scrolling once volume grew, which the PMO explicitly didn’t want.</td></tr>
-                  <tr><td>Progress view → card view</td><td>They needed status by individual workflow step, which meant restructuring the data model, not just the visuals.</td></tr>
-                  <tr><td>Card view → live updates</td><td>Real-time status brought a real constraint: refresh performance and backend load.</td></tr>
-                </tbody>
-              </table>
+            <div class="ge-insight-card reveal">
+              <h3>User Impact</h3>
+              <p>Greater autonomy and accessibility for users — quote preparation time was cut substantially, and stated satisfaction improved with a seamless experience across devices.</p>
             </div>
-            <h3>How I handled it</h3>
-            <p>
-              Rather than restarting each time, I kept the underlying data structure (workflow status by step)
-              consistent, so <strong>each visual pivot was a presentation change, not a rebuild</strong>. That’s what
-              let the design keep pace with requirements shifting meeting to meeting. For live updates, I worked with
-              engineering to find a refresh rate that was sustainable at scale, instead of designing an ideal
-              real-time view the backend couldn’t support.
-            </p>
-            <p>
-              The final card view with live status gave the PMO what they’d asked for in every round: at-a-glance
-              visibility into individual steps, no scroll dependency, updated in real time.
-            </p>
-            <h3>What I’d do differently</h3>
-            <p>
-              Push for a structured requirements session upfront. Even one round of “show me three rough directions
-              before we build any” would likely have surfaced the scroll and step-level needs earlier. Fast iteration
-              is valuable, but it doesn’t replace front-loaded discovery while the stakeholder’s own mental model is
-              still evolving.
-            </p>
-          </section>
-
-          <section id="impact" aria-labelledby="impact-title">
-            <h2 id="impact-title">Impact</h2>
-            <p>Notable gains in satisfaction, efficiency and productivity.</p>
-            <dl class="study-stats">
-              <div><dt>Quotes generated through the platform</dt><dd>5,000+</dd></div>
-              <div><dt>Vouchers processed</dt><dd>7,000+</dd></div>
-              <div><dt>Value processed</dt><dd>~$21M</dd></div>
-              <div><dt>Invoice cancellations handled</dt><dd>2,000+</dd></div>
-              <div><dt>Asset management requests</dt><dd>600+</dd></div>
-            </dl>
-            <ul>
-              <li><strong>Business.</strong> Adoption scaled across several teams as the platform absorbed work that used to run through disconnected tools.</li>
-              <li><strong>Users.</strong> More autonomy, much shorter quote preparation, and better satisfaction with a seamless experience across devices.</li>
-              <li><strong>Operations.</strong> More quotes processed and less manual work, because users manage their own requests.</li>
-            </ul>
-            <div class="study-quotes">
-              <blockquote class="study-quote">
-                <p>“This has completely streamlined my daily tasks. What used to take hours now only takes a few minutes, letting me focus more on client management.”</p>
-                <footer>Senior Asset Manager, Financial Services</footer>
-              </blockquote>
-              <blockquote class="study-quote">
-                <p>“I now have full autonomy to raise and track quote requests without relying on others. It’s a real change for efficiency and team productivity.”</p>
-                <footer>Asset Manager, Team Lead, Financial Services</footer>
-              </blockquote>
-              <blockquote class="study-quote">
-                <p>“The platform’s responsiveness on mobile means I can manage tasks anytime, anywhere. It’s boosted my productivity and cut delays in our workflow.”</p>
-                <footer>Field Operations Manager, Financial Services</footer>
-              </blockquote>
+            <div class="ge-insight-card reveal">
+              <h3>Operational Impact</h3>
+              <p>Processed quotes increased and manual work dropped, as role-based access let users manage their own requests without waiting on other teams.</p>
             </div>
-            <p class="study-note">Quoted by role rather than name, since I don’t have explicit consent to name the reviewers publicly.</p>
-          </section>
+          </div>
 
-          <section id="learnings" aria-labelledby="learnings-title">
-            <h2 id="learnings-title">What I took away</h2>
-            <ol>
-              <li><strong>Design for systems, not just screens.</strong> Removing one step for users often meant coordinating changes across several backend systems and stakeholders.</li>
-              <li><strong>Test early and lightly.</strong> Quick usability rounds found real problems before they became expensive.</li>
-              <li><strong>Performance is part of the experience.</strong> Faster processing directly improved efficiency and satisfaction.</li>
-              <li><strong>Role-based access empowers people.</strong> Managing their own requests gave users autonomy and sped everything up.</li>
-            </ol>
+          <div class="ge-impact-grid">
+            <article>
+              <strong>600+</strong>
+              <span>Asset management requests handled</span>
+            </article>
+            <article>
+              <strong>5,000+</strong>
+              <span>Quotes generated through the platform</span>
+            </article>
+            <article>
+              <strong>~$21M</strong>
+              <span>Value processed through the platform</span>
+            </article>
+            <article>
+              <strong>7,000+</strong>
+              <span>Vouchers processed</span>
+            </article>
+            <article>
+              <strong>2,000+</strong>
+              <span>Invoice cancellations handled</span>
+            </article>
+          </div>
+
+          <div class="ge-testimonial-grid">
+            <div class="ge-testimonial-card reveal">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"This has completely streamlined my daily tasks. What used to take hours now only takes a few minutes, letting me focus more on client management."</p>
+              <strong>Senior Asset Manager</strong>
+              <span>Financial Services team</span>
+            </div>
+            <div class="ge-testimonial-card reveal">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"I now have full autonomy to raise and track quote requests without relying on others. It's a real change for efficiency and team productivity."</p>
+              <strong>Asset Manager, Team Lead</strong>
+              <span>Financial Services team</span>
+            </div>
+            <div class="ge-testimonial-card reveal">
+              <div class="ge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>"The platform's responsiveness on mobile means I can manage tasks anytime, anywhere. It's boosted my productivity and cut delays in our workflow."</p>
+              <strong>Field Operations Manager</strong>
+              <span>Financial Services team</span>
+            </div>
+          </div>
+
+          <p class="golfpac-caption">Quoted with role-based attribution rather than full names, since I don't have explicit confirmation these reviewers consented to being publicly named.</p>
+
+          <div class="ge-statement ge-statement--compact" style="margin-top:56px;">
+            <h2>Key learnings</h2>
+          </div>
+
+          <ul class="ge-learnings-list">
+            <li><strong>User-centered design boosts adoption.</strong> Prioritizing user needs enhances satisfaction and drives engagement.</li>
+            <li><strong>Enterprise software means balancing simplicity with complexity.</strong> Removing one step for users often meant coordinating changes across multiple backend systems and stakeholders, not just a screen redesign.</li>
+            <li><strong>Iterative usability testing streamlines workflows.</strong> Early, lightweight testing found real problems before they became expensive to fix.</li>
+            <li><strong>Performance optimization enhances experience.</strong> Faster processing times directly improve efficiency and satisfaction.</li>
+            <li><strong>Role-based access empowers users.</strong> Independent request management boosts autonomy and efficiency.</li>
+          </ul>
+
+          <div class="ge-reflection">
             <p>
-              Since the first redesign I’ve kept leading design on the account, extending the design system to new
-              modules and views under the platform’s evolving guidelines.
+              The biggest learning from this project was designing for systems, not just screens.
+              It sharpened my ability to structure workflows, work across cross-functional teams,
+              and turn operational complexity into clearer digital experiences.
             </p>
-            <p class="study-note">
-              Exact financial figures and some internal tooling details stay approximate per the NDA.
-              Happy to go deeper in conversation:
-              <a href="mailto:mrarpansheth@gmail.com?subject=GE%20HealthCare%20case%20study">ask me about this project</a>.
-            </p>
-          </section>
-        </article>
-      </div>
+          </div>
 
-      <a class="study-next" href="tastex.html">
-        <small>Next project</small>
-        <strong>tasteX <span aria-hidden="true">→</span></strong>
-      </a>
-      <div class="study-return"><a href="index.html#work">← Selected work</a><a href="#top">Back to top ↑</a></div>
-    </main>
+          <p class="pareexa-status-note">
+            Everything above — the scope, role, screens, and design approach — is the real project.
+            Because it's an active enterprise engagement with GE Healthcare, exact financial figures
+            and some internal tooling details stay approximate here per the NDA covering this work.
+            Happy to go deeper on any of it in conversation.
+          </p>
 
-    <script src="pixels.js?v=20261125f" defer></script>
-    <script src="study.js?v=20261125c" defer></script>
+          <p class="pareexa-status-note">
+            Since this initial redesign, I've continued leading design on the GE Healthcare account —
+            extending the design system to new modules and updated views introduced under the
+            platform's evolving design guidelines.
+          </p>
+
+          <div class="ge-access-modal__ctas ge-access-modal__ctas--centered">
+            <a class="ge-access-modal__request" href="mailto:mrarpansheth@gmail.com?subject=GE%20Healthcare%20case%20study">
+              Ask Me About This Project
+            </a>
+          </div>
+        </section>
+
+        <section class="home-section" style="border-bottom:none;">
+          <div class="home-shell">
+            <div class="home-section__head reveal">
+              <div class="home-section__title-row">
+                <span class="home-num">07</span>
+                <h2>More Projects</h2>
+              </div>
+            </div>
+
+            <div class="home-work-grid">
+              <a data-cursor="View case" class="home-work-card reveal" href="golfpac-travel.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
+                  <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
+                </div>
+                <p class="home-project-eyebrow">Travel Platform</p>
+                <p class="home-project-title">
+                  Modernized a dated booking flow — three competing entry points became one guided path.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a data-cursor="View case" class="home-work-card reveal" href="tastex.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#f2994a;">tasteX</span>
+                  <img src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
+                </div>
+                <p class="home-project-eyebrow">Cloud Kitchen</p>
+                <p class="home-project-title">
+                  QR-based room-service ordering routed from multiple hotels into shared central kitchens.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+
+              <a data-cursor="View case" class="home-work-card reveal" href="pareexa-ai.html">
+                <div class="home-project-media">
+                  <span class="home-project-tag" style="background:#a78bfa;">Pareexa.ai</span>
+                  <img src="thumb-pareexa.jpg" alt="Pareexa.ai mobile onboarding screens" />
+                </div>
+                <p class="home-project-eyebrow">EdTech / AI</p>
+                <p class="home-project-title">
+                  AI-powered learning ecosystem for exam aspirants — planning, study, testing, and analytics.
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="site.js"></script>
+    <script src="reveal.js"></script>
+    <script src="case-toc.js"></script>
   </body>
 </html>
