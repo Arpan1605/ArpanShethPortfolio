@@ -1,0 +1,374 @@
+/* Pareexa.ai low-fidelity wireframes, drawn in HTML. Used only on pareexa-ai.html.
+   Selectors are scoped to .study-article so they win over the article's text styles. */
+
+.study-article .pareexa-wireframe-board {
+  max-width: 1120px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.study-article .pareexa-wireframe-card {
+  margin: 0;
+  padding: 14px 14px 16px;
+  border: 1px solid #ecece8;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.study-article .pareexa-wireframe-screen {
+  position: relative;
+  aspect-ratio: 9 / 19.5;
+  padding: 12px 10px;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 1px solid #ebebe8;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.study-article .pareexa-wireframe-card figcaption {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.study-article .pareexa-wireframe-card figcaption strong {
+  display: block;
+  font-size: 0.86rem;
+  color: #1f1f23;
+}
+
+.study-article .pareexa-wireframe-card figcaption span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.74rem;
+  color: #606068;
+}
+
+.study-article .wf-h {
+  margin: 0;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #26262b;
+  line-height: 1.3;
+}
+
+.study-article .wf-sub {
+  margin: 0;
+  font-size: 0.48rem;
+  color: #606068;
+  line-height: 1.3;
+}
+
+.study-article .wf-stat {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #1f1f23;
+}
+
+.study-article .wf-line {
+  height: 5px;
+  border-radius: 3px;
+  background: #e3e3e0;
+}
+
+.study-article .wf-line--60 {
+  width: 60%;
+}
+
+.study-article .wf-line--80 {
+  width: 80%;
+}
+
+.study-article .wf-box {
+  flex: 1;
+  min-height: 0;
+  border-radius: 8px;
+  background: #d9d9d6;
+}
+
+.study-article .wf-row {
+  display: flex;
+  gap: 5px;
+}
+
+.study-article .wf-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.study-article .wf-chip {
+  flex: 1;
+  padding: 4px 0;
+  border-radius: 6px;
+  border: 1px solid #e3e3e0;
+  background: #fff;
+  text-align: center;
+  font-size: 0.46rem;
+  color: #606068;
+}
+
+.study-article .wf-chip--active {
+  border-color: #1f1f23;
+  background: #1f1f23;
+  color: #fff;
+  font-weight: 700;
+}
+
+.study-article .wf-input {
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e0;
+  background: #fff;
+  font-size: 0.44rem;
+  color: #606068;
+}
+
+.study-article .wf-input span {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.44rem;
+  color: #606068;
+}
+
+.study-article .wf-btn {
+  padding: 5px 0;
+  border-radius: 999px;
+  background: #1f1f23;
+  color: #fff;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.study-article .wf-btn--outline {
+  background: #fff;
+  border: 1px solid #d7d7d4;
+  color: #606068;
+}
+
+.study-article .wf-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e0;
+  font-size: 0.44rem;
+  color: #606068;
+}
+
+.study-article .wf-option--active {
+  border-color: #1f1f23;
+  background: #f3f3f2;
+  color: #1f1f23;
+  font-weight: 700;
+}
+
+.study-article .wf-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #b8b9c0;
+  flex-shrink: 0;
+}
+
+.study-article .wf-dot--filled {
+  background: #1f1f23;
+  border-color: #1f1f23;
+}
+
+.study-article .wf-check {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  border: 1px solid #c7c8ce;
+  flex-shrink: 0;
+}
+
+.study-article .wf-bar-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #ebebe8;
+  overflow: hidden;
+}
+
+.study-article .wf-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: #1f1f23;
+}
+
+.study-article .wf-card {
+  padding: 5px 6px;
+  border-radius: 6px;
+  border: 1px solid #e3e3e0;
+  background: #fff;
+}
+
+.study-article .wf-card--dark {
+  background: #1f1f23;
+  border-color: #1f1f23;
+}
+
+.study-article .wf-card--dark .wf-h {
+  color: #fff;
+}
+
+.study-article .wf-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  border-top: 1px solid #ebebe8;
+}
+
+.study-article .wf-nav span {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  background: #e3e3e0;
+}
+
+.study-article .wf-nav span:first-child {
+  background: #1f1f23;
+}
+
+.study-article .wf-ring {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  margin: 4px auto;
+  border-radius: 50%;
+  background: conic-gradient(#1f1f23 270deg, #ebebe8 0deg);
+  display: grid;
+  place-items: center;
+}
+
+.study-article .wf-ring::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: #fafafa;
+}
+
+.study-article .wf-ring span {
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #1f1f23;
+}
+
+.study-article .wf-center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.study-article .wf-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #1f1f23;
+}
+
+.study-article .wf-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.study-article .wf-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d7d7d4;
+}
+
+.study-article .wf-dots span.is-active {
+  width: 14px;
+  border-radius: 4px;
+  background: #1f1f23;
+}
+
+.study-article .pareexa-wireframe-board--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.study-article .wf-bubble {
+  align-self: flex-start;
+  max-width: 90%;
+  padding: 6px 8px;
+  border-radius: 9px;
+  background: #eeeeec;
+}
+
+.study-article .wf-bubble p {
+  margin: 0;
+  font-size: 0.46rem;
+  line-height: 1.35;
+  color: #3a3a40;
+}
+
+.study-article .wf-bubble--user {
+  align-self: flex-end;
+  background: #1f1f23;
+}
+
+.study-article .wf-bubble--user p {
+  color: #fff;
+}
+
+.study-article .wf-card strong {
+  display: block;
+  font-size: 0.5rem;
+  color: #26262b;
+}
+
+/* Inside the reading column the wireframes scroll sideways as a strip. */
+.study-article .pareexa-wireframe-board {
+  display: flex;
+  max-width: none;
+  margin: 24px 0 10px;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+}
+.study-article .pareexa-wireframe-card {
+  flex: 0 0 176px;
+  padding: 10px;
+  border: 1px solid var(--c-line);
+  border-radius: 10px;
+  background: var(--c-card);
+  box-shadow: none;
+  scroll-snap-align: start;
+}
+.study-article .pareexa-wireframe-card figcaption {
+  margin-top: 10px;
+}
+.study-article .pareexa-wireframe-card figcaption strong {
+  font-size: 12px;
+  font-weight: 550;
+  color: var(--c-text);
+}
+.study-article .pareexa-wireframe-card figcaption span {
+  font-size: 11px;
+  color: var(--c-muted);
+}
+.study-article .pareexa-wireframe-board:focus-visible {
+  outline: 2px solid var(--c-wave);
+  outline-offset: 3px;
+}

@@ -189,3 +189,119 @@ body.subpage {
 .ge-case-page .ge-case-main {
   padding-bottom: 48px;
 }
+
+/* =========================================================
+   2026-11 refresh: quiet monochrome palette shared with the homepage
+   (chrome.css). Remaps the legacy tokens so every case study picks up
+   the new colours and type without rewriting its layout.
+   ========================================================= */
+
+html {
+  background: #fafafa;
+}
+body.subpage {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.9);
+  --grey: #f0f0f0;
+  --grey-2: #e7e7e7;
+  --ink: #252525;
+  --ink-soft: #3a3a3a;
+  --text: #252525;
+  --muted: #696969;
+  --line: #dedede;
+  --line-soft: rgba(0, 0, 0, 0.07);
+  --line-strong: #cfcfcf;
+  --dark: #252525;
+  --accent: #dfe7fb;
+  --accent-ink: #1c3578;
+  --accent-text: #1c3578;
+  --accent-soft: #eef2fd;
+  --btn-bg: #252525;
+  --btn-fg: #fafafa;
+  --footer-bg: #fafafa;
+  --sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.subpage .page {
+  border-radius: 0;
+}
+
+/* Display lines in Georgia, like the homepage hero. */
+html body.subpage .page :is(h1, h2) {
+  font-family: var(--c-serif);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+/* Labels: small uppercase Geist with open tracking. */
+.subpage .page :is(
+  .home-hero__eyebrow,
+  .eyebrow,
+  .tastex-decision__eyebrow,
+  .tastex-decision__label,
+  .golfpac-before-after__label,
+  .home-project-eyebrow,
+  .home-project-tag
+) {
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--muted);
+}
+.subpage .case-toc a {
+  letter-spacing: 0.04em;
+}
+.subpage .case-toc a.is-active {
+  border-left-color: var(--c-wave);
+}
+
+/* Cards: hairline borders on white, like the homepage project cards. */
+.subpage .page :is(
+  .ge-insight-card,
+  .ge-team-card,
+  .ge-testimonial-card,
+  .case-psi article,
+  .case-card,
+  .pareexa-status-note,
+  .pareexa-wireframe-card,
+  .tastex-flow-card,
+  .tastex-desktop-card,
+  .tastex-system-grid article,
+  .golfpac-before-after__panel,
+  .golfpac-messy-item,
+  .golfpac-snapshot,
+  .golfpac-flow__step,
+  .golfpac-reflection-card,
+  .golfpac-shot-card,
+  .golfpac-wireframe-card
+) {
+  background-color: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 2px 3px #7777770b;
+}
+.subpage .page .home-chip {
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+.subpage .page :is(.ge-hero-split__media, .home-showcase, .ge-persona-image) img,
+.subpage .page .home-work-card {
+  border-radius: 14px;
+}
+.subpage .page :is(.btn-accent, .ge-access-modal__request) {
+  font-family: var(--sans);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.subpage .page .ai-dark {
+  background: #1d1d1f;
+}
+
+/* Room for the fixed top bar. */
+.subpage .page {
+  padding-top: 8px;
+}

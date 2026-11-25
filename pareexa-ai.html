@@ -3,245 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pareexa.ai | Arpan Sheth</title>
+    <meta name="theme-color" content="#fafafa" />
+    <title>Pareexa.ai — AI-powered exam preparation | Arpan Sheth</title>
     <meta
       name="description"
-      content="Detailed case study: Pareexa.ai, an AI-powered learning ecosystem for UPSC, GPSC, MPPSC, and other government exam aspirants."
+      content="Case study: Pareexa.ai, an AI-powered learning ecosystem for exam aspirants. Product strategy, information architecture, 40+ mobile screens and a scalable design system."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Geist+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,300..600;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon-arpan.png" />
-    <link rel="stylesheet" href="styles.css?v=20261123i" />
-    <link rel="stylesheet" href="site.css?v=20261123i" />
-    <link rel="stylesheet" href="case.css?v=20261123i" />
+    <script>
+      try {
+        var t = localStorage.getItem("arpan-wall-theme");
+        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="chrome.css?v=20261125c" />
+    <link rel="stylesheet" href="study.css?v=20261125d" />
+    <link rel="stylesheet" href="wireframes.css?v=20261125c" />
   </head>
-  <body class="ge-case-page subpage" data-page="pareexa-ai">
-    <script src="chrome.js?v=20261123i"></script>
-    <div class="page" id="top">
+  <body class="study-page" data-page="pareexa-ai" data-theme-toggle>
+    <script src="chrome.js?v=20261125f"></script>
 
-    <nav class="case-toc" aria-label="On this page">
-      <a href="#overview">Overview</a>
-      <a href="#research">Research</a>
-      <a href="#ai-decisions">AI Decision-Making</a>
-      <a href="#modules">Modules</a>
-      <a href="#iterations">Iteration Examples</a>
-      <a href="#constraints">Constraints</a>
-      <a href="#impact">Impact</a>
-    </nav>
-
-    <div class="ge-case-shell">
-      <main id="main" class="ge-case-main">
-        <section class="ge-slide ge-slide--hero" id="overview">
-          <div class="ge-hero-split">
-            <div class="ge-hero-split__text reveal">
-              <p class="home-hero__eyebrow"><span class="home-num">01</span> EdTech / AI Case Study</p>
-              <h1>Consolidating a fragmented exam-prep journey into one connected ecosystem</h1>
-              <p>
-                Aspirants preparing for UPSC, GPSC, MPPSC, and other government exams were
-                switching between multiple apps for planning, study material, mock tests, current
-                affairs, and progress tracking. Pareexa.ai consolidated the entire preparation
-                journey into one connected ecosystem, where AI provided personalized guidance
-                rather than becoming another standalone tool.
-              </p>
-              <div class="home-hero__chips">
-                <span class="home-chip"><strong>Role:</strong>&nbsp;Product Designer &amp; Design System Lead</span>
-                <span class="home-chip"><strong>Duration:</strong>&nbsp;6 months</span>
-                <span class="home-chip"><strong>Platforms:</strong>&nbsp;iOS + Android</span>
-              </div>
-            </div>
-            <div class="ge-hero-split__media reveal">
-              <img src="phone-pareexa.jpg" alt="Pareexa.ai sign-in screen on mobile" style="max-width:280px; margin:0 auto; display:block; border-radius:24px; box-shadow:0 20px 50px rgba(0,0,0,0.15);" />
-            </div>
-          </div>
-
-          <p class="ge-hero-copy__summary" style="max-width:820px; margin:32px auto 0;">
-            At a glance: 6 months as Product Designer and Design System lead — 40+ screens
-            spanning onboarding, planning, testing, and AI-guided analytics, unified under one
-            design system.
+    <main id="main" class="page study">
+      <div class="study-reading">
+        <header class="study-intro" id="top">
+          <p class="study-kicker">EdTech · AI</p>
+          <h1>Pareexa.ai: one connected home for exam prep</h1>
+          <p>
+            Consolidating a fragmented exam-prep journey into one ecosystem, where AI gives personal guidance instead
+            of becoming yet another standalone tool.
           </p>
-
-          <div class="pareexa-hero-stats">
-            <article>
-              <span>Platforms</span>
-              <strong>iOS + Android</strong>
-              <p>Mobile-first product thinking for aspirants who study, revise, and practice throughout the day.</p>
-            </article>
-            <article>
-              <span>Product Scope</span>
-              <strong>15+ core modules</strong>
-              <p>Planning, study, PYQs, tests, analytics, notes, current affairs, payments, and AI support in one ecosystem.</p>
-            </article>
-            <article>
-              <span>Design Output</span>
-              <strong>40+ mobile screens</strong>
-              <p>End-to-end flows spanning onboarding, personalization, learning, performance feedback, and monetization.</p>
-            </article>
-            <article>
-              <span>Duration</span>
-              <strong>6-month case study</strong>
-              <p>Product design, UX research, IA, prototyping, and design-system thinking across a large feature surface.</p>
-            </article>
-          </div>
-
-          <div class="pareexa-value-strip">
-            <article>
-              <span>Industry</span>
-              <strong>EdTech</strong>
-            </article>
-            <article>
-              <span>Users</span>
-              <strong>Exam Aspirants</strong>
-            </article>
-            <article>
-              <span>Core Promise</span>
-              <strong>Structure, clarity, and measurable progress</strong>
-            </article>
-          </div>
-
-          <div class="case-psi">
-            <article class="reveal">
-              <span>🧭 Problem</span>
-              <p>An early-stage EdTech startup needed to translate a genuinely AI-driven personalized learning engine into an interface UPSC/GPSC aspirants could actually trust and use daily — without the product feeling like an unpredictable black box.</p>
-            </article>
-            <article class="reveal">
-              <span>💡 Solution</span>
-              <p>Designed end-to-end student learning journeys across web and mobile, including an in-app AI study assistant, adaptive study plans, and a scalable design system supporting the platform's growing set of modules.</p>
-            </article>
-            <article class="reveal">
-              <span>📊 Impact</span>
-              <p>Established the design and system foundations ahead of public release; the platform is currently in pre-launch development.</p>
-            </article>
-          </div>
-
-          <div class="home-showcase reveal" data-nav-dark>
-            <div class="home-phone home-phone--tilt-left">
-              <img src="Mobile Login Screen.png" alt="Pareexa.ai sign-in screen" />
+          <dl class="study-meta">
+            <div><dt>Role</dt><dd>Product Designer &amp; Design System Lead (advisor)</dd></div>
+            <div><dt>Timeline</dt><dd>6 months · Sep 2025 — Mar 2026</dd></div>
+            <div><dt>Platforms</dt><dd>iOS, Android &amp; web</dd></div>
+            <div><dt>Scope</dt><dd>15+ modules, 40+ mobile screens</dd></div>
+          </dl>
+          <figure>
+            <div class="study-gallery study-gallery--3 study-gallery--phones" style="margin: 0">
+              <a class="study-zoom" href="Mobile Login Screen.png"><img src="Mobile Login Screen.png" alt="Pareexa.ai sign-in screen" /></a>
+              <a class="study-zoom" href="Study Plan 21.png"><img src="Study Plan 21.png" alt="Personalized study plan screen" /></a>
+              <a class="study-zoom" href="Practice Test Module.png"><img src="Practice Test Module.png" alt="Practice test module screen" /></a>
             </div>
-            <div class="home-phone">
-              <img src="Study Plan 21.png" alt="Pareexa.ai personalized study plan screen" />
+          </figure>
+        </header>
+
+        <aside class="study-toc">
+          <details open>
+            <summary>On this page</summary>
+            <nav aria-label="Contents">
+              <ol>
+                <li><a href="#about">About the project</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#strategy">Product strategy</a></li>
+                <li><a href="#brand">Brand system</a></li>
+                <li><a href="#ai">Designing trusted AI</a></li>
+                <li><a href="#journey">The guided journey</a></li>
+                <li><a href="#iterations">Iterations</a></li>
+                <li><a href="#constraints">Constraints</a></li>
+                <li><a href="#impact">Impact &amp; lessons</a></li>
+              </ol>
+            </nav>
+          </details>
+        </aside>
+
+        <article class="study-article">
+          <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About the project</h2>
+            <p>
+              Aspirants preparing for UPSC, GPSC, MPPSC and other government exams were switching between apps for
+              planning, study material, mock tests, current affairs and progress tracking. Pareexa.ai brings that whole
+              journey into one connected ecosystem.
+            </p>
+            <p>
+              The challenge for this early-stage startup was turning a genuinely AI-driven learning engine into
+              something aspirants could <strong>trust and use every day, without it feeling like an unpredictable
+              black box.</strong>
+            </p>
+            <dl class="study-stats study-stats--2">
+              <div><dt>Core modules: planning, study, PYQs, tests, analytics, notes, AI and more</dt><dd>15+</dd></div>
+              <div><dt>Mobile screens across onboarding, learning, feedback and payments</dt><dd>40+</dd></div>
+            </dl>
+            <h3>My contribution</h3>
+            <ul>
+              <li>Led end-to-end product design across the mobile experience.</li>
+              <li>Defined the information architecture for 15+ interconnected modules.</li>
+              <li>Designed 40+ screens covering onboarding, planning, study, testing, analytics and AI.</li>
+              <li>Established the visual language and a scalable design system.</li>
+              <li>Worked with the founders to turn the business vision into an MVP-ready product strategy.</li>
+            </ul>
+          </section>
+
+          <section id="research" aria-labelledby="research-title">
+            <h2 id="research-title">Research</h2>
+            <blockquote><p>Aspirants were stuck with fragmented resources, weak planning, poor visibility and little personal guidance.</p></blockquote>
+            <ul>
+              <li>Learning resources were scattered across many disconnected surfaces.</li>
+              <li>There was no strong planning system to build consistency.</li>
+              <li>Performance visibility and analytics were shallow.</li>
+              <li>Motivation dropped because progress and next steps were unclear.</li>
+            </ul>
+            <h3>Three very different preparation realities</h3>
+            <div class="study-table-wrap">
+              <table>
+                <thead><tr><th scope="col">Persona</th><th scope="col">What they need</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Rahul</strong><br />UPSC aspirant, full-time learner</td><td>Structure for a long syllabus, daily clarity on what to study next, and a link between mock scores and revision.</td></tr>
+                  <tr><td><strong>Priya</strong><br />GPSC aspirant, consistency-focused</td><td>Topic-wise progress, previous-year questions inside the study flow, and confidence she’s improving.</td></tr>
+                  <tr><td><strong>Kunal</strong><br />Working professional, limited time</td><td>Focused plans that respect his time, quick practice loops, and smart recommendations instead of exploring.</td></tr>
+                </tbody>
+              </table>
             </div>
-            <div class="home-phone home-phone--tilt-right">
-              <img src="Practice Test Module.png" alt="Pareexa.ai practice test module screen" />
-            </div>
-          </div>
-
-          <div class="pareexa-goals-grid" style="grid-template-columns:1fr; max-width:720px;">
-            <article>
-              <h2 class="pareexa-contrib-title">🎯 My Contribution</h2>
-              <ul class="pareexa-mini-list">
-                <li>Led end-to-end product design across mobile experiences.</li>
-                <li>Defined the information architecture for 15+ interconnected modules.</li>
-                <li>Designed 40+ mobile screens covering onboarding, planning, study, testing, analytics, and AI.</li>
-                <li>Established the product's visual language and scalable design system.</li>
-                <li>Worked closely with founders to translate business vision into an MVP-ready product strategy.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="research">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">02</span> 🔍 Research</p>
-          <div class="ge-statement">
-            <h2>
-              Aspirants were stuck with
-              <span>fragmented resources, weak planning, poor visibility, and limited personalized guidance</span>
-              throughout their preparation journey.
-            </h2>
-          </div>
-
-          <div class="ge-problem-layout">
-            <div class="pareexa-challenge-collage" role="group" aria-label="Pareexa product boards preview">
-              <img
-                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--back"
-                src="pareexa-tests-board.png"
-                alt="Pareexa mock test and practice test flow screens"
-              />
-              <img
-                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--mid"
-                src="pareexa-study-planner-board.png"
-                alt="Pareexa personalized study planner screens"
-              />
-              <img
-                class="pareexa-challenge-collage__card pareexa-challenge-collage__card--front"
-                src="pareexa-onboarding-board.png"
-                alt="Pareexa onboarding and activation screens"
-              />
-            </div>
-
-            <div class="ge-problem-copy">
-              <p class="ge-problem-copy__lead">Core challenge</p>
-              <ul>
-                <li>Scattered learning resources across many disconnected surfaces</li>
-                <li>No strong study planning system to create consistency</li>
-                <li>Weak performance visibility and limited analytics depth</li>
-                <li>Low motivation because progress and next steps were unclear</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>Research anchored the product around three very different preparation realities.</h2>
-          </div>
-
-          <p class="pareexa-metrics-note pareexa-metrics-note--centered">
-            These personas were shaped through structured conversations with the founders about
-            aspirant behavior, combined with secondary research into UPSC/GPSC exam-prep habits —
-            not formal user interviews, given the advisory scope of the engagement.
-          </p>
-
-          <div class="pareexa-persona-grid">
-            <article>
-              <span>Persona 01</span>
-              <h3>Rahul</h3>
-              <p class="pareexa-persona-grid__meta">UPSC aspirant, full-time learner</p>
-              <ul class="pareexa-mini-list">
-                <li>Needs structure for a long syllabus</li>
-                <li>Wants daily clarity on what to study next</li>
-                <li>Struggles to connect mock performance with revision</li>
-              </ul>
-            </article>
-            <article>
-              <span>Persona 02</span>
-              <h3>Priya</h3>
-              <p class="pareexa-persona-grid__meta">GPSC aspirant, consistency-focused</p>
-              <ul class="pareexa-mini-list">
-                <li>Needs topic-wise progress visibility</li>
-                <li>Wants previous-year questions inside the study flow</li>
-                <li>Needs confidence that she is improving over time</li>
-              </ul>
-            </article>
-            <article>
-              <span>Persona 03</span>
-              <h3>Kunal</h3>
-              <p class="pareexa-persona-grid__meta">Working professional, limited time</p>
-              <ul class="pareexa-mini-list">
-                <li>Needs focused plans that respect time constraints</li>
-                <li>Wants quick practice loops instead of long setup</li>
-                <li>Needs smart recommendations instead of exploration overhead</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="pareexa-prototype-section pareexa-prototype-section--single">
-            <div class="pareexa-prototype-copy">
-              <span>Wireframes</span>
-              <h3>Early low-fidelity exploration</h3>
-              <p>
-                Before any visual design work began, I roughed out onboarding, planning, and
-                study/test flows in low-fidelity wireframes to validate structure and navigation
-                against the three personas above — eight of those screens below, spanning the
-                journey from first launch to a completed mock test.
-              </p>
-            </div>
-          </div>
-
-          <div class="pareexa-wireframe-board">
+            <p class="study-note">
+              Personas came from structured conversations with the founders about aspirant behaviour, plus secondary
+              research into UPSC/GPSC prep habits. Given the advisory scope, these weren’t formal user interviews.
+            </p>
+            <h3>Early low-fidelity wireframes</h3>
+            <p>
+              Before any visual design, I roughed out onboarding, planning and study/test flows to validate structure
+              and navigation against the personas: eight screens from first launch to a completed mock test.
+            </p>
+          <div class="pareexa-wireframe-board" role="region" aria-label="Low-fidelity wireframes, scrollable" tabindex="0">
             <figure class="pareexa-wireframe-card">
               <div class="pareexa-wireframe-screen">
                 <div class="wf-center">
@@ -432,534 +316,178 @@
               </figcaption>
             </figure>
           </div>
-        </section>
+            <p class="study-embed-link" aria-hidden="true">Scroll sideways for all eight →</p>
+          </section>
 
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>The opportunity was to create one preparation ecosystem instead of isolated tools.</h2>
-          </div>
-
-          <div class="ge-stakeholder-row">
-            <div>Home</div>
-            <div>Study</div>
-            <div>Tests</div>
-            <div>Analytics</div>
-            <div>AI</div>
-            <div>Notes</div>
-            <div>Current Affairs</div>
-            <div>Profile</div>
-          </div>
-
-          <div class="ge-split-text">
+          <section id="strategy" aria-labelledby="strategy-title">
+            <h2 id="strategy-title">One ecosystem, not isolated tools</h2>
             <p>
-              The product vision was to guide learners from confusion to confidence through
-              structured preparation. Instead of jumping between planning apps, notes, test tools,
-              and content sources, Pareexa.ai would bring everything together into one system.
+              The vision was to guide learners from confusion to confidence. Instead of jumping between planners,
+              notes, test tools and content, everything lives in one system. The principles were <strong>clarity,
+              motivation, personalization, feedback and accessibility</strong>: copy, progress and next steps stay
+              supportive rather than punitive, easing the anxiety of a long, high-stakes syllabus.
             </p>
+            <ul class="study-flow" aria-label="User journey">
+              <li>Discover</li><li>Register</li><li>Plan</li><li>Learn</li><li>Practice</li><li>Analyze</li><li>Improve</li>
+            </ul>
+            <h3>Structure and goals</h3>
             <p>
-              From the beginning, the design principles were clarity, motivation, personalization,
-              feedback, and accessibility: reduce the anxiety that comes with a long, high-stakes
-              syllabus by keeping copy, progress indicators, and next steps supportive rather than punitive.
+              The information architecture runs <strong>Authentication → Dashboard → Study → Tests → Notes → AI
+              Assistant → Profile → Subscription</strong>, with the study planner, reading, notes, AI assistant,
+              analytics, mock tests, current affairs and payments around one core.
             </p>
-          </div>
-
-          <div class="pareexa-journey-block">
-            <h3>User Journey Map</h3>
-            <div class="pareexa-journey-flow" role="group" aria-label="User journey map">
-              <span>Discover</span>
-              <span>Register</span>
-              <span>Plan Study</span>
-              <span>Learn</span>
-              <span>Practice</span>
-              <span>Analyze</span>
-              <span>Improve</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>Product strategy translated the vision into modules, structure, and measurable goals.</h2>
-          </div>
-
-          <div class="pareexa-ecosystem-section">
-            <div class="pareexa-ecosystem">
-              <div class="pareexa-ecosystem__center">Pareexa AI</div>
-              <div class="pareexa-ecosystem__item">Study Planner</div>
-              <div class="pareexa-ecosystem__item">Notes</div>
-              <div class="pareexa-ecosystem__item">AI Assistant</div>
-              <div class="pareexa-ecosystem__item">Analytics</div>
-              <div class="pareexa-ecosystem__item">Mock Tests</div>
-              <div class="pareexa-ecosystem__item">Reading</div>
-              <div class="pareexa-ecosystem__item">Current Affairs</div>
-              <div class="pareexa-ecosystem__item">Payments</div>
-            </div>
-
-            <div class="pareexa-ia-card">
-              <h3>Information Architecture</h3>
-              <pre>Authentication
-├ Dashboard
-├ Study
-├ Tests
-├ Notes
-├ AI Assistant
-├ Profile
-└ Subscription</pre>
-            </div>
-          </div>
-
-          <div class="pareexa-goals-grid">
-            <article>
-              <h3>Design Goals</h3>
-              <ul class="pareexa-mini-list">
-                <li>Reduce cognitive overload</li>
-                <li>Improve learning consistency</li>
-                <li>Encourage daily engagement</li>
-                <li>Create measurable progress</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Success Metrics (Post-Launch Targets)</h3>
-              <p class="pareexa-metrics-note">Defined with the founders as the tracking framework for after launch, not results measured to date.</p>
-              <ul class="pareexa-mini-list">
-                <li>Daily active users</li>
-                <li>Test completion rate</li>
-                <li>Subscription conversion</li>
-                <li>Study plan adherence</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>The brand system reinforced that promise.</h2>
-          </div>
-
-          <div class="ge-module-grid">
-            <article>
-              <h3>Visual Personality</h3>
-              <p>The guidelines position Pareexa.ai as dynamic, energetic, innovative, friendly, and smart, with a learning-first tone built around clarity and growth.</p>
-            </article>
-            <article>
-              <h3>Color System</h3>
-              <p>Primary orange "#FE6A2E" anchors the brand, supported by black "#111111", white "#FFFFFF", and a broader UI palette for positive, friendly, and smart moments.</p>
-            </article>
-            <article>
-              <h3>Typography</h3>
-              <p>Circular is the primary typeface for warmth and clarity, while Inter supports digital readability across dashboards, forms, and mobile interfaces.</p>
-            </article>
-          </div>
-
-          <div class="pareexa-guideline-gallery">
-            <figure class="pareexa-guideline-card">
-              <img
-                src="pareexa-guideline-symbol-10.png"
-                alt="Pareexa brand guideline slide showing the symbol meaning and learning-stage metaphor"
-              />
-              <figcaption>Brand symbol: layered blocks and upward movement representing structured growth.</figcaption>
-            </figure>
-            <figure class="pareexa-guideline-card">
-              <img
-                src="pareexa-guideline-colors-18.png"
-                alt="Pareexa brand guideline slide showing the color system and personality traits"
-              />
-              <figcaption>Color system: orange-led palette expressing energy, positivity, friendliness, and smart guidance.</figcaption>
-            </figure>
-            <figure class="pareexa-guideline-card">
-              <img
-                src="pareexa-guideline-typography-24.png"
-                alt="Pareexa brand guideline slide showing Circular as the primary typeface"
-              />
-              <figcaption>Typography: Circular for warmth and clarity, supported by Inter for digital readability.</figcaption>
-            </figure>
-          </div>
-
-          <div style="text-align:center; margin-top:32px;">
-            <a class="btn-accent" href="Pareexa_ai_Design_Guidelines.pdf" target="_blank" rel="noreferrer">
-              View Design Guidelines
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="ai-decisions">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">03</span> 🤖 AI Decision-Making</p>
-          <div class="ge-statement ge-statement--compact">
-            <h2>Designing AI that users could trust — not just use.</h2>
-          </div>
-
-          <div class="ge-split-text ge-split-text--large">
-            <p>
-              One of the biggest product challenges wasn't adding AI — it was ensuring learners
-              understood why they were receiving recommendations and felt comfortable relying on
-              them. In a high-stakes exam journey, users are unlikely to trust a system that
-              changes their study plan without explanation.
-            </p>
-            <p>
-              Instead of positioning AI as a separate chatbot, we embedded it across the learning
-              journey where it could provide contextual guidance.
-            </p>
-          </div>
-
-          <h3 class="golfpac-subhead" style="text-align:center; max-width:none;">Design Principles</h3>
-          <div class="pareexa-goals-grid">
-            <article>
-              <h3>Explain recommendations</h3>
-              <p>Every AI-generated study plan was based on information the learner had already shared — exam type, preparation timeline, available study hours, strengths, and weak subjects. This helped users understand that recommendations were personalized rather than random.</p>
-            </article>
-            <article>
-              <h3>Keep users in control</h3>
-              <p>AI suggestions were designed to be editable instead of fixed. Learners could adjust study hours, reorder subjects, or modify revision schedules, ensuring AI acted as an assistant rather than replacing personal decision-making.</p>
-            </article>
-            <article>
-              <h3>Surface AI at the right moments</h3>
-              <p>Rather than exposing AI everywhere, it appeared only when users needed support:</p>
-              <ul class="pareexa-mini-list">
-                <li>During study planning</li>
-                <li>After mock-test analysis</li>
-                <li>While identifying weak topics</li>
-                <li>When recommending the next study session</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Reduce cognitive load</h3>
-              <p>Recommendations focused on one clear next action instead of presenting multiple competing suggestions. The objective was to help learners continue studying with confidence rather than forcing additional decisions.</p>
-            </article>
-          </div>
-
-          <div class="ge-reflection">
-            <p>
-              By treating AI as a contextual decision-support system instead of a standalone
-              feature, the experience remained transparent, predictable, and aligned with how
-              aspirants naturally prepare for competitive examinations.
-            </p>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="modules">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">04</span> 🧩 Modules</p>
-          <div class="ge-statement ge-statement--compact">
-            <h2>Preparation needed to feel like one guided journey.</h2>
-          </div>
-
-          <div class="pareexa-module-intro">
-            <p>
-              The ecosystem was structured as a learning loop rather than a collection of disconnected
-              features. Each module had a clear job in the journey: reduce setup friction, create study
-              consistency, support focused learning, simulate exam pressure, surface meaningful feedback,
-              and guide next actions.
-            </p>
-            <p>
-              This framing turned Pareexa.ai from a list of features into one connected system,
-              where each module had a defined job in the aspirant's journey rather than existing
-              as an isolated screen.
-            </p>
-          </div>
-
-          <div class="ge-lifecycle-band">
-            <article>
-              <span>01</span>
-              <h3>Onboarding</h3>
-              <strong>First-time activation</strong>
-              <p>Introduced value quickly and moved users into personalization with minimal friction.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Planning</h3>
-              <strong>Habit-building structure</strong>
-              <p>Converted large exam goals into weekly and daily study routines that felt achievable.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Study</h3>
-              <strong>Focused content consumption</strong>
-              <p>Connected reading, video, notes, and PYQs so learners could stay in one productive flow.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Tests</h3>
-              <strong>Exam-like practice</strong>
-              <p>Mock tests and practice loops created pressure, repetition, and confidence before real exams.</p>
-            </article>
-            <article>
-              <span>05</span>
-              <h3>Analytics</h3>
-              <strong>Performance visibility</strong>
-              <p>Scores became actionable through accuracy trends, weaknesses, and revision direction.</p>
-            </article>
-            <article>
-              <span>06</span>
-              <h3>Improvement</h3>
-              <strong>Next-step guidance</strong>
-              <p>Insights, AI help, and revision support turned feedback into concrete actions for progress.</p>
-            </article>
-          </div>
-
-          <div class="pareexa-module-metrics">
-            <article>
-              <span>Journey Logic</span>
-              <strong>6 sequential stages</strong>
-              <p>Designed as one end-to-end loop: discover needs, build routine, learn, practice, analyze, and improve.</p>
-            </article>
-            <article>
-              <span>Product Scope</span>
-              <strong>15+ major modules</strong>
-              <p>Planner, reading, notes, tests, analytics, AI support, current affairs, payments, and more within a unified ecosystem.</p>
-            </article>
-            <article>
-              <span>Structure Rationale</span>
-              <strong>Grouped by journey stage, not feature type</strong>
-              <p>Modules were organized around where a task sits in the prep cycle — discover, plan, learn, practice, review — so navigation matches how aspirants actually move through preparation, not how the codebase is split.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>1. Onboarding and setup created the base for personalization.</h2>
-          </div>
-
-          <div class="ge-split-text">
-            <p>
-              The onboarding experience used illustration-driven introduction screens to quickly
-              communicate product value and increase first-time activation. It introduced users
-              to study planning, reading, and structured preparation in a low-friction way.
-            </p>
-            <p>
-              Authentication and profile setup then gathered key information such as name, email,
-              phone, target exam, category, DOB, and gender, so the product could personalize
-              study plans and content recommendations from the start.
-            </p>
-          </div>
-
-          <div class="pareexa-board-pair">
-            <figure class="pareexa-board-card reveal">
-              <img
-                src="pareexa-onboarding-board.png"
-                alt="Pareexa onboarding board with introduction, study plan, reading material, test analysis, and notes screens"
-              />
-              <figcaption>
-                Onboarding framed the platform as a guided ecosystem, introducing planning,
-                reading, testing, and notes before asking users to commit.
-              </figcaption>
-            </figure>
-            <figure class="pareexa-board-card reveal">
-              <img
-                src="pareexa-login-board.png"
-                alt="Pareexa login, OTP verification, sign up, and profile creation screens"
-              />
-              <figcaption>
-                Authentication and profile creation captured exam, category, and learner details
-                needed to personalize study plans and recommendations.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>2. Study planning turned a long exam journey into manageable routines.</h2>
-          </div>
-
-          <div class="ge-evolution-grid">
-            <article>
-              <span>Planning Layer</span>
-              <h3>Yearly to Daily Breakdown</h3>
-              <p>Study Planner covered yearly, monthly, weekly, and daily planning so aspirants could convert large exam goals into actionable routines.</p>
-            </article>
-            <article>
-              <span>Personalization</span>
-              <h3>Goal-Based Schedules</h3>
-              <p>AI-generated schedules and exam-specific preparation flows helped users feel the system was adapting to them, not forcing them into generic plans.</p>
-            </article>
-            <article>
-              <span>Motivation</span>
-              <h3>Visible Progress</h3>
-              <p>Planning was not treated as admin work; it was designed as a confidence-building layer that reduced overwhelm and gave direction.</p>
-            </article>
-          </div>
-
-          <figure class="pareexa-board-card pareexa-board-card--wide">
-            <img
-              src="pareexa-study-planner-board.png"
-              alt="Pareexa personalized study planner questionnaire and plan generation screens"
-            />
-            <figcaption>
-              The planner translated ambition into routine through a step-by-step flow covering
-              exam type, preparation horizon, daily study hours, weekly rhythm, and revision habits.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>3. The study experience blended reading, media, and revision support.</h2>
-          </div>
-
-          <div class="ge-module-grid">
-            <article>
-              <h3>Reading Experience</h3>
-              <p>Multilingual reading, highlights, notes, translation, and previous-year-question support helped learners stay inside one flow while studying.</p>
-            </article>
-            <article>
-              <h3>Content Consumption</h3>
-              <p>Text, videos, references, and contextual learning tools supported different study styles without making the interface feel scattered.</p>
-            </article>
-            <article>
-              <h3>Recommendation Engine</h3>
-              <p>Suggested courses, topics, and personalized learning paths gave the study module more relevance and better next-step guidance.</p>
-            </article>
-          </div>
-
-          <div class="pareexa-focus-grid">
-            <figure class="pareexa-board-card pareexa-board-card--crop">
-              <img
-                class="pareexa-board-card__image pareexa-board-card__image--pyq"
-                src="pareexa-pyq-board.png"
-                alt="Pareexa previous year question topic list with per-topic test cards and start-test actions"
-              />
-              <figcaption>
-                Previous-year-question support was embedded into the learning flow so aspirants
-                could move from concept reading to exam-style revision without switching tools.
-              </figcaption>
-            </figure>
-            <figure class="pareexa-board-card pareexa-board-card--crop">
-              <img
-                class="pareexa-board-card__image pareexa-board-card__image--support"
-                src="pareexa-other-screens-board.png"
-                alt="Pareexa FAQ, support, privacy policy, and related utility screens"
-              />
-              <figcaption>
-                Supporting surfaces like FAQs, help, and policy screens made the ecosystem feel
-                trustworthy and complete rather than like a loose collection of features.
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="pareexa-prototype-section">
-            <div class="pareexa-prototype-copy">
-              <span>Live Prototype</span>
-              <h3>Explore the full mobile prototype</h3>
-              <p>
-                The interactive prototype below is walkable end to end — onboarding, planning,
-                study, tests, notes, and analytics — in the same file used to validate flows
-                before handoff.
-              </p>
-              <a
-                class="pareexa-prototype-link"
-                href="https://www.figma.com/proto/SiP7OjDRune1U6kF7pMrtN/Pareex.ai?node-id=3202-15107&p=f&viewport=35%2C287%2C0.02&t=pnFL956KNACD56sn-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3202%3A16196&page-id=3202%3A14036"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open full-screen in Figma
-              </a>
-            </div>
-            <div class="pareexa-phone-mockup">
-              <span class="pareexa-phone-mockup__top"></span>
-              <div class="pareexa-phone-mockup__screen">
-                <iframe
-                  class="pareexa-phone-mockup__embed"
-                  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSiP7OjDRune1U6kF7pMrtN%2FPareex.ai%3Fnode-id%3D3202-15107%26p%3Df%26viewport%3D35%252C287%252C0.02%26t%3DpnFL956KNACD56sn-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D3202%253A16196%26page-id%3D3202%253A14036"
-                  title="Pareexa.ai interactive mobile prototype"
-                  allowfullscreen
-                  loading="lazy"
-                ></iframe>
+            <div class="study-shift">
+              <div>
+                <h4>Design goals</h4>
+                <ul><li>Reduce cognitive overload</li><li>Improve learning consistency</li><li>Encourage daily engagement</li><li>Make progress measurable</li></ul>
+              </div>
+              <div>
+                <h4>Post-launch metrics</h4>
+                <ul><li>Daily active users</li><li>Test completion rate</li><li>Subscription conversion</li><li>Study plan adherence</li></ul>
               </div>
             </div>
-          </div>
-        </section>
+            <p class="study-note">The metrics were defined with the founders as the tracking framework for after launch, not results measured to date.</p>
+          </section>
 
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>4. Testing had to simulate pressure without adding confusion.</h2>
-          </div>
-
-          <div class="ge-dashboard-story">
-            <div class="ge-ring-chart">
-              <div class="ge-ring-chart__center">Mock Tests<br>Instructions<br>Review</div>
+          <section id="brand" aria-labelledby="brand-title">
+            <h2 id="brand-title">The brand system reinforced the promise</h2>
+            <ul>
+              <li><strong>Personality.</strong> Dynamic, energetic, innovative, friendly and smart, with a learning-first tone built on clarity and growth.</li>
+              <li><strong>Colour.</strong> Primary orange #FE6A2E, with black #111111, white and a wider UI palette for positive, friendly and smart moments.</li>
+              <li><strong>Typography.</strong> Circular for warmth and clarity, with Inter for readability across dashboards, forms and mobile.</li>
+            </ul>
+            <ul class="study-swatches" aria-label="Brand colours" style="grid-template-columns: repeat(3, minmax(0, 1fr))">
+              <li><i style="--sw:#fe6a2e"></i>Orange #FE6A2E</li>
+              <li><i style="--sw:#111111"></i>Black #111111</li>
+              <li><i style="--sw:#ffffff; box-shadow: inset 0 0 0 1px var(--c-line)"></i>White #FFFFFF</li>
+            </ul>
+            <div class="study-gallery" style="--ratio: 1.78">
+              <figure><a class="study-zoom" href="pareexa-guideline-symbol-10.png"><img src="pareexa-guideline-symbol-10.png" alt="Brand guideline slide explaining the symbol: layered blocks and upward movement for structured growth" loading="lazy" /></a><figcaption>Symbol: structured growth</figcaption></figure>
+              <figure><a class="study-zoom" href="pareexa-guideline-colors-18.png"><img src="pareexa-guideline-colors-18.png" alt="Brand guideline slide showing the orange-led colour system and personality traits" loading="lazy" /></a><figcaption>Colour: an orange-led palette</figcaption></figure>
             </div>
-
-            <div class="ge-dashboard-story__copy">
-              <p>
-                The testing ecosystem included mock tests, subject tests, practice tests, and
-                exam simulations. Users could create tests flexibly while still experiencing a
-                realistic exam environment.
-              </p>
-              <p>
-                Instruction layers made time limits, negative marking, and question count explicit.
-                During the test itself, timer handling, navigation, mark-for-review behavior,
-                and question state visibility were designed to reduce cognitive load.
-              </p>
+            <figure class="study-figure" style="margin-top: 0">
+              <a class="study-zoom" href="pareexa-guideline-typography-24.png"><img src="pareexa-guideline-typography-24.png" alt="Brand guideline slide showing Circular as the primary typeface" loading="lazy" /></a>
+              <figcaption>Typography: Circular, supported by Inter</figcaption>
+            </figure>
+            <div class="study-cta">
+              <a href="Pareexa_ai_Design_Guidelines.pdf" target="_blank" rel="noopener noreferrer">View the full design guidelines (PDF) <span aria-hidden="true">↗</span></a>
             </div>
-          </div>
+          </section>
 
-          <figure class="pareexa-board-card pareexa-board-card--wide">
-            <img
-              src="pareexa-tests-board.png"
-              alt="Pareexa tests board with mock test, practice test, question states, and result summary screens"
-            />
-            <figcaption>
-              The testing system covered mock tests, practice tests, exam setup, live question
-              states, answer review, and summary reporting in one connected flow.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>5. Review and analytics turned raw performance into actionable feedback.</h2>
-          </div>
-
-          <div class="ge-module-grid">
-            <article>
-              <h3>Review Experience</h3>
-              <p>Correct answers, explanations, time analysis, and difficulty signals helped learners understand not just what was wrong, but why.</p>
-            </article>
-            <article>
-              <h3>Question Navigator</h3>
-              <p>Answered, unanswered, and review states gave users a clearer mental model of progress during the exam flow.</p>
-            </article>
-            <article>
-              <h3>Performance Dashboard</h3>
-              <p>SWOT, subject performance, trend graphs, heatmaps, percentile, confidence, negative marking, speed vs accuracy, and time analysis created a deeper feedback system.</p>
-            </article>
-          </div>
-
-          <div class="pareexa-analytics-story">
-            <article>
-              <span>Trend Analysis</span>
-              <p>Performance was framed over time, not as a one-off score, so learners could see whether consistency was actually improving.</p>
-            </article>
-            <article>
-              <span>Accuracy + Weakness Mapping</span>
-              <p>Analytics highlighted where performance was slipping by topic, allowing revision energy to go toward actual gaps rather than guesswork.</p>
-            </article>
-            <article>
-              <span>AI-Led Insight Direction</span>
-              <p>The long-term goal was not just reporting but actionable learning guidance: what to revise, what to repeat, and what to improve next.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>6. Notes, current affairs, and AI support made the ecosystem feel complete.</h2>
-          </div>
-
-          <div class="ge-split-text ge-split-text--large">
+          <section id="ai" aria-labelledby="ai-title">
+            <h2 id="ai-title">Designing AI people could trust, not just use</h2>
+            <blockquote><p>The challenge wasn’t adding AI. It was helping learners understand why they got a recommendation, and feel safe relying on it.</p></blockquote>
             <p>
-              The notes ecosystem supported creation, search, tags, and revision organization.
-              Current affairs were curated specifically for exam relevance, helping students
-              bridge day-to-day preparation with dynamic content.
+              In a high-stakes exam journey, nobody trusts a system that changes their plan without explanation. So
+              instead of a separate chatbot, AI was embedded across the journey wherever it could give contextual
+              guidance.
             </p>
+            <ul>
+              <li><strong>Explain recommendations.</strong> Every AI study plan was built from what the learner had shared (exam, timeline, available hours, strengths and weak subjects), so it read as personal rather than random.</li>
+              <li><strong>Keep users in control.</strong> Suggestions were editable: learners could change study hours, reorder subjects or move revision, so AI assisted rather than decided.</li>
+              <li><strong>Show up at the right moments.</strong> During planning, after mock-test analysis, when spotting weak topics and when suggesting the next session. Not everywhere.</li>
+              <li><strong>Reduce cognitive load.</strong> One clear next action instead of several competing suggestions.</li>
+            </ul>
             <p>
-              The AI assistant provided instant learning support through chat and suggested prompts,
-              giving users a sense of ongoing guidance instead of leaving them alone with content and scores.
+              Treating AI as contextual decision support kept the experience <strong>transparent, predictable and
+              aligned with how aspirants already prepare.</strong>
             </p>
-          </div>
+          </section>
 
-          <div class="pareexa-wireframe-board pareexa-wireframe-board--three">
+          <section id="journey" aria-labelledby="journey-title">
+            <h2 id="journey-title">Preparation as one guided journey</h2>
+            <p>
+              The ecosystem works as a learning loop, not a feature list. Modules are grouped by where a task sits in
+              the prep cycle, not by how the codebase is split, and each has one job: reduce setup friction, build
+              consistency, support focused study, simulate exam pressure, surface feedback and guide the next step.
+            </p>
+            <ol>
+              <li><strong>Onboarding:</strong> introduce value quickly and move into personalization with little friction.</li>
+              <li><strong>Planning:</strong> turn big exam goals into weekly and daily routines that feel achievable.</li>
+              <li><strong>Study:</strong> connect reading, video, notes and PYQs in one productive flow.</li>
+              <li><strong>Tests:</strong> mock tests and practice loops that build pressure, repetition and confidence.</li>
+              <li><strong>Analytics:</strong> accuracy trends and weak spots that point revision in the right direction.</li>
+              <li><strong>Improvement:</strong> insights, AI help and revision support that turn feedback into action.</li>
+            </ol>
+
+            <h3>Onboarding and setup</h3>
+            <p>
+              Illustrated intro screens communicate value quickly, introducing planning, reading and structured
+              preparation before asking for commitment. Sign-up and profile setup then capture exam, category and
+              learner details so plans and content are personal from day one.
+            </p>
+            <figure class="study-figure">
+              <a class="study-zoom" href="pareexa-onboarding-board.png"><img src="pareexa-onboarding-board.png" alt="Onboarding screens introducing study plans, reading material, test analysis and notes" loading="lazy" /></a>
+              <figcaption>Onboarding frames the platform as a guided ecosystem.</figcaption>
+            </figure>
+            <figure class="study-figure">
+              <a class="study-zoom" href="pareexa-login-board.png"><img src="pareexa-login-board.png" alt="Login, OTP verification, sign-up and profile creation screens" loading="lazy" /></a>
+              <figcaption>Authentication and profile creation capture what personalization needs.</figcaption>
+            </figure>
+
+            <h3>Study planning</h3>
+            <p>
+              The planner breaks preparation down from <strong>yearly to monthly, weekly and daily</strong>.
+              AI-generated, exam-specific schedules make the system feel like it adapts to the learner, and visible
+              progress makes planning a confidence-builder rather than admin work.
+            </p>
+            <figure class="study-figure">
+              <a class="study-zoom" href="pareexa-study-planner-board.png"><img src="pareexa-study-planner-board.png" alt="Study planner questionnaire and plan generation screens" loading="lazy" /></a>
+              <figcaption>A step-by-step flow: exam, horizon, daily hours, weekly rhythm and revision habits.</figcaption>
+            </figure>
+
+            <h3>The study experience</h3>
+            <p>
+              Multilingual reading with highlights, notes, translation and previous-year questions keeps learners in
+              one flow. Text, video and references support different study styles, and a recommendation engine
+              suggests courses, topics and personal paths.
+            </p>
+            <div class="study-gallery" style="--ratio: 0.95">
+              <figure><a class="study-zoom" href="pareexa-pyq-board.png"><img src="pareexa-pyq-board.png" alt="Previous-year-question topic list with per-topic test cards" loading="lazy" /></a><figcaption>PYQs built into the learning flow</figcaption></figure>
+              <figure><a class="study-zoom" href="pareexa-other-screens-board.png"><img src="pareexa-other-screens-board.png" alt="FAQ, support, privacy policy and other utility screens" loading="lazy" /></a><figcaption>Support surfaces that build trust</figcaption></figure>
+            </div>
+            <p>The interactive prototype is walkable end to end: onboarding, planning, study, tests, notes and analytics.</p>
+            <div class="study-embed" style="--ratio: 0.75">
+              <iframe
+                src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSiP7OjDRune1U6kF7pMrtN%2FPareex.ai%3Fnode-id%3D3202-15107%26p%3Df%26viewport%3D35%252C287%252C0.02%26t%3DpnFL956KNACD56sn-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D3202%253A16196%26page-id%3D3202%253A14036"
+                title="Pareexa.ai interactive mobile prototype"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <a class="study-embed-link" href="https://www.figma.com/proto/SiP7OjDRune1U6kF7pMrtN/Pareex.ai?node-id=3202-15107&amp;p=f&amp;viewport=35%2C287%2C0.02&amp;t=pnFL956KNACD56sn-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=3202%3A16196&amp;page-id=3202%3A14036" target="_blank" rel="noopener noreferrer">Open full screen in Figma ↗</a>
+
+            <h3>Testing without confusion</h3>
+            <p>
+              Mock, subject and practice tests and full simulations let users build tests flexibly while still feeling
+              a real exam. Instructions make time limits, negative marking and question count explicit. During the test,
+              <strong>timer, navigation, mark-for-review and question states</strong> were designed to keep cognitive
+              load down.
+            </p>
+            <figure class="study-figure">
+              <a class="study-zoom" href="pareexa-tests-board.png"><img src="pareexa-tests-board.png" alt="Mock test, practice test, question states and result summary screens" loading="lazy" /></a>
+              <figcaption>Setup, live question states, review and summary in one connected flow.</figcaption>
+            </figure>
+
+            <h3>Review and analytics</h3>
+            <ul>
+              <li><strong>Review:</strong> correct answers, explanations, time analysis and difficulty show not just what was wrong, but why.</li>
+              <li><strong>Question navigator:</strong> answered, unanswered and review states give a clear picture of progress.</li>
+              <li><strong>Performance dashboard:</strong> SWOT, subject performance, trends, heatmaps, percentile, speed vs. accuracy and time analysis.</li>
+            </ul>
+            <p>
+              Performance is framed over time rather than as a one-off score, weaknesses are mapped by topic, and the
+              long-term aim is guidance, not reporting: <strong>what to revise, what to repeat, what to improve
+              next.</strong>
+            </p>
+
+            <h3>Notes, current affairs and the AI assistant</h3>
+            <p>
+              Notes support creation, search, tags and revision. Current affairs are curated for exam relevance. The
+              AI assistant offers chat with suggested prompts like “Explain Article 21”, “Generate quiz” and “Create
+              revision notes”, so nobody starts at a blank box.
+            </p>
+          <div class="pareexa-wireframe-board" role="region" aria-label="AI assistant, current affairs and notes wireframes, scrollable" tabindex="0">
             <figure class="pareexa-wireframe-card">
               <div class="pareexa-wireframe-screen">
                 <p class="wf-h">AI Assistant</p>
@@ -1021,366 +549,106 @@
             </figure>
           </div>
 
-          <p class="pareexa-prompt-strip__label">
-            Example prompts suggested inside the AI assistant, so aspirants had a starting point
-            instead of a blank chat box:
-          </p>
+            <h3>Payments and support</h3>
+            <p>
+              Plans run from free to monthly, quarterly, half-yearly and yearly. Payment is a clear sequence (plan,
+              method, confirmation, success) across UPI, net banking and cards, with the plan summary always visible.
+            </p>
+            <figure class="study-figure">
+              <a class="study-zoom" href="pareexa-payment-screen.png"><img src="pareexa-payment-screen.png" alt="Payment method, card input and success screens" loading="lazy" /></a>
+            </figure>
+            <p>
+              Profile covers exam preferences, purchased tests, referrals and notifications, while FAQ, help, privacy,
+              terms, contact and feedback give the product the completeness of a real app, not a concept.
+            </p>
+          </section>
 
-          <div class="pareexa-prompt-strip">
-            <article>Explain Article 21</article>
-            <article>Generate quiz</article>
-            <article>Create revision notes</article>
-          </div>
-        </section>
+          <section id="iterations" aria-labelledby="iterations-title">
+            <h2 id="iterations-title">Iterations with the founders</h2>
+            <h3>1. Simplifying study plan creation</h3>
+            <p>
+              <strong>Before:</strong> one long questionnaire on a single screen covering exam, hours, revision,
+              learning style and availability. In walkthroughs it felt overwhelming, like admin work before any value.
+            </p>
+            <p>
+              <strong>After:</strong> a guided multi-step flow with progress and short explanations, one decision at a
+              time. Personalization now comes from smaller, focused choices, which lowers perceived effort.
+            </p>
+            <h3>2. Dashboard prioritization</h3>
+            <p>
+              <strong>Before:</strong> notes, tests, analytics, reading, AI and current affairs all had equal weight, so
+              nothing told learners what to do next.
+            </p>
+            <p>
+              <strong>After:</strong> the dashboard is built around daily actions (today’s plan, the upcoming mock,
+              the current streak and a progress summary), with everything else in secondary navigation. It became a
+              decision-making hub, not a navigation hub.
+            </p>
+            <h3>3. AI recommendations</h3>
+            <p>
+              <strong>Before:</strong> several suggestions at once, which left people unsure where to start.
+            </p>
+            <p>
+              <strong>After:</strong> one prioritized, explained next step, like “Focus on Modern History today based on
+              your recent mock performance in this topic”, instead of “Study History / Watch Video / Practice Questions
+              / Revise Notes”. <strong>Clarity over quantity.</strong>
+            </p>
+          </section>
 
-        <section class="ge-slide">
-          <div class="ge-statement ge-statement--compact">
-            <h2>7. Monetization and support flows were designed with the same clarity.</h2>
-          </div>
-
-          <div class="pareexa-payment-showcase">
-            <div class="pareexa-payment-showcase__copy">
-              <p>
-                Subscription strategy included free, monthly, quarterly, half-yearly, and yearly plans.
-                The payment experience was structured as a clear, low-friction sequence:
-                plan selection, payment method, confirmation, and success.
-              </p>
-              <p>
-                The screen set you shared shows how the flow handled UPI, net banking, and cards,
-                while keeping the plan summary visible and ending with a distinct success state.
-              </p>
+          <section id="constraints" aria-labelledby="constraints-title">
+            <h2 id="constraints-title">Constraints &amp; trade-offs</h2>
+            <p>Every decision balanced user value, implementation effort and launch priorities.</p>
+            <div class="study-table-wrap">
+              <table>
+                <thead><tr><th scope="col">Constraint</th><th scope="col">Trade-off</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>MVP timeline</strong><br />First release within a six-month engagement</td><td>The MVP focused on personalized planning, learning journeys, mock tests, analytics and contextual AI. Advanced coaching was deferred.</td></tr>
+                  <tr><td><strong>Limited user data</strong><br />No behavioural data before launch</td><td>Personalization used onboarding answers rather than history, so recommendations worked from day one.</td></tr>
+                  <tr><td><strong>Large feature surface</strong><br />Planning, learning, tests, analytics, AI, payments</td><td>Navigation follows the learner’s journey rather than technical modules.</td></tr>
+                  <tr><td><strong>Trust in AI</strong><br />Users expect predictable guidance</td><td>AI recommends, never decides: suggestions stay transparent and editable.</td></tr>
+                </tbody>
+              </table>
             </div>
-            <img
-              class="pareexa-payment-showcase__image"
-              src="pareexa-payment-screen.png"
-              alt="Pareexa payment flow showing payment method, card input, and success state screens"
-            />
-          </div>
+          </section>
 
-          <div class="ge-split-text">
-            <p>
-              Beyond payments, profile management covered exam preferences, purchased tests, referral
-              system, and notifications so the account area felt relevant to ongoing learning.
+          <section id="impact" aria-labelledby="impact-title">
+            <h2 id="impact-title">Impact &amp; lessons</h2>
+            <p class="study-note">
+              Pareexa.ai is in pre-launch development. My role as Product Design Advisor was to set the design strategy,
+              information architecture and design system ahead of release, so the impact here is design foundations,
+              not usage data.
             </p>
-            <p>
-              Support experiences such as FAQ, Help Center, Privacy, Terms, contact, and feedback gave
-              the ecosystem the practical completeness expected from a real product, not just a concept.
-            </p>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="iterations">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">05</span> 🔄 Iteration Examples</p>
-          <div class="ge-statement ge-statement--compact">
-            <h2>The design evolved through internal walkthroughs with the founders.</h2>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Iteration 1</p>
-            <h3 class="tastex-decision__title">Simplifying Study Plan Creation</h3>
-
-            <p class="tastex-decision__label">Initial Design</p>
-            <p>
-              The first version asked users to configure their study plan using a long
-              questionnaire covering exam type, study hours, revision preferences, learning style,
-              and daily availability on a single screen.
-            </p>
-
-            <p class="tastex-decision__label">Problem</p>
-            <p>
-              During internal walkthroughs with the founders, the setup felt overwhelming.
-              Completing many inputs before seeing any value increased friction and made the
-              onboarding experience feel like administrative work.
-            </p>
-
-            <p class="tastex-decision__label">Final Design</p>
-            <p>
-              The flow was redesigned into a guided multi-step experience with clear progress
-              indicators and contextual explanations. Each decision was presented individually,
-              making the setup feel achievable while progressively building a personalized study
-              plan.
-            </p>
-
-            <p class="tastex-decision__label">Result</p>
-            <p>
-              Users reach personalization through smaller, focused decisions instead of completing
-              one lengthy form, reducing perceived effort during onboarding.
-            </p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Iteration 2</p>
-            <h3 class="tastex-decision__title">Dashboard Prioritization</h3>
-
-            <p class="tastex-decision__label">Initial Design</p>
-            <p>
-              The dashboard displayed equal emphasis on multiple modules including notes, tests,
-              analytics, reading material, AI, and current affairs.
-            </p>
-
-            <p class="tastex-decision__label">Problem</p>
-            <p>
-              Everything appeared equally important, making it difficult for learners to
-              understand what they should do next.
-            </p>
-
-            <p class="tastex-decision__label">Final Design</p>
-            <p>The dashboard was reorganized around daily actions:</p>
-            <ul class="pareexa-mini-list">
-              <li>Today's Study Plan</li>
-              <li>Upcoming Mock Test</li>
-              <li>Current Streak</li>
-              <li>Progress Summary</li>
+            <ul>
+              <li><strong>Planning + learning</strong> in one structured system for routines and content.</li>
+              <li><strong>Testing + analytics</strong> that show progress, weaknesses and how to improve.</li>
+              <li><strong>AI + retention:</strong> smarter support, stronger personalization, more learner confidence.</li>
             </ul>
-            <p>Supporting features became secondary navigation instead of primary content.</p>
-
-            <p class="tastex-decision__label">Why</p>
-            <p>The redesign shifted the homepage from being a navigation hub into a decision-making hub.</p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Iteration 3</p>
-            <h3 class="tastex-decision__title">AI Recommendations</h3>
-
-            <p class="tastex-decision__label">Initial Design</p>
-            <p>The AI assistant originally suggested multiple recommendations simultaneously.</p>
-
-            <p class="tastex-decision__label">Problem</p>
-            <p>Presenting several suggestions at once created uncertainty about which action users should take first.</p>
-
-            <p class="tastex-decision__label">Final Design</p>
             <p>
-              Recommendations became sequential and contextual, focusing on one prioritized next
-              step supported by a short explanation — for example, copy followed a pattern like
-              "Focus on Modern History today based on your recent mock performance in this topic,"
-              instead of a flat list of "Study History / Watch Video / Practice Questions / Revise
-              Notes."
+              It was a strong exercise in end-to-end ownership: designing for product scale rather than polish,
+              balancing clarity with monetization and retention, building one reusable design language across modules,
+              and treating analytics as a learning product, not a reporting screen.
             </p>
+            <h3>What I took away</h3>
+            <ol>
+              <li><strong>Ecosystems beat feature collections.</strong> Learners think about passing an exam, not about modules.</li>
+              <li><strong>AI should reduce decisions, not create them.</strong> The best moments simplified the next action.</li>
+              <li><strong>Transparency builds trust.</strong> People adopt suggestions they understand and can adjust.</li>
+              <li><strong>Information architecture matters as much as interface.</strong> With 15+ modules, organizing around the workflow beat polishing screens in isolation.</li>
+            </ol>
+            <h3>Looking ahead</h3>
+            <p>After launch, the priorities are to validate onboarding completion through usability testing, measure plan adherence, track AI recommendation acceptance, use behavioural data to improve personalization, and add adaptive revision planning based on long-term trends.</p>
+          </section>
+        </article>
+      </div>
 
-            <p class="tastex-decision__label">Design Principle</p>
-            <p>Clarity over quantity.</p>
-          </div>
-        </section>
+      <a class="study-next" href="golfpac-travel.html">
+        <small>Next project</small>
+        <strong>GolfPac Travel <span aria-hidden="true">→</span></strong>
+      </a>
+      <div class="study-return"><a href="index.html#work">← Selected work</a><a href="#top">Back to top ↑</a></div>
+    </main>
 
-        <section class="ge-slide" id="constraints">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">06</span> ⚖️ Constraints &amp; Trade-offs</p>
-          <div class="ge-statement ge-statement--compact">
-            <h2>Every decision balanced user value, effort, and launch priorities.</h2>
-          </div>
-
-          <div class="ge-split-text ge-split-text--large">
-            <p>
-              Like most early-stage products, Pareexa.ai was designed within real-world business
-              and engineering constraints. Rather than designing an idealized experience, every
-              decision balanced user value, implementation effort, and launch priorities.
-            </p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Constraint 1</p>
-            <h3 class="tastex-decision__title">MVP Timeline</h3>
-            <p>The product was being prepared for its first public release within a six-month design engagement.</p>
-
-            <p class="tastex-decision__label">Trade-off</p>
-            <p>Instead of designing every advanced AI capability upfront, the MVP focused on:</p>
-            <ul class="pareexa-mini-list">
-              <li>Personalized study planning</li>
-              <li>Learning journeys</li>
-              <li>Mock tests</li>
-              <li>Analytics</li>
-              <li>Contextual AI recommendations</li>
-            </ul>
-            <p>More advanced coaching features were intentionally deferred for future iterations.</p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Constraint 2</p>
-            <h3 class="tastex-decision__title">Limited User Data</h3>
-            <p>As the platform had not yet launched, there was limited behavioral data available.</p>
-
-            <p class="tastex-decision__label">Trade-off</p>
-            <p>
-              Personalization relied primarily on user-provided onboarding information rather than
-              historical learning behavior, allowing meaningful recommendations without requiring
-              months of usage history.
-            </p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Constraint 3</p>
-            <h3 class="tastex-decision__title">Large Feature Surface</h3>
-            <p>The platform combined planning, learning, testing, analytics, AI, payments, and content management within one product.</p>
-
-            <p class="tastex-decision__label">Trade-off</p>
-            <p>
-              Navigation was organized around the learner's preparation journey rather than around
-              technical modules, reducing complexity despite the broad scope.
-            </p>
-          </div>
-
-          <div class="tastex-decision">
-            <p class="tastex-decision__eyebrow">Constraint 4</p>
-            <h3 class="tastex-decision__title">Building Trust in AI</h3>
-            <p>Competitive exam preparation is a high-confidence activity where users expect predictable guidance.</p>
-
-            <p class="tastex-decision__label">Trade-off</p>
-            <p>
-              Instead of allowing AI to make automatic decisions, recommendations remained
-              transparent and editable, giving learners confidence while maintaining control.
-            </p>
-          </div>
-        </section>
-
-        <section class="ge-slide" id="impact">
-          <p class="eyebrow" style="text-align:center; max-width:1080px; margin:0 auto 18px;"><span class="home-num">07</span> 📊 Impact</p>
-          <div class="ge-statement ge-statement--compact">
-            <h2>A complete preparation ecosystem instead of isolated tools.</h2>
-          </div>
-
-          <p class="pareexa-status-note">
-            Pareexa.ai is currently in pre-launch development. My role as Product Design Advisor
-            focused on establishing the design strategy, information architecture, and a scalable
-            design system ahead of public release — rather than optimizing an already-live
-            product. The impact below reflects that scope: design decisions and system foundations,
-            not usage data or launch results.
-          </p>
-
-          <div class="ge-impact-grid">
-            <article>
-              <strong>Planning + Learning</strong>
-              <span>One structured system for study routines and content engagement</span>
-            </article>
-            <article>
-              <strong>Testing + Analytics</strong>
-              <span>Better visibility into progress, weaknesses, and improvement paths</span>
-            </article>
-            <article>
-              <strong>AI + Retention</strong>
-              <span>Smarter support, stronger personalization, and higher learner confidence</span>
-            </article>
-          </div>
-
-          <div class="ge-reflection">
-            <p>
-              Pareexa.ai was a strong exercise in end-to-end product ownership. It pushed me to think
-              beyond isolated screens and design a large ecosystem where planning, content, AI assistance,
-              testing, analytics, and monetization all needed to feel unified, motivating, and scalable.
-            </p>
-          </div>
-
-          <div class="pareexa-goals-grid" style="grid-template-columns:1fr; max-width:640px;">
-            <article>
-              <h3>Product Design Impact</h3>
-              <ul class="pareexa-mini-list">
-                <li>Designed for product scale, not just visual polish</li>
-                <li>Balanced user clarity with monetization and retention</li>
-                <li>Built a reusable design language across multiple modules</li>
-                <li>Treated analytics as a learning product, not a reporting screen</li>
-              </ul>
-            </article>
-          </div>
-
-          <h3 class="golfpac-subhead" style="text-align:center; max-width:none; margin-top:56px;">💡 Lessons Learned</h3>
-          <div class="ge-split-text ge-split-text--large">
-            <p>
-              Designing Pareexa.ai reinforced that successful AI products are not defined by how
-              much AI they contain, but by how naturally AI supports existing user behavior.
-              Throughout the project, several principles became clear.
-            </p>
-          </div>
-
-          <div class="pareexa-goals-grid">
-            <article>
-              <h3>Product ecosystems outperform feature collections</h3>
-              <p>Learners don't think in terms of modules such as planning, notes, or analytics. They think about preparing for an exam. Designing around one connected journey created a more coherent experience than building isolated features.</p>
-            </article>
-            <article>
-              <h3>AI should reduce decisions, not create them</h3>
-              <p>The most valuable AI interactions were those that simplified the next action rather than presenting more information. Recommendation quality mattered less than helping learners confidently move forward.</p>
-            </article>
-            <article>
-              <h3>Transparency builds trust</h3>
-              <p>Users are more likely to adopt AI recommendations when they understand why those suggestions are being made and retain the ability to adjust them.</p>
-            </article>
-            <article>
-              <h3>Information architecture matters as much as interface design</h3>
-              <p>With more than fifteen interconnected modules, organizing the ecosystem around the learner's workflow proved more valuable than optimizing individual screens in isolation.</p>
-            </article>
-          </div>
-
-          <h3 class="golfpac-subhead" style="text-align:center; max-width:none; margin-top:56px;">Looking ahead</h3>
-          <p class="pareexa-metrics-note pareexa-metrics-note--centered">
-            Pareexa.ai has not yet launched, so these are priorities for validation after launch —
-            not results measured to date.
-          </p>
-          <div class="ge-split-text" style="margin-top:24px;">
-            <ul style="max-width:640px; margin:0 auto; text-align:left; color:#3a3a40; line-height:1.8;">
-              <li>Validate onboarding completion through usability testing</li>
-              <li>Measure study plan adherence over time</li>
-              <li>Evaluate AI recommendation acceptance rates</li>
-              <li>Improve personalization using behavioral learning data</li>
-              <li>Introduce adaptive revision planning based on long-term performance trends</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="home-section" style="border-bottom:none;">
-          <div class="home-shell">
-            <div class="home-section__head reveal">
-              <div class="home-section__title-row">
-                <span class="home-num">08</span>
-                <h2>More Projects</h2>
-              </div>
-            </div>
-
-            <div class="home-work-grid">
-              <a data-cursor="View case" class="home-work-card reveal" href="ge-healthcare.html">
-                <div class="home-project-media">
-                  <span class="home-project-tag" style="background:#5b8def;">GE Healthcare</span>
-                  <img src="thumb-ge-healthcare.jpg" alt="GE Healthcare Asset Lifecycle Management dashboard" />
-                </div>
-                <p class="home-project-eyebrow">Enterprise Healthcare</p>
-                <p class="home-project-title">
-                  Redesigned lease, loan, end-of-term, and remarketing workflows for a platform used by 2,000+ global users.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-              </a>
-
-              <a data-cursor="View case" class="home-work-card reveal" href="golfpac-travel.html">
-                <div class="home-project-media">
-                  <span class="home-project-tag" style="background:#5fd4e8;">GolfPac Travel</span>
-                  <img src="thumb-golfpac.jpg" alt="GolfPac Travel booking homepage" />
-                </div>
-                <p class="home-project-eyebrow">Travel Platform</p>
-                <p class="home-project-title">
-                  Modernized a dated booking flow — three competing entry points became one guided path.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-              </a>
-
-              <a data-cursor="View case" class="home-work-card reveal" href="tastex.html">
-                <div class="home-project-media">
-                  <span class="home-project-tag" style="background:#f2994a;">tasteX</span>
-                  <img src="thumb-tastex.jpg" alt="tasteX kitchen dashboard showing live orders" />
-                </div>
-                <p class="home-project-eyebrow">Cloud Kitchen</p>
-                <p class="home-project-title">
-                  QR-based room-service ordering routed from multiple hotels into shared central kitchens.
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    <script src="site.js"></script>
-    <script src="reveal.js"></script>
-    <script src="case-toc.js"></script>
+    <script src="pixels.js?v=20261125f" defer></script>
+    <script src="study.js?v=20261125c" defer></script>
   </body>
 </html>
