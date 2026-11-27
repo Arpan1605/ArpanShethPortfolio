@@ -1454,7 +1454,7 @@ html[data-theme="dark"] .marquee__group img {
 
 .recognition {
   padding-top: 200px;
-  padding-bottom: 160px;
+  padding-bottom: 120px;
 }
 .journal {
   display: grid;
@@ -1649,4 +1649,187 @@ html[data-theme="dark"] .marquee__group img {
 @media (max-width: 899px) {
   .pd__grid { grid-template-columns: 1fr; }
   .pd__rows div { grid-template-columns: 96px 1fr; }
+}
+
+/* ---------- Side project: psych.design ----------
+   A slim dark card under the folders. It borrows psych.design's own dark,
+   glowy look so it reads as a separate world, but stays quiet next to the
+   main work. Dark in both themes on purpose. */
+.side-project {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 32px;
+  padding: 26px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: #16120f;
+  color: #f4efe9;
+  isolation: isolate;
+  transition: transform 0.5s var(--ease), border-color 0.4s var(--ease);
+}
+.side-project__glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 140% at 0% 0%, rgba(236, 72, 153, 0.22), transparent 60%),
+    radial-gradient(50% 160% at 70% 0%, rgba(124, 92, 255, 0.28), transparent 65%),
+    radial-gradient(40% 120% at 100% 100%, rgba(250, 204, 21, 0.14), transparent 70%);
+  transition: opacity 0.5s var(--ease);
+  opacity: 0.8;
+}
+.side-project:hover,
+.side-project:focus-visible { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.22); }
+.side-project:hover .side-project__glow { opacity: 1; }
+.side-project__text { display: grid; gap: 6px; min-width: 0; }
+.side-project__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e9e2da;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.side-project__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f472b6;
+  box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.6);
+  animation: side-pulse 2.4s ease-out infinite;
+}
+@keyframes side-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.55); }
+  70%, 100% { box-shadow: 0 0 0 8px rgba(244, 114, 182, 0); }
+}
+.side-project__title {
+  margin-top: 4px;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.side-project__desc { max-width: 56ch; color: #cfc6bc; font-size: 15px; line-height: 1.55; }
+.side-project__curve { width: 200px; height: 50px; overflow: visible; }
+.side-project__base { fill: none; stroke: rgba(255, 255, 255, 0.18); stroke-width: 1; stroke-dasharray: 3 4; }
+.side-project__line {
+  fill: none;
+  stroke: #4ade80;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.1s var(--ease);
+}
+.side-project__pts circle { fill: #4ade80; stroke: #16120f; stroke-width: 1.5; }
+.side-project__pts circle:nth-child(4),
+.side-project__pts circle:nth-child(5) { fill: #facc15; }
+/* The feeling curve redraws itself on hover. */
+.side-project:hover .side-project__line { animation: side-draw 1.1s var(--ease); }
+@keyframes side-draw { from { stroke-dashoffset: 260; } to { stroke-dashoffset: 0; } }
+.side-project__go {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #facc15;
+  color: #16120f;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.3s var(--ease);
+}
+.side-project__go svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.4s var(--ease); }
+.side-project:hover .side-project__go svg { transform: translate(2px, -2px); }
+.side-project-wrap { margin-top: 72px; }
+@media (max-width: 899px) {
+  .side-project { grid-template-columns: minmax(0, 1fr) auto; }
+  .side-project__curve { display: none; }
+}
+@media (max-width: 559px) {
+  .side-project { grid-template-columns: 1fr; gap: 18px; padding: 22px 20px; }
+  .side-project-wrap { margin-top: 56px; }
+  .side-project__go { justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .side-project__dot { animation: none; }
+  .side-project:hover .side-project__line { animation: none; }
+  .side-project { transition: none; }
+}
+
+/* ---------- Off the clock ----------
+   A small personal note to close the page: the godfather cats. Sits in the
+   same 3/9 label grid as the About section. */
+.offclock {
+  padding-bottom: 160px;
+}
+.offclock__grid {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: var(--gap);
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.offclock .label { padding-top: 8px; }
+.offclock__body { max-width: 760px; }
+.offclock__title {
+  margin: 0;
+  font-size: clamp(26px, 2.4vw, 34px);
+  font-weight: 450;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.offclock__text {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.offclock__photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+.offclock__photos figure { margin: 0; }
+.offclock__photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 14px;
+  background: var(--grey);
+  transition: transform 0.6s var(--ease);
+}
+.offclock__photos figure:hover img { transform: rotate(-1.5deg) scale(1.02); }
+.offclock__photos figure:nth-child(2):hover img { transform: rotate(1.5deg) scale(1.02); }
+.offclock__photos figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+@media (max-width: 900px) {
+  .offclock__grid { grid-template-columns: 1fr; gap: 16px; }
+  .offclock { padding-bottom: 120px; }
+}
+@media (max-width: 559px) {
+  .offclock__photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .offclock__photos figure:first-child { grid-column: 1 / -1; }
+  .offclock__photos figure:first-child img { aspect-ratio: 4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offclock__photos img { transition: none; }
+  .offclock__photos figure:hover img { transform: none; }
 }
